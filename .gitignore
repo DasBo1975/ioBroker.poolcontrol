@@ -13,7 +13,6 @@ build/
 coverage/
 
 # Editor / IDE
-.vscode/
 .idea/
 *.swp
 

@@ -1,6 +1,6 @@
 {
   "common": {
-    "name": "poolcontrol",
+    "name": "iobroker.poolcontrol",
     "version": "0.0.1",
     "news": {
       "0.0.7": {
@@ -159,8 +159,7 @@
       {
         "admin": ">=7.0.23"
       }
-    ],
-    "installedFrom": "/opt/iobroker/ioBroker.poolcontrol"
+    ]
   },
   "native": {
     "option1": true,

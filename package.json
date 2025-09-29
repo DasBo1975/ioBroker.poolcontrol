@@ -6,7 +6,7 @@
     "name": "DasBo1975",
     "email": "dasbo1975@outlook.de"
   },
-  "homepage": "https://github.com/DasBo1975/ioBroker.poolcontrol",
+  "homepage": "https://github.com/DasBo1975/iobroker.poolcontrol",
   "license": "MIT",
   "keywords": [
     "pool",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/DasBo1975/ioBroker.poolcontrol.git"
+    "url": "https://github.com/DasBo1975/iobroker.poolcontrol.git"
   },
   "engines": {
     "node": ">= 20"
