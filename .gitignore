@@ -1,36 +1,23 @@
-# No dot-directories except github/vscode
-.*/
-!.vscode/
-!.github/
-
-*.code-workspace
-node_modules
-nbproject
-
-# npm package files
-iobroker.*.tgz
-
-# npm/yarn/pnpm logs
+# Node.js
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# Build- und Distribution
-build/
+# Adapter spezifisch
+*.test.js
+.create-adapter.json
+
+# Build / Coverage
 dist/
-admin/build/
+build/
+coverage/
 
-# Editor/IDE
+# Editor / IDE
+.vscode/
 .idea/
-
-# Betriebssystem
-Thumbs.db
-.DS_Store
-
-# i18n intermediate files
-admin/i18n/flat.txt
-admin/i18n/*/flat.txt
-
-# ioBroker spezifisch
 *.swp
+
+# System
+.DS_Store
+Thumbs.db
