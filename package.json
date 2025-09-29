@@ -1,7 +1,6 @@
 {
   "name": "iobroker.poolcontrol",
-  "version": "0.0.1",
-  "type": "module",
+  "version": "0.0.1", 
   "description": "Steuerung & Automatisierung für den Pool (Pumpe, Heizung, Ventile, Sensoren).",
   "author": {
     "name": "DasBo1975",
