@@ -5,7 +5,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Adapter spezifisch
-*.test.js
 .create-adapter.json
 
 # Build / Coverage
