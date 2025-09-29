@@ -50,53 +50,53 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Zeitsteuerung ---
         await createTimeStates(this);
-		
-		// --- Laufzeitsteuerung ---
-		await createRuntimeStates(this);
-		
-		// --- Sprachausgaben ---
-		await createSpeechStates(this);
-		
-		// --- Verbrauch & Kosten ---
-		await createConsumptionStates(this);
+
+        // --- Laufzeitsteuerung ---
+        await createRuntimeStates(this);
+
+        // --- Sprachausgaben ---
+        await createSpeechStates(this);
+
+        // --- Verbrauch & Kosten ---
+        await createConsumptionStates(this);
 
         // --- Helper starten ---
         temperatureHelper.init(this);
-		timeHelper.init(this);
-		runtimeHelper.init(this);
-		pumpHelper.init(this);
-		speechHelper.init(this);
-		consumptionHelper.init(this);
-		solarHelper.init(this);
-		frostHelper.init(this);
+        timeHelper.init(this);
+        runtimeHelper.init(this);
+        pumpHelper.init(this);
+        speechHelper.init(this);
+        consumptionHelper.init(this);
+        solarHelper.init(this);
+        frostHelper.init(this);
     }
-	
+
     onUnload(callback) {
         try {
             if (temperatureHelper.cleanup) {
                 temperatureHelper.cleanup();
             }
-			if (timeHelper.cleanup) {
+            if (timeHelper.cleanup) {
                 timeHelper.cleanup();
-			}
-			if (runtimeHelper.cleanup) {
-				runtimeHelper.cleanup ();
-			}
-			if (pumpHelper.cleanup) {
-				pumpHelper.cleanup ();
-			}
-			if (speechHelper.cleanup) {
-				speechHelper.cleanup();
-			}
-			if (consumptionHelper.cleanup) {
-				consumptionHelper.cleanup ();
-			}
-			if (solarHelper.cleanup) {
-				solarHelper.cleanup();
-			}
-			if (frostHelper.cleanup) {
-			    frostHelper.cleanup();
-			}
+            }
+            if (runtimeHelper.cleanup) {
+                runtimeHelper.cleanup ();
+            }
+            if (pumpHelper.cleanup) {
+                pumpHelper.cleanup ();
+            }
+            if (speechHelper.cleanup) {
+                speechHelper.cleanup();
+            }
+            if (consumptionHelper.cleanup) {
+                consumptionHelper.cleanup ();
+            }
+            if (solarHelper.cleanup) {
+                solarHelper.cleanup();
+            }
+            if (frostHelper.cleanup) {
+                frostHelper.cleanup();
+            }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
         } finally {
@@ -115,26 +115,26 @@ class Poolcontrol extends utils.Adapter {
         } catch (e) {
             this.log.warn(`[temperatureHelper] Fehler in handleStateChange: ${e.message}`);
         }
-		try {
-			runtimeHelper.handleStateChange(id, state);
-		} catch (e) {
-			this.log.warn(`[runtimeHelper] Fehler in handleStateChange: ${e.message}`);
-		}
-		try {
-			pumpHelper.handleStateChange(id, state);
-		} catch (e) {
-			this.log.warn(`[pumpHelper] Fehler in handleStateChange: ${e.message}`);
-		}
-		try {
-			speechHelper.handleStateChange(id, state);
-		} catch (e) {
-			this.log.warn(`[speechHelper] Fehler in handleStateChange: ${e.message}`);
-		}
-		try {
-			consumptionHelper.handleStateChange(id, state);
-		} catch (e) {
-			this.log.warn(`[consumptionHelper] Fehler in handleStateChange: ${e.message}`);
-		}
+        try {
+            runtimeHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[runtimeHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            pumpHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[pumpHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            speechHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[speechHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            consumptionHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[consumptionHelper] Fehler in handleStateChange: ${e.message}`);
+        }
     }
 }
 
