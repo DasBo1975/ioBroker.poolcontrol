@@ -1,0 +1,617 @@
+{
+  "i18n": false,
+  "type": "tabs",
+  "items": {
+    "general": {
+      "type": "panel",
+      "label": "Allgemeine Einstellungen",
+      "items": {
+        "divider1": {
+          "type": "divider",
+          "newLine": true
+        },
+        "pool_name": {
+          "type": "text",
+          "label": "Name des Pools",
+          "default": "Mein Pool",
+          "sm": 3
+        },
+        "pool_size": {
+          "type": "number",
+          "label": "Poolgröße (Liter)",
+          "default": 30000,
+          "sm": 3,
+          "newLine": true
+        },
+        "min_circulation_per_day": {
+          "type": "select",
+          "label": "Min. Umwälzung pro Tag",
+          "options": [
+            { "label": "0,5x", "value": 0.5 },
+            { "label": "1,0x", "value": 1.0 },
+            { "label": "1,5x", "value": 1.5 },
+            { "label": "2,0x", "value": 2.0 },
+            { "label": "2,5x", "value": 2.5 },
+            { "label": "3,0x", "value": 3.0 }
+          ],
+          "default": 1,
+          "sm": 3,
+          "newLine": true
+        }
+      }
+    },
+    "pump": {
+      "type": "panel",
+      "label": "Pumpe",
+      "items": {
+        "divider2": {
+          "type": "divider",
+          "newLine": true
+        },
+        "pump_max_watt": {
+          "type": "number",
+          "label": "Max. Leistung (Watt)",
+          "default": 1000,
+          "sm": 3
+        },
+        "pump_power_lph": {
+          "type": "number",
+          "label": "Pumpenleistung (l/h)",
+          "default": 6000,
+          "sm": 3,
+          "newLine": true
+        },
+        "divider3": {
+          "type": "divider",
+          "newLine": true
+        },
+        "frost_protection_active": {
+          "type": "checkbox",
+          "label": "Frostschutz aktivieren",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "frost_protection_temp": {
+          "type": "number",
+          "label": "Frostschutz-Temperatur (°C)",
+          "default": 2,
+          "sm": 3
+        },
+        "divider4": {
+          "type": "divider",
+          "newLine": true
+        },
+        "pump_switch": {
+          "type": "objectId",
+          "label": "Objekt-ID schaltbare Steckdose Pumpe",
+          "default": "",
+          "sm": 3
+        },
+		"pump_current_power_id": {
+		  "type": "objectId",
+		  "label": "Objekt-ID aktuelle Leistung (W)",
+		  "default": "",
+		  "sm": 3
+		},
+        "divider9": {
+          "type": "divider",
+          "newLine": true
+        },
+        "pump_mode_hint": {
+          "type": "staticText",
+          "text": "Pumpenmodus (Automatik/Manuell/Aus/Zeit) kann über den Datenpunkt 'pump.mode' gesteuert werden.",
+          "newLine": true
+        },
+        "divider10": {
+          "type": "divider",
+          "newLine": true
+        },
+        "manual_safety_enabled": {
+          "type": "checkbox",
+          "label": "Sicherheitsfunktionen auch im Modus 'Manuell' aktivieren",
+          "default": true,
+          "sm": 6,
+          "newLine": true
+        },
+        "manual_safety_enabled_hint": {
+          "type": "staticText",
+          "text": "Wenn aktiviert, werden die Sicherheitsfunktionen wie Frostschutz und Überhitzungsschutz (Solar) weiterhin ausgeführt.",
+          "newLine": true
+        }
+      }
+    },
+    "temperature": {
+      "type": "panel",
+      "label": "Temperaturverwaltung",
+      "items": {
+        "divider5": {
+          "type": "divider",
+          "newLine": true
+        },
+        "surface_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Oberfläche verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "surface_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Oberfläche",
+          "default": "",
+          "sm": 3
+        },
+        "ground_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Grund verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "ground_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Grund",
+          "default": "",
+          "sm": 3
+        },
+        "flow_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Vorlauf verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "flow_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Vorlauf",
+          "default": "",
+          "sm": 3
+        },
+        "return_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Rücklauf verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "return_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Rücklauf",
+          "default": "",
+          "sm": 3
+        },
+        "collector_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Kollektor verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "collector_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Kollektor",
+          "default": "",
+          "sm": 3
+        },
+        "outside_temp_active": {
+          "type": "checkbox",
+          "label": "Sensor Außentemperatur verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "outside_temp_sensor": {
+          "type": "objectId",
+          "label": "Objekt-ID Sensor Außentemperatur",
+          "default": "",
+          "sm": 3
+        }
+      }
+    },
+    "solar": {
+      "type": "panel",
+      "label": "Solarverwaltung",
+      "items": {
+        "divider6": {
+          "type": "divider",
+          "newLine": true
+        },
+        "solar_control_active": {
+          "type": "checkbox",
+          "label": "Solarsteuerung aktivieren",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "divider_solar1": {
+          "type": "divider",
+          "newLine": true
+        },
+        "solar_hysteresis_active": {
+          "type": "checkbox",
+          "label": "Regelung mit Hysterese verwenden",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "solar_temp_on": {
+          "type": "number",
+          "label": "Kollektortemperatur Einschaltgrenze (°C)",
+          "default": 30,
+          "sm": 3
+        },
+        "solar_temp_off": {
+          "type": "number",
+          "label": "Kollektortemperatur Ausschaltgrenze (°C)",
+          "default": 25,
+          "sm": 3
+        },
+		"divider_solar2": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"solar_collector_warn_active": {
+		  "type": "checkbox",
+		  "label": "Kollektortemperatur-Warnung aktivieren",
+		  "default": false,
+		  "sm": 3,
+		  "newLine": true
+		},
+		"solar_collector_warn_temp": {
+		  "type": "number",
+		  "label": "Warnschwelle Kollektortemperatur (°C)",
+		  "default": 80,
+		  "sm": 3
+		},
+		"solar_collector_warn_speech": {
+		  "type": "checkbox",
+		  "label": "Bei Warnung Sprachausgabe/Benachrichtigung",
+		  "default": true,
+		  "sm": 6,
+		  "newLine": true
+		},
+		"solar_collector_warn_hint": {
+		  "type": "staticText",
+		  "text": "Hinweis: Die Warnung wird automatisch zurückgesetzt, sobald die Temperatur 10 % unter die eingestellte Schwelle fällt.",
+		  "newLine": true
+		}
+      }
+    },
+    "timecontrol": {
+      "type": "panel",
+      "label": "Zeitsteuerung",
+      "items": {
+        "divider_time1": {
+          "type": "divider",
+          "newLine": true
+        },
+        "time1_active": {
+          "type": "checkbox",
+          "label": "Zeitfenster 1 aktiv",
+          "default": true,
+          "sm": 3,
+          "newLine": true
+        },
+        "time1_start": {
+          "type": "text",
+          "label": "Start (HH:MM)",
+          "default": "08:00",
+          "sm": 3
+        },
+        "time1_end": {
+          "type": "text",
+          "label": "Ende (HH:MM)",
+          "default": "10:00",
+          "sm": 3
+        },
+        "time1_day_mon": {
+		  "type": "checkbox",
+		  "label": "Montag",
+		  "default": true,
+		  "sm": 1,
+		  "newLine": true
+		},
+		"time1_day_tue": {
+		  "type": "checkbox",
+		  "label": "Dienstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time1_day_wed": {
+		  "type": "checkbox",
+		  "label": "Mittwoch",
+		  "default": true,
+		  "sm": 1
+		},
+		"time1_day_thu": {
+		  "type": "checkbox",
+		  "label": "Donnerstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time1_day_fri": {
+		  "type": "checkbox",
+		  "label": "Freitag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time1_day_sat": {
+		  "type": "checkbox",
+		  "label": "Samstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time1_day_sun": {
+		  "type": "checkbox",
+		  "label": "Sonntag",
+		  "default": true,
+		  "sm": 1
+		},
+        "divider_time2": {
+          "type": "divider",
+          "newLine": true
+        },
+        "time2_active": {
+          "type": "checkbox",
+          "label": "Zeitfenster 2 aktiv",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "time2_start": {
+          "type": "text",
+          "label": "Start (HH:MM)",
+          "default": "14:00",
+          "sm": 3,
+		  "newLine": true
+        },
+        "time2_end": {
+          "type": "text",
+          "label": "Ende (HH:MM)",
+          "default": "16:00",
+          "sm": 3
+        },
+        "time2_day_mon": {
+		  "type": "checkbox",
+		  "label": "Montag",
+		  "default": true,
+		  "sm": 1,
+		  "newLine": true
+		},
+		"time2_day_tue": {
+		  "type": "checkbox",
+		  "label": "Dienstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time2_day_wed": {
+		  "type": "checkbox",
+		  "label": "Mittwoch",
+		  "default": true,
+		  "sm": 1
+		},
+		"time2_day_thu": {
+		  "type": "checkbox",
+		  "label": "Donnerstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time2_day_fri": {
+		  "type": "checkbox",
+		  "label": "Freitag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time2_day_sat": {
+		  "type": "checkbox",
+		  "label": "Samstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time2_day_sun": {
+		  "type": "checkbox",
+		  "label": "Sonntag",
+		  "default": true,
+		  "sm": 1
+		},
+        "divider_time3": {
+          "type": "divider",
+          "newLine": true
+        },
+        "time3_active": {
+          "type": "checkbox",
+          "label": "Zeitfenster 3 aktiv",
+          "default": false,
+          "sm": 3,
+          "newLine": true
+        },
+        "time3_start": {
+          "type": "text",
+          "label": "Start (HH:MM)",
+          "default": "18:00",
+          "sm": 3
+        },
+        "time3_end": {
+          "type": "text",
+          "label": "Ende (HH:MM)",
+          "default": "20:00",
+          "sm": 3
+        },
+        "time3_day_mon": {
+		  "type": "checkbox",
+		  "label": "Montag",
+		  "default": true,
+		  "sm": 1,
+		  "newLine": true
+		},
+		"time3_day_tue": {
+		  "type": "checkbox",
+		  "label": "Dienstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time3_day_wed": {
+		  "type": "checkbox",
+		  "label": "Mittwoch",
+		  "default": true,
+		  "sm": 1
+		},
+		"time3_day_thu": {
+		  "type": "checkbox",
+		  "label": "Donnerstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time3_day_fri": {
+		  "type": "checkbox",
+		  "label": "Freitag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time3_day_sat": {
+		  "type": "checkbox",
+		  "label": "Samstag",
+		  "default": true,
+		  "sm": 1
+		},
+		"time3_day_sun": {
+		  "type": "checkbox",
+		  "label": "Sonntag",
+		  "default": true,
+		  "sm": 1
+		}
+      }
+    },
+	"speech": {
+	  "type": "panel",
+	  "label": "Sprachausgaben",
+	  "items": {
+		"divider_speech1": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"speech_active": {
+		  "type": "checkbox",
+		  "label": "Sprachausgaben aktivieren",
+		  "default": false,
+		  "sm": 3,
+		  "newLine": true
+		},
+
+		"divider_speech2": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"speech_alexa_enabled": {
+		  "type": "checkbox",
+		  "label": "Ausgabe über Alexa aktivieren",
+		  "default": false,
+		  "sm": 3,
+		  "newLine": true
+		},
+		"speech_alexa_device": {
+		  "type": "objectId",
+		  "label": "Alexa-Gerät",
+		  "default": "",
+		  "sm": 6
+		},
+		"speech_alexa_volume": {
+		  "type": "number",
+		  "label": "Lautstärke (0–100)",
+		  "default": 50,
+		  "sm": 3,
+		  "newLine": true
+		},
+		"speech_alexa_voice": {
+		  "type": "select",
+		  "label": "Stimme",
+		  "options": [
+			{ "label": "Standard (weiblich)", "value": "female" },
+			{ "label": "Männlich", "value": "male" }
+		  ],
+		  "default": "female",
+		  "sm": 3
+		},
+
+		"divider_speech3": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"speech_telegram_enabled": {
+		  "type": "checkbox",
+		  "label": "Ausgabe über Telegram aktivieren",
+		  "default": false,
+		  "sm": 3,
+		  "newLine": true
+		},
+		"speech_telegram_instance": {
+		  "type": "instance",
+		  "adapter": "telegram",
+		  "label": "Telegram-Instanz",
+		  "default": "telegram.0",
+		  "sm": 6
+		},
+		"divider_speech4": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"speech_temp_threshold": {
+		  "type": "number",
+		  "label": "Temperaturschwelle für Ansage (°C)",
+		  "default": 25,
+		  "sm": 3,
+		  "newLine": true
+		},
+		"speech_include_errors": {
+		  "type": "checkbox",
+		  "label": "Fehlermeldungen ansagen",
+		  "default": true,
+		  "sm": 3
+		}
+	  }
+	},
+	"consumption": {
+	  "type": "panel",
+	  "label": "Verbrauch & Kosten",
+	  "items": {
+		"divider_cons1": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"consumption_enabled": {
+		  "type": "checkbox",
+		  "label": "Verbrauchs- und Kostenberechnung aktivieren",
+		  "default": false,
+		  "sm": 6,
+		  "newLine": true
+		},
+
+		"external_energy_total_id": {
+		  "type": "objectId",
+		  "label": "Objekt-ID externer kWh-Zähler",
+		  "default": "",
+		  "sm": 6
+		},
+
+		"divider_cons2": {
+		  "type": "divider",
+		  "newLine": true
+		},
+		"energy_price_eur_kwh": {
+		  "type": "number",
+		  "label": "Strompreis (€ / kWh)",
+		  "default": 0.35,
+		  "sm": 3,
+		  "newLine": true
+		},
+
+		"consumption_hint": {
+		  "type": "staticText",
+		  "text": "Hinweis: Für die Verbrauchsberechnung wird ein externer kWh-Zähler benötigt (z. B. Messsteckdose).",
+		  "newLine": true
+		}
+	  }
+	}
+  }
+}

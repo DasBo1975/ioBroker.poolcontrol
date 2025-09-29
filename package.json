@@ -1,0 +1,61 @@
+{
+  "name": "iobroker.poolcontrol",
+  "version": "0.0.1",
+  "description": "Steuerung & Automatisierung für den Pool (Pumpe, Heizung, Ventile, Sensoren).",
+  "author": {
+    "name": "DasBo1975",
+    "email": "dasbo1975@outlook.de"
+  },
+  "homepage": "https://github.com/DasBo1975/ioBroker.poolcontrol",
+  "license": "MIT",
+  "keywords": [
+    "pool",
+    "pumpe",
+    "solar",
+    "wasser",
+    "temperatur"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DasBo1975/ioBroker.poolcontrol.git"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.3.2"
+  },
+  "devDependencies": {
+    "@iobroker/adapter-dev": "^1.5.0",
+    "@iobroker/testing": "^5.1.1",
+    "chai-as-promised": "^7.1.2",
+    "chai": "^4.5.0",
+    "eslint": "^8.57.1",
+    "mocha": "^11.7.2",
+    "proxyquire": "^2.1.3",
+    "sinon": "^21.0.0",
+    "sinon-chai": "^3.7.0"
+  },
+  "main": "main.js",
+  "files": [
+    "admin{,/!(src)/**}/!(tsconfig|tsconfig.*|.eslintrc).{json,json5}",
+    "admin{,/!(src)/**}/*.{html,css,png,svg,jpg,js}",
+    "lib/",
+    "www/",
+    "io-package.json",
+    "LICENSE",
+    "main.js"
+  ],
+  "scripts": {
+    "test:js": "mocha --config test/mocharc.custom.json \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
+    "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
+    "test": "npm run test:js && npm run test:package",
+    "lint": "eslint .",
+    "translate": "translate-adapter"
+  },
+  "bugs": {
+    "url": "https://github.com/DasBo1975/ioBroker.poolcontrol/issues"
+  },
+  "readmeFilename": "README.md"
+}
