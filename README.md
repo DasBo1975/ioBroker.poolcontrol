@@ -33,9 +33,9 @@ Er ermöglicht die Automatisierung von Pumpen, Temperatur- und Solarsteuerung so
 - **Verbrauch & Kosten**
   - Auswertung eines externen kWh-Zählers
   - Tages-, Wochen-, Monats- und Jahresverbrauch
-  - Berechnung der Stromkosten anhand konfigurierbarem Preis
-	**Hinweis:**  
-	Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei [help.md](./help.md).
+  - Berechnung der Stromkosten anhand konfigurierbarem Preis  
+    **Hinweis:**  
+    Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei [help.md](./help.md).
 
 - **Sprachausgaben**
   - Ausgabe über Alexa oder Telegram
@@ -79,14 +79,35 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 
 ---
 
+## Dokumentation
+- [Help.md (ausführliche Beschreibung und Hinweise)](./help.md)
+
+---
+
 ## Changelog
-Siehe `io-package.json`, Abschnitt `news`.
+Auszug, vollständige Liste siehe `io-package.json`:
+
+### 0.0.7
+- Help-Datei (`help.md`) und erste README-Version hinzugefügt
+
+### 0.0.6
+- Verbrauchs- und Kostenberechnung mit externem kWh-Zähler
+
+### 0.0.5
+- Sprachausgabe über Alexa und Telegram
 
 ---
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
-- [GitHub Issues](https://github.com/DasBo1975/ioBroker.poolcontrol/issues) *(sobald Repo online ist)*  
+- [GitHub Issues](https://github.com/DasBo1975/ioBroker.poolcontrol/issues)
+
+---
+
+## Unterstützung der Adapterentwicklung
+Wenn Ihnen **ioBroker.poolcontrol** gefällt, denken Sie bitte über eine Spende nach:  
+
+➡️ [Unterstützen via PayPal](https://www.paypal.com/donate?business=dirk.bertin@t-online.de)
 
 ---
 
@@ -99,5 +120,5 @@ Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware**
 ---
 
 ## Lizenz
-MIT License  
+[MIT](./LICENSE) License  
 Copyright (c) 2025 DasBo1975
