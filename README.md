@@ -98,6 +98,9 @@ Auszug, vollständige Liste siehe `io-package.json`:
 ### 0.0.5
 - Sprachausgabe über Alexa und Telegram
 
+### 0.0.1
+- initial release
+
 ---
 
 ## Support
