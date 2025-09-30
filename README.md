@@ -121,6 +121,6 @@ Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware**
 
 ---
 
-## Lizenz
+## LICENSE
 [MIT](./LICENSE) License  
 Copyright (c) 2025 DasBo1975
