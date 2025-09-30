@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.0.1",
+    "version": "0.0.7",
     "news": {
       "0.0.7": {
         "en": "Added help file (help.md) and first README version",
