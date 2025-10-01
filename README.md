@@ -2,6 +2,10 @@
 
 ![Test and Release](https://github.com/DasBo1975/iobroker.poolcontrol/actions/workflows/test-and-release.yml/badge.svg)
 ![npm](https://img.shields.io/npm/v/iobroker.poolcontrol?color=blue)
+![Downloads](https://img.shields.io/npm/dm/iobroker.poolcontrol)
+![Installs](https://iobroker.live/badges/poolcontrol-installed.svg)
+![Stable](https://iobroker.live/badges/poolcontrol-stable.svg)
+![License](https://img.shields.io/github/license/DasBo1975/ioBroker.poolcontrol)
 
 Der Adapter **ioBroker.poolcontrol** dient zur Steuerung und Überwachung von Poolanlagen.  
 Er ermöglicht die Automatisierung von Pumpen, Temperatur- und Solarsteuerung sowie Verbrauchsauswertung.  
