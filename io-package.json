@@ -15,7 +15,7 @@
         "pl": "Dodano kartę pomocy w konfiguracji instancji z linkiem do dokumentacji GitHub",
         "uk": "Додано вкладку довідки в конфігурацію екземпляра з посиланням на документацію GitHub",
         "zh-cn": "在实例配置中添加了帮助选项卡，并链接到 документацию GitHub"
-      }
+      },
       "0.0.7": {
         "en": "Added help file (help.md) and first README version",
         "de": "Hilfedatei (help.md) und erste README-Version hinzugefügt",
