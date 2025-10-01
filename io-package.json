@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "news": {
+	  "0.0.8": {
+        "en": "Added Help tab in instance configuration with link to GitHub documentation",
+        "de": "Hilfetab in der Instanzkonfiguration hinzugefügt mit Link zur GitHub-Dokumentation",
+        "ru": "Добавлена вкладка помощи в настройке экземпляра со ссылкой на документацию GitHub",
+        "pt": "Guia de ajuda adicionado na configuração da instância com link para a documentação do GitHub",
+        "nl": "Help-tab toegevoegd in de instance-configuratie met link naar GitHub-documentatie",
+        "fr": "Onglet d'aide ajouté dans la configuration de l'instance avec lien vers la documentation GitHub",
+        "it": "Aggiunta scheda di aiuto nella configurazione dell'istanza con collegamento alla documentazione GitHub",
+        "es": "Se agregó pestaña de ayuda en la configuración de la instancia con enlace a la documentación de GitHub",
+        "pl": "Dodano kartę pomocy w konfiguracji instancji z linkiem do dokumentacji GitHub",
+        "uk": "Додано вкладку довідки в конфігурацію екземпляра з посиланням на документацію GitHub",
+        "zh-cn": "在实例配置中添加了帮助选项卡，并链接到 документацию GitHub"
+      }
       "0.0.7": {
         "en": "Added help file (help.md) and first README version",
         "de": "Hilfedatei (help.md) und erste README-Version hinzugefügt",

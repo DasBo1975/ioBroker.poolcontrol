@@ -90,6 +90,9 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.0.8
+- Hilfetab in der Instanzkonfiguration hinzugefügt (mit Link zur GitHub-Dokumentation)
+
 ### 0.0.7
 - Help-Datei (`help.md`) und erste README-Version hinzugefügt
 
