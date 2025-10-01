@@ -896,6 +896,26 @@
 		  "newLine": true
 		}
 	  }
-	}
+    },	
+	"help": {
+      "type": "panel",
+      "label": "Hilfe",
+      "items": {
+        "divider_help": {
+          "type": "divider",
+          "newLine": true
+        },
+        "helpLink": {
+          "type": "staticLink",
+          "label": "Öffne die ausführliche Dokumentation auf GitHub",
+          "href": "https://github.com/DasBo1975/iobroker.poolcontrol/blob/main/admin/help.md",
+          "newLine": true
+        },
+        "helpText": {
+          "type": "staticText",
+          "text": "Hier finden Sie die vollständige Dokumentation und Hinweise zu allen Einstellungen. Weitere Hinweise zu künftigen Versionen folgen."
+        }
+      }
+    }
   }
 }
