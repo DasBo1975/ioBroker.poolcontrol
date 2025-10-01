@@ -14,13 +14,21 @@
           "type": "text",
           "label": "Name des Pools",
           "default": "Mein Pool",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "pool_size": {
           "type": "number",
           "label": "Poolgröße (Liter)",
           "default": 30000,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "min_circulation_per_day": {
@@ -35,7 +43,11 @@
             { "label": "3,0x", "value": 3.0 }
           ],
           "default": 1,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         }
       }
@@ -52,13 +64,21 @@
           "type": "number",
           "label": "Max. Leistung (Watt)",
           "default": 1000,
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "pump_power_lph": {
           "type": "number",
           "label": "Pumpenleistung (l/h)",
           "default": 6000,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "divider3": {
@@ -69,14 +89,22 @@
           "type": "checkbox",
           "label": "Frostschutz aktivieren",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "frost_protection_temp": {
           "type": "number",
           "label": "Frostschutz-Temperatur (°C)",
           "default": 2,
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "divider4": {
           "type": "divider",
@@ -86,13 +114,21 @@
           "type": "objectId",
           "label": "Objekt-ID schaltbare Steckdose Pumpe",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
 		"pump_current_power_id": {
 		  "type": "objectId",
 		  "label": "Objekt-ID aktuelle Leistung (W)",
 		  "default": "",
-		  "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
 		},
         "divider9": {
           "type": "divider",
@@ -111,7 +147,11 @@
           "type": "checkbox",
           "label": "Sicherheitsfunktionen auch im Modus 'Manuell' aktivieren",
           "default": true,
+		  "xs": 12,
           "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6,
           "newLine": true
         },
         "manual_safety_enabled_hint": {
@@ -133,79 +173,127 @@
           "type": "checkbox",
           "label": "Sensor Oberfläche verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "surface_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Oberfläche",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "ground_temp_active": {
           "type": "checkbox",
           "label": "Sensor Grund verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "ground_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Grund",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "flow_temp_active": {
           "type": "checkbox",
           "label": "Sensor Vorlauf verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "flow_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Vorlauf",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "return_temp_active": {
           "type": "checkbox",
           "label": "Sensor Rücklauf verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "return_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Rücklauf",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "collector_temp_active": {
           "type": "checkbox",
           "label": "Sensor Kollektor verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "collector_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Kollektor",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "outside_temp_active": {
           "type": "checkbox",
           "label": "Sensor Außentemperatur verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "outside_temp_sensor": {
           "type": "objectId",
           "label": "Objekt-ID Sensor Außentemperatur",
           "default": "",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         }
       }
     },
@@ -221,7 +309,11 @@
           "type": "checkbox",
           "label": "Solarsteuerung aktivieren",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "divider_solar1": {
@@ -232,20 +324,32 @@
           "type": "checkbox",
           "label": "Regelung mit Hysterese verwenden",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "solar_temp_on": {
           "type": "number",
           "label": "Kollektortemperatur Einschaltgrenze (°C)",
           "default": 30,
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "solar_temp_off": {
           "type": "number",
           "label": "Kollektortemperatur Ausschaltgrenze (°C)",
           "default": 25,
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
 		"divider_solar2": {
 		  "type": "divider",
@@ -255,20 +359,32 @@
 		  "type": "checkbox",
 		  "label": "Kollektortemperatur-Warnung aktivieren",
 		  "default": false,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 		"solar_collector_warn_temp": {
 		  "type": "number",
 		  "label": "Warnschwelle Kollektortemperatur (°C)",
 		  "default": 80,
-		  "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
 		},
 		"solar_collector_warn_speech": {
 		  "type": "checkbox",
 		  "label": "Bei Warnung Sprachausgabe/Benachrichtigung",
 		  "default": true,
-		  "sm": 6,
+		  "xs": 12,
+          "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6,
 		  "newLine": true
 		},
 		"solar_collector_warn_hint": {
@@ -290,63 +406,103 @@
           "type": "checkbox",
           "label": "Zeitfenster 1 aktiv",
           "default": true,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "time1_start": {
           "type": "text",
           "label": "Start (HH:MM)",
           "default": "08:00",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "time1_end": {
           "type": "text",
           "label": "Ende (HH:MM)",
           "default": "10:00",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "time1_day_mon": {
 		  "type": "checkbox",
 		  "label": "Montag",
 		  "default": true,
-		  "sm": 1,
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1,
 		  "newLine": true
 		},
 		"time1_day_tue": {
 		  "type": "checkbox",
 		  "label": "Dienstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time1_day_wed": {
 		  "type": "checkbox",
 		  "label": "Mittwoch",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time1_day_thu": {
 		  "type": "checkbox",
 		  "label": "Donnerstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time1_day_fri": {
 		  "type": "checkbox",
 		  "label": "Freitag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time1_day_sat": {
 		  "type": "checkbox",
 		  "label": "Samstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time1_day_sun": {
 		  "type": "checkbox",
 		  "label": "Sonntag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
         "divider_time2": {
           "type": "divider",
@@ -356,64 +512,104 @@
           "type": "checkbox",
           "label": "Zeitfenster 2 aktiv",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "time2_start": {
           "type": "text",
           "label": "Start (HH:MM)",
           "default": "14:00",
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
         },
         "time2_end": {
           "type": "text",
           "label": "Ende (HH:MM)",
           "default": "16:00",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "time2_day_mon": {
 		  "type": "checkbox",
 		  "label": "Montag",
 		  "default": true,
-		  "sm": 1,
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1,
 		  "newLine": true
 		},
 		"time2_day_tue": {
 		  "type": "checkbox",
 		  "label": "Dienstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time2_day_wed": {
 		  "type": "checkbox",
 		  "label": "Mittwoch",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time2_day_thu": {
 		  "type": "checkbox",
 		  "label": "Donnerstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time2_day_fri": {
 		  "type": "checkbox",
 		  "label": "Freitag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time2_day_sat": {
 		  "type": "checkbox",
 		  "label": "Samstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time2_day_sun": {
 		  "type": "checkbox",
 		  "label": "Sonntag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
         "divider_time3": {
           "type": "divider",
@@ -423,63 +619,103 @@
           "type": "checkbox",
           "label": "Zeitfenster 3 aktiv",
           "default": false,
+		  "xs": 12,
           "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
           "newLine": true
         },
         "time3_start": {
           "type": "text",
           "label": "Start (HH:MM)",
           "default": "18:00",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "time3_end": {
           "type": "text",
           "label": "Ende (HH:MM)",
           "default": "20:00",
-          "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
         },
         "time3_day_mon": {
 		  "type": "checkbox",
 		  "label": "Montag",
 		  "default": true,
-		  "sm": 1,
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1,
 		  "newLine": true
 		},
 		"time3_day_tue": {
 		  "type": "checkbox",
 		  "label": "Dienstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time3_day_wed": {
 		  "type": "checkbox",
 		  "label": "Mittwoch",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time3_day_thu": {
 		  "type": "checkbox",
 		  "label": "Donnerstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time3_day_fri": {
 		  "type": "checkbox",
 		  "label": "Freitag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time3_day_sat": {
 		  "type": "checkbox",
 		  "label": "Samstag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		},
 		"time3_day_sun": {
 		  "type": "checkbox",
 		  "label": "Sonntag",
 		  "default": true,
-		  "sm": 1
+		  "xs": 12,
+          "sm": 1,
+		  "md": 1,
+		  "lg": 1,
+		  "xl": 1
 		}
       }
     },
@@ -495,7 +731,11 @@
 		  "type": "checkbox",
 		  "label": "Sprachausgaben aktivieren",
 		  "default": false,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 
@@ -507,20 +747,32 @@
 		  "type": "checkbox",
 		  "label": "Ausgabe über Alexa aktivieren",
 		  "default": false,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 		"speech_alexa_device": {
 		  "type": "objectId",
 		  "label": "Alexa-Gerät",
 		  "default": "",
-		  "sm": 6
+		  "xs": 12,
+          "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6
 		},
 		"speech_alexa_volume": {
 		  "type": "number",
 		  "label": "Lautstärke (0–100)",
 		  "default": 50,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 		"speech_alexa_voice": {
@@ -531,7 +783,11 @@
 			{ "label": "Männlich", "value": "male" }
 		  ],
 		  "default": "female",
-		  "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
 		},
 
 		"divider_speech3": {
@@ -542,7 +798,11 @@
 		  "type": "checkbox",
 		  "label": "Ausgabe über Telegram aktivieren",
 		  "default": false,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 		"speech_telegram_instance": {
@@ -550,7 +810,11 @@
 		  "adapter": "telegram",
 		  "label": "Telegram-Instanz",
 		  "default": "telegram.0",
-		  "sm": 6
+		  "xs": 12,
+          "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6
 		},
 		"divider_speech4": {
 		  "type": "divider",
@@ -560,14 +824,22 @@
 		  "type": "number",
 		  "label": "Temperaturschwelle für Ansage (°C)",
 		  "default": 25,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 		"speech_include_errors": {
 		  "type": "checkbox",
 		  "label": "Fehlermeldungen ansagen",
 		  "default": true,
-		  "sm": 3
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3
 		}
 	  }
 	},
@@ -583,7 +855,11 @@
 		  "type": "checkbox",
 		  "label": "Verbrauchs- und Kostenberechnung aktivieren",
 		  "default": false,
-		  "sm": 6,
+		  "xs": 12,
+          "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6,
 		  "newLine": true
 		},
 
@@ -591,7 +867,11 @@
 		  "type": "objectId",
 		  "label": "Objekt-ID externer kWh-Zähler",
 		  "default": "",
-		  "sm": 6
+		  "xs": 12,
+          "sm": 6,
+		  "md": 6,
+		  "lg": 6,
+		  "xl": 6
 		},
 
 		"divider_cons2": {
@@ -602,7 +882,11 @@
 		  "type": "number",
 		  "label": "Strompreis (€ / kWh)",
 		  "default": 0.35,
-		  "sm": 3,
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
 		  "newLine": true
 		},
 
