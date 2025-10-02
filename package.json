@@ -6,6 +6,7 @@
   "homepage": "https://github.com/DasBo1975/ioBroker.poolcontrol",
   "license": "MIT",
   "keywords": [
+    "ioBroker",  
     "pool",
     "pumpe",
     "solar",
