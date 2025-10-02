@@ -3,7 +3,7 @@
   "version": "0.0.8", 
   "description": "Steuerung & Automatisierung für den Pool (Pumpe, Heizung, Ventile, Sensoren).",
   "author": "DasBo1975 <dasbo1975@outlook.de>",
-  "homepage": "https://github.com/DasBo1975/iobroker.poolcontrol",
+  "homepage": "https://github.com/DasBo1975/ioBroker.poolcontrol",
   "license": "MIT",
   "keywords": [
     "pool",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/DasBo1975/iobroker.poolcontrol.git"
+    "url": "https://github.com/DasBo1975/ioBroker.poolcontrol.git"
   },
   "engines": {
     "node": ">= 20"
@@ -54,7 +54,7 @@
     "translate": "translate-adapter"
   },
   "bugs": {
-    "url": "https://github.com/DasBo1975/iobroker.poolcontrol/issues"
+    "url": "https://github.com/DasBo1975/ioBroker.poolcontrol/issues"
   },
   "readmeFilename": "README.md"
 }
