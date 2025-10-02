@@ -137,7 +137,12 @@
         "pump_mode_hint": {
           "type": "staticText",
           "text": "Pumpenmodus (Automatik/Manuell/Aus/Zeit) kann über den Datenpunkt 'pump.mode' gesteuert werden.",
-          "newLine": true
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
         },
         "divider10": {
           "type": "divider",
@@ -157,7 +162,12 @@
         "manual_safety_enabled_hint": {
           "type": "staticText",
           "text": "Wenn aktiviert, werden die Sicherheitsfunktionen wie Frostschutz und Überhitzungsschutz (Solar) weiterhin ausgeführt.",
-          "newLine": true
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
         }
       }
     },
@@ -390,7 +400,12 @@
 		"solar_collector_warn_hint": {
 		  "type": "staticText",
 		  "text": "Hinweis: Die Warnung wird automatisch zurückgesetzt, sobald die Temperatur 10 % unter die eingestellte Schwelle fällt.",
-		  "newLine": true
+		  "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
 		}
       }
     },
@@ -893,7 +908,12 @@
 		"consumption_hint": {
 		  "type": "staticText",
 		  "text": "Hinweis: Für die Verbrauchsberechnung wird ein externer kWh-Zähler benötigt (z. B. Messsteckdose).",
-		  "newLine": true
+		  "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
 		}
 	  }
     },	
@@ -909,7 +929,12 @@
           "type": "staticLink",
           "label": "Öffne die ausführliche Dokumentation auf GitHub",
           "href": "https://github.com/DasBo1975/iobroker.poolcontrol/blob/main/admin/help.md",
-          "newLine": true
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
         },
         "helpText": {
           "type": "staticText",

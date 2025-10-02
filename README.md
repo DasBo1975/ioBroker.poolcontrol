@@ -133,5 +133,5 @@ Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware**
 ---
 
 ## LICENSE
-[MIT](./LICENSE) License  
-Copyright (c) 2025 DasBo1975
+MIT Licence
+
