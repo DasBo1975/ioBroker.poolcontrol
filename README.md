@@ -94,6 +94,10 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.0.9
+- Laufzeit-, Umwälz-, Verbrauch-/Kosten- und Temperatur-Min/Max-States sind jetzt persistent  
+  (Werte bleiben nach Adapter-Neustart oder Stromausfall erhalten)
+
 ### 0.0.8
 - Hilfetab in der Instanzkonfiguration hinzugefügt (mit Link zur GitHub-Dokumentation)
 
