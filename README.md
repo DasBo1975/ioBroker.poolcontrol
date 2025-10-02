@@ -132,6 +132,6 @@ Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware**
 
 ---
 
-## LICENSE
-MIT Licence
+## License
+MIT License
 
