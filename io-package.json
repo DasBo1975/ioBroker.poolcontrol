@@ -103,14 +103,11 @@
         "js-controller": ">=6.0.11"
       }
     ],
-    "globalDependencies": {
+	"globalDependencies": [
+      {
         "admin": ">=7.6.17"
-    },
-	"support": {
-      "donate": {
-        "paypal": "https://www.paypal.com/donate?business=dirk.bertin%40t-online.de"
-	  }
-	}
+      }
+    ]
   },
   "native": {
     "option1": true,
