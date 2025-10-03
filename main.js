@@ -13,6 +13,7 @@ const speechHelper = require('./lib/helpers/speechHelper');
 const consumptionHelper = require('./lib/helpers/consumptionHelper');
 const solarHelper = require('./lib/helpers/solarHelper');
 const frostHelper = require('./lib/helpers/frostHelper');
+const statusHelper = require('./lib/helpers/statusHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
@@ -21,6 +22,7 @@ const { createTimeStates } = require('./lib/stateDefinitions/timeStates');
 const { createRuntimeStates } = require('./lib/stateDefinitions/runtimeStates');
 const { createSpeechStates } = require('./lib/stateDefinitions/speechStates');
 const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionStates');
+const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -60,6 +62,9 @@ class Poolcontrol extends utils.Adapter {
         // --- Verbrauch & Kosten ---
         await createConsumptionStates(this);
 
+        // --- Statusübersicht ---
+        await createStatusStates(this);
+
         // --- Helper starten ---
         temperatureHelper.init(this);
         timeHelper.init(this);
@@ -69,6 +74,7 @@ class Poolcontrol extends utils.Adapter {
         consumptionHelper.init(this);
         solarHelper.init(this);
         frostHelper.init(this);
+        statusHelper.init(this);
     }
 
     onUnload(callback) {
@@ -96,6 +102,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (frostHelper.cleanup) {
                 frostHelper.cleanup();
+            }
+            if (statusHelper.cleanup) {
+                statusHelper.cleanup();
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
@@ -134,6 +143,11 @@ class Poolcontrol extends utils.Adapter {
             consumptionHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[consumptionHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            statusHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[statusHelper] Fehler in handleStateChange: ${e.message}`);
         }
     }
 }
