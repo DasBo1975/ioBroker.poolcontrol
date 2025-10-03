@@ -120,6 +120,14 @@ Funktionen:
 - **speech.start_text / speech.end_text** → Texte für Pumpenstart/-stopp.  
 - **speech.last_text** → zuletzt gesprochener Text.  
 - **speech.texts.[sensor]** → optionale Textausgaben für Sensorwerte.  
+- **E-Mail-Ausgabe**  
+  - Aktivierbar über die Instanzkonfiguration (`speech_email_enabled`).  
+  - Konfigurierbar:  
+    - **speech_email_instance** → E-Mail-Adapter-Instanz (z. B. `email.0`)  
+    - **speech_email_recipient** → Empfänger-Adresse  
+    - **speech_email_subject** → Betreffzeile der E-Mail  
+  - Bei jeder Sprachausgabe (Pumpenstart, Stopp, Fehler, Temperaturwarnung usw.) wird zusätzlich eine E-Mail an den konfigurierten Empfänger verschickt.  
+  - Praktisch für Nutzer, die keine Alexa/Telegram-Anbindung verwenden, aber trotzdem Benachrichtigungen erhalten möchten.  
 
 *Wichtig: Ermöglicht direkte Benachrichtigungen über Pumpen- und Temperaturereignisse.*  
 

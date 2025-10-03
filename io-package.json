@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.0.10",
+    "version": "0.1.0",
     "news": {
+      "0.1.0": {
+       "en": "Added speech output via E-Mail (configurable: instance, recipient, subject)",
+       "de": "Sprachausgabe per E-Mail hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff)",
+       "ru": "Добавлен вывод речи по электронной почте (настраивается: экземпляр, получатель, тема)",
+       "pt": "Adicionada saída de fala por e-mail (configurável: instância, destinatário, assunto)",
+       "nl": "Spraakuitvoer via e-mail toegevoegd (configureerbaar: instantie, ontvanger, onderwerp)",
+       "fr": "Ajout de la sortie vocale par e-mail (configurable : instance, destinataire, sujet)",
+       "it": "Aggiunta uscita vocale via e-mail (configurabile: istanza, destinatario, oggetto)",
+       "es": "Se agregó salida de voz por correo electrónico (configurable: instancia, destinatario, asunto)",
+       "pl": "Dodano wyjście głosowe przez e-mail (konfigurowalne: instancja, odbiorca, temat)",
+       "uk": "Додано озвучення електронною поштою (налаштовується: екземпляр, одержувач, тема)",
+       "zh-cn": "新增通过电子邮件的语音输出（可配置：实例、收件人、主题）"
+      },
       "0.0.10": {
        "en": "Added extended status overview with pump statistics, system flags and JSON summary",
        "de": "Erweiterte Statusübersicht mit Pumpenstatistiken, Systemanzeigen und JSON-Zusammenfassung hinzugefügt",
@@ -28,19 +41,6 @@
         "pl": "Stany czasu pracy, cyrkulacji, zużycia/kosztów i temp. min/max są teraz zachowane po restartach",
         "uk": "Стан часу роботи, циркуляції, споживання/вартості та мін/макс температури тепер зберігаються після перезапусків",
         "zh-cn": "运行时间、循环、消耗/成本和温度最小/最大状态现在在重启后保持"
-      },
-	  "0.0.8": {
-        "en": "Added Help tab in instance configuration with link to GitHub documentation",
-        "de": "Hilfetab in der Instanzkonfiguration hinzugefügt mit Link zur GitHub-Dokumentation",
-        "ru": "Добавлена вкладка помощи в настройке экземпляра со ссылкой на документацию GitHub",
-        "pt": "Guia de ajuda adicionado na configuração da instância com link para a documentação do GitHub",
-        "nl": "Help-tab toegevoegd in de instance-configuratie met link naar GitHub-documentatie",
-        "fr": "Onglet d'aide ajouté dans la configuration de l'instance avec lien vers la documentation GitHub",
-        "it": "Aggiunta scheda di aiuto nella configurazione dell'istanza con collegamento alla documentazione GitHub",
-        "es": "Se agregó pestaña de ayuda en la configuración de la instancia con enlace a la documentación de GitHub",
-        "pl": "Dodano kartę pomocy w konfiguracji instancji z linkiem do dokumentacji GitHub",
-        "uk": "Додано вкладку довідки в конфігурацію екземпляра з посиланням на документацію GitHub",
-        "zh-cn": "在实例配置中添加了帮助选项卡，并链接到 документацию GitHub"
       }
     },
     "titleLang": {

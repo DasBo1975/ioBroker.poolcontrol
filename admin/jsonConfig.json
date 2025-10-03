@@ -846,6 +846,53 @@
 		  "lg": 6,
 		  "xl": 6
 		},
+		        "divider_speech_email": {
+          "type": "divider",
+          "newLine": true
+        },
+        "speech_email_enabled": {
+          "type": "checkbox",
+          "label": "Ausgabe über E-Mail aktivieren",
+          "default": false,
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3,
+          "newLine": true
+        },
+        "speech_email_instance": {
+          "type": "instance",
+          "adapter": "email",
+          "label": "E-Mail Adapter-Instanz",
+          "default": "email.0",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6
+        },
+        "speech_email_recipient": {
+          "type": "text",
+          "label": "Empfänger-Adresse",
+          "default": "meineadresse@example.com",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6,
+          "newLine": true
+        },
+        "speech_email_subject": {
+          "type": "text",
+          "label": "E-Mail Betreff",
+          "default": "PoolControl Nachricht",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6
+        },
 		"divider_speech4": {
 		  "type": "divider",
 		  "newLine": true

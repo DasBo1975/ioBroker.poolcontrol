@@ -94,6 +94,13 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.1.0
+- Sprachausgabe über **E-Mail** hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff).
+- Erweiterung der Instanz-Konfiguration im Tab „Sprachausgaben“.
+  **Bugfixes**
+- Kleinere Korrekturen und Optimierungen in der Dokumentation (`help.md`).
+- Logging in `speechHelper` verbessert.
+
 ### 0.0.10
 
 Statusübersicht
