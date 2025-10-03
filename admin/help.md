@@ -25,7 +25,11 @@ Funktionen:
 - **general.pool_size** → Größe des Pools in Litern (wichtig für Berechnung der Umwälzung).  
 - **general.min_circulation_per_day** → Faktor, wie oft das gesamte Poolvolumen pro Tag umgewälzt werden soll.  
 - **status.season_active** → Bool, ob die Poolsaison aktiv ist (wird später für historische Berechnungen genutzt).  
-
+  Wenn aktiv: Der Adapter führt alle automatischen Funktionen wie Pumpensteuerung, Solarregelung und Statistiken normal aus.  
+  Wenn inaktiv: Automatische Logiken (z. B. Pumpenautomatik, Solarsteuerung) sind deaktiviert.  
+  Der Frostschutz bleibt jedoch **immer aktiv**, auch außerhalb der Saison.  
+  Der Status kann sowohl über die Instanzkonfiguration als auch direkt im Objektbaum oder über VIS/Blockly geändert werden.
+  
 ---
 
 ## 3. Pumpe
@@ -131,7 +135,11 @@ Ab Version 0.0.10 gibt es einen eigenen Bereich `status.*`:
 - **status.pump_today_count** → Anzahl der Starts heute.  
 - **status.system_ok** → Bool, ob das System fehlerfrei läuft.  
 - **status.system_warning / system_warning_text** → aktive Systemwarnung.  
-- **status.season_active** → Bool, ob die Poolsaison aktiv ist.  
+- **status.season_active** → Bool, ob die Poolsaison aktiv ist.
+  Dieser Wert spiegelt den Saisonstatus wider und beeinflusst die Logik des Adapters:  
+  - true = Poolsaison aktiv → Pumpen- und Solarsteuerung arbeiten normal.  
+  - false = Poolsaison inaktiv → Automatikfunktionen sind deaktiviert, nur Frostschutz bleibt erhalten.  
+  Der Wert ist schaltbar und kann auch direkt in VIS oder per Skript geändert werden.
 
 *Wichtig: Diese States geben eine zentrale Übersicht für Visualisierung (z. B. in VIS/vis2 Widgets).*  
 

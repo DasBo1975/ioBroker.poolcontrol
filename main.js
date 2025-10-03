@@ -64,6 +64,12 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Statusübersicht ---
         await createStatusStates(this);
+		
+        // Saisonstatus aus Config übernehmen
+        await this.setStateAsync('status.season_active', {
+            val: this.config.season_active,
+            ack: true,
+        });
 
         // --- Helper starten ---
         temperatureHelper.init(this);
@@ -113,12 +119,20 @@ class Poolcontrol extends utils.Adapter {
         }
     }
 
-    onStateChange(id, state) {
+    async onStateChange(id, state) {
         if (state) {
             this.log.debug(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
         } else {
             this.log.debug(`state ${id} deleted`);
         }
+
+        // Saisonstatus manuell ändern (z.B. über VIS)
+        if (id.endsWith('status.season_active') && state && state.ack === false) {
+            this.log.info(`[main] Saisonstatus geändert: ${state.val}`);
+            await this.setStateAsync('status.season_active', { val: state.val, ack: true });
+            return; // danach keine Helper mehr aufrufen
+        }
+
         try {
             temperatureHelper.handleStateChange(id, state);
         } catch (e) {
