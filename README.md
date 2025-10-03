@@ -94,6 +94,26 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.0.10
+
+Statusübersicht
+Ab Version 0.0.10 gibt es einen eigenen Bereich `status.*` mit folgenden Datenpunkten:
+
+- **status.summary** → Textübersicht (Pumpe, Modus, Temperaturen, Laufzeit, Umwälzung)
+- **status.overview_json** → Übersicht als JSON (maschinenlesbar)
+- **status.last_summary_update** → Zeitpunkt der letzten Aktualisierung
+- **status.pump_last_start** → Letzter Pumpenstart (Zeitstempel)
+- **status.pump_last_stop** → Letztes Pumpenende (Zeitstempel)
+- **status.pump_was_on_today** → Boolean, ob die Pumpe heute lief
+- **status.pump_today_count** → Anzahl der Starts heute (Reset um Mitternacht)
+- **status.system_ok** → Boolean, ob das System fehlerfrei läuft
+- **status.system_warning** → Boolean, wenn eine Warnung aktiv ist
+- **status.system_warning_text** → Beschreibung der aktiven Warnung
+- **status.season_active** → Anzeige, ob die Poolsaison aktiv ist
+
+Diese Datenpunkte sind besonders für **VIS/vis2, Alexa- oder Telegram-Ausgaben** gedacht, da sie eine schnelle Übersicht über den aktuellen Poolstatus bieten.
+
+
 ### 0.0.9
 - Laufzeit-, Umwälz-, Verbrauch-/Kosten- und Temperatur-Min/Max-States sind jetzt persistent  
   (Werte bleiben nach Adapter-Neustart oder Stromausfall erhalten)

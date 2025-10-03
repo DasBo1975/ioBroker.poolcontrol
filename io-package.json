@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "news": {
+      "0.0.10": {
+       "en": "Added extended status overview with pump statistics, system flags and JSON summary",
+       "de": "Erweiterte Statusübersicht mit Pumpenstatistiken, Systemanzeigen und JSON-Zusammenfassung hinzugefügt",
+       "ru": "Добавлен расширенный обзор состояния с насосной статистикой, системными флагами и JSON-резюме",
+       "pt": "Adicionada visão geral de status estendida com estatísticas da bomba, sinalizadores do sistema e resumo em JSON",
+       "nl": "Uitgebreide statusoverzicht toegevoegd met pompstatistieken, systeemindicatoren en JSON-samenvatting",
+       "fr": "Aperçu du statut étendu ajouté avec statistiques de la pompe, indicateurs système et résumé JSON",
+       "it": "Aggiunta panoramica dello stato estesa con statistiche della pompa, indicatori di sistema e riepilogo JSON",
+       "es": "Añadida vista general de estado extendida con estadísticas de la bomba, indicadores del sistema y resumen en JSON",
+       "pl": "Dodano rozszerzony przegląd statusu ze statystykami pompy, flagami systemowymi i podsumowaniem JSON",
+       "uk": "Додано розширений огляд статусу зі статистикою насоса, системними прапорцями та зведенням JSON",
+       "zh-cn": "新增扩展状态概览，包括泵统计、系统标志和 JSON 摘要"
+      },
 	  "0.0.9": {
         "en": "Made runtime, circulation, consumption/costs and temperature min/max states persistent across restarts",
         "de": "Laufzeit-, Umwälz-, Verbrauch-/Kosten- und Temperatur-Min/Max-States bleiben jetzt über Neustarts erhalten",
@@ -28,19 +41,6 @@
         "pl": "Dodano kartę pomocy w konfiguracji instancji z linkiem do dokumentacji GitHub",
         "uk": "Додано вкладку довідки в конфігурацію екземпляра з посиланням на документацію GitHub",
         "zh-cn": "在实例配置中添加了帮助选项卡，并链接到 документацию GitHub"
-      },
-      "0.0.7": {
-        "en": "Added help file (help.md) and first README version",
-        "de": "Hilfedatei (help.md) und erste README-Version hinzugefügt",
-        "ru": "Добавлен файл справки (help.md) и первая версия README",
-        "pt": "Adicionado arquivo de ajuda (help.md) e primeira versão do README",
-        "nl": "Helpbestand (help.md) en eerste README-versie toegevoegd",
-        "fr": "Ajout du fichier d'aide (help.md) et première version du README",
-        "it": "Aggiunto file di aiuto (help.md) e prima versione di README",
-        "es": "Se agregó archivo de ayuda (help.md) y primera versión de README",
-        "pl": "Dodano plik pomocy (help.md) i pierwszą wersję README",
-        "uk": "Додано файл довідки (help.md) та першу версію README",
-        "zh-cn": "添加了帮助文件 (help.md) 和第一个 README 版本"     
       }
     },
     "titleLang": {
