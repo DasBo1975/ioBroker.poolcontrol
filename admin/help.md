@@ -10,174 +10,137 @@ Der PoolControl-Adapter ermöglicht die automatische Steuerung und Überwachung 
 Funktionen:
 - Pumpensteuerung (Automatik, Manuell, Zeitmodus)  
 - Temperaturverwaltung (Sensoren, Min/Max, Differenzen)  
-- Solarsteuerung mit Hysterese  
+- Solarsteuerung mit Hysterese und Warnungen  
 - Laufzeit- und Umwälzberechnung  
+- Verbrauchs- und Kostenberechnung  
 - Fehlerüberwachung (z. B. Überlast, keine Leistung)  
+- Sprachausgaben (Alexa, Telegram)  
+- Statusübersicht mit Pumpenstatistik und Systemindikatoren  
 
 ---
 
 ## 2. Allgemeine Einstellungen
 **Tab: „Allgemeine Einstellungen“**
-- **Name des Pools** → Freitext, dient nur zur Anzeige.  
-- **Poolgröße (Liter)** → wichtig für Umwälzberechnungen.  
-- **Min. Umwälzung pro Tag** → Faktor, wie oft das gesamte Poolvolumen pro Tag umgewälzt werden soll.  
+- **general.pool_name** → Name des Pools (nur Anzeige).  
+- **general.pool_size** → Größe des Pools in Litern (wichtig für Berechnung der Umwälzung).  
+- **general.min_circulation_per_day** → Faktor, wie oft das gesamte Poolvolumen pro Tag umgewälzt werden soll.  
+- **status.season_active** → Bool, ob die Poolsaison aktiv ist (wird später für historische Berechnungen genutzt).  
 
 ---
 
 ## 3. Pumpe
 **Tab: „Pumpe“**
-- **Max. Leistung (Watt)** → Grenze für die Fehlererkennung „Überlast“.  
-- **Pumpenleistung (l/h)** → Grundlage für die Umwälzberechnung.  
-- **Frostschutz aktivieren & Temperatur** → automatische Pumpensteuerung bei Frost.  
-- **Objekt-ID schaltbare Steckdose Pumpe** → hier die Steckdose auswählen, über die die Pumpe geschaltet wird.  
-- **Objekt-ID aktuelle Leistung (W)** → Leistungsmessung der Pumpe (z. B. aus Messsteckdose).  
-
-**Besondere Datenpunkte:**  
-- `pump.mode` → Betriebsmodus (`auto`, `manual`, `time`, `off`).  
-- `pump.error` → zeigt Fehlerstatus an (true/false), kann manuell quittiert werden.  
-- `pump.status` → lesbarer Status („AUS“, „EIN (manuell)“, „FEHLER“).  
-- `pump.current_power` → aktuelle Leistungsaufnahme.  
+- **pump.pump_switch** → zentraler Schalter EIN/AUS.  
+  *Wichtig: Dieser Datenpunkt steuert die reale Steckdose und ist die Grundlage für Laufzeit- und Umwälzberechnungen.*  
+- **pump.mode** → Betriebsmodus (`auto`, `manual`, `time`, `off`).  
+  *Wichtig: Legt fest, ob die Pumpe durch Solar-/Frostlogik, Zeitsteuerung oder manuell gesteuert wird.*  
+- **pump.status** → Textstatus („AUS“, „EIN (manuell)“, „FEHLER“).  
+- **pump.error** → zeigt Fehlerstatus an (true/false). Muss manuell zurückgesetzt werden.  
+- **pump.current_power** → aktuelle Leistungsaufnahme (W).  
+  *Wichtig: Grundlage für Fehlererkennung (Trockenlauf, Überlast).*  
 
 **Fehlerfälle:**  
-- **EIN ohne Leistung** → Pumpe eingeschaltet, aber <5 W → Fehler.  
-- **AUS mit Leistung** → Pumpe ausgeschaltet, aber >10 W → Fehler.  
+- **EIN ohne Leistung** (<5 W) → Fehler (Trockenlauf).  
+- **AUS mit Leistung** (>10 W) → Fehler.  
 - **Überlast** → Leistungsaufnahme > Maximalwert → Notabschaltung + `mode = off`.  
 
 ---
 
 ## 4. Temperaturverwaltung
 **Tab: „Temperaturverwaltung“**
-- Bis zu 6 Sensoren (Oberfläche, Grund, Vorlauf, Rücklauf, Kollektor, Außentemperatur).  
-- Für jeden Sensor: „verwenden“ + Objekt-ID.  
+- Bis zu 6 Sensoren: Oberfläche, Grund, Vorlauf, Rücklauf, Kollektor, Außentemperatur.  
+- Für jeden Sensor: „verwenden“ (bool) + Objekt-ID.  
 
 **Datenpunkte:**  
-- `temperature.[sensor].current` → aktueller Wert.  
-- `temperature.[sensor].min_today` / `max_today` → Tages-Min/Max.  
-- `temperature.[sensor].delta_per_hour` → Änderung pro Stunde.  
-- `temperature.delta.*` → Differenzen (Kollektor–Luft, Oberfläche–Grund, Vorlauf–Rücklauf).  
+- `temperature.[sensor].current` → aktueller Wert (°C).  
+- `temperature.[sensor].min_today` / `max_today` → Tages-Min/Max (°C, persistent).  
+- `temperature.[sensor].delta_per_hour` → Änderung pro Stunde (°C/h).  
+- `temperature.delta.collector_outside` → Kollektor – Außentemperatur.  
+- `temperature.delta.surface_ground` → Oberfläche – Grund.  
+- `temperature.delta.flow_return` → Vorlauf – Rücklauf.  
+
+*Wichtig: Die Temperaturwerte sind Basis für Solarsteuerung, Frostschutz und Statusübersicht.*  
 
 ---
 
 ## 5. Solarverwaltung
 **Tab: „Solarverwaltung“**  
-- **Solarsteuerung aktivieren** → schaltet den Logikblock ein/aus.  
-- **Hysterese aktivieren** → verhindert häufiges Ein-/Ausschalten.  
-- **Kollektortemperatur EIN/AUS-Grenze** → definiert Schwellwerte für Zuschaltung.  
-- **Kollektortemperatur-Warnung aktivieren** → überwacht die Kollektortemperatur.  
-- **Warnschwelle Kollektortemperatur (°C)** → ab dieser Temperatur wird eine Warnung ausgelöst.  
-- **Bei Warnung Sprachausgabe/Benachrichtigung** → löst zusätzlich eine Meldung über Alexa/Telegram aus.  
+- **solar.solar_control_active** → Solarsteuerung aktivieren/deaktivieren.  
+- **solar.hysteresis_active** → Hysterese aktiv (verhindert ständiges Ein/Aus).  
+- **solar.temp_on / temp_off** → Einschalt- und Ausschaltgrenzen (°C).  
+- **solar.collector_warning** → zeigt an, ob aktuell eine Übertemperatur-Warnung aktiv ist.  
+- **solar.warn_active / solar.warn_temp / solar.warn_speech** → Steuerung der Warnlogik.  
 
-**Datenpunkte:**  
-- `solar.collector_warning` → zeigt an, ob aktuell eine Warnung aktiv ist.  
-
-**Hinweise:**  
-- Die Warnung wird automatisch zurückgesetzt, sobald die Temperatur **10 % unter die eingestellte Schwelle** fällt.  
+*Wichtig: Die Solarlogik entscheidet direkt, ob `pump.pump_switch = true` gesetzt wird.*  
 
 ---
 
 ## 6. Zeitsteuerung
-**Tab: „Zeitsteuerung“**
+**Tab: „Zeitsteuerung“**  
 - Bis zu 3 Zeitfenster (Startzeit, Endzeit, Wochentage).  
 - Nur aktiv, wenn `pump.mode = time`.  
+
+**Datenpunkte:**  
+- `timecontrol.time1_active` → Zeitfenster 1 aktiv  
+- `timecontrol.time1_start` / `timecontrol.time1_end` → Start- und Endzeit (HH:MM)  
+- `timecontrol.time1_day_mon..sun` → Wochentage für Zeitfenster gültig  
 
 ---
 
 ## 7. Laufzeit & Umwälzung
-**Datenpunkte (automatisch):**  
-- `runtime.total` → Gesamtlaufzeit der Pumpe.  
-- `runtime.today` → Laufzeit heute.  
+**Datenpunkte:**  
+- `runtime.total` → Gesamtlaufzeit der Pumpe (s).  
+- `runtime.today` → Laufzeit heute (s).  
 - `runtime.formatted` → Formatierte Anzeige („Xh Ym“).  
-- `circulation.daily_total` → heute bereits umgewälzte Wassermenge.  
-- `circulation.daily_remaining` → Restmenge bis zum Tagesziel.  
+- `circulation.daily_total` → heute bereits umgewälzte Wassermenge (Liter).  
+- `circulation.daily_required` → erforderliche Umwälzmenge pro Tag (abhängig von Poolgröße & Faktor).  
+- `circulation.daily_remaining` → Restmenge bis Soll-Umwälzung.  
+
+*Wichtig: Diese Werte zeigen, ob die tägliche Mindestumwälzung erreicht ist.*  
 
 ---
 
-## 8. Fehlermeldungen & Quittierung
-- Fehler setzen den Datenpunkt `pump.error = true` und Status auf „FEHLER“.  
-- Bei Überlast wird die Pumpe **automatisch abgeschaltet** und `pump.mode = off`.  
-- **Quittierung:** Nutzer muss `pump.error` manuell wieder auf `false` setzen, bevor der Modus erneut geändert werden kann.  
+## 8. Verbrauch & Kosten
+**Tab: „Verbrauch & Kosten“**  
+- **consumption.total_kwh** → Gesamtverbrauch (kWh).  
+- **consumption.day_kwh / week_kwh / month_kwh / year_kwh** → Verbrauchswerte je Zeitraum.  
+- **costs.total_eur / day_eur / week_eur / month_eur / year_eur** → Kosten in Euro (basierend auf konfiguriertem Strompreis).  
+
+*Wichtig: Hilft beim Monitoring des Energieverbrauchs und zur Kostenabschätzung.*  
 
 ---
 
 ## 9. Sprachausgaben
-**Tab: „Sprachausgaben“**
-- **Sprachausgaben aktivieren** → Hauptschalter für alle Ansagen.
-- **Alexa-Ausgabe aktivieren** → Auswahl des Geräts, Lautstärke und Stimme (weiblich/männlich).
-- **Telegram-Ausgabe aktivieren** → Auswahl der Telegram-Instanz für Textnachrichten.
-- **Temperaturschwelle (°C)** → ab dieser Temperatur wird eine Ansage erzeugt.
-- **Fehlermeldungen ansagen** → entscheidet, ob Pumpenfehler auch gesprochen/gesendet werden.
+**Tab: „Sprachausgaben“**  
+- **speech.active** → Hauptschalter für Sprachausgaben.  
+- **speech.start_text / speech.end_text** → Texte für Pumpenstart/-stopp.  
+- **speech.last_text** → zuletzt gesprochener Text.  
+- **speech.texts.[sensor]** → optionale Textausgaben für Sensorwerte.  
 
-**Datenpunkte:**
-- `speech.active` → Schalter für globale Aktivierung.
-- `speech.start_text` / `speech.end_text` → frei definierbare Texte beim Pumpenstart/-stopp.
-- `speech.texts.[sensor]` → optionale Texte für einzelne Sensoren.
-- `speech.last_text` → zeigt den zuletzt gesprochenen/gesendeten Text.
-
-**Hinweise:**
-- Alexa-Ausgabe erfolgt über den Datenpunkt `.speak` des ausgewählten Echo-Geräts.
-- Telegram-Ausgabe erfolgt als Nachricht an die konfigurierte Instanz.
+*Wichtig: Ermöglicht direkte Benachrichtigungen über Pumpen- und Temperaturereignisse.*  
 
 ---
 
-## 10. Verbrauch & Kosten
-**Tab: „Verbrauch & Kosten“**
-- **Verbrauchs- und Kostenberechnung aktivieren** → Schaltet den Bereich ein.
-- **Objekt-ID externer kWh-Zähler** → Messsteckdose oder anderes Gerät mit kWh-Gesamtzähler.
-- **Strompreis (€ / kWh)** → Grundlage für Kostenberechnung.
+## 10. Statusübersicht
+Ab Version 0.0.10 gibt es einen eigenen Bereich `status.*`:  
+- **status.summary** → Textzusammenfassung (Pumpe, Modus, Temperaturen, Laufzeit, Umwälzung).  
+- **status.overview_json** → maschinenlesbare JSON-Zusammenfassung.  
+- **status.last_summary_update** → Zeitpunkt der letzten Aktualisierung.  
+- **status.pump_last_start / pump_last_stop** → Zeitpunkt letzter Start/Stop.  
+- **status.pump_was_on_today** → Bool, ob die Pumpe heute eingeschaltet war.  
+- **status.pump_today_count** → Anzahl der Starts heute.  
+- **status.system_ok** → Bool, ob das System fehlerfrei läuft.  
+- **status.system_warning / system_warning_text** → aktive Systemwarnung.  
+- **status.season_active** → Bool, ob die Poolsaison aktiv ist.  
 
-**Datenpunkte:**
-- `consumption.total_kwh` → Gesamtverbrauch laut Zähler.
-- `consumption.day_kwh`, `week_kwh`, `month_kwh`, `year_kwh` → Verbrauch je Periode.
-- `costs.total_eur`, `day_eur`, `week_eur`, `month_eur`, `year_eur` → Kostenberechnung anhand Strompreis.
-
-**Hinweise:**
-- Für die Verbrauchs- und Kostenberechnung ist ein externer kWh-Zähler erforderlich (z. B. Messsteckdose).
-- Ohne kWh-Zähler erfolgt keine Berechnung.
-- Baselines (Startwerte) werden automatisch gesetzt und täglich zu Mitternacht zurückgestellt.
+*Wichtig: Diese States geben eine zentrale Übersicht für Visualisierung (z. B. in VIS/vis2 Widgets).*  
 
 ---
 
-## 10 A. Hinweise zur Verbrauchslogik
-
-- **Gesamtwerte (`consumption.total_kwh`, `costs.total_eur`)**  
-  Diese Werte sind absolute Summen. Sie steigen kontinuierlich an und enthalten auch einen internen Offset, falls der externe Zähler zurückgesetzt oder die Messsteckdose gewechselt wird. Dadurch gehen Gesamtwerte nicht verloren.
-
-- **Periodenwerte (`day_kwh`, `week_kwh`, `month_kwh`, `year_kwh` und die Kosten-Pendants)**  
-  Diese Werte zeigen den Verbrauch innerhalb der aktuellen Periode.  
-  - `day_*` beginnt jeden Tag um Mitternacht neu bei 0.  
-  - `week_*` beginnt jeden Montag neu bei 0.  
-  - `month_*` beginnt am 1. des Monats neu bei 0.  
-  - `year_*` beginnt am 1. Januar neu bei 0.  
-
-- **Neustarts & Stromausfälle**  
-  Alle Werte bleiben bei einem Neustart des Adapters oder bei einem Stromausfall erhalten, da sie in der ioBroker-Datenbank gespeichert werden. Nach Wiederanlauf werden sie korrekt weitergeführt.
+## 11. Fehlermeldungen & Quittierung
+- Fehler setzen den Datenpunkt `pump.error = true` und Status auf „FEHLER“.  
+- Bei Überlast wird die Pumpe **automatisch abgeschaltet** (`pump.mode = off`).  
+- **Quittierung:** Nutzer muss `pump.error` manuell wieder auf `false` setzen, bevor der Modus erneut geändert werden kann.  
 
 ---
 
-## 11. Frostschutz
-**Tab: „Pumpe“**  
-- **Frostschutz aktivieren** → schaltet die Frostschutz-Logik ein.  
-- **Frostschutz-Temperatur (°C)** → Grenzwert, ab dem die Pumpe bei Frost eingeschaltet wird.  
-
-**Funktionsweise:**  
-- Der Frostschutz ist **nur aktiv im Modus `auto`**.  
-- Wenn die Außentemperatur **≤ eingestellter Wert**, schaltet der Adapter die Pumpe automatisch EIN.  
-- Wenn die Außentemperatur wieder **≥ (Grenzwert + 1 °C)** liegt, schaltet der Adapter die Pumpe automatisch AUS (Hysterese).  
-- Damit wird ein Einfrieren von Leitungen und Pumpe bei Frost verhindert.  
-
-**Datenpunkte:**  
-- `pump.frost_protection_active` → Schalter, ob Frostschutz aktiv ist.  
-- `pump.frost_protection_temp` → Grenzwert für Frostschutz in °C.  
-
----
-
-## 12. Tipps zur Steuerung
-- Über Datenpunkte kann die Pumpe direkt geschaltet oder der Modus geändert werden.  
-- Automatisierungen (z. B. Solar, Zeit) greifen nur, wenn der passende Modus aktiv ist.  
-- Sicherheitsfunktionen (Frostschutz, Überlast) sind unabhängig vom Modus wirksam.  
-
----
-
-## 13. Weitere Hinweise
-- Alle Datenpunkte sind im Objektbaum unter `poolcontrol.*` zu finden.  
-- Erweiterte Funktionen (Wartung) sind in Planung und werden in zukünftigen Versionen ergänzt.  
