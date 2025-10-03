@@ -938,7 +938,7 @@
         },
         "helpText": {
           "type": "staticText",
-          "text": "Hier finden Sie die vollständige Dokumentation und Hinweise zu allen Einstellungen. Weitere Hinweise zu künftigen Versionen folgen."
+          "text": "Hier finden Sie die vollständige Dokumentation und Hinweise zu allen Einstellungen. Weitere Hinweise zu künftigen Versionen folgen.",
           "xs": 12,
           "sm": 12,
           "md": 12,
