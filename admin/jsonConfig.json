@@ -558,7 +558,6 @@
 		  "md": 3,
 		  "lg": 3,
 		  "xl": 3,
-		  "newLine": true
         },
         "time2_end": {
           "type": "text",
