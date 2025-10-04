@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
+      "0.1.1": {
+       "en": "Fixed endless loop between pump_switch and deviceId for some smart sockets",
+       "de": "Endlosschleife zwischen pump_switch und Steckdose (deviceId) behoben",
+       "ru": "Исправлен бесконечный цикл между pump_switch и deviceId для некоторых умных розеток",
+       "pt": "Corrigido loop infinito entre pump_switch e deviceId em algumas tomadas inteligentes",
+       "nl": "Eindeloze lus tussen pump_switch en deviceId voor sommige slimme stopcontacten opgelost",
+       "fr": "Correction d'une boucle infinie entre pump_switch et deviceId pour certaines prises intelligentes",
+       "it": "Corretto loop infinito tra pump_switch e deviceId per alcune prese intelligenti",
+       "es": "Corregido bucle infinito entre pump_switch y deviceId en algunos enchufes inteligentes",
+       "pl": "Naprawiono nieskończoną pętlę między pump_switch a deviceId dla niektórych inteligentnych gniazdek",
+       "uk": "Виправлено нескінченний цикл між pump_switch і deviceId для деяких розумних розеток",
+       "zh-cn": "修复了某些智能插座中 pump_switch 与 deviceId 之间的无限循环"
+      },
       "0.1.0": {
        "en": "Added speech output via E-Mail (configurable: instance, recipient, subject)",
        "de": "Sprachausgabe per E-Mail hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff)",
@@ -28,19 +41,6 @@
        "pl": "Dodano rozszerzony przegląd statusu ze statystykami pompy, flagami systemowymi i podsumowaniem JSON",
        "uk": "Додано розширений огляд статусу зі статистикою насоса, системними прапорцями та зведенням JSON",
        "zh-cn": "新增扩展状态概览，包括泵统计、系统标志和 JSON 摘要"
-      },
-	  "0.0.9": {
-        "en": "Made runtime, circulation, consumption/costs and temperature min/max states persistent across restarts",
-        "de": "Laufzeit-, Umwälz-, Verbrauch-/Kosten- und Temperatur-Min/Max-States bleiben jetzt über Neustarts erhalten",
-        "ru": "Состояния времени работы, циркуляции, потребления/стоимости и мин/макс температуры теперь сохраняются при перезапуске",
-        "pt": "Estados de tempo de execução, circulação, consumo/custos e temperatura min/máx agora persistem após reinicializações",
-        "nl": "Runtime-, circulatie-, verbruiks-/kosten- en temperatuur min/max-states blijven nu behouden bij herstart",
-        "fr": "Les états de durée, de circulation, de consommation/coûts et de température min/max persistent désormais après redémarrage",
-        "it": "Gli stati di runtime, circolazione, consumo/costi e temperatura min/max ora persistono ai riavvii",
-        "es": "Los estados de tiempo de ejecución, circulación, consumo/costos y temperatura min/máx ahora persisten tras reinicios",
-        "pl": "Stany czasu pracy, cyrkulacji, zużycia/kosztów i temp. min/max są teraz zachowane po restartach",
-        "uk": "Стан часу роботи, циркуляції, споживання/вартості та мін/макс температури тепер зберігаються після перезапусків",
-        "zh-cn": "运行时间、循环、消耗/成本和温度最小/最大状态现在在重启后保持"
       }
     },
     "titleLang": {
