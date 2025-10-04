@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
+      "0.1.2": {
+       "en": "Improved: The last known temperature values of all active sensors are now read at adapter start. Sensors that report rarely are now displayed correctly.",
+       "de": "Verbesserung: Beim Adapterstart werden nun die letzten bekannten Temperaturwerte aller aktiven Sensoren übernommen. Sensoren, die nur selten Werte senden, werden jetzt korrekt angezeigt.",
+       "ru": "Улучшение: При запуске адаптера теперь считываются последние известные значения температуры всех активных датчиков.",
+       "pt": "Melhoria: Os últimos valores de temperatura conhecidos de todos os sensores ativos agora são lidos ao iniciar o adaptador.",
+       "nl": "Verbetering: Bij het starten van de adapter worden nu de laatst bekende temperatuurwaarden van alle actieve sensoren opgehaald.",
+       "fr": "Amélioration : les dernières valeurs de température connues de tous les capteurs actifs sont désormais lues au démarrage de l’adaptateur.",
+       "it": "Miglioramento: all'avvio dell'adattatore vengono ora letti gli ultimi valori di temperatura noti di tutti i sensori attivi.",
+       "es": "Mejora: ahora se leen al iniciar el adaptador los últimos valores de temperatura conocidos de todos los sensores activos.",
+       "pl": "Ulepszenie: podczas uruchamiania adaptera odczytywane są ostatnie znane wartości temperatury wszystkich aktywnych czujników.",
+       "uk": "Покращення: під час запуску адаптера тепер зчитуються останні відомі значення температури всіх активних датчиків.",
+       "zh-cn": "改进：适配器启动时现在会读取所有活动传感器的最后已知温度值。"
+      },
       "0.1.1": {
        "en": "Fixed endless loop between pump_switch and deviceId for some smart sockets",
        "de": "Endlosschleife zwischen pump_switch und Steckdose (deviceId) behoben",

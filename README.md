@@ -94,6 +94,11 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.1.2
+- Verbesserung: Beim Adapterstart werden nun die letzten bekannten Temperaturwerte aller aktiven Sensoren (z. B. Oberfläche, Kollektor, Außentemperatur usw.) automatisch übernommen.  
+- Dadurch werden auch Sensoren korrekt angezeigt, die ihren Messwert nur selten aktualisieren (z. B. Homematic oder stromsparende Funk-Sensoren).  
+- Keine Änderung am Verhalten der restlichen Logik, reine Komfort- und Stabilitätsverbesserung.
+
 ### 0.1.1
 - Fehlerbehebung: Endlosschleife zwischen `pump_switch` und externer Steckdose (`deviceId`) behoben, die bei bestimmten Smart-Steckdosen (z. B. Shelly, Tasmota, FritzDECT) auftreten konnte.  
 - Verbesserte Stabilität im `pumpHelper` durch interne Rückkopplungsprüfung.  
