@@ -98,7 +98,6 @@ Auszug, vollständige Liste siehe `io-package.json`:
 - Fehlerbehebung: Endlosschleife zwischen `pump_switch` und externer Steckdose (`deviceId`) behoben, die bei bestimmten Smart-Steckdosen (z. B. Shelly, Tasmota, FritzDECT) auftreten konnte.  
 - Verbesserte Stabilität im `pumpHelper` durch interne Rückkopplungsprüfung.  
 - Keine Änderungen an bestehenden Konfigurationen erforderlich.
-- Bigfixes
 
 ### 0.1.0
 - Sprachausgabe über **E-Mail** hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff).
