@@ -94,6 +94,11 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
 
+### 0.1.1
+- Fehlerbehebung: Endlosschleife zwischen `pump_switch` und externer Steckdose (`deviceId`) behoben, die bei bestimmten Smart-Steckdosen (z. B. Shelly, Tasmota, FritzDECT) auftreten konnte.  
+- Verbesserte Stabilität im `pumpHelper` durch interne Rückkopplungsprüfung.  
+- Keine Änderungen an bestehenden Konfigurationen erforderlich.
+
 ### 0.1.0
 - Sprachausgabe über **E-Mail** hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff).
 - Erweiterung der Instanz-Konfiguration im Tab „Sprachausgaben“.
@@ -130,12 +135,6 @@ Diese Datenpunkte sind besonders für **VIS/vis2, Alexa- oder Telegram-Ausgaben*
 
 ### 0.0.7
 - Help-Datei (`help.md`) und erste README-Version hinzugefügt
-
-### 0.0.6
-- Verbrauchs- und Kostenberechnung mit externem kWh-Zähler
-
-### 0.0.5
-- Sprachausgabe über Alexa und Telegram
 
 ### 0.0.1
 - initial release
