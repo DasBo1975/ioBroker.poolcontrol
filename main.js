@@ -14,6 +14,7 @@ const consumptionHelper = require('./lib/helpers/consumptionHelper');
 const solarHelper = require('./lib/helpers/solarHelper');
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
+const controlHelper = require('./lib/helpers/controlHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
@@ -23,6 +24,7 @@ const { createRuntimeStates } = require('./lib/stateDefinitions/runtimeStates');
 const { createSpeechStates } = require('./lib/stateDefinitions/speechStates');
 const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionStates');
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
+const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -71,6 +73,9 @@ class Poolcontrol extends utils.Adapter {
             ack: true,
         });
 
+        // --- Control States ---
+        await createControlStates(this);
+
         // --- Helper starten ---
         temperatureHelper.init(this);
         timeHelper.init(this);
@@ -81,6 +86,7 @@ class Poolcontrol extends utils.Adapter {
         solarHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
+        controlHelper.init(this);
     }
 
     onUnload(callback) {
@@ -111,6 +117,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (statusHelper.cleanup) {
                 statusHelper.cleanup();
+            }
+            if (controlHelper.cleanup) {
+                controlHelper.cleanup();
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
@@ -162,6 +171,9 @@ class Poolcontrol extends utils.Adapter {
             statusHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[statusHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        if (id.includes('control.')) {
+            controlHelper.handleStateChange(id, state);
         }
     }
 }
