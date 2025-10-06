@@ -160,3 +160,127 @@ Ab Version 0.0.10 gibt es einen eigenen Bereich `status.*`:
 
 ---
 
+## 12. SystemCheck – Diagnose und Debug-Logs
+
+Der Bereich **SystemCheck** dient zur internen Analyse und Diagnose des PoolControl-Adapters.  
+Hier können Entwickler und erfahrene Anwender gezielt prüfen, wie sich bestimmte Werte im laufenden Betrieb verändern.
+
+---
+
+## 13. Steuerung (Controlhelper) im Objektbereich poolcontrol.control
+
+  Der Bereich Steuerung (ControlHelper) umfasst alle automatischen und manuellen Sonderfunktionen,
+  die direkt in den Poolbetrieb eingreifen – etwa Wartungsmodus, Rückspülung, Energie-Reset
+  und die tägliche Umwälzungsprüfung mit Nachpumpfunktion.
+
+  Diese Logik wird intern durch die Datei controlHelper.js gesteuert.
+  Sie sorgt dafür, dass alle Aktionen zeitlich korrekt ausgeführt und automatisch wieder beendet werden.
+
+  🧰 Wartungsmodus
+
+  Der Wartungsmodus wird über den Datenpunkt
+  control.pump.maintenance_active aktiviert oder deaktiviert.
+
+  Wenn aktiviert, schaltet der Adapter:
+
+  die Pumpe aus,
+
+  den Modus auf „controlHelper“,
+
+  und pausiert alle Automatikfunktionen (Solar, Zeitsteuerung, Nachpumpen).
+
+  Wenn deaktiviert, wird der vorherige Pumpenmodus automatisch wiederhergestellt
+  (meist auto oder time).
+
+  Optional werden Sprachausgaben oder Benachrichtigungen gesendet, wenn diese aktiviert sind.
+  So bleibt der Wartungsbetrieb sauber vom Automatikmodus getrennt.
+
+  🔁 Rückspülung
+
+  Die Rückspülung wird über den Datenpunkt
+  control.pump.backwash_start ausgelöst.
+
+  Ablauf:
+
+  Nach dem Start wird der Button sofort wieder auf false gesetzt (Impulsfunktion).
+
+  Der Status control.pump.backwash_active zeigt während der Laufzeit an, dass die Rückspülung läuft.
+
+  Die Laufzeit wird über control.pump.backwash_duration (in Minuten) festgelegt.
+
+  Nach Ablauf der Zeit:
+
+  Pumpe wird automatisch ausgeschaltet,
+
+  der vorherige Pumpenmodus wird wiederhergestellt,
+
+  der Status backwash_active geht auf false.
+
+  Bei aktivierten Benachrichtigungen wird zusätzlich eine Meldung oder Sprachausgabe ausgegeben
+  (z. B. „Rückspülung abgeschlossen. Automatikmodus wieder aktiv.“).
+
+  ⚡ Energie-Reset
+
+  Der Datenpunkt control.energy.reset setzt alle Verbrauchs- und Kostenwerte auf 0.
+  Beim Auslösen:
+
+  werden alle zugehörigen States (consumption.*, costs.*) zurückgesetzt,
+
+  der Schalter wird danach automatisch wieder auf false gesetzt,
+
+  und optional wird eine Benachrichtigung mit Zeitstempel gesendet
+  (z. B. „Energiezähler wurde am 06.10.2025 vollständig zurückgesetzt“).
+
+  Diese Funktion ist hilfreich, wenn die Messsteckdose gewechselt oder ein neuer Strompreis gesetzt wurde.
+
+ 💧 Tägliche Umwälzprüfung & Nachpumpen
+
+  Der ControlHelper überprüft einmal täglich, ob die Soll-Umwälzmenge erreicht wurde.
+  Die Uhrzeit für diesen Check ist über control.circulation.check_time frei einstellbar (Standard: 18:00 Uhr).
+
+  Der Modus der Umwälzprüfung (control.circulation.mode) bestimmt das Verhalten:
+
+  Modus	Beschreibung
+  notify	Nur Tagesbericht, keine Aktion.
+  manual	Bericht mit Hinweis, dass die Pumpe manuell eingeschaltet werden soll.
+  auto		Automatisches Nachpumpen bis zur Zielmenge, wenn der Kollektor wärmer als der Pool ist.
+
+  Bei aktivem Automatikmodus schaltet der Adapter:
+
+  pump.mode auf controlHelper,
+
+  pump.reason auf nachpumpen,
+
+  startet die Pumpe,
+
+  und beendet den Vorgang automatisch, sobald die Zielmenge erreicht ist.
+
+  Auch hier werden optionale Benachrichtigungen oder Sprachausgaben ausgegeben,
+  damit der Nutzer über den Status informiert bleibt.
+
+### 🧩 Debug-Logs
+Über den Kanal `SystemCheck.debug_logs` kann ein einzelner Bereich der Instanz (z. B. *pump*, *solar*, *runtime*, *temperature*, *control* usw.) überwacht werden.  
+Dazu stehen folgende Datenpunkte zur Verfügung:
+
+| Datenpunkt | Beschreibung |
+|-------------|--------------|
+| **target_area** | Auswahl, welcher Bereich überwacht werden soll. Nur ein Bereich kann gleichzeitig aktiv sein. |
+| **log** | Fortlaufendes Textprotokoll der erfassten Änderungen und Zeitabstände. |
+| **clear** | Löscht den Inhalt des Logs vollständig. |
+
+---
+
+### ⚙️ Funktionsweise
+Nach der Auswahl eines Bereichs beginnt der Adapter automatisch damit, auffällige Änderungen (z. B. zu schnelle Statuswechsel oder häufige Wertupdates) aufzuzeichnen.  
+Das Log kann anschließend direkt im Textfeld eingesehen oder kopiert werden.
+
+Dieses Werkzeug dient in erster Linie zur Fehlersuche und Optimierung.  
+Im Normalbetrieb sollte die Überwachung deaktiviert bleiben, um Systemressourcen zu schonen.
+
+---
+
+### 🧠 Hinweis
+Der Bereich *SystemCheck* wird in zukünftigen Versionen um weitere Diagnosefunktionen erweitert,  
+z. B. automatische Plausibilitätsprüfungen oder Exportfunktionen für Supportzwecke.
+
+
