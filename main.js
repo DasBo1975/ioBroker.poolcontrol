@@ -15,6 +15,7 @@ const solarHelper = require('./lib/helpers/solarHelper');
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
+const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
@@ -25,6 +26,7 @@ const { createSpeechStates } = require('./lib/stateDefinitions/speechStates');
 const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionStates');
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 const { createControlStates } = require('./lib/stateDefinitions/controlStates');
+const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -76,6 +78,9 @@ class Poolcontrol extends utils.Adapter {
         // --- Control States ---
         await createControlStates(this);
 
+        // --- DebugLog Staets ---
+        await createDebugLogStates(this);
+
         // --- Helper starten ---
         temperatureHelper.init(this);
         timeHelper.init(this);
@@ -87,6 +92,7 @@ class Poolcontrol extends utils.Adapter {
         frostHelper.init(this);
         statusHelper.init(this);
         controlHelper.init(this);
+        debugLogHelper.init(this);
     }
 
     onUnload(callback) {
@@ -175,6 +181,8 @@ class Poolcontrol extends utils.Adapter {
         if (id.includes('control.')) {
             controlHelper.handleStateChange(id, state);
         }
+
+        await debugLogHelper.handleStateChange(id, state);
     }
 }
 
