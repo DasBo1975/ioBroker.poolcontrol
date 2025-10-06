@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+       "en": "New diagnostic area 'SystemCheck' for internal debug logs and future analysis tools.",
+       "de": "Neuer Diagnosebereich 'SystemCheck' für interne Debug-Logs und künftige Analysefunktionen.",
+       "ru": "Новая диагностическая область 'SystemCheck' для внутренних журналов отладки и будущих инструментов анализа.",
+       "pt": "Nova área de diagnóstico 'SystemCheck' para logs de depuração internos e futuras ferramentas de análise.",
+       "nl": "Nieuw diagnostisch gebied 'SystemCheck' voor interne foutopsporingslogboeken en toekomstige analysetools.",
+       "fr": "Nouvelle zone de diagnostic 'SystemCheck' pour les journaux de débogage internes et les futurs outils d'analyse.",
+       "it": "Nuova area diagnostica 'SystemCheck' per i log di debug interni e futuri strumenti di analisi.",
+       "es": "Nueva área de diagnóstico 'SystemCheck' para registros internos de depuración y futuras herramientas de análisis.",
+       "pl": "Nowy obszar diagnostyczny 'SystemCheck' dla wewnętrznych dzienników debugowania i przyszłych narzędzi analitycznych.",
+       "uk": "Нова діагностична область 'SystemCheck' для внутрішніх журналів налагодження та майбутніх інструментів аналізу.",
+       "zh-cn": "新的诊断区域“SystemCheck”，用于内部调试日志和未来的分析工具。"
+      },
       "0.1.2": {
        "en": "Improved: The last known temperature values of all active sensors are now read at adapter start. Sensors that report rarely are now displayed correctly.",
        "de": "Verbesserung: Beim Adapterstart werden nun die letzten bekannten Temperaturwerte aller aktiven Sensoren übernommen. Sensoren, die nur selten Werte senden, werden jetzt korrekt angezeigt.",

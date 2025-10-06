@@ -48,6 +48,18 @@ Er ermöglicht die Automatisierung von Pumpen, Temperatur- und Solarsteuerung so
   - Ausgabe über Alexa oder Telegram
   - Ansagen bei Pumpenstart/-stopp, Fehlern oder Temperaturschwellen
 
+- **Systemcheck (Diagnosebereich)**
+  Ab Version **0.2.0** enthält der Adapter einen neuen Diagnosebereich **SystemCheck**.  
+  Er bietet interne Debug-Logs, mit denen bestimmte Teilbereiche (z. B. Pumpen-, Solar- oder Temperatursteuerung) gezielt überwacht werden können.
+
+  *Funktionen:*
+  - Auswahl des zu überwachenden Bereichs
+  - Fortlaufendes Log der letzten Änderungen
+  - Manuelles Löschen des Logs möglich
+
+  Dieser Bereich dient ausschließlich der Analyse und Fehlerdiagnose.  
+  Im normalen Betrieb sollte die Überwachung deaktiviert bleiben.
+
 ---
 
 ## Installation
@@ -93,6 +105,14 @@ Funktionen können sich ändern, bitte regelmäßig den Changelog beachten.
 
 ## Changelog
 Auszug, vollständige Liste siehe `io-package.json`:
+
+### 0.2.0 (2025-10-06)
+- Neuer Diagnosebereich **SystemCheck** für interne Debug-Logs und Analysen.
+- Möglichkeit, einzelne Adapterbereiche (z. B. Pumpe, Solar, Temperatur) gezielt zu überwachen.
+- Fortlaufendes Textprotokoll mit manueller Löschfunktion.
+- Alle bisherigen Debug-Funktionen aus `zz_debuglogs` in `SystemCheck.debug_logs` integriert.
+- Vorbereitung für zukünftige Diagnose-Erweiterungen (Export, Systemprüfung, Plausibilitäts-Checks).
+
 
 ### 0.1.2
 - Verbesserung: Beim Adapterstart werden nun die letzten bekannten Temperaturwerte aller aktiven Sensoren (z. B. Oberfläche, Kollektor, Außentemperatur usw.) automatisch übernommen.  
