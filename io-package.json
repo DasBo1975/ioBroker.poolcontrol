@@ -115,6 +115,11 @@
     "extIcon": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/main/admin/poolcontrol.png",
     "readme": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/README.md",
     "loglevel": "info",
+    "ignoreLogs": [
+      "State .*speech\\.solar_active.* has no existing object",
+      "State .*speech\\.frost_active.* has no existing object",
+      "State .*speech\\.time_active.* has no existing object"
+    ],
     "tier": 3,
     "mode": "daemon",
     "type": "climate-control",
