@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+       "en": "Fixed the issue with invisible states for speech control and added proper internal variable handling.",
+       "de": "Behebung des Problems mit unsichtbaren States für die Sprachsteuerung und hinzugefügte korrekte Handhabung interner Variablen.",
+       "ru": "Исправлена проблема с невидимыми состояниями для управления речью и добавлена правильная обработка внутренних переменных.",
+       "pt": "Corrigido o problema com estados invisíveis para controle de fala e adicionada a manipulação adequada de variáveis internas.",
+       "nl": "Het probleem met onzichtbare toestanden voor spraakbesturing is opgelost en de juiste verwerking van interne variabelen toegevoegd.",
+       "fr": "Correction du problème des états invisibles pour le contrôle vocal et ajout d'un traitement correct des variables internes.",
+       "it": "Risolto il problema con gli stati invisibili per il controllo vocale e aggiunto un corretto trattamento delle variabili interne.",
+       "es": "Se solucionó el problema con los estados invisibles para el control de voz y se añadió el manejo adecuado de las variables internas.",
+       "pl": "Naprawiono problem z niewidzialnymi stanami dla kontroli głosowej i dodano prawidłowe przetwarzanie zmiennych wewnętrznych.",
+       "uk": "Виправлено проблему з невидимими станами для керування голосом та додано правильну обробку внутрішніх змінних.",
+       "zh-cn": "修复了语音控制的隐形状态问题，并添加了正确的内部变量处理。"
+      },
       "0.2.0": {
        "en": "New diagnostic area 'SystemCheck' for internal debug logs and future analysis tools.",
        "de": "Neuer Diagnosebereich 'SystemCheck' für interne Debug-Logs und künftige Analysefunktionen.",
