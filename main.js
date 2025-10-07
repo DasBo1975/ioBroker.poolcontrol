@@ -16,6 +16,7 @@ const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
+const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
@@ -93,6 +94,7 @@ class Poolcontrol extends utils.Adapter {
         statusHelper.init(this);
         controlHelper.init(this);
         debugLogHelper.init(this);
+        speechTextHelper.init(this);
     }
 
     onUnload(callback) {
@@ -126,6 +128,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (controlHelper.cleanup) {
                 controlHelper.cleanup();
+            }
+            if (speechTextHelper.cleanup) {
+                speechTextHelper.cleanup();
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
@@ -177,6 +182,11 @@ class Poolcontrol extends utils.Adapter {
             statusHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[statusHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            speechTextHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[speechTextHelper] Fehler in handleStateChange: ${e.message}`);
         }
         if (id.includes('control.')) {
             controlHelper.handleStateChange(id, state);
