@@ -15,6 +15,7 @@ const solarHelper = require('./lib/helpers/solarHelper');
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
+const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
@@ -93,6 +94,7 @@ class Poolcontrol extends utils.Adapter {
         frostHelper.init(this);
         statusHelper.init(this);
         controlHelper.init(this);
+        controlHelper2.init(this);
         debugLogHelper.init(this);
         speechTextHelper.init(this);
     }
@@ -128,6 +130,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (controlHelper.cleanup) {
                 controlHelper.cleanup();
+            }
+            if (controlHelper2.cleanup) {
+                controlHelper2.cleanup();
             }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
@@ -190,6 +195,9 @@ class Poolcontrol extends utils.Adapter {
         }
         if (id.includes('control.')) {
             controlHelper.handleStateChange(id, state);
+        }
+        if (id.includes('control.')) {
+            controlHelper2.handleStateChange(id, state);
         }
 
         await debugLogHelper.handleStateChange(id, state);
