@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "news": {
+      "0.2.2": {
+        "en": "Added automatic backwash reminder with speech and log notifications.",
+        "de": "Automatische Rückspülerinnerung mit Sprach- und Log-Benachrichtigung hinzugefügt.",
+        "ru": "Добавлено автоматическое напоминание о обратной промывке с голосовыми и журнальными уведомлениями.",
+        "pt": "Adicionado lembrete automático de retrolavagem com notificações de voz e registro.",
+        "nl": "Automatische terugspoelherinnering toegevoegd met spraak- en logmeldingen.",
+        "fr": "Ajout d’un rappel automatique de contre-lavage avec notifications vocales et journaux.",
+        "it": "Aggiunto promemoria automatico di controlavaggio con notifiche vocali e log.",
+        "es": "Recordatorio automático de contralavado añadido con notificaciones de voz y registro.",
+        "pl": "Dodano automatyczne przypomnienie o płukaniu wstecznym z powiadomieniami głosowymi i dziennikiem.",
+        "zh-cn": "添加了带语音和日志通知的自动反冲洗提醒。"
+      },
       "0.2.1": {
        "en": "Fixed the issue with invisible states for speech control and added proper internal variable handling.",
        "de": "Behebung des Problems mit unsichtbaren States für die Sprachsteuerung und hinzugefügte korrekte Handhabung interner Variablen.",
@@ -54,34 +66,7 @@
        "pl": "Naprawiono nieskończoną pętlę między pump_switch a deviceId dla niektórych inteligentnych gniazdek",
        "uk": "Виправлено нескінченний цикл між pump_switch і deviceId для деяких розумних розеток",
        "zh-cn": "修复了某些智能插座中 pump_switch 与 deviceId 之间的无限循环"
-      },
-      "0.1.0": {
-       "en": "Added speech output via E-Mail (configurable: instance, recipient, subject)",
-       "de": "Sprachausgabe per E-Mail hinzugefügt (konfigurierbar: Instanz, Empfänger, Betreff)",
-       "ru": "Добавлен вывод речи по электронной почте (настраивается: экземпляр, получатель, тема)",
-       "pt": "Adicionada saída de fala por e-mail (configurável: instância, destinatário, assunto)",
-       "nl": "Spraakuitvoer via e-mail toegevoegd (configureerbaar: instantie, ontvanger, onderwerp)",
-       "fr": "Ajout de la sortie vocale par e-mail (configurable : instance, destinataire, sujet)",
-       "it": "Aggiunta uscita vocale via e-mail (configurabile: istanza, destinatario, oggetto)",
-       "es": "Se agregó salida de voz por correo electrónico (configurable: instancia, destinatario, asunto)",
-       "pl": "Dodano wyjście głosowe przez e-mail (konfigurowalne: instancja, odbiorca, temat)",
-       "uk": "Додано озвучення електронною поштою (налаштовується: екземпляр, одержувач, тема)",
-       "zh-cn": "新增通过电子邮件的语音输出（可配置：实例、收件人、主题）"
-      },
-      "0.0.10": {
-       "en": "Added extended status overview with pump statistics, system flags and JSON summary",
-       "de": "Erweiterte Statusübersicht mit Pumpenstatistiken, Systemanzeigen und JSON-Zusammenfassung hinzugefügt",
-       "ru": "Добавлен расширенный обзор состояния с насосной статистикой, системными флагами и JSON-резюме",
-       "pt": "Adicionada visão geral de status estendida com estatísticas da bomba, sinalizadores do sistema e resumo em JSON",
-       "nl": "Uitgebreide statusoverzicht toegevoegd met pompstatistieken, systeemindicatoren en JSON-samenvatting",
-       "fr": "Aperçu du statut étendu ajouté avec statistiques de la pompe, indicateurs système et résumé JSON",
-       "it": "Aggiunta panoramica dello stato estesa con statistiche della pompa, indicatori di sistema e riepilogo JSON",
-       "es": "Añadida vista general de estado extendida con estadísticas de la bomba, indicadores del sistema y resumen en JSON",
-       "pl": "Dodano rozszerzony przegląd statusu ze statystykami pompy, flagami systemowymi i podsumowaniem JSON",
-       "uk": "Додано розширений огляд статусу зі статистикою насоса, системними прапорцями та зведенням JSON",
-       "zh-cn": "新增扩展状态概览，包括泵统计、系统标志和 JSON 摘要"
-      }
-    },
+    }
     "titleLang": {
       "en": "PoolControl",
       "de": "PoolControl",
