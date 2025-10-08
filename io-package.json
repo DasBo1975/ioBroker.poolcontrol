@@ -66,7 +66,8 @@
        "pl": "Naprawiono nieskończoną pętlę między pump_switch a deviceId dla niektórych inteligentnych gniazdek",
        "uk": "Виправлено нескінченний цикл між pump_switch і deviceId для деяких розумних розеток",
        "zh-cn": "修复了某些智能插座中 pump_switch 与 deviceId 之间的无限循环"
-    }
+	   }
+	},
     "titleLang": {
       "en": "PoolControl",
       "de": "PoolControl",
@@ -144,5 +145,5 @@
   },
   "objects": [],
   "instanceObjects": []
-  }
+}
 
