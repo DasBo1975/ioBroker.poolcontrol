@@ -83,7 +83,7 @@ class Poolcontrol extends utils.Adapter {
 
         // --- DebugLog Staets ---
         await createDebugLogStates(this);
-		
+
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
 
