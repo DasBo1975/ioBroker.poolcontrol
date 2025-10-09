@@ -18,6 +18,7 @@ const controlHelper = require('./lib/helpers/controlHelper');
 const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
+const migrationHelper = require('./lib/helpers/migrationHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
@@ -82,6 +83,9 @@ class Poolcontrol extends utils.Adapter {
 
         // --- DebugLog Staets ---
         await createDebugLogStates(this);
+		
+        // --- Migration Helper zuletzt starten ---
+        await migrationHelper.init(this);
 
         // --- Helper starten ---
         temperatureHelper.init(this);
