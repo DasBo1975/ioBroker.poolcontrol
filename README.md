@@ -121,6 +121,24 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+### 0.3.0 (12.10.2025)
+**Neu:** Intelligentes Pumpen-Monitoring & Lernsystem
+
+- Hinzugefügt: **Reelle Durchflussberechnung** auf Basis der tatsächlichen Leistungsaufnahme.  
+- Neuer Bereich **`pump.live`** zur Live-Überwachung von Leistung, Durchfluss und prozentualer Auslastung.  
+- Die **tägliche Umwälzberechnung** verwendet nun den realen Durchflusswert anstelle eines Fixwerts.  
+- Neuer Lernbereich **`pump.learning`**:
+  - Lernt automatisch die durchschnittlichen Leistungs- und Durchflusswerte.  
+  - Bestimmt daraus einen dynamischen **Normalbereich (± 15 %)**.  
+  - Berechnet prozentuale Abweichungen und erstellt **textbasierte Statusmeldungen**.  
+  - Alle Lernwerte werden **persistent** gespeichert und bleiben auch nach Neustart erhalten.  
+- Vollständig **ereignisgesteuerte Logik** ohne zusätzliche Timer oder Polling-Zyklen.  
+
+> Mit dieser Version beginnt die lernfähige Phase des PoolControl-Adapters:  
+> Deine Pumpe weiß jetzt selbst, was für sie „normal“ ist.
+
+---
+
 ### 0.2.2 (2025-10-08)
 - Einführung einer **automatischen Rückspülerinnerung** (neuer Bereich im ControlHelper2)
 - Erinnerung mit Intervall in Tagen und automatischer Rücksetzung nach erfolgter Rückspülung

@@ -258,6 +258,28 @@ Hier können Entwickler und erfahrene Anwender gezielt prüfen, wie sich bestimm
   Auch hier werden optionale Benachrichtigungen oder Sprachausgaben ausgegeben,
   damit der Nutzer über den Status informiert bleibt.
 
+### 14. Pumpen-Monitoring & Lernsystem (ab Version 0.3.0)
+
+Ab dieser Version kann der PoolControl-Adapter automatisch das typische Verhalten der Poolpumpe erlernen.  
+Dazu werden die realen Leistungs- und Durchflusswerte während des Betriebs ausgewertet und daraus ein sogenannter **Normalbereich** gebildet.
+
+Im Objektbaum finden Sie dafür den neuen Bereich **`pump.learning`**.  
+Hier werden verschiedene Lern- und Analysewerte angezeigt:
+
+- **Durchschnittliche Leistungsaufnahme** und **Durchflussmenge**,  
+  die aus mehreren realen Pumpenläufen ermittelt werden.  
+- Dynamisch berechnete **Grenzwerte des Normalbereichs (± 15 %)**.  
+- Aktuelle **Abweichungen in %** sowie eine **textbasierte Bewertung**,  
+  z. B. „Pumpe läuft im Normalbereich“ oder „unterhalb des Normalbereichs“.  
+- Die **Gesamtzahl der Lernzyklen**, die bereits in die Berechnung eingeflossen sind.
+
+Alle Werte werden **persistent gespeichert** und bleiben somit auch nach einem Neustart erhalten.  
+Sprachansagen werden in diesem Bereich **nicht** erzeugt – die Daten dienen ausschließlich der Diagnose und Analyse.
+
+Dieses Lernsystem bildet die Grundlage für zukünftige Erweiterungen wie  
+Diagnose-, Statistik- und Effizienz-Module (z. B. COP-Berechnung oder Wetteranalyse).
+
+
 ### 🧩 Debug-Logs
 Über den Kanal `SystemCheck.debug_logs` kann ein einzelner Bereich der Instanz (z. B. *pump*, *solar*, *runtime*, *temperature*, *control* usw.) überwacht werden.  
 Dazu stehen folgende Datenpunkte zur Verfügung:

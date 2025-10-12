@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "news": {
+      "0.3.0": {
+        "en": "Added real pump flow calculation, live monitoring, and self-learning normal range system for pump analysis.",
+        "de": "Reelle Durchflussberechnung, Liveüberwachung und selbstlernendes Normalbereich-System zur Pumpenanalyse hinzugefügt.",
+        "ru": "Добавлен расчет реального расхода насоса, живой мониторинг и самообучающаяся система нормальных диапазонов для анализа насоса.",
+        "pt": "Adicionada cálculo de fluxo real da bomba, monitoramento ao vivo e sistema autoaprendente de faixa normal para análise da bomba.",
+        "nl": "Reële pompdebietberekening, livebewaking en zelflerend normaalbereiksysteem voor pompanalyse toegevoegd.",
+        "fr": "Ajout du calcul du débit réel de la pompe, de la surveillance en direct et d’un système de plage normale auto-apprenant pour l’analyse de la pompe.",
+        "it": "Aggiunto calcolo del flusso reale della pompa, monitoraggio live e sistema autoapprendente di intervallo normale per l'analisi della pompa.",
+        "es": "Se añadió el cálculo del caudal real de la bomba, la monitorización en vivo y un sistema de rango normal autoaprendente para el análisis de la bomba.",
+        "pl": "Dodano obliczanie rzeczywistego przepływu pompy, monitorowanie na żywo i samouczący się system normalnego zakresu do analizy pompy.",
+        "zh-cn": "添加了实际泵流量计算、实时监控以及用于泵分析的自学习正常范围系统。"
+        },
       "0.2.2": {
         "en": "Added automatic backwash reminder with speech and log notifications.",
         "de": "Automatische Rückspülerinnerung mit Sprach- und Log-Benachrichtigung hinzugefügt.",
@@ -40,33 +52,7 @@
        "pl": "Nowy obszar diagnostyczny 'SystemCheck' dla wewnętrznych dzienników debugowania i przyszłych narzędzi analitycznych.",
        "uk": "Нова діагностична область 'SystemCheck' для внутрішніх журналів налагодження та майбутніх інструментів аналізу.",
        "zh-cn": "新的诊断区域“SystemCheck”，用于内部调试日志和未来的分析工具。"
-      },
-      "0.1.2": {
-       "en": "Improved: The last known temperature values of all active sensors are now read at adapter start. Sensors that report rarely are now displayed correctly.",
-       "de": "Verbesserung: Beim Adapterstart werden nun die letzten bekannten Temperaturwerte aller aktiven Sensoren übernommen. Sensoren, die nur selten Werte senden, werden jetzt korrekt angezeigt.",
-       "ru": "Улучшение: При запуске адаптера теперь считываются последние известные значения температуры всех активных датчиков.",
-       "pt": "Melhoria: Os últimos valores de temperatura conhecidos de todos os sensores ativos agora são lidos ao iniciar o adaptador.",
-       "nl": "Verbetering: Bij het starten van de adapter worden nu de laatst bekende temperatuurwaarden van alle actieve sensoren opgehaald.",
-       "fr": "Amélioration : les dernières valeurs de température connues de tous les capteurs actifs sont désormais lues au démarrage de l’adaptateur.",
-       "it": "Miglioramento: all'avvio dell'adattatore vengono ora letti gli ultimi valori di temperatura noti di tutti i sensori attivi.",
-       "es": "Mejora: ahora se leen al iniciar el adaptador los últimos valores de temperatura conocidos de todos los sensores activos.",
-       "pl": "Ulepszenie: podczas uruchamiania adaptera odczytywane są ostatnie znane wartości temperatury wszystkich aktywnych czujników.",
-       "uk": "Покращення: під час запуску адаптера тепер зчитуються останні відомі значення температури всіх активних датчиків.",
-       "zh-cn": "改进：适配器启动时现在会读取所有活动传感器的最后已知温度值。"
-      },
-      "0.1.1": {
-       "en": "Fixed endless loop between pump_switch and deviceId for some smart sockets",
-       "de": "Endlosschleife zwischen pump_switch und Steckdose (deviceId) behoben",
-       "ru": "Исправлен бесконечный цикл между pump_switch и deviceId для некоторых умных розеток",
-       "pt": "Corrigido loop infinito entre pump_switch e deviceId em algumas tomadas inteligentes",
-       "nl": "Eindeloze lus tussen pump_switch en deviceId voor sommige slimme stopcontacten opgelost",
-       "fr": "Correction d'une boucle infinie entre pump_switch et deviceId pour certaines prises intelligentes",
-       "it": "Corretto loop infinito tra pump_switch e deviceId per alcune prese intelligenti",
-       "es": "Corregido bucle infinito entre pump_switch y deviceId en algunos enchufes inteligentes",
-       "pl": "Naprawiono nieskończoną pętlę między pump_switch a deviceId dla niektórych inteligentnych gniazdek",
-       "uk": "Виправлено нескінченний цикл між pump_switch і deviceId для деяких розумних розеток",
-       "zh-cn": "修复了某些智能插座中 pump_switch 与 deviceId 之间的无限循环"
-	   }
+      }
 	},
     "titleLang": {
       "en": "PoolControl",

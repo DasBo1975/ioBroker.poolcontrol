@@ -5,16 +5,22 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
-## [0.3.0] – in Entwicklung
-**Geplant:**
-- Vollständige Helper-Struktur abgeschlossen (`controlHelper`, `statusHelper`, `speechHelper`, `solarHelper`, `pumpHelper`, `runtimeHelper`, usw.)
-- Rückspülsteuerung fertiggestellt mit automatischer Sprachmeldung
-- Neue Statusmeldungen im Bereich Control
-- Überarbeitung des `speechTextHelper` (ACK-Fix)
-- MigrationHelper ergänzt (automatische Anpassung veralteter States)
-- Vorbereitung auf Drucksensor-Integration (`pressureHelper`)
-- Beginn GitHub-Wiki mit Datenpunkt-Dokumentation
-- Vorbereitung zukünftiger Sensorik (Level, pH, ORP)
+### 0.3.0 (2025-10-12)
+**Neu:** Intelligentes Pumpen-Monitoring & Lernsystem
+
+- Reelle Durchflussberechnung auf Basis der tatsächlichen Leistungsaufnahme.  
+- Neuer Bereich **`pump.live`** für aktuelle Echtzeitwerte (Leistung, Durchfluss, Prozentleistung).  
+- Die tägliche Umwälzberechnung nutzt jetzt den realen Durchflusswert.  
+- Neuer Bereich **`pump.learning`**:
+  - Automatisches Lernen der durchschnittlichen Leistungs- und Durchflusswerte.  
+  - Dynamische Ermittlung des Normalbereichs (±15 %).  
+  - Berechnung der Abweichungen in Prozent und textbasierte Bewertung.  
+  - Lernwerte werden persistent gespeichert (bleiben über Neustarts erhalten).  
+- Vollständig eventbasiert – keine Timer, keine Polling-Zyklen.  
+
+> Mit dieser Version beginnt die lernfähige Phase des PoolControl-Adapters:  
+> Die Pumpe erkennt nun selbstständig, ob sie sich im Normalbereich befindet.
+
 
 ---
 
