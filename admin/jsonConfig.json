@@ -81,8 +81,10 @@
           "newLine": true
         },
         "tempbox_status": {
-          "type": "staticText",
-          "text": "Status: (wird später vom Hardware-Helper befüllt)",
+          "type": "text",
+          "label": "Status",
+          "id": "hardware.tempbox.handshake.state",
+          "readOnly": true,
           "xs": 12,
           "sm": 6,
           "md": 6,
@@ -101,8 +103,10 @@
           "newLine": true
         },
         "tasterbox_status": {
-          "type": "staticText",
-          "text": "Status: (wird später vom Hardware-Helper befüllt)",
+          "type": "text",
+          "label": "Status",
+          "id": "hardware.tasterbox.handshake.state",
+          "readOnly": true,
           "xs": 12,
           "sm": 6,
           "md": 6,

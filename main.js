@@ -21,6 +21,7 @@ const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const migrationHelper = require('./lib/helpers/migrationHelper');
+const { HardwareHelper } = require('./lib/helpers/hardwareHelper'); // NEU: Hardware-Box-Erkennung
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -34,6 +35,7 @@ const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionS
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
+const { createHardwareStates } = require('./lib/stateDefinitions/hardwareStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -92,6 +94,13 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
+
+        // --- Hardware States ---
+        await createHardwareStates(this);
+
+        // NEU: HardwareHelper starten
+        this.hardwareHelper = new HardwareHelper(this);
+        await this.hardwareHelper.init();
 
         // --- Helper starten ---
         temperatureHelper.init(this);
@@ -154,6 +163,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
+            }
+            if (this.hardwareHelper) {
+                this.hardwareHelper.stop(); // NEU: Timer & Scan stoppen
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
