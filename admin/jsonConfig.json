@@ -64,6 +64,55 @@
           "lg": 3,
           "xl": 3,
           "newLine": true
+        },
+                "divider_hardware1": {
+          "type": "divider",
+          "newLine": true
+        },
+        "use_tempbox": {
+          "type": "checkbox",
+          "label": "Temperatur-Box (ESP32) aktivieren",
+          "default": false,
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3,
+          "newLine": true
+        },
+        "tempbox_status": {
+          "type": "staticText",
+          "text": "Status: (wird später vom Hardware-Helper befüllt)",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6
+        },
+        "use_tasterbox": {
+          "type": "checkbox",
+          "label": "Taster-Box (ESP32) aktivieren",
+          "default": false,
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3,
+          "newLine": true
+        },
+        "tasterbox_status": {
+          "type": "staticText",
+          "text": "Status: (wird später vom Hardware-Helper befüllt)",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6
+        },
+        "hardware_hint": {
+          "type": "staticText",
+          "text": "Wenn du eine Box aktivierst, sucht der PoolControl-Adapter automatisch im ESPHome-Adapter nach ihr und stellt den Handshake her. Deaktivierte Boxen werden sofort getrennt.",
+          "newLine": true
         }
       }
     },
