@@ -203,6 +203,13 @@ class Poolcontrol extends utils.Adapter {
             return; // danach keine Helper mehr aufrufen
         }
 
+        // TempBox Statusänderung manuell (z. B. aus VIS oder Instanz)
+        if (id.endsWith('hardware.tempbox.settings.enabled') && state && state.ack === false) {
+            this.log.info(`[main] TempBox aktiviert/deaktiviert: ${state.val}`);
+            await this.setStateAsync('hardware.tempbox.settings.enabled', { val: state.val, ack: true });
+            return;
+        }
+
         try {
             temperatureHelper.handleStateChange(id, state);
         } catch (e) {
