@@ -68,57 +68,6 @@
                 "divider_hardware1": {
           "type": "divider",
           "newLine": true
-        },
-        "use_tempbox": {
-          "type": "checkbox",
-          "label": "Temperatur-Box (ESP32) aktivieren",
-          "default": false,
-          "xs": 12,
-          "sm": 3,
-          "md": 3,
-          "lg": 3,
-          "xl": 3,
-          "newLine": true
-        },
-        "tempbox_statepath": {
-          "type": "objectId",
-          "label": "Objekt-ID zur TempBox-ID (ESPHome-State)",
-          "default": "",
-          "xs": 12,
-          "sm": 9,
-          "md": 9,
-          "lg": 9,
-          "xl": 9,
-          "newLine": false,
-          "tooltip": "Vollständiger Datenpfad des TextSensors mit der Kennung der Temperaturbox (z. B. 'esphome.0.64B708C8F8C0.TextSensor.3807403586.state')."
-        },
-        "use_tasterbox": {
-          "type": "checkbox",
-          "label": "Taster-Box (ESP32) aktivieren",
-          "default": false,
-          "xs": 12,
-          "sm": 3,
-          "md": 3,
-          "lg": 3,
-          "xl": 3,
-          "newLine": true
-        },
-        "tasterbox_statepath": {
-          "type": "objectId",
-          "label": "Objekt-ID zur TasterBox-ID (ESPHome-State)",
-          "default": "",
-          "xs": 12,
-          "sm": 9,
-          "md": 9,
-          "lg": 9,
-          "xl": 9,
-          "newLine": false,
-          "tooltip": "Vollständiger Datenpfad des TextSensors mit der Kennung der Tasterbox (z. B. 'esphome.0.64B708C8F8C0.TextSensor.4711289510.state')."
-        },
-        "hardware_hint": {
-          "type": "staticText",
-          "text": "Wenn du eine Box aktivierst, sucht der PoolControl-Adapter automatisch im ESPHome-Adapter nach ihr und stellt den Handshake her. Deaktivierte Boxen werden sofort getrennt.",
-          "newLine": true
         }
       }
     },

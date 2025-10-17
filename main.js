@@ -21,7 +21,6 @@ const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const migrationHelper = require('./lib/helpers/migrationHelper');
-const { HardwareHelper } = require('./lib/helpers/hardwareHelper'); // NEU: Hardware-Box-Erkennung
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -35,7 +34,6 @@ const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionS
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
-const { createHardwareStates } = require('./lib/stateDefinitions/hardwareStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -86,21 +84,6 @@ class Poolcontrol extends utils.Adapter {
             ack: true,
         });
 
-        // NEU: Kurze Verzögerung, bis Config vollständig geladen ist
-        await new Promise(resolve => setTimeout(resolve, 200));
-
-        // TempBox-Checkbox aus Config übernehmen (Synchronisierung)
-        await this.setStateAsync('hardware.tempbox.settings.enabled', {
-            val: this.config.use_tempbox,
-            ack: true,
-        });
-
-        // TasterBox-Checkbox aus Config übernehmen (Synchronisierung)
-        await this.setStateAsync('hardware.tasterbox.settings.enabled', {
-            val: this.config.use_tasterbox,
-            ack: true,
-        });
-
         // --- Control States ---
         await createControlStates(this);
 
@@ -109,13 +92,6 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
-
-        // --- Hardware States ---
-        await createHardwareStates(this);
-
-        // NEU: HardwareHelper starten
-        this.hardwareHelper = new HardwareHelper(this);
-        await this.hardwareHelper.init();
 
         // --- Helper starten ---
         temperatureHelper.init(this);
@@ -179,9 +155,6 @@ class Poolcontrol extends utils.Adapter {
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
             }
-            if (this.hardwareHelper) {
-                this.hardwareHelper.cleanup(); // NEU: Timer & Scan stoppen
-            }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
         } finally {
@@ -201,13 +174,6 @@ class Poolcontrol extends utils.Adapter {
             this.log.info(`[main] Saisonstatus geändert: ${state.val}`);
             await this.setStateAsync('status.season_active', { val: state.val, ack: true });
             return; // danach keine Helper mehr aufrufen
-        }
-
-        // TempBox Statusänderung manuell (z. B. aus VIS oder Instanz)
-        if (id.endsWith('hardware.tempbox.settings.enabled') && state && state.ack === false) {
-            this.log.info(`[main] TempBox aktiviert/deaktiviert: ${state.val}`);
-            await this.setStateAsync('hardware.tempbox.settings.enabled', { val: state.val, ack: true });
-            return;
         }
 
         try {
