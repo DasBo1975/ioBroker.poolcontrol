@@ -81,7 +81,7 @@
           "newLine": true
         },
         "tempbox_status": {
-          "type": "staticTextext",
+          "type": "staticText",
           "text": "Verbindungsstatus siehe: hardware.tempbox.handshake.state",
           "readOnly": true,
           "xs": 12,
