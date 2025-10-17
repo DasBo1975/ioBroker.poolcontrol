@@ -81,7 +81,7 @@
           "newLine": true
         },
         "tempbox_status": {
-          "type": "text",
+          "type": "stateText",
           "label": "Status",
           "id": "hardware.tempbox.handshake.state",
           "readOnly": true,
@@ -103,7 +103,7 @@
           "newLine": true
         },
         "tasterbox_status": {
-          "type": "text",
+          "type": "stateText",
           "label": "Status",
           "id": "hardware.tasterbox.handshake.state",
           "readOnly": true,
