@@ -83,7 +83,6 @@
         "tempbox_status": {
           "type": "staticText",
           "text": "Verbindungsstatus siehe: hardware.tempbox.handshake.state",
-          "readOnly": true,
           "xs": 12,
           "sm": 6,
           "md": 6,
@@ -104,7 +103,6 @@
         "tasterbox_status": {
           "type": "staticText",
           "text": "Verbindungsstatus siehe: hardware.tasterbox.handshake.state",
-          "readOnly": true,
           "xs": 12,
           "sm": 6,
           "md": 6,
