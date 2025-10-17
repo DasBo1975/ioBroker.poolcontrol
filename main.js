@@ -86,6 +86,18 @@ class Poolcontrol extends utils.Adapter {
             ack: true,
         });
 
+        // TempBox-Checkbox aus Config übernehmen (Synchronisierung)
+        await this.setStateAsync('hardware.tempbox.settings.enabled', {
+            val: this.config.use_tempbox,
+            ack: true,
+        });
+
+        // TasterBox-Checkbox aus Config übernehmen (Synchronisierung)
+        await this.setStateAsync('hardware.tasterbox.settings.enabled', {
+            val: this.config.use_tasterbox,
+            ack: true,
+        });
+
         // --- Control States ---
         await createControlStates(this);
 
