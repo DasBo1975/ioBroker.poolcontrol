@@ -165,7 +165,7 @@ class Poolcontrol extends utils.Adapter {
                 speechTextHelper.cleanup();
             }
             if (this.hardwareHelper) {
-                this.hardwareHelper.stop(); // NEU: Timer & Scan stoppen
+                this.hardwareHelper.cleanup(); // NEU: Timer & Scan stoppen
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
