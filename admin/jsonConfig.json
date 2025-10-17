@@ -80,14 +80,17 @@
           "xl": 3,
           "newLine": true
         },
-        "tempbox_status": {
-          "type": "staticText",
-          "text": "Verbindungsstatus siehe: hardware.tempbox.handshake.state",
+        "tempbox_statepath": {
+          "type": "text",
+          "label": "Pfad zur Box-ID (ESPHome-State)",
+          "default": "",
           "xs": 12,
-          "sm": 6,
-          "md": 6,
-          "lg": 6,
-          "xl": 6
+          "sm": 9,
+          "md": 9,
+          "lg": 9,
+          "xl": 9,
+          "newLine": false,
+          "tooltip": "Vollständiger Datenpfad des TextSensors mit der Kennung der Temperaturbox (z. B. 'esphome.0.64B708C8F8C0.TextSensor.3807403586.state')."
         },
         "use_tasterbox": {
           "type": "checkbox",
@@ -100,14 +103,17 @@
           "xl": 3,
           "newLine": true
         },
-        "tasterbox_status": {
-          "type": "staticText",
-          "text": "Verbindungsstatus siehe: hardware.tasterbox.handshake.state",
+        "tasterbox_statepath": {
+          "type": "text",
+          "label": "Pfad zur Box-ID (ESPHome-State)",
+          "default": "",
           "xs": 12,
-          "sm": 6,
-          "md": 6,
-          "lg": 6,
-          "xl": 6
+          "sm": 9,
+          "md": 9,
+          "lg": 9,
+          "xl": 9,
+          "newLine": false,
+          "tooltip": "Vollständiger Datenpfad des TextSensors mit der Kennung der Tasterbox (z. B. 'esphome.0.64B708C8F8C0.TextSensor.4711289510.state')."
         },
         "hardware_hint": {
           "type": "staticText",
