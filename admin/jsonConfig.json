@@ -81,9 +81,8 @@
           "newLine": true
         },
         "tempbox_status": {
-          "type": "stateText",
-          "label": "Status",
-          "id": "hardware.tempbox.handshake.state",
+          "type": "staticTextext",
+          "text": "Verbindungsstatus siehe: hardware.tempbox.handshake.state",
           "readOnly": true,
           "xs": 12,
           "sm": 6,
@@ -103,9 +102,8 @@
           "newLine": true
         },
         "tasterbox_status": {
-          "type": "stateText",
-          "label": "Status",
-          "id": "hardware.tasterbox.handshake.state",
+          "type": "staticText",
+          "text": "Verbindungsstatus siehe: hardware.tasterbox.handshake.state",
           "readOnly": true,
           "xs": 12,
           "sm": 6,
