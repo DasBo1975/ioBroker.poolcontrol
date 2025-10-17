@@ -86,6 +86,9 @@ class Poolcontrol extends utils.Adapter {
             ack: true,
         });
 
+        // NEU: Kurze Verzögerung, bis Config vollständig geladen ist
+        await new Promise(resolve => setTimeout(resolve, 200));
+
         // TempBox-Checkbox aus Config übernehmen (Synchronisierung)
         await this.setStateAsync('hardware.tempbox.settings.enabled', {
             val: this.config.use_tempbox,
