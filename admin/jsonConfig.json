@@ -81,8 +81,8 @@
           "newLine": true
         },
         "tempbox_statepath": {
-          "type": "text",
-          "label": "Pfad zur Box-ID (ESPHome-State)",
+          "type": "objectId",
+          "label": "Objekt-ID zur TempBox-ID (ESPHome-State)",
           "default": "",
           "xs": 12,
           "sm": 9,
@@ -104,8 +104,8 @@
           "newLine": true
         },
         "tasterbox_statepath": {
-          "type": "text",
-          "label": "Pfad zur Box-ID (ESPHome-State)",
+          "type": "objectId",
+          "label": "Objekt-ID zur TasterBox-ID (ESPHome-State)",
           "default": "",
           "xs": 12,
           "sm": 9,
