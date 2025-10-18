@@ -5,6 +5,17 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+
+### 0.3.1 (2025-10-18)
+- FrostHelper stabilisiert:
+  - Feste Hysterese von +2 °C (bisher +1 °C)
+  - Ganzzahl-Rundung eingeführt zur Vermeidung von Schaltflattern um 3 °C
+  - Keine Änderungen an States oder Konfiguration erforderlich
+
+
+---
+
+
 ### 0.3.0 (2025-10-12)
 **Neu:** Intelligentes Pumpen-Monitoring & Lernsystem
 

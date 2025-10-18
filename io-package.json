@@ -1,8 +1,22 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "news": {
+      "news": {
+      "0.3.1": {
+        "en": "Frost protection logic stabilized: fixed hysteresis of +2 °C and rounded temperature values to avoid pump switching fluctuations around 3 °C.",
+        "de": "Frostschutz-Logik stabilisiert: feste Hysterese von +2 °C und gerundete Temperaturwerte zur Vermeidung von Pumpenschaltflattern um 3 °C.",
+        "ru": "Логика защиты от замерзания стабилизирована: фиксированная гистерезис +2 °C и округленные значения температуры для предотвращения колебаний включения насоса около 3 °C.",
+        "pt": "Lógica de proteção contra congelamento estabilizada: histerese fixa de +2 °C e valores de temperatura arredondados para evitar flutuações de comutação da bomba em torno de 3 °C.",
+        "nl": "Vorstbeschermingslogica gestabiliseerd: vaste hysterese van +2 °C en afgeronde temperatuurwaarden om pompfluctuaties rond 3 °C te voorkomen.",
+        "fr": "Logique de protection antigel stabilisée : hystérésis fixe de +2 °C et valeurs de température arrondies pour éviter les fluctuations de commutation de la pompe autour de 3 °C.",
+        "it": "Logica di protezione antigelo stabilizzata: isteresi fissa di +2 °C e valori di temperatura arrotondati per evitare fluttuazioni di commutazione della pompa intorno a 3 °C.",
+        "es": "Lógica de protección contra heladas estabilizada: histéresis fija de +2 °C y valores de temperatura redondeados para evitar fluctuaciones de conmutación de la bomba alrededor de 3 °C.",
+        "pl": "Ustabilizowano logikę ochrony przed zamarzaniem: stała histereza +2 °C i zaokrąglone wartości temperatury, aby uniknąć wahań przełączania pompy w okolicach 3 °C.",
+        "uk": "Стабілізовано логіку захисту від замерзання: фіксована гістерезис +2 °C і округлені значення температури, щоб уникнути коливань увімкнення насоса біля 3 °C.",
+        "zh-cn": "防冻逻辑稳定：固定 +2 °C 滞后并四舍五入温度值，以避免泵在 3 °C 附近频繁切换。"
+      },
       "0.3.0": {
         "en": "Added real pump flow calculation, live monitoring, and self-learning normal range system for pump analysis.",
         "de": "Reelle Durchflussberechnung, Liveüberwachung und selbstlernendes Normalbereich-System zur Pumpenanalyse hinzugefügt.",
@@ -14,7 +28,7 @@
         "es": "Se añadió el cálculo del caudal real de la bomba, la monitorización en vivo y un sistema de rango normal autoaprendente para el análisis de la bomba.",
         "pl": "Dodano obliczanie rzeczywistego przepływu pompy, monitorowanie na żywo i samouczący się system normalnego zakresu do analizy pompy.",
         "zh-cn": "添加了实际泵流量计算、实时监控以及用于泵分析的自学习正常范围系统。"
-        },
+      },
       "0.2.2": {
         "en": "Added automatic backwash reminder with speech and log notifications.",
         "de": "Automatische Rückspülerinnerung mit Sprach- und Log-Benachrichtigung hinzugefügt.",
