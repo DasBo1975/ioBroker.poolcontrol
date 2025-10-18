@@ -3,7 +3,6 @@
     "name": "poolcontrol",
     "version": "0.3.1",
     "news": {
-      "news": {
       "0.3.1": {
         "en": "Frost protection logic stabilized: fixed hysteresis of +2 °C and rounded temperature values to avoid pump switching fluctuations around 3 °C.",
         "de": "Frostschutz-Logik stabilisiert: feste Hysterese von +2 °C und gerundete Temperaturwerte zur Vermeidung von Pumpenschaltflattern um 3 °C.",
