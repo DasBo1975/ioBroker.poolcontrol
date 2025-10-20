@@ -34,7 +34,6 @@ const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionS
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
-const { createHardwareStates } = require('./lib/stateDefinitions/hardwareStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -90,9 +89,6 @@ class Poolcontrol extends utils.Adapter {
 
         // --- DebugLog States ---
         await createDebugLogStates(this);
-
-        // --- Hardware States ---
-        await createHardwareStates(this);
 
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
