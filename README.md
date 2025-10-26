@@ -121,6 +121,30 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+### **0.4.0 (26.10.2025)**
+
+**Neue Funktionen**
+- Einführung des neuen Statistik-Systems unter `analytics.statistics.temperature.today`
+- Automatische Erfassung von **Min-, Max- und Durchschnittswerten** aller aktiven Temperatursensoren
+- Pro Sensor: JSON- und HTML-Zusammenfassungen mit laufender Aktualisierung
+- Gesamtausgabe aller Sensoren (Tabelle) unter  
+  `analytics.statistics.temperature.today.outputs.summary_all_html`
+- Vollständig **persistente Datenpunkte** mit Überinstallationsschutz
+- **Automatischer Mitternachts-Reset** zur Tagesrücksetzung inkl. Zeitstempel
+- Vorbereitung für zukünftige Wochen-, Monats- und Saisonstatistiken
+
+**Verbesserungen**
+- Einheitliche Struktur durch neuen Hauptordner `analytics`
+- Keine dauerhaften Loops oder Timerbelastungen – reine Eventverarbeitung
+- Verbesserte Performance und Speicherstabilität
+- Überarbeitete Initialisierung aller Statistik-States beim Start
+
+**Hinweis**
+Diese Version bildet die stabile Basis für alle folgenden Statistik- und Analysefunktionen  
+(z. B. Wochen- und Monatsstatistik, Historien- und Effizienz-Auswertungen).
+
+---
+
 ### 0.3.1 (2025-10-18)
 - FrostHelper stabilisiert:
   - Feste Hysterese von +2 °C (bisher +1 °C)
@@ -145,24 +169,6 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 > Mit dieser Version beginnt die lernfähige Phase des PoolControl-Adapters:  
 > Deine Pumpe weiß jetzt selbst, was für sie „normal“ ist.
 
----
-
-### 0.2.2 (2025-10-08)
-- Einführung einer **automatischen Rückspülerinnerung** (neuer Bereich im ControlHelper2)
-- Erinnerung mit Intervall in Tagen und automatischer Rücksetzung nach erfolgter Rückspülung
-- Log- und Sprachausgabe bei Fälligkeit oder Überfälligkeit
-- Erweiterung des Control-Bereichs um zusätzliche States (backwash_reminder_active, interval_days, last_date, required)
-- Anpassung der main.js und controlStates zur Integration
-- Vorbereitung weiterer Wartungs- und Steuerungsfunktionen (Beleuchtung, Roboter, Ventile, Gegenstromanlage, Kesseldruck-Überwachung).
-
----
-
-### 0.2.0 (2025-10-06)
-- Neuer Diagnosebereich **SystemCheck** für interne Debug-Logs und Analysen.  
-- Möglichkeit, einzelne Adapterbereiche (z. B. Pumpe, Solar, Temperatur) gezielt zu überwachen.  
-- Fortlaufendes Textprotokoll mit manueller Löschfunktion.  
-- Alle bisherigen Debug-Funktionen aus `zz_debuglogs` in `SystemCheck.debug_logs` integriert.  
-- Vorbereitung für zukünftige Diagnose-Erweiterungen (Export, Systemprüfung, Plausibilitäts-Checks).
 
 *(ältere Versionen siehe [io-package.json](./io-package.json))*  
 

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "news": {
+      "0.4.0": {
+        "en": "Added daily temperature statistics under analytics.statistics.temperature.today with automatic min/max/average tracking, JSON and HTML summaries, and midnight reset logic.",
+        "de": "Tägliche Temperaturstatistik unter analytics.statistics.temperature.today hinzugefügt mit automatischer Erfassung von Min-/Max-/Durchschnittswerten, JSON- und HTML-Zusammenfassungen sowie Mitternachts-Reset.",
+        "ru": "Добавлена ежедневная статистика температуры в analytics.statistics.temperature.today с автоматическим отслеживанием мин./макс./средних значений, JSON и HTML сводками и логикой сброса в полночь.",
+        "pt": "Adicionadas estatísticas diárias de temperatura em analytics.statistics.temperature.today com rastreamento automático de mínimo/máximo/média, resumos em JSON e HTML e redefinição automática à meia-noite.",
+        "nl": "Dagelijkse temperatuurstatistieken toegevoegd onder analytics.statistics.temperature.today met automatische min/max/gemiddelde tracking, JSON- en HTML-samenvattingen en middernachtreset.",
+        "fr": "Ajout de statistiques quotidiennes de température sous analytics.statistics.temperature.today avec suivi automatique min/max/moyenne, résumés JSON et HTML et réinitialisation automatique à minuit.",
+        "it": "Aggiunte statistiche giornaliere della temperatura in analytics.statistics.temperature.today con monitoraggio automatico di min/max/media, riepiloghi JSON e HTML e reset automatico a mezzanotte.",
+        "es": "Se añadieron estadísticas diarias de temperatura en analytics.statistics.temperature.today con seguimiento automático de mínimos/máximos/promedios, resúmenes en JSON y HTML y reinicio automático a medianoche.",
+        "pl": "Dodano dzienne statystyki temperatury w analytics.statistics.temperature.today z automatycznym śledzeniem wartości min/max/średnich, podsumowaniami JSON i HTML oraz resetem o północy.",
+        "uk": "Додано щоденну статистику температури в analytics.statistics.temperature.today з автоматичним відстеженням мін/макс/середніх значень, JSON і HTML зведеннями та скиданням опівночі.",
+        "zh-cn": "在 analytics.statistics.temperature.today 中添加了每日温度统计，具有自动最小/最大/平均跟踪、JSON 和 HTML 摘要以及午夜重置功能。"
+      },
       "0.3.1": {
         "en": "Frost protection logic stabilized: fixed hysteresis of +2 °C and rounded temperature values to avoid pump switching fluctuations around 3 °C.",
         "de": "Frostschutz-Logik stabilisiert: feste Hysterese von +2 °C und gerundete Temperaturwerte zur Vermeidung von Pumpenschaltflattern um 3 °C.",
@@ -52,19 +65,6 @@
        "pl": "Naprawiono problem z niewidzialnymi stanami dla kontroli głosowej i dodano prawidłowe przetwarzanie zmiennych wewnętrznych.",
        "uk": "Виправлено проблему з невидимими станами для керування голосом та додано правильну обробку внутрішніх змінних.",
        "zh-cn": "修复了语音控制的隐形状态问题，并添加了正确的内部变量处理。"
-      },
-      "0.2.0": {
-       "en": "New diagnostic area 'SystemCheck' for internal debug logs and future analysis tools.",
-       "de": "Neuer Diagnosebereich 'SystemCheck' für interne Debug-Logs und künftige Analysefunktionen.",
-       "ru": "Новая диагностическая область 'SystemCheck' для внутренних журналов отладки и будущих инструментов анализа.",
-       "pt": "Nova área de diagnóstico 'SystemCheck' para logs de depuração internos e futuras ferramentas de análise.",
-       "nl": "Nieuw diagnostisch gebied 'SystemCheck' voor interne foutopsporingslogboeken en toekomstige analysetools.",
-       "fr": "Nouvelle zone de diagnostic 'SystemCheck' pour les journaux de débogage internes et les futurs outils d'analyse.",
-       "it": "Nuova area diagnostica 'SystemCheck' per i log di debug interni e futuri strumenti di analisi.",
-       "es": "Nueva área de diagnóstico 'SystemCheck' para registros internos de depuración y futuras herramientas de análisis.",
-       "pl": "Nowy obszar diagnostyczny 'SystemCheck' dla wewnętrznych dzienników debugowania i przyszłych narzędzi analitycznych.",
-       "uk": "Нова діагностична область 'SystemCheck' для внутрішніх журналів налагодження та майбутніх інструментів аналізу.",
-       "zh-cn": "新的诊断区域“SystemCheck”，用于内部调试日志和未来的分析工具。"
       }
 	},
     "titleLang": {

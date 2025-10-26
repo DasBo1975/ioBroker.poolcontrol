@@ -6,6 +6,32 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 ---
 
 
+### **0.4.0 (26.10.2025)**
+
+**Neue Funktionen**
+- Einführung des neuen Statistik-Systems unter `analytics.statistics.temperature.today`
+- Automatische Erfassung von **Min-, Max- und Durchschnittswerten** aller aktiven Temperatursensoren
+- Pro Sensor: JSON- und HTML-Zusammenfassungen mit laufender Aktualisierung
+- Gesamtausgabe aller Sensoren (Tabelle) unter  
+  `analytics.statistics.temperature.today.outputs.summary_all_html`
+- Vollständig **persistente Datenpunkte** mit Überinstallationsschutz
+- **Automatischer Mitternachts-Reset** zur Tagesrücksetzung inkl. Zeitstempel
+- Vorbereitung für zukünftige Wochen-, Monats- und Saisonstatistiken
+
+**Verbesserungen**
+- Einheitliche Struktur durch neuen Hauptordner `analytics`
+- Keine dauerhaften Loops oder Timerbelastungen – reine Eventverarbeitung
+- Verbesserte Performance und Speicherstabilität
+- Überarbeitete Initialisierung aller Statistik-States beim Start
+
+**Hinweis**
+Diese Version bildet die stabile Basis für alle folgenden Statistik- und Analysefunktionen  
+(z. B. Wochen- und Monatsstatistik, Historien- und Effizienz-Auswertungen).
+
+
+---
+
+
 ### 0.3.1 (2025-10-18)
 - FrostHelper stabilisiert:
   - Feste Hysterese von +2 °C (bisher +1 °C)
