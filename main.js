@@ -8,6 +8,7 @@ const utils = require('@iobroker/adapter-core');
 const temperatureHelper = require('./lib/helpers/temperatureHelper');
 const timeHelper = require('./lib/helpers/timeHelper');
 const runtimeHelper = require('./lib/helpers/runtimeHelper');
+const statisticsHelper = require('./lib/helpers/statisticsHelper');
 const pumpHelper = require('./lib/helpers/pumpHelper');
 const pumpHelper2 = require('./lib/helpers/pumpHelper2');
 const pumpHelper3 = require('./lib/helpers/pumpHelper3');
@@ -29,6 +30,7 @@ const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
 const { createGeneralStates } = require('./lib/stateDefinitions/generalStates');
 const { createTimeStates } = require('./lib/stateDefinitions/timeStates');
 const { createRuntimeStates } = require('./lib/stateDefinitions/runtimeStates');
+const { createStatisticsStates } = require('./lib/stateDefinitions/statisticsStates');
 const { createSpeechStates } = require('./lib/stateDefinitions/speechStates');
 const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionStates');
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
@@ -69,6 +71,9 @@ class Poolcontrol extends utils.Adapter {
         // --- Laufzeitsteuerung ---
         await createRuntimeStates(this);
 
+        // Statistik-States (Temperaturen)
+        await createStatisticsStates(this);
+
         // --- Sprachausgaben ---
         await createSpeechStates(this);
 
@@ -97,6 +102,7 @@ class Poolcontrol extends utils.Adapter {
         temperatureHelper.init(this);
         timeHelper.init(this);
         runtimeHelper.init(this);
+        statisticsHelper.init(this);
         pumpHelper.init(this);
         pumpHelper2.init(this);
         pumpHelper3.init(this);
@@ -121,6 +127,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (runtimeHelper.cleanup) {
                 runtimeHelper.cleanup();
+            }
+            if (statisticsHelper.cleanup) {
+                statisticsHelper.cleanup();
             }
             if (pumpHelper.cleanup) {
                 pumpHelper.cleanup();
