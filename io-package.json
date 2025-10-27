@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.4.0",
+    "version": "0.4.0-alpha",
     "news": {
       "0.4.0": {
         "en": "Added daily temperature statistics under analytics.statistics.temperature.today with automatic min/max/average tracking, JSON and HTML summaries, and midnight reset logic.",
