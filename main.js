@@ -9,6 +9,8 @@ const temperatureHelper = require('./lib/helpers/temperatureHelper');
 const timeHelper = require('./lib/helpers/timeHelper');
 const runtimeHelper = require('./lib/helpers/runtimeHelper');
 const statisticsHelper = require('./lib/helpers/statisticsHelper');
+const statisticsHelperWeek = require('./lib/helpers/statisticsHelperWeek');
+const statisticsHelperMonth = require('./lib/helpers/statisticsHelperMonth');
 const pumpHelper = require('./lib/helpers/pumpHelper');
 const pumpHelper2 = require('./lib/helpers/pumpHelper2');
 const pumpHelper3 = require('./lib/helpers/pumpHelper3');
@@ -103,6 +105,8 @@ class Poolcontrol extends utils.Adapter {
         timeHelper.init(this);
         runtimeHelper.init(this);
         statisticsHelper.init(this);
+        statisticsHelperWeek.init(this);
+        statisticsHelperMonth.init(this);
         pumpHelper.init(this);
         pumpHelper2.init(this);
         pumpHelper3.init(this);
