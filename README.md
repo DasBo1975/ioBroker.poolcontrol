@@ -121,6 +121,14 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v0.5.0 (2025-10-28)
+- Erweiterung der Temperaturstatistik um Wochen- und Monatsauswertung  
+  (`analytics.statistics.temperature.week` / `.month`)
+- Eigenständige, eventbasierte Helper für Woche und Monat
+- Persistente Datenpunkte mit automatischen JSON- und HTML-Zusammenfassungen
+- Vorbereitung für zukünftige Erweiterungen (Saison- und Jahresstatistik)
+
+
 ### **0.4.0 (26.10.2025)**
 
 **Neue Funktionen**
