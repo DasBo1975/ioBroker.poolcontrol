@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "news": {
+       "0.5.1": {
+         "en": "Extended week and month statistics with persistent data, unified JSON format, and installation protection.",
+         "de": "Erweiterte Wochen- und Monatsstatistik mit persistenten Daten, einheitlichem JSON-Format und Überinstallationsschutz.",
+         "ru": "Расширенная недельная и месячная статистика с постоянными данными, унифицированным форматом JSON и защитой при переустановке.",
+         "pt": "Estatísticas semanais e mensais expandidas com dados persistentes, formato JSON unificado e proteção de reinstalação.",
+         "nl": "Uitgebreide week- en maandstatistieken met persistente gegevens, uniforme JSON-indeling en installatiebescherming.",
+         "fr": "Statistiques hebdomadaires et mensuelles étendues avec données persistantes, format JSON unifié et protection à la réinstallation.",
+         "it": "Statistiche settimanali e mensili estese con dati persistenti, formato JSON unificato e protezione dall'installazione.",
+         "es": "Estadísticas semanales y mensuales ampliadas con datos persistentes, formato JSON unificado y protección de reinstalación.",
+         "pl": "Rozszerzone statystyki tygodniowe i miesięczne z trwałymi danymi, ujednoliconym formatem JSON i ochroną przed ponowną instalacją.",
+         "uk": "Розширена тижнева та місячна статистика з постійними даними, уніфікованим форматом JSON і захистом під час перевстановлення.",
+         "zh-cn": "扩展的周和月统计，具有持久数据、统一的 JSON 格式和重新安装保护。"
+       },
       "0.5.0": {
         "en": "Added weekly and monthly temperature statistics under analytics.statistics.temperature.week and analytics.statistics.temperature.month with automatic summaries, independent helpers and persistent data points.",
         "de": "Wöchentliche und monatliche Temperaturstatistiken unter analytics.statistics.temperature.week und analytics.statistics.temperature.month hinzugefügt – mit automatischen Zusammenfassungen, unabhängigen Helpern und persistenten Datenpunkten.",
@@ -52,18 +65,6 @@
         "es": "Se añadió el cálculo del caudal real de la bomba, la monitorización en vivo y un sistema de rango normal autoaprendente para el análisis de la bomba.",
         "pl": "Dodano obliczanie rzeczywistego przepływu pompy, monitorowanie na żywo i samouczący się system normalnego zakresu do analizy pompy.",
         "zh-cn": "添加了实际泵流量计算、实时监控以及用于泵分析的自学习正常范围系统。"
-      },
-      "0.2.2": {
-        "en": "Added automatic backwash reminder with speech and log notifications.",
-        "de": "Automatische Rückspülerinnerung mit Sprach- und Log-Benachrichtigung hinzugefügt.",
-        "ru": "Добавлено автоматическое напоминание о обратной промывке с голосовыми и журнальными уведомлениями.",
-        "pt": "Adicionado lembrete automático de retrolavagem com notificações de voz e registro.",
-        "nl": "Automatische terugspoelherinnering toegevoegd met spraak- en logmeldingen.",
-        "fr": "Ajout d’un rappel automatique de contre-lavage avec notifications vocales et journaux.",
-        "it": "Aggiunto promemoria automatico di controlavaggio con notifiche vocali e log.",
-        "es": "Recordatorio automático de contralavado añadido con notificaciones de voz y registro.",
-        "pl": "Dodano automatyczne przypomnienie o płukaniu wstecznym z powiadomieniami głosowymi i dziennikiem.",
-        "zh-cn": "添加了带语音和日志通知的自动反冲洗提醒。"
       }
 	},
     "titleLang": {
