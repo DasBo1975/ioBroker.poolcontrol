@@ -849,7 +849,30 @@
 		  "lg": 6,
 		  "xl": 6
 		},
-		        "divider_speech_email": {
+        "speech_telegram_placeholder": {
+          "type": "staticText",
+          "label": "",
+          "text": "",
+		  "xs": 12,
+          "sm": 3,
+		  "md": 3,
+		  "lg": 3,
+		  "xl": 3,
+          "newLine": true
+        },
+        "speech_telegram_users": {
+          "type": "text",
+          "label": "Telegram-Empfänger (Benutzernamen, Komma-getrennt / leer = an alle Benutzer)",
+          "attr": "speech_telegram_users",
+          "tooltip": "Beispiel: Dirk,Dennis (leer = an alle Benutzer senden)",
+          "default": "",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6
+        },
+		  "divider_speech_email": {
           "type": "divider",
           "newLine": true
         },

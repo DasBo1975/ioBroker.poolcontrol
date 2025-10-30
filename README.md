@@ -121,6 +121,9 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v0.5.3 (2025-10-30)
+- Telegram-Benutzerwahl hinzugefügt
+
 ## v0.5.2 (2025-10-30)
 - Erweitertes Helper-Vorrangssystem: Konflikte zwischen Zeit- und Solarsteuerung behoben
 - Frostschutz pausiert während Zeitfenster. Nun stabiles Pumpenverhalten und Verbesserte
