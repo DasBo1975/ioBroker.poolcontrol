@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "news": {
+       "0.5.2": {
+         "en": "Extended helper priority system: fixed time/solar conflicts, frost pauses during time windows. Stable pump behavior and improved coordination between helpers.",
+         "de": "Erweitertes Helper-Vorrangsystem: Konflikte zwischen Zeit- und Solarsteuerung behoben, Frostschutz pausiert während Zeitfenstern. Stabiles Pumpenverhalten und verbesserte Koordination zwischen den Helpern.",
+         "ru": "Расширена система приоритетов помощников: устранены конфликты между таймером и солнечным управлением, мороз приостанавливается во время временных окон. Стабильная работа насоса и улучшенная координация между помощниками.",
+         "pt": "Sistema de prioridade dos helpers expandido: corrigidos conflitos de tempo/solar, proteção contra geada pausa durante janelas de tempo. Comportamento estável da bomba e melhor coordenação entre helpers.",
+         "nl": "Uitgebreid helperprioriteitssysteem: conflicten tussen tijd- en zonregeling opgelost, vorstbeveiliging pauzeert tijdens tijdvensters. Stabiel pompgedrag en betere coördinatie tussen helpers.",
+         "fr": "Système de priorité des helpers étendu : conflits temps/solaire corrigés, protection antigel en pause pendant les plages horaires. Comportement de pompe stable et meilleure coordination entre les helpers.",
+         "it": "Sistema di priorità degli helper esteso: risolti i conflitti tempo/solare, la protezione antigelo si mette in pausa durante le finestre temporali. Comportamento stabile della pompa e migliore coordinamento tra gli helper.",
+         "es": "Sistema de prioridad de helpers ampliado: solucionados los conflictos de tiempo/solar, la protección contra heladas se pausa durante las ventanas de tiempo. Comportamiento estable de la bomba y mejor coordinación entre helpers.",
+         "pl": "Rozszerzony system priorytetów helperów: naprawiono konflikty między czasem a sterowaniem solarnym, ochrona przed mrozem wstrzymuje się podczas okien czasowych. Stabilne działanie pompy i lepsza koordynacja między helperami.",
+         "zh-cn": "扩展的助手优先级系统：修复时间/太阳能冲突，防冻在时间窗口内暂停。泵运行稳定，助手之间协调更好。"
+       },
        "0.5.1": {
          "en": "Extended week and month statistics with persistent data, unified JSON format, and installation protection.",
          "de": "Erweiterte Wochen- und Monatsstatistik mit persistenten Daten, einheitlichem JSON-Format und Überinstallationsschutz.",

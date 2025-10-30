@@ -121,6 +121,11 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v0.5.2 (2025-10-30)
+- Erweitertes Helper-Vorrangssystem: Konflikte zwischen Zeit- und Solarsteuerung behoben
+- Frostschutz pausiert während Zeitfenster. Nun stabiles Pumpenverhalten und Verbesserte
+  Koordination zwischen den Helpern
+
 ## v0.5.0 (2025-10-28)
 - Erweiterung der Temperaturstatistik um Wochen- und Monatsauswertung  
   (`analytics.statistics.temperature.week` / `.month`)
