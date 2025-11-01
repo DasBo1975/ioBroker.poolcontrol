@@ -121,6 +121,9 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v0.5.5 (2025-11-01)
+- Endlosschleife in Statistik Woche und Monat behoben
+
 ## v0.5.3 (2025-10-30)
 - Telegram-Benutzerwahl hinzugefügt
 

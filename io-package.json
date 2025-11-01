@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.5.4",
+    "version": "0.5.5",
     "news": {
+       "0.5.5": {
+         "en": "Fixed remaining timer recursion issue in weekly and monthly statistics to fully prevent infinite reset loops. Cleaned up jsonConfig structure and improved timer handling.",
+         "de": "Verbleibende Timer-Rekursion in Wochen- und Monatsstatistik behoben, um Endlosschleifen beim Reset endgültig zu verhindern. jsonConfig-Struktur bereinigt und Timer-Handling verbessert.",
+         "ru": "Исправлена оставшаяся рекурсия таймера в еженедельной и ежемесячной статистике для полного предотвращения бесконечных циклов сброса. Упрощена структура jsonConfig и улучшено управление таймерами.",
+         "pt": "Corrigida a recursão restante do temporizador nas estatísticas semanais e mensais para evitar completamente loops de redefinição infinitos. Estrutura jsonConfig limpa e manuseio de temporizador aprimorado.",
+         "nl": "Overgebleven timerrecursie in week- en maandstatistieken opgelost om oneindige resetlussen volledig te voorkomen. jsonConfig-structuur opgeschoond en timerafhandeling verbeterd.",
+         "fr": "Correction de la récursion restante du minuteur dans les statistiques hebdomadaires et mensuelles afin d'éviter définitivement les boucles de réinitialisation infinies. Structure jsonConfig nettoyée et gestion du minuteur améliorée.",
+         "it": "Corretta la ricorsione residua del timer nelle statistiche settimanali e mensili per prevenire completamente i loop di reset infiniti. Pulita la struttura jsonConfig e migliorata la gestione dei timer.",
+         "es": "Corregida la recursión restante del temporizador en las estadísticas semanales y mensuales para evitar completamente los bucles de reinicio infinitos. Estructura jsonConfig limpiada y manejo del temporizador mejorado.",
+         "pl": "Naprawiono pozostałą rekursję timera w statystykach tygodniowych i miesięcznych, aby całkowicie zapobiec nieskończonym pętlom resetowania. Uporządkowano strukturę jsonConfig i ulepszono obsługę timera.",
+         "uk": "Виправлено залишкову рекурсію таймера у тижневій та місячній статистиці, щоб повністю запобігти нескінченним циклам скидання. Очищено структуру jsonConfig і покращено обробку таймерів.",
+         "zh-cn": "修复了每周和每月统计中的剩余计时器递归问题，以完全防止无限重置循环。清理了 jsonConfig 结构并改进了计时器处理。"
+       },
        "0.5.4": {
          "en": "Fixed a rare infinite loop during weekly and monthly statistics reset that could cause Redis overload. Added timer protection and improved stability.",
          "de": "Selten auftretende Endlosschleife beim Wochen- und Monatsreset der Statistik behoben, die zu Redis-Überlastung führen konnte. Timer-Schutz und Stabilität verbessert.",
@@ -78,19 +91,6 @@
         "pl": "Dodano dzienne statystyki temperatury w analytics.statistics.temperature.today z automatycznym śledzeniem wartości min/max/średnich, podsumowaniami JSON i HTML oraz resetem o północy.",
         "uk": "Додано щоденну статистику температури в analytics.statistics.temperature.today з автоматичним відстеженням мін/макс/середніх значень, JSON і HTML зведеннями та скиданням опівночі.",
         "zh-cn": "在 analytics.statistics.temperature.today 中添加了每日温度统计，具有自动最小/最大/平均跟踪、JSON 和 HTML 摘要以及午夜重置功能。"
-      },
-      "0.3.1": {
-        "en": "Frost protection logic stabilized: fixed hysteresis of +2 °C and rounded temperature values to avoid pump switching fluctuations around 3 °C.",
-        "de": "Frostschutz-Logik stabilisiert: feste Hysterese von +2 °C und gerundete Temperaturwerte zur Vermeidung von Pumpenschaltflattern um 3 °C.",
-        "ru": "Логика защиты от замерзания стабилизирована: фиксированная гистерезис +2 °C и округленные значения температуры для предотвращения колебаний включения насоса около 3 °C.",
-        "pt": "Lógica de proteção contra congelamento estabilizada: histerese fixa de +2 °C e valores de temperatura arredondados para evitar flutuações de comutação da bomba em torno de 3 °C.",
-        "nl": "Vorstbeschermingslogica gestabiliseerd: vaste hysterese van +2 °C en afgeronde temperatuurwaarden om pompfluctuaties rond 3 °C te voorkomen.",
-        "fr": "Logique de protection antigel stabilisée : hystérésis fixe de +2 °C et valeurs de température arrondies pour éviter les fluctuations de commutation de la pompe autour de 3 °C.",
-        "it": "Logica di protezione antigelo stabilizzata: isteresi fissa di +2 °C e valori di temperatura arrotondati per evitare fluttuazioni di commutazione della pompa intorno a 3 °C.",
-        "es": "Lógica de protección contra heladas estabilizada: histéresis fija de +2 °C y valores de temperatura redondeados para evitar fluctuaciones de conmutación de la bomba alrededor de 3 °C.",
-        "pl": "Ustabilizowano logikę ochrony przed zamarzaniem: stała histereza +2 °C i zaokrąglone wartości temperatury, aby uniknąć wahań przełączania pompy w okolicach 3 °C.",
-        "uk": "Стабілізовано логіку захисту від замерзання: фіксована гістерезис +2 °C і округлені значення температури, щоб уникнути коливань увімкнення насоса біля 3 °C.",
-        "zh-cn": "防冻逻辑稳定：固定 +2 °C 滞后并四舍五入温度值，以避免泵在 3 °C 附近频繁切换。"
       }
 	},
     "titleLang": {
