@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "news": {
+       "0.5.4": {
+         "en": "Fixed a rare infinite loop during weekly and monthly statistics reset that could cause Redis overload. Added timer protection and improved stability.",
+         "de": "Selten auftretende Endlosschleife beim Wochen- und Monatsreset der Statistik behoben, die zu Redis-Überlastung führen konnte. Timer-Schutz und Stabilität verbessert.",
+         "ru": "Исправлена редкая бесконечная петля при сбросе еженедельной и ежемесячной статистики, вызывавшая перегрузку Redis. Добавлена защита таймера и улучшена стабильность.",
+         "pt": "Corrigido um loop infinito raro durante a redefinição das estatísticas semanais e mensais que podia causar sobrecarga do Redis. Adicionada proteção de temporizador e melhorada a estabilidade.",
+         "nl": "Zeldzame oneindige lus opgelost tijdens de reset van wekelijkse en maandelijkse statistieken die Redis kon overbelasten. Timerbescherming en stabiliteit verbeterd.",
+         "fr": "Correction d'une boucle infinie rare lors de la réinitialisation des statistiques hebdomadaires et mensuelles pouvant provoquer une surcharge de Redis. Protection du minuteur et stabilité améliorées.",
+         "it": "Corretto un raro ciclo infinito durante il reset delle statistiche settimanali e mensili che poteva causare un sovraccarico di Redis. Migliorata la protezione del timer e la stabilità.",
+         "es": "Se corrigió un bucle infinito poco frecuente durante el reinicio de las estadísticas semanales y mensuales que podía causar sobrecarga de Redis. Protección de temporizador y estabilidad mejoradas.",
+         "pl": "Naprawiono rzadką nieskończoną pętlę podczas resetowania statystyk tygodniowych i miesięcznych, która mogła powodować przeciążenie Redis. Dodano ochronę timera i poprawiono stabilność.",
+         "uk": "Виправлено рідкісну нескінченну петлю під час скидання тижневої та місячної статистики, що могла спричинити перевантаження Redis. Додано захист таймера та покращено стабільність.",
+         "zh-cn": "修复了每周和每月统计重置期间可能导致 Redis 过载的罕见无限循环。改进了计时器保护和系统稳定性。"
+       },
        "0.5.3": {
          "en": "Added user selection for Telegram notifications. If no user is selected, messages are sent globally as before; if one or more usernames are specified, only those users receive the messages. Admin UI visually improved (recipient field indented under the instance). speechHelper and jsonConfig.json updated.",
          "de": "Benutzerauswahl für Telegram-Benachrichtigungen hinzugefügt. Wenn kein Benutzer ausgewählt ist, werden Nachrichten wie bisher global gesendet; bei einem oder mehreren Benutzernamen erhalten nur diese die Nachrichten. Admin-UI optisch verbessert (Empfängerfeld unter der Instanz eingerückt). speechHelper und jsonConfig.json aktualisiert.",
