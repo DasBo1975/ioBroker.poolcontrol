@@ -851,8 +851,7 @@
 		},
         "speech_telegram_placeholder": {
           "type": "staticText",
-          "label": "",
-          "text": "",
+          "text": " ",
 		  "xs": 12,
           "sm": 3,
 		  "md": 3,
