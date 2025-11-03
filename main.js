@@ -19,6 +19,7 @@ const consumptionHelper = require('./lib/helpers/consumptionHelper');
 const solarHelper = require('./lib/helpers/solarHelper');
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
+const photovoltaicHelper = require('./lib/helpers/photovoltaicHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
 const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
@@ -29,6 +30,7 @@ const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
 const { createPumpStates3 } = require('./lib/stateDefinitions/pumpStates3');
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
+const { createPhotovoltaicStates } = require('./lib/stateDefinitions/photovoltaicStates');
 const { createGeneralStates } = require('./lib/stateDefinitions/generalStates');
 const { createTimeStates } = require('./lib/stateDefinitions/timeStates');
 const { createRuntimeStates } = require('./lib/stateDefinitions/runtimeStates');
@@ -66,6 +68,9 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Solarverwaltung ---
         await createSolarStates(this);
+
+        // --- Photovoltaik ---
+        await createPhotovoltaicStates(this);
 
         // --- Zeitsteuerung ---
         await createTimeStates(this);
@@ -113,6 +118,7 @@ class Poolcontrol extends utils.Adapter {
         speechHelper.init(this);
         consumptionHelper.init(this);
         solarHelper.init(this);
+        photovoltaicHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
         controlHelper.init(this);
@@ -226,6 +232,11 @@ class Poolcontrol extends utils.Adapter {
             this.log.warn(`[consumptionHelper] Fehler in handleStateChange: ${e.message}`);
         }
         try {
+            photovoltaicHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[photovoltaicHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
             statusHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[statusHelper] Fehler in handleStateChange: ${e.message}`);
@@ -240,6 +251,17 @@ class Poolcontrol extends utils.Adapter {
         }
         if (id.includes('control.')) {
             controlHelper2.handleStateChange(id, state);
+        }
+
+        // --- Photovoltaik-Parameter ---
+        if (id.endsWith('photovoltaic.afterrun_min')) {
+            this.log.debug(`[onStateChange] Nachlaufzeit (PV) geändert auf ${state.val} Minuten`);
+            this.config.pv_afterrun_min = Number(state.val);
+        }
+
+        if (id.endsWith('photovoltaic.ignore_on_circulation')) {
+            this.log.debug(`[onStateChange] PV-Logik ignorieren bei Umwälzmenge = ${state.val}`);
+            this.config.pv_ignore_on_circulation = !!state.val;
         }
 
         await debugLogHelper.handleStateChange(id, state);

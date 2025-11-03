@@ -862,7 +862,6 @@
         "speech_telegram_users": {
           "type": "text",
           "label": "Telegram-Empfänger (Benutzernamen, Komma-getrennt / leer = an alle Benutzer)",
-          "attr": "speech_telegram_users",
           "tooltip": "Beispiel: Dirk,Dennis (leer = an alle Benutzer senden)",
           "default": "",
           "xs": 12,
@@ -947,7 +946,7 @@
 	},
 	"consumption": {
 	  "type": "panel",
-	  "label": "Verbrauch & Kosten",
+	  "label": "PV, Verbrauch & Kosten",
 	  "items": {
 		"divider_cons1": {
 		  "type": "divider",
@@ -1003,7 +1002,59 @@
           "md": 12,
           "lg": 12,
           "xl": 12
-		}
+		},
+
+        "divider_pv1": {
+          "type": "divider",
+          "newLine": true
+        },
+        "pv_header": {
+          "type": "header",
+          "text": "Photovoltaik (Überschusserkennung)",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "power_generated_id": {
+          "type": "objectId",
+          "label": "Objekt-ID PV-Erzeugungsleistung (W)",
+          "default": "",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6,
+          "tooltip": "Datenpunkt mit aktueller PV-Leistung (Watt)"
+        },
+        "power_house_id": {
+          "type": "objectId",
+          "label": "Objekt-ID Hausverbrauch (W)",
+          "default": "",
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 6,
+          "xl": 6,
+          "tooltip": "Datenpunkt mit aktuellem Hausverbrauch (Watt)"
+        },
+        "threshold_w": {
+          "type": "number",
+          "label": "Schwellwert für PV-Überschuss (W)",
+          "default": 200,
+          "min": 0,
+          "max": 2000,
+          "step": 50,
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3,
+          "tooltip": "Ab welcher Differenz zwischen PV und Hausverbrauch ein Überschuss gilt"
+        }
 	  }
     },	
 	"help": {
