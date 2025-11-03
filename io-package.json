@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.5.5",
+    "version": "0.6.0",
     "news": {
+       "0.6.0": {
+         "en": "Added complete photovoltaic control with automatic pump management (mode 'Automatik (PV)'). The adapter can now react to PV surplus based on configurable house consumption and generation values. Includes migration for existing installations. Improved system consistency and internal logging.",
+         "de": "Vollständige Photovoltaik-Steuerung mit automatischer Pumpenlogik (Modus 'Automatik (PV)') hinzugefügt. Der Adapter reagiert nun auf PV-Überschuss anhand konfigurierbarer Hausverbrauchs- und Erzeugungswerte. Migration für bestehende Installationen integriert. Systemkonsistenz und interne Protokollierung verbessert.",
+         "ru": "Добавлено полное управление фотоэлектрической системой с автоматическим управлением насосом (режим 'Automatik (PV)'). Адаптер теперь реагирует на избыток PV на основе настраиваемых значений потребления и генерации. Включена миграция для существующих установок. Улучшена системная согласованность и внутреннее ведение журнала.",
+         "pt": "Adicionado controle fotovoltaico completo com gerenciamento automático da bomba (modo 'Automatik (PV)'). O adaptador agora reage ao excedente de PV com base nos valores configuráveis de consumo e geração da casa. Inclui migração para instalações existentes. Consistência do sistema e registro interno aprimorados.",
+         "nl": "Volledige fotovoltaïsche besturing toegevoegd met automatische pompbesturing (modus 'Automatik (PV)'). De adapter reageert nu op PV-overschot op basis van configureerbare huisverbruik- en opwekkingswaarden. Migratie voor bestaande installaties inbegrepen. Verbeterde systeemconsistentie en interne logboekregistratie.",
+         "fr": "Ajout du contrôle photovoltaïque complet avec gestion automatique de la pompe (mode 'Automatik (PV)'). L'adaptateur réagit désormais au surplus photovoltaïque en fonction des valeurs configurables de consommation et de production domestiques. Migration incluse pour les installations existantes. Cohérence du système et journalisation interne améliorées.",
+         "it": "Aggiunto controllo fotovoltaico completo con gestione automatica della pompa (modalità 'Automatik (PV)'). L'adattatore ora reagisce al surplus fotovoltaico in base ai valori configurabili di consumo e generazione domestici. Migrazione inclusa per le installazioni esistenti. Migliorata la coerenza del sistema e la registrazione interna.",
+         "es": "Se añadió control fotovoltaico completo con gestión automática de la bomba (modo 'Automatik (PV)'). El adaptador ahora reacciona al excedente fotovoltaico según los valores configurables de consumo y generación de la casa. Incluye migración para instalaciones existentes. Mejorada la coherencia del sistema y el registro interno.",
+         "pl": "Dodano pełną kontrolę fotowoltaiczną z automatycznym zarządzaniem pompą (tryb 'Automatik (PV)'). Adapter reaguje teraz na nadwyżkę PV w oparciu o konfigurowalne wartości zużycia i produkcji energii. Zawiera migrację dla istniejących instalacji. Poprawiono spójność systemu i wewnętrzne logowanie.",
+         "uk": "Додано повний фотогальванічний контроль з автоматичним керуванням насосом (режим 'Automatik (PV)'). Адаптер тепер реагує на надлишок PV на основі налаштовуваних значень споживання та генерації. Включено міграцію для існуючих установок. Покращено системну узгодженість і внутрішнє журналювання.",
+         "zh-cn": "新增完整的光伏控制与自动泵管理（模式“Automatik (PV)”）。适配器现在可根据可配置的家庭耗电与发电数值响应光伏盈余。包含对现有安装的迁移。改进了系统一致性和内部日志记录。"
+       },
        "0.5.5": {
          "en": "Fixed remaining timer recursion issue in weekly and monthly statistics to fully prevent infinite reset loops. Cleaned up jsonConfig structure and improved timer handling.",
          "de": "Verbleibende Timer-Rekursion in Wochen- und Monatsstatistik behoben, um Endlosschleifen beim Reset endgültig zu verhindern. jsonConfig-Struktur bereinigt und Timer-Handling verbessert.",
@@ -78,20 +91,7 @@
         "pl": "Dodano tygodniowe i miesięczne statystyki temperatury w analytics.statistics.temperature.week i analytics.statistics.temperature.month z automatycznymi podsumowaniami, niezależnymi pomocnikami i trwałymi punktami danych.",
         "uk": "Додано щотижневу та щомісячну статистику температури в analytics.statistics.temperature.week та analytics.statistics.temperature.month з автоматичними зведеннями, незалежними помічниками та постійними точками даних.",
         "zh-cn": "在 analytics.statistics.temperature.week 和 analytics.statistics.temperature.month 中添加了每周和每月温度统计，具有自动摘要、独立助手和持久数据点。"
-      },
-      "0.4.0": {
-        "en": "Added daily temperature statistics under analytics.statistics.temperature.today with automatic min/max/average tracking, JSON and HTML summaries, and midnight reset logic.",
-        "de": "Tägliche Temperaturstatistik unter analytics.statistics.temperature.today hinzugefügt mit automatischer Erfassung von Min-/Max-/Durchschnittswerten, JSON- und HTML-Zusammenfassungen sowie Mitternachts-Reset.",
-        "ru": "Добавлена ежедневная статистика температуры в analytics.statistics.temperature.today с автоматическим отслеживанием мин./макс./средних значений, JSON и HTML сводками и логикой сброса в полночь.",
-        "pt": "Adicionadas estatísticas diárias de temperatura em analytics.statistics.temperature.today com rastreamento automático de mínimo/máximo/média, resumos em JSON e HTML e redefinição automática à meia-noite.",
-        "nl": "Dagelijkse temperatuurstatistieken toegevoegd onder analytics.statistics.temperature.today met automatische min/max/gemiddelde tracking, JSON- en HTML-samenvattingen en middernachtreset.",
-        "fr": "Ajout de statistiques quotidiennes de température sous analytics.statistics.temperature.today avec suivi automatique min/max/moyenne, résumés JSON et HTML et réinitialisation automatique à minuit.",
-        "it": "Aggiunte statistiche giornaliere della temperatura in analytics.statistics.temperature.today con monitoraggio automatico di min/max/media, riepiloghi JSON e HTML e reset automatico a mezzanotte.",
-        "es": "Se añadieron estadísticas diarias de temperatura en analytics.statistics.temperature.today con seguimiento automático de mínimos/máximos/promedios, resúmenes en JSON y HTML y reinicio automático a medianoche.",
-        "pl": "Dodano dzienne statystyki temperatury w analytics.statistics.temperature.today z automatycznym śledzeniem wartości min/max/średnich, podsumowaniami JSON i HTML oraz resetem o północy.",
-        "uk": "Додано щоденну статистику температури в analytics.statistics.temperature.today з автоматичним відстеженням мін/макс/середніх значень, JSON і HTML зведеннями та скиданням опівночі.",
-        "zh-cn": "在 analytics.statistics.temperature.today 中添加了每日温度统计，具有自动最小/最大/平均跟踪、JSON 和 HTML 摘要以及午夜重置功能。"
-      }
+       }
 	},
     "titleLang": {
       "en": "PoolControl",

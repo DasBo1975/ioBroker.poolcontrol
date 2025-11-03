@@ -19,7 +19,8 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
 ## Funktionen
 
 - **Pumpensteuerung**
-  - Betriebsmodi: Automatik, Manuell, Zeitsteuerung, Aus
+  - Betriebsmodi: Automatik, Automatik (PV), Manuell, Zeitsteuerung, Aus
+  - Automatik (PV) steuert die Pumpe abhängig vom Photovoltaik-Überschuss
   - Fehlererkennung (kein Stromverbrauch, Leistung trotz „AUS“, Überlast)
   - Sicherheitsfunktionen (Frostschutz, Überhitzungsschutz)
 
@@ -34,12 +35,24 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Kollektor-Warnung (mit automatischer Rücksetzung bei 10 % unter der Schwelle)
   - Optionale Sprachausgabe bei Warnung
 
+- **Photovoltaiksteuerung (ab v0.6.0)
+  - Automatische Pumpensteuerung auf Basis von PV-Erzeugung und Hausverbrauchs
+  - Einschaltlogik: Überschuss ≥ (Pumpen-Nennleistung + Sicherheitsaufschlag)
+  - Optionaler Nachlauf bei Wolkenphasen
+  - Ignorieren bei erreichter Tagesumwälzung
+  - Konfiguration über zwei Fremd-Objekt-IDs (power_generated_id, power_house_id)
+  - Neuer Pumpenmodus „Automatik (PV)
+
 - **Zeitsteuerung**
   - Bis zu 3 frei konfigurierbare Zeitfenster pro Woche
 
 - **Laufzeit & Umwälzung**
   - Zählt Laufzeiten (heute, gesamt)
   - Berechnet tägliche Umwälzung und Restmenge
+  - Rückspülerinnerung mit konfigurierbarem Intervall (z. B. alle 7 Tage)
+  - Anzeige der letzten Rückspülung inkl. Datum
+  - Automatische Rücksetzung nach erfolgter Rückspülung
+  - PV-Modus berücksichtigt Umwälzstatus (z. B. „Ignoriere bei Umwälzung erreicht“)
 
 - **Verbrauch & Kosten**
   - Auswertung eines externen kWh-Zählers
@@ -49,16 +62,19 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   **Hinweis:**  
   Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei [help.md](./help.md).
 
+- **Statistiksystem**
+  - Bereich `analytics.statistics.*` mit Tages-, Wochen- und Monatswerten
+  - Automatische Berechnung von Min-, Max-, Durchschnitts- und Laufzeitwerten
+  - Vollständig persistente Datenpunkte (Überinstallationsschutz)
+  - HTML- und JSON-Zusammenfassungen pro Sensor und Gesamtübersicht
+
 - **Sprachausgaben**
   - Ausgabe über Alexa oder Telegram
   - Ansagen bei Pumpenstart/-stopp, Fehlern oder Temperaturschwellen
 
 - **SystemCheck (Diagnosebereich)**
-  Ab Version **0.2.0** enthält der Adapter einen neuen Diagnosebereich **SystemCheck**.  
-  Er bietet interne Debug-Logs, mit denen bestimmte Teilbereiche (z. B. Pumpen-, Solar- oder Temperatursteuerung) gezielt überwacht werden können.
-
-  *Funktionen:*
-  - Auswahl des zu überwachenden Bereichs
+  - Interner Diagnosebereich für Debug- und Überwachungsfunktionen
+  - Auswahl des zu überwachenden Bereichs (z. B. Pumpe, Solar, Temperatur)
   - Fortlaufendes Log der letzten Änderungen
   - Manuelles Löschen des Logs möglich
 
@@ -90,26 +106,24 @@ Die Konfiguration erfolgt über Tabs im Admin-Interface:
 
 ## Geplante Erweiterungen
 
-- Rückspülerinnerung (Intervall in Tagen, Erinnerung über State)  
-- Wartung Kesseldruck (maximaler Druck, Warnung bei Überschreitung)  
-- Weitere Komfortfunktionen nach Praxistests  
-- Kesseldruck-Wartung / Drucksensor-Warnung
-- PV-Überschuss-Steuerung (für z.B. Pumpe oder Wärmepumpe)
-- Zweite Pumpe (z.B. Wärmetauscher)
-- Statistikbereich 
-- Eigene Widgets für VIS/VIS2
-- Erweiterung Wärmepumpen-/Heizlogik
-- Steuerung von Poolbeleuchtung
-- Steuerung von Poolrobotern
-- Steuerung von elektrischen Ventilen 
-- Steuerung von Gegenstromanlagen
+- Erweiterte PV- und Solar-Effizienzanalyse (COP-Berechnung, Tagesnutzen, Wetterintegration)
+- Statistik-Exportfunktion (CSV/Excel)
+- Diagnostic-Helper zur automatischen Systemprüfung
+- Erweiterung der Heizungs-/Wärmepumpenlogik (`heatHelper`)
+- Drucksensor-Integration zur Kesseldruck-Überwachung
+- Zweite Pumpe (z. B. Wärmetauscher oder Wärmepumpe)
+- Eigene Widgets für VIS/VIS2 (grafische Pool- und Solarvisualisierung)
+- Steuerung von Poolbeleuchtung, Ventilen und Gegenstromanlagen
+- Integration zusätzlicher Sensorboxen (z. B. TempBox, PressureBox, LevelBox)
+- KI- und Sprach-Assistenten-Erweiterung (Pool-Tagesbericht, Tipps, Sprachbefehle)
+
 
 ---
 
 ## Hinweis
 
-Der Adapter befindet sich aktuell in der Entwicklung.  
-Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
+Der Adapter befindet sich in aktiver Weiterentwicklung.
+Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ---
 
@@ -120,6 +134,15 @@ Funktionen können sich ändern – bitte regelmäßig den Changelog beachten.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+
+## v0.6.0 (2025-11-03)
+- Einführung der vollständigen Photovoltaik-Steuerung mit automatischer Pumpenlogik  
+  (neuer Pumpenmodus `Automatik (PV)` unter `pump.mode`)
+- Adapter reagiert auf PV-Überschuss basierend auf konfigurierbarer Hausverbrauchs- und Erzeugungsleistung
+- Einschaltlogik: Pumpe EIN bei Überschuss ≥ (Nennleistung + Schwellwert)
+- Berücksichtigung von Saisonstatus, Nachlaufzeit und optionalem „Umwälzung erreicht“-Schutz
+- Automatische Migration ergänzt neuen Modus `auto_pv` in bestehenden Installationen
+- Verbesserte interne Logik, Persistenz und Debug-Protokollierung
 
 ## v0.5.5 (2025-11-01)
 - Endlosschleife in Statistik Woche und Monat behoben

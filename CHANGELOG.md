@@ -5,6 +5,17 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+## v0.6.0 (2025-11-03)
+- Einführung der vollständigen Photovoltaik-Steuerung mit automatischer Pumpenlogik  
+  (neuer Pumpenmodus `Automatik (PV)` unter `pump.mode`)
+- Adapter reagiert auf PV-Überschuss basierend auf konfigurierbarer Hausverbrauchs- und Erzeugungsleistung
+- Einschaltlogik: Pumpe EIN bei Überschuss ≥ (Nennleistung + Schwellwert)
+- Berücksichtigung von Saisonstatus, Nachlaufzeit und optionalem „Umwälzung erreicht“-Schutz
+- Automatische Migration ergänzt neuen Modus `auto_pv` in bestehenden Installationen
+- Verbesserte interne Logik, Persistenz und Debug-Protokollierung
+
+---
+
 ## v0.5.5 (2025-11-01)
 - Endlosschleife in Statistik Woche und Monat behoben
 
