@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "news": {
+       "0.6.1": {
+         "en": "Fixed false monthly reset when no last_reset date existed. Corrected real last_update timestamp in monthly statistics.",
+         "de": "Fehlerhaften Monatsreset ohne gültiges last_reset-Datum behoben. Korrigierter echter Zeitstempel last_update in der Monatsstatistik.",
+         "ru": "Исправлен неверный ежемесячный сброс без действительной даты last_reset. Исправлено обновление времени last_update в ежемесячной статистике.",
+         "pt": "Corrigido o reset mensal incorreto quando não havia data last_reset. Corrigido o timestamp real de last_update na estatística mensal.",
+         "nl": "Onjuiste maandelijkse reset opgelost wanneer er geen last_reset-datum was. Gecorrigeerde echte last_update-tijd in maandelijkse statistieken.",
+         "fr": "Correction du réinitialisation mensuelle erronée lorsqu'aucune date last_reset n'existait. Horodatage last_update réel corrigé dans les statistiques mensuelles.",
+         "it": "Corretto il reset mensile errato quando non esisteva una data last_reset. Corretto il timestamp reale last_update nelle statistiche mensili.",
+         "es": "Corregido el restablecimiento mensual erróneo cuando no existía una fecha last_reset. Corregida la marca de tiempo real last_update en las estadísticas mensuales.",
+         "pl": "Naprawiono błędny miesięczny reset, gdy nie istniała data last_reset. Poprawiono rzeczywisty znacznik czasu last_update w miesięcznych statystykach.",
+         "zh-cn": "修复了在不存在 last_reset 日期时错误的月度重置。修正了月度统计中的真实 last_update 时间戳。"
+       },
        "0.6.0": {
          "en": "Added complete photovoltaic control with automatic pump management (mode 'Automatik (PV)'). The adapter can now react to PV surplus based on configurable house consumption and generation values. Includes migration for existing installations. Improved system consistency and internal logging.",
          "de": "Vollständige Photovoltaik-Steuerung mit automatischer Pumpenlogik (Modus 'Automatik (PV)') hinzugefügt. Der Adapter reagiert nun auf PV-Überschuss anhand konfigurierbarer Hausverbrauchs- und Erzeugungswerte. Migration für bestehende Installationen integriert. Systemkonsistenz und interne Protokollierung verbessert.",
@@ -79,18 +91,6 @@
          "pl": "Rozszerzone statystyki tygodniowe i miesięczne z trwałymi danymi, ujednoliconym formatem JSON i ochroną przed ponowną instalacją.",
          "uk": "Розширена тижнева та місячна статистика з постійними даними, уніфікованим форматом JSON і захистом під час перевстановлення.",
          "zh-cn": "扩展的周和月统计，具有持久数据、统一的 JSON 格式和重新安装保护。"
-       },
-      "0.5.0": {
-        "en": "Added weekly and monthly temperature statistics under analytics.statistics.temperature.week and analytics.statistics.temperature.month with automatic summaries, independent helpers and persistent data points.",
-        "de": "Wöchentliche und monatliche Temperaturstatistiken unter analytics.statistics.temperature.week und analytics.statistics.temperature.month hinzugefügt – mit automatischen Zusammenfassungen, unabhängigen Helpern und persistenten Datenpunkten.",
-        "ru": "Добавлена еженедельная и ежемесячная статистика температуры в analytics.statistics.temperature.week и analytics.statistics.temperature.month с автоматическими сводками, независимыми помощниками и постоянными точками данных.",
-        "fr": "Ajout des statistiques de température hebdomadaires et mensuelles sous analytics.statistics.temperature.week et analytics.statistics.temperature.month avec résumés automatiques, helpers indépendants et points de données persistants.",
-        "it": "Aggiunte statistiche settimanali e mensili della temperatura in analytics.statistics.temperature.week e analytics.statistics.temperature.month con riepiloghi automatici, helper indipendenti e punti dati persistenti.",
-        "es": "Se añadieron estadísticas semanales y mensuales de temperatura en analytics.statistics.temperature.week y analytics.statistics.temperature.month con resúmenes automáticos, ayudantes independientes y puntos de datos persistentes.",
-        "nl": "Wekelijkse en maandelijkse temperatuurstatistieken toegevoegd onder analytics.statistics.temperature.week en analytics.statistics.temperature.month met automatische samenvattingen, onafhankelijke helpers en persistente gegevenspunten.",
-        "pl": "Dodano tygodniowe i miesięczne statystyki temperatury w analytics.statistics.temperature.week i analytics.statistics.temperature.month z automatycznymi podsumowaniami, niezależnymi pomocnikami i trwałymi punktami danych.",
-        "uk": "Додано щотижневу та щомісячну статистику температури в analytics.statistics.temperature.week та analytics.statistics.temperature.month з автоматичними зведеннями, незалежними помічниками та постійними точками даних.",
-        "zh-cn": "在 analytics.statistics.temperature.week 和 analytics.statistics.temperature.month 中添加了每周和每月温度统计，具有自动摘要、独立助手和持久数据点。"
        }
 	},
     "titleLang": {
