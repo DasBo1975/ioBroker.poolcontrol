@@ -5,6 +5,14 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+## v0.6.2 (2025-11-07)
+- Überarbeitung der Instanzübersicht mit neuen Header-Strukturen für klarere Bedienung
+- Neues Startseitenbild „Egon im Blaumann“ in der Admin-Oberfläche integriert
+- Erweiterung des Sprachsystems um konfigurierbare Alexa-Ausgabezeiten
+- Anpassungen und Aufräumarbeiten in jsonConfig, speechHelper und speechStates
+
+---
+
 ## v0.6.0 (2025-11-03)
 - Einführung der vollständigen Photovoltaik-Steuerung mit automatischer Pumpenlogik  
   (neuer Pumpenmodus `Automatik (PV)` unter `pump.mode`)

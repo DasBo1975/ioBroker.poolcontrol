@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "news": {
+       "0.6.2": {
+         "en": "UI refinement and admin interface improvements. Added image integration ('Egon in blue overalls') for visual identification. Speech system extended with Alexa output time configuration. Cleaned and optimized jsonConfig with section headers for improved clarity.",
+         "de": "Oberflächenüberarbeitung und Verbesserungen der Admin-Ansicht. Bildintegration ('Egon im Blaumann') zur visuellen Wiedererkennung hinzugefügt. Sprachsystem um konfigurierbare Alexa-Ausgabezeiten erweitert. jsonConfig mit Abschnittsüberschriften bereinigt und übersichtlicher gestaltet.",
+         "ru": "Улучшение интерфейса и доработка административной панели. Добавлено изображение ('Эгон в синем комбинезоне') для визуальной идентификации. Расширена система речи с настройкой времени вывода Alexa. Очищена и оптимизирована jsonConfig с заголовками разделов для лучшей читаемости.",
+         "pt": "Aprimoramento da interface e melhorias na administração. Adicionada imagem ('Egon de macacão azul') para identificação visual. Sistema de fala ampliado com configuração de horários de saída Alexa. jsonConfig limpa e otimizada com cabeçalhos de seção para melhor clareza.",
+         "nl": "UI verfijnd en verbeteringen in het beheerpaneel. Afbeelding ('Egon in blauwe overall') toegevoegd voor visuele herkenning. Spraaksysteem uitgebreid met Alexa-uitvoertijdaanpassing. jsonConfig opgeschoond en overzichtelijker gemaakt met sectiekoppen.",
+         "fr": "Amélioration de l'interface utilisateur et du panneau d'administration. Image ajoutée ('Egon en bleu de travail') pour identification visuelle. Système vocal étendu avec configuration des heures de sortie Alexa. jsonConfig nettoyé et optimisé avec en-têtes de section pour plus de clarté.",
+         "it": "Raffinamento dell'interfaccia e miglioramenti al pannello di amministrazione. Aggiunta l'immagine ('Egon in tuta blu') per l'identificazione visiva. Sistema vocale ampliato con configurazione degli orari di uscita Alexa. jsonConfig ripulito e ottimizzato con intestazioni di sezione per maggiore chiarezza.",
+         "es": "Refinamiento de la interfaz y mejoras en el panel de administración. Se agregó imagen ('Egon con mono azul') para identificación visual. Sistema de voz ampliado con configuración de horarios de salida de Alexa. jsonConfig limpiado y optimizado con encabezados de sección para mayor claridad.",
+         "pl": "Udoskonalenie interfejsu i panelu administracyjnego. Dodano obraz ('Egon w niebieskim kombinezonie') dla wizualnej identyfikacji. Rozszerzono system mowy o konfigurację czasu wyjścia Alexa. Wyczyczono i zoptymalizowano jsonConfig z nagłówkami sekcji dla lepszej przejrzystości.",
+         "zh-cn": "改进了界面和管理界面。添加了图像（'蓝色工作服的Egon'）以实现视觉识别。语音系统扩展了Alexa输出时间配置。清理并优化了带有章节标题的jsonConfig，使其更清晰。"
+       },
        "0.6.1": {
          "en": "Fixed false monthly reset when no last_reset date existed. Corrected real last_update timestamp in monthly statistics.",
          "de": "Fehlerhaften Monatsreset ohne gültiges last_reset-Datum behoben. Korrigierter echter Zeitstempel last_update in der Monatsstatistik.",
@@ -78,19 +90,6 @@
          "es": "Sistema de prioridad de helpers ampliado: solucionados los conflictos de tiempo/solar, la protección contra heladas se pausa durante las ventanas de tiempo. Comportamiento estable de la bomba y mejor coordinación entre helpers.",
          "pl": "Rozszerzony system priorytetów helperów: naprawiono konflikty między czasem a sterowaniem solarnym, ochrona przed mrozem wstrzymuje się podczas okien czasowych. Stabilne działanie pompy i lepsza koordynacja między helperami.",
          "zh-cn": "扩展的助手优先级系统：修复时间/太阳能冲突，防冻在时间窗口内暂停。泵运行稳定，助手之间协调更好。"
-       },
-       "0.5.1": {
-         "en": "Extended week and month statistics with persistent data, unified JSON format, and installation protection.",
-         "de": "Erweiterte Wochen- und Monatsstatistik mit persistenten Daten, einheitlichem JSON-Format und Überinstallationsschutz.",
-         "ru": "Расширенная недельная и месячная статистика с постоянными данными, унифицированным форматом JSON и защитой при переустановке.",
-         "pt": "Estatísticas semanais e mensais expandidas com dados persistentes, formato JSON unificado e proteção de reinstalação.",
-         "nl": "Uitgebreide week- en maandstatistieken met persistente gegevens, uniforme JSON-indeling en installatiebescherming.",
-         "fr": "Statistiques hebdomadaires et mensuelles étendues avec données persistantes, format JSON unifié et protection à la réinstallation.",
-         "it": "Statistiche settimanali e mensili estese con dati persistenti, formato JSON unificato e protezione dall'installazione.",
-         "es": "Estadísticas semanales y mensuales ampliadas con datos persistentes, formato JSON unificado y protección de reinstalación.",
-         "pl": "Rozszerzone statystyki tygodniowe i miesięczne z trwałymi danymi, ujednoliconym formatem JSON i ochroną przed ponowną instalacją.",
-         "uk": "Розширена тижнева та місячна статистика з постійними даними, уніфікованим форматом JSON і захистом під час перевстановлення.",
-         "zh-cn": "扩展的周和月统计，具有持久数据、统一的 JSON 格式和重新安装保护。"
        }
 	},
     "titleLang": {

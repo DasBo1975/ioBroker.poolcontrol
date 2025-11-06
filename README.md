@@ -135,6 +135,13 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v0.6.2 (2025-11-07)
+- Überarbeitung der Instanzübersicht mit neuen Header-Strukturen für klarere Bedienung
+- Neues Startseitenbild „Egon im Blaumann“ in der Admin-Oberfläche integriert
+- Erweiterung des Sprachsystems um konfigurierbare Alexa-Ausgabezeiten
+- Anpassungen und Aufräumarbeiten in jsonConfig, speechHelper und speechStates
+
+
 ## v0.6.0 (2025-11-03)
 - Einführung der vollständigen Photovoltaik-Steuerung mit automatischer Pumpenlogik  
   (neuer Pumpenmodus `Automatik (PV)` unter `pump.mode`)
@@ -185,31 +192,6 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 Diese Version bildet die stabile Basis für alle folgenden Statistik- und Analysefunktionen  
 (z. B. Wochen- und Monatsstatistik, Historien- und Effizienz-Auswertungen).
 
----
-
-### 0.3.1 (2025-10-18)
-- FrostHelper stabilisiert:
-  - Feste Hysterese von +2 °C (bisher +1 °C)
-  - Ganzzahl-Rundung eingeführt zur Vermeidung von Schaltflattern um 3 °C
-  - Keine Änderungen an States oder Konfiguration erforderlich
-
----
-
-### 0.3.0 (12.10.2025)
-**Neu:** Intelligentes Pumpen-Monitoring & Lernsystem
-
-- Hinzugefügt: **Reelle Durchflussberechnung** auf Basis der tatsächlichen Leistungsaufnahme.  
-- Neuer Bereich **`pump.live`** zur Live-Überwachung von Leistung, Durchfluss und prozentualer Auslastung.  
-- Die **tägliche Umwälzberechnung** verwendet nun den realen Durchflusswert anstelle eines Fixwerts.  
-- Neuer Lernbereich **`pump.learning`**:
-  - Lernt automatisch die durchschnittlichen Leistungs- und Durchflusswerte.  
-  - Bestimmt daraus einen dynamischen **Normalbereich (± 15 %)**.  
-  - Berechnet prozentuale Abweichungen und erstellt **textbasierte Statusmeldungen**.  
-  - Alle Lernwerte werden **persistent** gespeichert und bleiben auch nach Neustart erhalten.  
-- Vollständig **ereignisgesteuerte Logik** ohne zusätzliche Timer oder Polling-Zyklen.  
-
-> Mit dieser Version beginnt die lernfähige Phase des PoolControl-Adapters:  
-> Deine Pumpe weiß jetzt selbst, was für sie „normal“ ist.
 
 
 *(ältere Versionen siehe [io-package.json](./io-package.json))*  

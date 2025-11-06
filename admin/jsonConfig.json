@@ -6,9 +6,16 @@
       "type": "panel",
       "label": "Allgemeine Einstellungen",
       "items": {
-        "divider1": {
-          "type": "divider",
-          "newLine": true
+        "general_header": {
+          "type": "header",
+          "text": "Allgemeine Einstellungen zum Pool",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "pool_name": {
           "type": "text",
@@ -18,7 +25,8 @@
           "sm": 3,
 		  "md": 3,
 		  "lg": 3,
-		  "xl": 3
+		  "xl": 3,
+          "newLine": true
         },
         "pool_size": {
           "type": "number",
@@ -47,12 +55,18 @@
           "sm": 3,
 		  "md": 3,
 		  "lg": 3,
-		  "xl": 3,
-          "newLine": true
+		  "xl": 3
         },
-		"divider_season1": {
-          "type": "divider",
-          "newLine": true
+        "general_season_header": {
+          "type": "header",
+          "text": "Saisoneinstellungen",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "season_active": {
           "type": "checkbox",
@@ -65,19 +79,32 @@
           "xl": 3,
           "newLine": true
         },
-                "divider_hardware1": {
-          "type": "divider",
-          "newLine": true
-        }
+        "egon_image": {
+          "type": "staticImage",
+          "src": "adapter/poolcontrol/admin/egon_blaumann.jpg",
+          "newLine": true,
+          "xs": 3,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3
+        },
       }
     },
     "pump": {
       "type": "panel",
       "label": "Pumpe",
       "items": {
-        "divider2": {
-          "type": "divider",
-          "newLine": true
+        "Leistung_header": {
+          "type": "header",
+          "text": "Pumpeneinstellungen (Nennleistung)",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "pump_max_watt": {
           "type": "number",
@@ -87,7 +114,8 @@
           "sm": 3,
 		  "md": 3,
 		  "lg": 3,
-		  "xl": 3
+		  "xl": 3,
+          "newLine": true
         },
         "pump_power_lph": {
           "type": "number",
@@ -97,12 +125,18 @@
           "sm": 3,
 		  "md": 3,
 		  "lg": 3,
-		  "xl": 3,
-          "newLine": true
+		  "xl": 3
         },
-        "divider3": {
-          "type": "divider",
-          "newLine": true
+        "Frostschutz_header": {
+          "type": "header",
+          "text": "Frostschutz",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "frost_protection_active": {
           "type": "checkbox",
@@ -125,9 +159,16 @@
 		  "lg": 3,
 		  "xl": 3
         },
-        "divider4": {
-          "type": "divider",
-          "newLine": true
+        "pumpswitch_header": {
+          "type": "header",
+          "text": "Pumpendatenpunkte (Messsteckdose & Aktueller Verbrauch Watt)",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "pump_switch": {
           "type": "objectId",
@@ -149,10 +190,6 @@
 		  "lg": 3,
 		  "xl": 3
 		},
-        "divider9": {
-          "type": "divider",
-          "newLine": true
-        },
         "pump_mode_hint": {
           "type": "staticText",
           "text": "Pumpenmodus (Automatik/Manuell/Aus/Zeit) kann über den Datenpunkt 'pump.mode' gesteuert werden.",
@@ -163,9 +200,16 @@
           "lg": 12,
           "xl": 12
         },
-        "divider10": {
-          "type": "divider",
-          "newLine": true
+        "pump_safety_header": {
+          "type": "header",
+          "text": "Sicherheitsfunktionen",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "manual_safety_enabled": {
           "type": "checkbox",
@@ -194,9 +238,16 @@
       "type": "panel",
       "label": "Temperaturverwaltung",
       "items": {
-        "divider5": {
-          "type": "divider",
-          "newLine": true
+        "tempsensor_header": {
+          "type": "header",
+          "text": "Temperatursensoren",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "surface_temp_active": {
           "type": "checkbox",
@@ -330,9 +381,16 @@
       "type": "panel",
       "label": "Solarverwaltung",
       "items": {
-        "divider6": {
-          "type": "divider",
-          "newLine": true
+        "solar_control_active_header": {
+          "type": "header",
+          "text": "Solarsteuerung aktivieren",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "solar_control_active": {
           "type": "checkbox",
@@ -345,9 +403,16 @@
 		  "xl": 3,
           "newLine": true
         },
-        "divider_solar1": {
-          "type": "divider",
-          "newLine": true
+        "solar_hysteresis_active_header": {
+          "type": "header",
+          "text": "Hysterese",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "solar_hysteresis_active": {
           "type": "checkbox",
@@ -380,10 +445,17 @@
 		  "lg": 3,
 		  "xl": 3
         },
-		"divider_solar2": {
-		  "type": "divider",
-		  "newLine": true
-		},
+        "solar_collector_warn_active_header": {
+          "type": "header",
+          "text": "Kollektortemperatur-Warnung",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
 		"solar_collector_warn_active": {
 		  "type": "checkbox",
 		  "label": "Kollektortemperatur-Warnung aktivieren",
@@ -432,9 +504,16 @@
       "type": "panel",
       "label": "Zeitsteuerung",
       "items": {
-        "divider_time1": {
-          "type": "divider",
-          "newLine": true
+        "time1_active_header": {
+          "type": "header",
+          "text": "Zeitfenster 1",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "time1_active": {
           "type": "checkbox",
@@ -538,9 +617,16 @@
 		  "lg": 1,
 		  "xl": 1
 		},
-        "divider_time2": {
-          "type": "divider",
-          "newLine": true
+        "time2_active_header": {
+          "type": "header",
+          "text": "Zeitfenster 2",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "time2_active": {
           "type": "checkbox",
@@ -644,9 +730,16 @@
 		  "lg": 1,
 		  "xl": 1
 		},
-        "divider_time3": {
-          "type": "divider",
-          "newLine": true
+        "time3_active_header": {
+          "type": "header",
+          "text": "Zeitfenster 3",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "time3_active": {
           "type": "checkbox",
@@ -756,10 +849,17 @@
 	  "type": "panel",
 	  "label": "Sprachausgaben",
 	  "items": {
-		"divider_speech1": {
-		  "type": "divider",
-		  "newLine": true
-		},
+        "speech_general_header": {
+          "type": "header",
+          "text": "Generell",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
 		"speech_active": {
 		  "type": "checkbox",
 		  "label": "Sprachausgaben aktivieren",
@@ -772,10 +872,17 @@
 		  "newLine": true
 		},
 
-		"divider_speech2": {
-		  "type": "divider",
-		  "newLine": true
-		},
+        "speech_alexa_header": {
+          "type": "header",
+          "text": "Amazon Alexa",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
 		"speech_alexa_enabled": {
 		  "type": "checkbox",
 		  "label": "Ausgabe über Alexa aktivieren",
@@ -823,10 +930,17 @@
 		  "xl": 3
 		},
 
-		"divider_speech3": {
-		  "type": "divider",
-		  "newLine": true
-		},
+        "speech_telegram_header": {
+          "type": "header",
+          "text": "Telegram",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
 		"speech_telegram_enabled": {
 		  "type": "checkbox",
 		  "label": "Ausgabe über Telegram aktivieren",
@@ -870,9 +984,16 @@
           "lg": 6,
           "xl": 6
         },
-		  "divider_speech_email": {
-          "type": "divider",
-          "newLine": true
+        "speech_mail_header": {
+          "type": "header",
+          "text": "Mail",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "speech_email_enabled": {
           "type": "checkbox",
@@ -948,10 +1069,17 @@
 	  "type": "panel",
 	  "label": "PV, Verbrauch & Kosten",
 	  "items": {
-		"divider_cons1": {
-		  "type": "divider",
-		  "newLine": true
-		},
+        "consumption_header": {
+          "type": "header",
+          "text": "Verbrauch- und Kostenberechnung",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
 		"consumption_enabled": {
 		  "type": "checkbox",
 		  "label": "Verbrauchs- und Kostenberechnung aktivieren",
@@ -973,11 +1101,6 @@
 		  "md": 6,
 		  "lg": 6,
 		  "xl": 6
-		},
-
-		"divider_cons2": {
-		  "type": "divider",
-		  "newLine": true
 		},
 		"energy_price_eur_kwh": {
 		  "type": "number",
@@ -1003,11 +1126,6 @@
           "lg": 12,
           "xl": 12
 		},
-
-        "divider_pv1": {
-          "type": "divider",
-          "newLine": true
-        },
         "pv_header": {
           "type": "header",
           "text": "Photovoltaik (Überschusserkennung)",
@@ -1061,9 +1179,16 @@
       "type": "panel",
       "label": "Hilfe",
       "items": {
-        "divider_help": {
-          "type": "divider",
-          "newLine": true
+        "help_header": {
+          "type": "header",
+          "text": "Hilfe und Hinweise",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "helpLink": {
           "type": "staticLink",
