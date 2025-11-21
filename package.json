@@ -1,6 +1,6 @@
 {
   "name": "iobroker.poolcontrol",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Steuerung & Automatisierung für den Pool (Pumpe, Heizung, Ventile, Sensoren).",
   "author": "DasBo1975 <dasbo1975@outlook.de>",
   "homepage": "https://github.com/DasBo1975/ioBroker.poolcontrol",

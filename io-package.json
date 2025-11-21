@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "news": {
+       "0.6.3": {
+         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
+         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
+         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
+         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
+         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
+         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
+         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
+         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
+         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
+         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
+         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
+       },
        "0.6.2": {
          "en": "UI refinement and admin interface improvements. Added image integration ('Egon in blue overalls') for visual identification. Speech system extended with Alexa output time configuration. Cleaned and optimized jsonConfig with section headers for improved clarity.",
          "de": "Oberflächenüberarbeitung und Verbesserungen der Admin-Ansicht. Bildintegration ('Egon im Blaumann') zur visuellen Wiedererkennung hinzugefügt. Sprachsystem um konfigurierbare Alexa-Ausgabezeiten erweitert. jsonConfig mit Abschnittsüberschriften bereinigt und übersichtlicher gestaltet.",
@@ -78,18 +91,6 @@
          "pl": "Dodano wybór użytkowników dla powiadomień Telegram. Gdy nie wybrano żadnego użytkownika, wiadomości są wysyłane globalnie jak wcześniej; po podaniu jednego lub kilku nazw użytkowników wiadomości otrzymują tylko oni. Ulepszono UI administracyjne (pole odbiorców pod instancją). Zaktualizowano speechHelper i jsonConfig.json.",
          "uk": "Додано вибір користувачів для сповіщень Telegram. Якщо користувача не вибрано, повідомлення надсилаються глобально, як і раніше; якщо вказано одне чи кілька імен, їх отримують лише ці користувачі. Візуально покращено інтерфейс адміністрування (поле одержувача під екземпляром). Оновлено speechHelper та jsonConfig.json.",
          "zh-cn": "新增 Telegram 通知的用户选择功能。未选择用户时消息将像以前一样全局发送；指定一个或多个用户名时，仅这些用户会收到消息。优化了管理界面显示（收件人字段缩进至实例下方）。已更新 speechHelper 和 jsonConfig.json。"
-       },
-       "0.5.2": {
-         "en": "Extended helper priority system: fixed time/solar conflicts, frost pauses during time windows. Stable pump behavior and improved coordination between helpers.",
-         "de": "Erweitertes Helper-Vorrangsystem: Konflikte zwischen Zeit- und Solarsteuerung behoben, Frostschutz pausiert während Zeitfenstern. Stabiles Pumpenverhalten und verbesserte Koordination zwischen den Helpern.",
-         "ru": "Расширена система приоритетов помощников: устранены конфликты между таймером и солнечным управлением, мороз приостанавливается во время временных окон. Стабильная работа насоса и улучшенная координация между помощниками.",
-         "pt": "Sistema de prioridade dos helpers expandido: corrigidos conflitos de tempo/solar, proteção contra geada pausa durante janelas de tempo. Comportamento estável da bomba e melhor coordenação entre helpers.",
-         "nl": "Uitgebreid helperprioriteitssysteem: conflicten tussen tijd- en zonregeling opgelost, vorstbeveiliging pauzeert tijdens tijdvensters. Stabiel pompgedrag en betere coördinatie tussen helpers.",
-         "fr": "Système de priorité des helpers étendu : conflits temps/solaire corrigés, protection antigel en pause pendant les plages horaires. Comportement de pompe stable et meilleure coordination entre les helpers.",
-         "it": "Sistema di priorità degli helper esteso: risolti i conflitti tempo/solare, la protezione antigelo si mette in pausa durante le finestre temporali. Comportamento stabile della pompa e migliore coordinamento tra gli helper.",
-         "es": "Sistema de prioridad de helpers ampliado: solucionados los conflictos de tiempo/solar, la protección contra heladas se pausa durante las ventanas de tiempo. Comportamiento estable de la bomba y mejor coordinación entre helpers.",
-         "pl": "Rozszerzony system priorytetów helperów: naprawiono konflikty między czasem a sterowaniem solarnym, ochrona przed mrozem wstrzymuje się podczas okien czasowych. Stabilne działanie pompy i lepsza koordynacja między helperami.",
-         "zh-cn": "扩展的助手优先级系统：修复时间/太阳能冲突，防冻在时间窗口内暂停。泵运行稳定，助手之间协调更好。"
        }
 	},
     "titleLang": {
