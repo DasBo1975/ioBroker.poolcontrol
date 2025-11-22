@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "news": {
+       "0.6.4": {
+         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
+         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
+         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
+         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
+         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
+         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
+         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
+         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
+         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
+         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
+         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
+       },
        "0.6.3": {
          "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
          "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
@@ -78,19 +91,6 @@
          "pl": "Naprawiono rzadką nieskończoną pętlę podczas resetowania statystyk tygodniowych i miesięcznych, która mogła powodować przeciążenie Redis. Dodano ochronę timera i poprawiono stabilność.",
          "uk": "Виправлено рідкісну нескінченну петлю під час скидання тижневої та місячної статистики, що могла спричинити перевантаження Redis. Додано захист таймера та покращено стабільність.",
          "zh-cn": "修复了每周和每月统计重置期间可能导致 Redis 过载的罕见无限循环。改进了计时器保护和系统稳定性。"
-       },
-       "0.5.3": {
-         "en": "Added user selection for Telegram notifications. If no user is selected, messages are sent globally as before; if one or more usernames are specified, only those users receive the messages. Admin UI visually improved (recipient field indented under the instance). speechHelper and jsonConfig.json updated.",
-         "de": "Benutzerauswahl für Telegram-Benachrichtigungen hinzugefügt. Wenn kein Benutzer ausgewählt ist, werden Nachrichten wie bisher global gesendet; bei einem oder mehreren Benutzernamen erhalten nur diese die Nachrichten. Admin-UI optisch verbessert (Empfängerfeld unter der Instanz eingerückt). speechHelper und jsonConfig.json aktualisiert.",
-         "ru": "Добавлен выбор пользователей для уведомлений Telegram. Если пользователь не выбран, сообщения отправляются глобально, как и раньше; при указании одного или нескольких имен сообщения получают только эти пользователи. Улучшен интерфейс админки (поле получателей расположено под экземпляром). Обновлены speechHelper и jsonConfig.json.",
-         "pt": "Adicionada seleção de usuários para notificações do Telegram. Se nenhum usuário for selecionado, as mensagens serão enviadas globalmente como antes; se um ou mais nomes forem informados, apenas esses usuários receberão as mensagens. UI de administração melhorada visualmente (campo de destinatários recuado sob a instância). speechHelper e jsonConfig.json atualizados.",
-         "nl": "Gebruikersselectie toegevoegd voor Telegram-meldingen. Als er geen gebruiker is geselecteerd, worden berichten zoals voorheen wereldwijd verzonden; bij één of meer opgegeven gebruikersnamen ontvangen alleen die gebruikers de berichten. Admin-UI visueel verbeterd (ontvanger-veld ingesprongen onder de instantie). speechHelper en jsonConfig.json bijgewerkt.",
-         "fr": "Ajout de la sélection d’utilisateurs pour les notifications Telegram. Si aucun utilisateur n’est sélectionné, les messages sont envoyés globalement comme auparavant ; si un ou plusieurs noms sont spécifiés, seuls ces utilisateurs reçoivent les messages. Amélioration visuelle de l’interface d’admin (champ destinataire indenté sous l’instance). speechHelper et jsonConfig.json mis à jour.",
-         "it": "Aggiunta la selezione degli utenti per le notifiche Telegram. Se non viene selezionato alcun utente, i messaggi vengono inviati globalmente come prima; indicando uno o più nomi utente, solo questi riceveranno i messaggi. Migliorata l’UI di amministrazione (campo destinatari rientrato sotto l’istanza). Aggiornati speechHelper e jsonConfig.json.",
-         "es": "Se añadió la selección de usuarios para notificaciones de Telegram. Si no se selecciona ningún usuario, los mensajes se envían globalmente como antes; si se especifican uno o más nombres de usuario, solo esos usuarios reciben los mensajes. Mejora visual en la interfaz de administración (campo de destinatarios sangrado bajo la instancia). speechHelper y jsonConfig.json actualizados.",
-         "pl": "Dodano wybór użytkowników dla powiadomień Telegram. Gdy nie wybrano żadnego użytkownika, wiadomości są wysyłane globalnie jak wcześniej; po podaniu jednego lub kilku nazw użytkowników wiadomości otrzymują tylko oni. Ulepszono UI administracyjne (pole odbiorców pod instancją). Zaktualizowano speechHelper i jsonConfig.json.",
-         "uk": "Додано вибір користувачів для сповіщень Telegram. Якщо користувача не вибрано, повідомлення надсилаються глобально, як і раніше; якщо вказано одне чи кілька імен, їх отримують лише ці користувачі. Візуально покращено інтерфейс адміністрування (поле одержувача під екземпляром). Оновлено speechHelper та jsonConfig.json.",
-         "zh-cn": "新增 Telegram 通知的用户选择功能。未选择用户时消息将像以前一样全局发送；指定一个或多个用户名时，仅这些用户会收到消息。优化了管理界面显示（收件人字段缩进至实例下方）。已更新 speechHelper 和 jsonConfig.json。"
        }
 	},
     "titleLang": {
