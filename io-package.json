@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "news": {
+       "0.6.5": {
+         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
+         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
+         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
+         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
+         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
+         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
+         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
+         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
+         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
+         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
+         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
+       },
        "0.6.4": {
          "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
          "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
@@ -78,19 +91,6 @@
          "pl": "Naprawiono pozostałą rekursję timera w statystykach tygodniowych i miesięcznych, aby całkowicie zapobiec nieskończonym pętlom resetowania. Uporządkowano strukturę jsonConfig i ulepszono obsługę timera.",
          "uk": "Виправлено залишкову рекурсію таймера у тижневій та місячній статистиці, щоб повністю запобігти нескінченним циклам скидання. Очищено структуру jsonConfig і покращено обробку таймерів.",
          "zh-cn": "修复了每周和每月统计中的剩余计时器递归问题，以完全防止无限重置循环。清理了 jsonConfig 结构并改进了计时器处理。"
-       },
-       "0.5.4": {
-         "en": "Fixed a rare infinite loop during weekly and monthly statistics reset that could cause Redis overload. Added timer protection and improved stability.",
-         "de": "Selten auftretende Endlosschleife beim Wochen- und Monatsreset der Statistik behoben, die zu Redis-Überlastung führen konnte. Timer-Schutz und Stabilität verbessert.",
-         "ru": "Исправлена редкая бесконечная петля при сбросе еженедельной и ежемесячной статистики, вызывавшая перегрузку Redis. Добавлена защита таймера и улучшена стабильность.",
-         "pt": "Corrigido um loop infinito raro durante a redefinição das estatísticas semanais e mensais que podia causar sobrecarga do Redis. Adicionada proteção de temporizador e melhorada a estabilidade.",
-         "nl": "Zeldzame oneindige lus opgelost tijdens de reset van wekelijkse en maandelijkse statistieken die Redis kon overbelasten. Timerbescherming en stabiliteit verbeterd.",
-         "fr": "Correction d'une boucle infinie rare lors de la réinitialisation des statistiques hebdomadaires et mensuelles pouvant provoquer une surcharge de Redis. Protection du minuteur et stabilité améliorées.",
-         "it": "Corretto un raro ciclo infinito durante il reset delle statistiche settimanali e mensili che poteva causare un sovraccarico di Redis. Migliorata la protezione del timer e la stabilità.",
-         "es": "Se corrigió un bucle infinito poco frecuente durante el reinicio de las estadísticas semanales y mensuales que podía causar sobrecarga de Redis. Protección de temporizador y estabilidad mejoradas.",
-         "pl": "Naprawiono rzadką nieskończoną pętlę podczas resetowania statystyk tygodniowych i miesięcznych, która mogła powodować przeciążenie Redis. Dodano ochronę timera i poprawiono stabilność.",
-         "uk": "Виправлено рідкісну нескінченну петлю під час скидання тижневої та місячної статистики, що могла спричинити перевантаження Redis. Додано захист таймера та покращено стабільність.",
-         "zh-cn": "修复了每周和每月统计重置期间可能导致 Redis 过载的罕见无限循环。改进了计时器保护和系统稳定性。"
        }
 	},
     "titleLang": {
