@@ -200,6 +200,48 @@
           "lg": 12,
           "xl": 12
         },
+		        "pressure_header": {
+          "type": "header",
+          "text": "Drucksensor (Filterdruck)",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "use_pressure_sensor": {
+          "type": "checkbox",
+          "label": "Drucksensor verwenden",
+          "default": false,
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3,
+          "newLine": true
+        },
+        "pressure_sensor_id": {
+          "type": "objectId",
+          "label": "Objekt-ID Drucksensor (bar)",
+          "default": "",
+          "xs": 12,
+          "sm": 3,
+          "md": 3,
+          "lg": 3,
+          "xl": 3
+        },
+        "pressure_hint": {
+          "type": "staticText",
+          "text": "Hinweis: Unterstützt sowohl externe Sensoren als auch die PoolControl-Druckbox.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
         "pump_safety_header": {
           "type": "header",
           "text": "Sicherheitsfunktionen",

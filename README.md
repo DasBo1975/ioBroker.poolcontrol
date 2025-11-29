@@ -135,6 +135,16 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+
+## v0.7.0 (2025-11-29)
+- Einführung eines neuen Drucksensor-Systems unter `pump.pressure.*`
+- Unterstützung externer Drucksensor-ObjektID (bar-Wert aus ioBroker)
+- Trenderkennung (steigend/fallend/stabil) und gleitender Druckdurchschnitt
+- Selbstlernende Min-/Max-Druckwerte mit manuellem Reset-State
+- Neuer Diagnose-Text (`status_text_diagnostic`) mit erweiterten Analyseinformationen
+- Erweiterte Pumpenüberwachung ohne automatische Steuerlogik (rein informativ)
+
+
 ## v0.6.2 (2025-11-07)
 - Überarbeitung der Instanzübersicht mit neuen Header-Strukturen für klarere Bedienung
 - Neues Startseitenbild „Egon im Blaumann“ in der Admin-Oberfläche integriert

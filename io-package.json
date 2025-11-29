@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.6.5",
+    "version": "0.7.0",
     "news": {
+       "0.7.0": {
+         "en": "Added full pressure sensor integration (pump.pressure.*), including trend detection, self-learning min/max values, diagnostic output and configurable normal pressure range. No automatic control logic – purely informative.",
+         "de": "Vollständige Drucksensor-Integration (pump.pressure.*) hinzugefügt, inklusive Trenderkennung, selbstlernenden Min-/Max-Werten, Diagnoseausgabe und einstellbarem Normaldruckbereich. Keine automatische Logik – rein informativ.",
+         "ru": "Добавлена полная интеграция датчика давления (pump.pressure.*), включая определение тренда, самообучающиеся минимальные/максимальные значения, диагностический вывод и настраиваемый диапазон нормального давления. Без автоматической логики – только информация.",
+         "pt": "Adicionada integração completa do sensor de pressão (pump.pressure.*), incluindo detecção de tendência, valores mínimos/máximos autoaprendidos, saída de diagnóstico e faixa de pressão normal configurável. Sem lógica automática – apenas informativo.",
+         "nl": "Volledige druksensorintegratie (pump.pressure.*) toegevoegd, inclusief trenddetectie, zelflerende min/max-waarden, diagnostische uitvoer en instelbaar normaaldrukbereik. Geen automatische logica – puur informatief.",
+         "fr": "Intégration complète du capteur de pression (pump.pressure.*) ajoutée, comprenant la détection de tendance, des valeurs min/max auto-apprises, une sortie de diagnostic et une plage de pression normale configurable. Aucune logique automatique – uniquement informatif.",
+         "it": "Aggiunta integrazione completa del sensore di pressione (pump.pressure.*), con rilevamento delle tendenze, valori min/max autoapprendenti, output diagnostico e intervallo di pressione normale configurabile. Nessuna logica automatica – solo informativo.",
+         "es": "Se añadió la integración completa del sensor de presión (pump.pressure.*), incluyendo detección de tendencia, valores mínimos/máximos autoaprendidos, salida de diagnóstico y rango de presión normal configurable. Sin lógica automática – solo informativo.",
+         "pl": "Dodano pełną integrację czujnika ciśnienia (pump.pressure.*), w tym wykrywanie trendów, samo uczące się wartości min/max, dane diagnostyczne oraz konfigurowalny zakres ciśnienia normalnego. Bez automatycznej logiki – wyłącznie informacyjne.",
+         "uk": "Додано повну інтеграцію датчика тиску (pump.pressure.*), включаючи визначення трендів, самонавчальні мін/макс значення, діагностичний вихід та налаштовуваний діапазон нормального тиску. Без автоматичної логіки – лише інформаційно.",
+         "zh-cn": "新增完整压力传感器集成 (pump.pressure.*)，包括趋势检测、自学习最小/最大值、诊断输出以及可配置的正常压力范围。无自动控制逻辑，仅提供信息。"
+       },
        "0.6.5": {
          "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
          "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
@@ -78,19 +91,6 @@
          "pl": "Dodano pełną kontrolę fotowoltaiczną z automatycznym zarządzaniem pompą (tryb 'Automatik (PV)'). Adapter reaguje teraz na nadwyżkę PV w oparciu o konfigurowalne wartości zużycia i produkcji energii. Zawiera migrację dla istniejących instalacji. Poprawiono spójność systemu i wewnętrzne logowanie.",
          "uk": "Додано повний фотогальванічний контроль з автоматичним керуванням насосом (режим 'Automatik (PV)'). Адаптер тепер реагує на надлишок PV на основі налаштовуваних значень споживання та генерації. Включено міграцію для існуючих установок. Покращено системну узгодженість і внутрішнє журналювання.",
          "zh-cn": "新增完整的光伏控制与自动泵管理（模式“Automatik (PV)”）。适配器现在可根据可配置的家庭耗电与发电数值响应光伏盈余。包含对现有安装的迁移。改进了系统一致性和内部日志记录。"
-       },
-       "0.5.5": {
-         "en": "Fixed remaining timer recursion issue in weekly and monthly statistics to fully prevent infinite reset loops. Cleaned up jsonConfig structure and improved timer handling.",
-         "de": "Verbleibende Timer-Rekursion in Wochen- und Monatsstatistik behoben, um Endlosschleifen beim Reset endgültig zu verhindern. jsonConfig-Struktur bereinigt und Timer-Handling verbessert.",
-         "ru": "Исправлена оставшаяся рекурсия таймера в еженедельной и ежемесячной статистике для полного предотвращения бесконечных циклов сброса. Упрощена структура jsonConfig и улучшено управление таймерами.",
-         "pt": "Corrigida a recursão restante do temporizador nas estatísticas semanais e mensais para evitar completamente loops de redefinição infinitos. Estrutura jsonConfig limpa e manuseio de temporizador aprimorado.",
-         "nl": "Overgebleven timerrecursie in week- en maandstatistieken opgelost om oneindige resetlussen volledig te voorkomen. jsonConfig-structuur opgeschoond en timerafhandeling verbeterd.",
-         "fr": "Correction de la récursion restante du minuteur dans les statistiques hebdomadaires et mensuelles afin d'éviter définitivement les boucles de réinitialisation infinies. Structure jsonConfig nettoyée et gestion du minuteur améliorée.",
-         "it": "Corretta la ricorsione residua del timer nelle statistiche settimanali e mensili per prevenire completamente i loop di reset infiniti. Pulita la struttura jsonConfig e migliorata la gestione dei timer.",
-         "es": "Corregida la recursión restante del temporizador en las estadísticas semanales y mensuales para evitar completamente los bucles de reinicio infinitos. Estructura jsonConfig limpiada y manejo del temporizador mejorado.",
-         "pl": "Naprawiono pozostałą rekursję timera w statystykach tygodniowych i miesięcznych, aby całkowicie zapobiec nieskończonym pętlom resetowania. Uporządkowano strukturę jsonConfig i ulepszono obsługę timera.",
-         "uk": "Виправлено залишкову рекурсію таймера у тижневій та місячній статистиці, щоб повністю запобігти нескінченним циклам скидання. Очищено структуру jsonConfig і покращено обробку таймерів.",
-         "zh-cn": "修复了每周和每月统计中的剩余计时器递归问题，以完全防止无限重置循环。清理了 jsonConfig 结构并改进了计时器处理。"
        }
 	},
     "titleLang": {
