@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "news": {
+       "0.7.1": {
+         "en": "Fix for pressure sensor initialization: The adapter now correctly recognizes the configured sensor ID in pumpHelper4. Additionally improved handling of missing / invalid values.",
+         "de": "Fehlerbehebung bei der Drucksensor-Initialisierung: Der Adapter erkennt nun die konfigurierte Sensor-ID in pumpHelper4 korrekt. Außerdem wurde die Verarbeitung fehlender oder ungültiger Werte verbessert.",
+         "ru": "Исправление инициализации датчика давления: адаптер теперь корректно распознаёт настроенный идентификатор датчика в pumpHelper4. Улучшена обработка отсутствующих и недопустимых значений.",
+         "pt": "Correção na inicialização do sensor de pressão: o adaptador agora reconhece corretamente o ID configurado do sensor em pumpHelper4. Manipulação aprimorada de valores ausentes ou inválidos.",
+         "nl": "Foutoplossing voor de druksensor-initialisatie: de adapter herkent nu correct de geconfigureerde sensor-ID in pumpHelper4. Verbeterde verwerking van ontbrekende of ongeldige waarden.",
+         "fr": "Correction de l'initialisation du capteur de pression : l'adaptateur reconnaît désormais correctement l'ID du capteur configuré dans pumpHelper4. Amélioration du traitement des valeurs manquantes ou invalides.",
+         "it": "Correzione dell'inizializzazione del sensore di pressione: l'adattatore ora riconosce correttamente l'ID configurato del sensore in pumpHelper4. Migliorata anche la gestione dei valori mancanti o non validi.",
+         "es": "Corrección en la inicialización del sensor de presión: el adaptador ahora reconoce correctamente la ID del sensor configurado en pumpHelper4. Manejo mejorado de valores faltantes o inválidos.",
+         "pl": "Poprawka inicjalizacji czujnika ciśnienia: adapter poprawnie rozpoznaje teraz skonfigurowany identyfikator czujnika w pumpHelper4. Ulepszono również obsługę brakujących lub nieprawidłowych wartości.",
+         "uk": "Виправлення ініціалізації датчика тиску: адаптер тепер правильно розпізнає налаштований ID датчика в pumpHelper4. Покращено обробку відсутніх або некоректних значень.",
+         "zh-cn": "修复压力传感器初始化：适配器现在可以正确识别 pumpHelper4 中配置的传感器 ID，并改进了对缺失或无效数值的处理。"
+       },
        "0.7.0": {
          "en": "Added full pressure sensor integration (pump.pressure.*), including trend detection, self-learning min/max values, diagnostic output and configurable normal pressure range. No automatic control logic – purely informative.",
          "de": "Vollständige Drucksensor-Integration (pump.pressure.*) hinzugefügt, inklusive Trenderkennung, selbstlernenden Min-/Max-Werten, Diagnoseausgabe und einstellbarem Normaldruckbereich. Keine automatische Logik – rein informativ.",
@@ -78,19 +91,6 @@
          "es": "Corregido el restablecimiento mensual erróneo cuando no existía una fecha last_reset. Corregida la marca de tiempo real last_update en las estadísticas mensuales.",
          "pl": "Naprawiono błędny miesięczny reset, gdy nie istniała data last_reset. Poprawiono rzeczywisty znacznik czasu last_update w miesięcznych statystykach.",
          "zh-cn": "修复了在不存在 last_reset 日期时错误的月度重置。修正了月度统计中的真实 last_update 时间戳。"
-       },
-       "0.6.0": {
-         "en": "Added complete photovoltaic control with automatic pump management (mode 'Automatik (PV)'). The adapter can now react to PV surplus based on configurable house consumption and generation values. Includes migration for existing installations. Improved system consistency and internal logging.",
-         "de": "Vollständige Photovoltaik-Steuerung mit automatischer Pumpenlogik (Modus 'Automatik (PV)') hinzugefügt. Der Adapter reagiert nun auf PV-Überschuss anhand konfigurierbarer Hausverbrauchs- und Erzeugungswerte. Migration für bestehende Installationen integriert. Systemkonsistenz und interne Protokollierung verbessert.",
-         "ru": "Добавлено полное управление фотоэлектрической системой с автоматическим управлением насосом (режим 'Automatik (PV)'). Адаптер теперь реагирует на избыток PV на основе настраиваемых значений потребления и генерации. Включена миграция для существующих установок. Улучшена системная согласованность и внутреннее ведение журнала.",
-         "pt": "Adicionado controle fotovoltaico completo com gerenciamento automático da bomba (modo 'Automatik (PV)'). O adaptador agora reage ao excedente de PV com base nos valores configuráveis de consumo e geração da casa. Inclui migração para instalações existentes. Consistência do sistema e registro interno aprimorados.",
-         "nl": "Volledige fotovoltaïsche besturing toegevoegd met automatische pompbesturing (modus 'Automatik (PV)'). De adapter reageert nu op PV-overschot op basis van configureerbare huisverbruik- en opwekkingswaarden. Migratie voor bestaande installaties inbegrepen. Verbeterde systeemconsistentie en interne logboekregistratie.",
-         "fr": "Ajout du contrôle photovoltaïque complet avec gestion automatique de la pompe (mode 'Automatik (PV)'). L'adaptateur réagit désormais au surplus photovoltaïque en fonction des valeurs configurables de consommation et de production domestiques. Migration incluse pour les installations existantes. Cohérence du système et journalisation interne améliorées.",
-         "it": "Aggiunto controllo fotovoltaico completo con gestione automatica della pompa (modalità 'Automatik (PV)'). L'adattatore ora reagisce al surplus fotovoltaico in base ai valori configurabili di consumo e generazione domestici. Migrazione inclusa per le installazioni esistenti. Migliorata la coerenza del sistema e la registrazione interna.",
-         "es": "Se añadió control fotovoltaico completo con gestión automática de la bomba (modo 'Automatik (PV)'). El adaptador ahora reacciona al excedente fotovoltaico según los valores configurables de consumo y generación de la casa. Incluye migración para instalaciones existentes. Mejorada la coherencia del sistema y el registro interno.",
-         "pl": "Dodano pełną kontrolę fotowoltaiczną z automatycznym zarządzaniem pompą (tryb 'Automatik (PV)'). Adapter reaguje teraz na nadwyżkę PV w oparciu o konfigurowalne wartości zużycia i produkcji energii. Zawiera migrację dla istniejących instalacji. Poprawiono spójność systemu i wewnętrzne logowanie.",
-         "uk": "Додано повний фотогальванічний контроль з автоматичним керуванням насосом (режим 'Automatik (PV)'). Адаптер тепер реагує на надлишок PV на основі налаштовуваних значень споживання та генерації. Включено міграцію для існуючих установок. Покращено системну узгодженість і внутрішнє журналювання.",
-         "zh-cn": "新增完整的光伏控制与自动泵管理（模式“Automatik (PV)”）。适配器现在可根据可配置的家庭耗电与发电数值响应光伏盈余。包含对现有安装的迁移。改进了系统一致性和内部日志记录。"
        }
 	},
     "titleLang": {
