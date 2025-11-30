@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "news": {
+       "0.7.2": {
+         "en": "Added new info system: The adapter now writes seasonal greetings and the installed adapter version to info.* states. Includes automatic daily refresh at 00:01 and full Easter date calculation.",
+         "de": "Neues Info-System hinzugefügt: Der Adapter schreibt nun saisonale Grüße und die installierte Adapterversion in die info.* States. Enthält eine automatische tägliche Aktualisierung um 00:01 sowie eine vollständige Oster-Berechnung.",
+         "ru": "Добавлена новая информационная система: адаптер теперь записывает сезонные поздравления и установленную версию адаптера в состояния info.*. Включает ежедневное обновление в 00:01 и полный расчёт даты Пасхи.",
+         "pt": "Novo sistema de informações adicionado: o adaptador agora grava saudações sazonais e a versão instalada do adaptador nos estados info.*. Inclui atualização diária automática às 00:01 e cálculo completo da data da Páscoa.",
+         "nl": "Nieuw infosysteem toegevoegd: de adapter schrijft nu seizoensgroeten en de geïnstalleerde adapterversie naar info.*-states. Inclusief automatische dagelijkse update om 00:01 en volledige berekening van Pasen.",
+         "fr": "Nouveau système d'informations ajouté : l'adaptateur écrit désormais des messages saisonniers et la version installée dans les états info.*. Comprend une mise à jour quotidienne automatique à 00:01 et un calcul complet de la date de Pâques.",
+         "it": "Aggiunto nuovo sistema informativo: l'adattatore ora scrive i saluti stagionali e la versione installata negli stati info.*. Include aggiornamento giornaliero automatico alle 00:01 e calcolo completo della data di Pasqua.",
+         "es": "Nuevo sistema de información añadido: el adaptador ahora escribe saludos estacionales y la versión instalada en los estados info.*. Incluye actualización automática diaria a las 00:01 y cálculo completo de la fecha de Pascua.",
+         "pl": "Dodano nowy system informacji: adapter zapisuje teraz sezonowe pozdrowienia oraz zainstalowaną wersję adaptera w stanach info.*. Zawiera automatyczne codzienne odświeżanie o 00:01 oraz pełne wyliczenie daty Wielkanocy.",
+         "uk": "Додано нову інформаційну систему: адаптер тепер записує сезонні привітання та встановлену версію адаптера в стани info.*. Містить щоденне автоматичне оновлення о 00:01 і повний розрахунок дати Великодня.",
+         "zh-cn": "新增信息系统：适配器现在会将季节性问候和已安装的适配器版本写入 info.* 状态。包括每天 00:01 的自动刷新和完整的复活节日期计算。"
+       },
        "0.7.1": {
          "en": "Fix for pressure sensor initialization: The adapter now correctly recognizes the configured sensor ID in pumpHelper4. Additionally improved handling of missing / invalid values.",
          "de": "Fehlerbehebung bei der Drucksensor-Initialisierung: Der Adapter erkennt nun die konfigurierte Sensor-ID in pumpHelper4 korrekt. Außerdem wurde die Verarbeitung fehlender oder ungültiger Werte verbessert.",
@@ -79,18 +92,6 @@
          "es": "Refinamiento de la interfaz y mejoras en el panel de administración. Se agregó imagen ('Egon con mono azul') para identificación visual. Sistema de voz ampliado con configuración de horarios de salida de Alexa. jsonConfig limpiado y optimizado con encabezados de sección para mayor claridad.",
          "pl": "Udoskonalenie interfejsu i panelu administracyjnego. Dodano obraz ('Egon w niebieskim kombinezonie') dla wizualnej identyfikacji. Rozszerzono system mowy o konfigurację czasu wyjścia Alexa. Wyczyczono i zoptymalizowano jsonConfig z nagłówkami sekcji dla lepszej przejrzystości.",
          "zh-cn": "改进了界面和管理界面。添加了图像（'蓝色工作服的Egon'）以实现视觉识别。语音系统扩展了Alexa输出时间配置。清理并优化了带有章节标题的jsonConfig，使其更清晰。"
-       },
-       "0.6.1": {
-         "en": "Fixed false monthly reset when no last_reset date existed. Corrected real last_update timestamp in monthly statistics.",
-         "de": "Fehlerhaften Monatsreset ohne gültiges last_reset-Datum behoben. Korrigierter echter Zeitstempel last_update in der Monatsstatistik.",
-         "ru": "Исправлен неверный ежемесячный сброс без действительной даты last_reset. Исправлено обновление времени last_update в ежемесячной статистике.",
-         "pt": "Corrigido o reset mensal incorreto quando não havia data last_reset. Corrigido o timestamp real de last_update na estatística mensal.",
-         "nl": "Onjuiste maandelijkse reset opgelost wanneer er geen last_reset-datum was. Gecorrigeerde echte last_update-tijd in maandelijkse statistieken.",
-         "fr": "Correction du réinitialisation mensuelle erronée lorsqu'aucune date last_reset n'existait. Horodatage last_update réel corrigé dans les statistiques mensuelles.",
-         "it": "Corretto il reset mensile errato quando non esisteva una data last_reset. Corretto il timestamp reale last_update nelle statistiche mensili.",
-         "es": "Corregido el restablecimiento mensual erróneo cuando no existía una fecha last_reset. Corregida la marca de tiempo real last_update en las estadísticas mensuales.",
-         "pl": "Naprawiono błędny miesięczny reset, gdy nie istniała data last_reset. Poprawiono rzeczywisty znacznik czasu last_update w miesięcznych statystykach.",
-         "zh-cn": "修复了在不存在 last_reset 日期时错误的月度重置。修正了月度统计中的真实 last_update 时间戳。"
        }
 	},
     "titleLang": {

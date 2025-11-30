@@ -26,6 +26,7 @@ const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const migrationHelper = require('./lib/helpers/migrationHelper');
+const infoHelper = require('./lib/helpers/infoHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -42,6 +43,7 @@ const { createConsumptionStates } = require('./lib/stateDefinitions/consumptionS
 const { createStatusStates } = require('./lib/stateDefinitions/statusStates');
 const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
+const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -105,6 +107,9 @@ class Poolcontrol extends utils.Adapter {
         // --- DebugLog States ---
         await createDebugLogStates(this);
 
+        // --- Info States ---
+        await createInfoStates(this);
+
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
 
@@ -125,6 +130,7 @@ class Poolcontrol extends utils.Adapter {
         photovoltaicHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
+        infoHelper.init(this);
         controlHelper.init(this);
         controlHelper2.init(this);
         debugLogHelper.init(this);
@@ -180,6 +186,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
+            }
+            if (infoHelper.cleanup) {
+                infoHelper.cleanup();
             }
         } catch (e) {
             this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
