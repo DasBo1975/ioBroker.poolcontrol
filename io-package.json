@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.7.2",
+    "version": "0.7.3",
     "news": {
+       "0.7.3": {
+         "en": "Fix in seasonal greetings: Christmas greeting now only appears between December 20 and 27. Incorrect early activation has been corrected.",
+         "de": "Fix bei den saisonalen Grüßen: Weihnachtsgruß erscheint nun korrekt nur vom 20. bis 27. Dezember. Fehlerhafte frühzeitige Aktivierung wurde behoben.",
+         "ru": "Исправление сезонных поздравлений: Рождественское поздравление теперь отображается только с 20 по 27 декабря. Ошибочное раннее срабатывание исправлено.",
+         "pt": "Correção nos cumprimentos sazonais: A saudação de Natal agora aparece corretamente apenas entre 20 e 27 de dezembro. Ativação incorreta antecipada foi corrigida.",
+         "nl": "Fix in seizoensgroeten: Kerstgroet verschijnt nu correct alleen van 20 t/m 27 december. Onjuiste vroege activering is verholpen.",
+         "fr": "Correction des messages saisonniers : le message de Noël apparaît désormais uniquement du 20 au 27 décembre. L’activation prématurée incorrecte a été corrigée.",
+         "it": "Correzione nei saluti stagionali: l’augurio di Natale ora appare correttamente solo dal 20 al 27 dicembre. Corretto il problema dell'attivazione anticipata.",
+         "es": "Corrección en los saludos estacionales: el mensaje de Navidad ahora aparece correctamente solo del 20 al 27 de diciembre. Se corrigió la activación anticipada incorrecta.",
+         "pl": "Poprawka pozdrowień sezonowych: życzenia świąteczne pojawiają się teraz prawidłowo tylko między 20 a 27 grudnia. Błędna przedwczesna aktywacja została naprawiona.",
+         "uk": "Виправлено сезонні вітання: Різдвяне привітання тепер з’являється лише з 20 по 27 грудня. Помилкове передчасне спрацьовування виправлено.",
+         "zh-cn": "修复季节性问候：圣诞问候现在仅在 12 月 20 日至 27 日之间显示。已修复错误的提前触发问题。"
+       },
        "0.7.2": {
          "en": "Added new info system: The adapter now writes seasonal greetings and the installed adapter version to info.* states. Includes automatic daily refresh at 00:01 and full Easter date calculation.",
          "de": "Neues Info-System hinzugefügt: Der Adapter schreibt nun saisonale Grüße und die installierte Adapterversion in die info.* States. Enthält eine automatische tägliche Aktualisierung um 00:01 sowie eine vollständige Oster-Berechnung.",
@@ -80,18 +93,6 @@
          "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
          "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
          "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
-       },
-       "0.6.2": {
-         "en": "UI refinement and admin interface improvements. Added image integration ('Egon in blue overalls') for visual identification. Speech system extended with Alexa output time configuration. Cleaned and optimized jsonConfig with section headers for improved clarity.",
-         "de": "Oberflächenüberarbeitung und Verbesserungen der Admin-Ansicht. Bildintegration ('Egon im Blaumann') zur visuellen Wiedererkennung hinzugefügt. Sprachsystem um konfigurierbare Alexa-Ausgabezeiten erweitert. jsonConfig mit Abschnittsüberschriften bereinigt und übersichtlicher gestaltet.",
-         "ru": "Улучшение интерфейса и доработка административной панели. Добавлено изображение ('Эгон в синем комбинезоне') для визуальной идентификации. Расширена система речи с настройкой времени вывода Alexa. Очищена и оптимизирована jsonConfig с заголовками разделов для лучшей читаемости.",
-         "pt": "Aprimoramento da interface e melhorias na administração. Adicionada imagem ('Egon de macacão azul') para identificação visual. Sistema de fala ampliado com configuração de horários de saída Alexa. jsonConfig limpa e otimizada com cabeçalhos de seção para melhor clareza.",
-         "nl": "UI verfijnd en verbeteringen in het beheerpaneel. Afbeelding ('Egon in blauwe overall') toegevoegd voor visuele herkenning. Spraaksysteem uitgebreid met Alexa-uitvoertijdaanpassing. jsonConfig opgeschoond en overzichtelijker gemaakt met sectiekoppen.",
-         "fr": "Amélioration de l'interface utilisateur et du panneau d'administration. Image ajoutée ('Egon en bleu de travail') pour identification visuelle. Système vocal étendu avec configuration des heures de sortie Alexa. jsonConfig nettoyé et optimisé avec en-têtes de section pour plus de clarté.",
-         "it": "Raffinamento dell'interfaccia e miglioramenti al pannello di amministrazione. Aggiunta l'immagine ('Egon in tuta blu') per l'identificazione visiva. Sistema vocale ampliato con configurazione degli orari di uscita Alexa. jsonConfig ripulito e ottimizzato con intestazioni di sezione per maggiore chiarezza.",
-         "es": "Refinamiento de la interfaz y mejoras en el panel de administración. Se agregó imagen ('Egon con mono azul') para identificación visual. Sistema de voz ampliado con configuración de horarios de salida de Alexa. jsonConfig limpiado y optimizado con encabezados de sección para mayor claridad.",
-         "pl": "Udoskonalenie interfejsu i panelu administracyjnego. Dodano obraz ('Egon w niebieskim kombinezonie') dla wizualnej identyfikacji. Rozszerzono system mowy o konfigurację czasu wyjścia Alexa. Wyczyczono i zoptymalizowano jsonConfig z nagłówkami sekcji dla lepszej przejrzystości.",
-         "zh-cn": "改进了界面和管理界面。添加了图像（'蓝色工作服的Egon'）以实现视觉识别。语音系统扩展了Alexa输出时间配置。清理并优化了带有章节标题的jsonConfig，使其更清晰。"
        }
 	},
     "titleLang": {
