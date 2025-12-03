@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "news": {
+       "0.7.4": {
+         "en": "Improvement: The circulation mode (control.circulation.mode) is now fully protected against reinstall/overinstall. User-defined values are no longer overwritten during adapter update or restart.",
+         "de": "Verbesserung: Der Umwälzungsmodus (control.circulation.mode) ist jetzt vollständig gegen Überinstallation geschützt. Benutzerwerte werden bei Adapter-Update oder Neustart nicht mehr überschrieben.",
+         "ru": "Улучшение: режим циркуляции (control.circulation.mode) теперь полностью защищен от переустановки. Пользовательские значения больше не перезаписываются при обновлении или перезапуске адаптера.",
+         "pt": "Melhoria: O modo de circulação (control.circulation.mode) agora está totalmente protegido contra reinstalações. Os valores definidos pelo usuário não são mais substituídos durante atualização ou reinicialização do adaptador.",
+         "nl": "Verbetering: De circulatiemodus (control.circulation.mode) is nu volledig beschermd tegen overinstallaties. Door de gebruiker ingestelde waarden worden niet langer overschreven bij een update of herstart.",
+         "fr": "Amélioration : Le mode de circulation (control.circulation.mode) est désormais entièrement protégé contre les réinstallations. Les valeurs définies par l’utilisateur ne sont plus écrasées lors d’une mise à jour ou d’un redémarrage de l’adaptateur.",
+         "it": "Miglioramento: La modalità di circolazione (control.circulation.mode) è ora completamente protetta da reinstallazioni. I valori utente non vengono più sovrascritti durante aggiornamenti o riavvii dell’adattatore.",
+         "es": "Mejora: El modo de circulación (control.circulation.mode) ahora está completamente protegido contra reinstalaciones. Los valores del usuario ya no se sobrescriben durante actualizaciones o reinicios del adaptador.",
+         "pl": "Ulepszenie: Tryb cyrkulacji (control.circulation.mode) jest teraz w pełni chroniony przed ponowną instalacją. Wartości użytkownika nie są już nadpisywane podczas aktualizacji lub restartu adaptera.",
+         "uk": "Покращення: Режим циркуляції (control.circulation.mode) тепер повністю захищений від повторної інсталяції. Значення користувача більше не перезаписуються під час оновлення або перезапуску адаптера.",
+         "zh-cn": "改进：循环模式（control.circulation.mode）现已完全受保护，不会在重新安装或更新适配器时被覆盖。"
+       },
        "0.7.3": {
          "en": "Fix in seasonal greetings: Christmas greeting now only appears between December 20 and 27. Incorrect early activation has been corrected.",
          "de": "Fix bei den saisonalen Grüßen: Weihnachtsgruß erscheint nun korrekt nur vom 20. bis 27. Dezember. Fehlerhafte frühzeitige Aktivierung wurde behoben.",
@@ -69,19 +82,6 @@
          "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
        },
        "0.6.4": {
-         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
-         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
-         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
-         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
-         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
-         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
-         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
-         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
-         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
-         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
-         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
-       },
-       "0.6.3": {
          "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
          "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
          "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",

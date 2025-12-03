@@ -136,6 +136,10 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ### **WORK IN PROGRESS**
 
 
+## v0.7.4 (2025-12-03)
+- Fix Bug in Controlhelper. Persistenter Schutz bei control.circulation.mode
+
+
 ## v0.7.0 (2025-11-29)
 - Einführung eines neuen Drucksensor-Systems unter `pump.pressure.*`
 - Unterstützung externer Drucksensor-ObjektID (bar-Wert aus ioBroker)
