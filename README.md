@@ -35,7 +35,7 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Kollektor-Warnung (mit automatischer Rücksetzung bei 10 % unter der Schwelle)
   - Optionale Sprachausgabe bei Warnung
 
-- **Photovoltaiksteuerung (ab v0.6.0)
+- **Photovoltaiksteuerung (seit v0.6.0)**
   - Automatische Pumpensteuerung auf Basis von PV-Erzeugung und Hausverbrauchs
   - Einschaltlogik: Überschuss ≥ (Pumpen-Nennleistung + Sicherheitsaufschlag)
   - Optionaler Nachlauf bei Wolkenphasen
@@ -68,6 +68,26 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Vollständig persistente Datenpunkte (Überinstallationsschutz)
   - HTML- und JSON-Zusammenfassungen pro Sensor und Gesamtübersicht
 
+- **Drucksensor-Integration (seit v0.7.x)**
+  - Echtzeit-Filterdruckmessung
+  - Trendanalyse: steigend / fallend / stabil
+  - Gleitender lernender Durchschnitt (avg_bar)
+  - Selbstlernende Min-/Max-Druckwerte
+  - Diagnosetext + letzte Aktualisierung
+  - Keine automatische Steuerung – rein informativ
+  - Normaldruckbereich durch Benutzer einstellbar
+
+- **KI-System (ab v0.8.0)**
+  - Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
+  - Automatische Textausgaben mit optionaler Sprachausgabe
+  - Stündliche Wetter-Updates zur laufenden Aktualisierung
+  - Anti-Spam-System zur Vermeidung doppelter Hinweise
+  
+- **Info-System (seit v0.7.x)**
+  - Informationssystem des Adapters
+  - Saisonale Grüße (Weihnachten, Silvester, Neujahr, Ostern)
+  - Anzeige der installierten Adapterversion
+   
 - **Sprachausgaben**
   - Ausgabe über Alexa oder Telegram
   - Ansagen bei Pumpenstart/-stopp, Fehlern oder Temperaturschwellen
@@ -110,7 +130,6 @@ Die Konfiguration erfolgt über Tabs im Admin-Interface:
 - Statistik-Exportfunktion (CSV/Excel)
 - Diagnostic-Helper zur automatischen Systemprüfung
 - Erweiterung der Heizungs-/Wärmepumpenlogik (`heatHelper`)
-- Drucksensor-Integration zur Kesseldruck-Überwachung
 - Zweite Pumpe (z. B. Wärmetauscher oder Wärmepumpe)
 - Eigene Widgets für VIS/VIS2 (grafische Pool- und Solarvisualisierung)
 - Steuerung von Poolbeleuchtung, Ventilen und Gegenstromanlagen
