@@ -60,7 +60,9 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Berechnung der Stromkosten anhand konfigurierbarem Preis  
 
   **Hinweis:**  
-  Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei [help.md](./help.md).
+  Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei 
+  [help.md](https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/admin/help.md)
+
 
 - **Statistiksystem**
   - Bereich `analytics.statistics.*` mit Tages-, Wochen- und Monatswerten
