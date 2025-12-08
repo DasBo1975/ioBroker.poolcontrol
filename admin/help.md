@@ -196,35 +196,48 @@ Wenn aktiv:
 
 ## 3.6 KI-System (AI)
 
+### **Hauptschalter (ai.enabled)**
+
+| Datenpunkt | Bedeutung |
+|------------|-----------|
+| ai.enabled | Hauptschalter für das gesamte KI-System |
+
+Das KI-System besteht derzeit aus zwei Modulen:
+
+- aiHelper (Wetter & Tagesfunktionen)
+- aiForecastHelper (Vorhersage für morgen)
+
 Das AI-System erzeugt täglich automatisch:
 
 - Wetterhinweise  
 - Tageszusammenfassungen  
 - Pooltipps  
-- Wochenendberichte  
+- Wochenendberichte
+- Vorhersage für morgen  
 
-### **Schalter (ai.switches.)**
+### **Schalter (ai.weather.switches.)**
 
 | Datenpunkt | Bedeutung |
 |------------|-----------|
-| ai.switches.enabled | Hauptschalter |
-| ai.switches.allow_speech | Ausgaben zusätzlich in `speech.queue` |
-| ai.switches.daily_summary_enabled | tägliche Zusammenfassung |
-| ai.switches.daily_pool_tips_enabled | Pool-Tipps |
-| ai.switches.weather_advice_enabled | Wetterhinweise |
-| ai.switches.weekend_summary_enabled | Wochenendbericht |
-| ai.switches.debug_mode | zusätzliche Logeinträge |
+| ai.weather.switches.allow_speech | Ausgaben zusätzlich in `speech.queue` |
+| ai.weather.switches.daily_summary_enabled | tägliche Zusammenfassung |
+| ai.weather.switches.daily_pool_tips_enabled | Pool-Tipps |
+| ai.weather.switches.weather_advice_enabled | Wetterhinweise |
+| ai.weather.switches.weekend_summary_enabled | Wochenendbericht |
+| ai.weather.switches.debug_mode | zusätzliche Logeinträge |
+| ai.weather.switches.tomorrow_forecast_enabled | Vorhersage für morgen aktiv |
 
-### **Zeitpläne (ai.schedule.)**
+### **Zeitpläne (ai.weather.schedule.)**
 
 - daily_summary_time  
 - daily_pool_tips_time  
 - weather_advice_time  
-- weekend_summary_time  
+- weekend_summary_time
+- tomorrow_forecast_time
 
 Alle Werte im Format HH:MM.
 
-### **Ausgaben (ai.outputs.)**
+### **Ausgaben (ai.weather.outputs.)**
 
 Hier erscheinen Texte, die VIS oder andere Adapter nutzen können.
 
