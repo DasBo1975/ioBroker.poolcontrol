@@ -1219,7 +1219,7 @@
     },	
 	"help": {
       "type": "panel",
-      "label": "Hilfe",
+      "label": "Hilfe & Info",
       "items": {
         "help_header": {
           "type": "header",
@@ -1235,7 +1235,7 @@
         "helpLink": {
           "type": "staticLink",
           "label": "Öffne die ausführliche Dokumentation auf GitHub",
-          "href": "https://github.com/DasBo1975/iobroker.poolcontrol/blob/main/admin/help.md",
+          "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/admin/help.md",
           "newLine": true,
           "xs": 12,
           "sm": 12,
@@ -1251,6 +1251,100 @@
           "md": 12,
           "lg": 12,
           "xl": 12		  
+        },		
+        "ai_info_header": {
+          "type": "header",
+          "text": "Wichtige Hinweise zum KI-System",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "ai_info_text": {
+          "type": "staticText",
+          "text": "Das KI-System (aiHelper & aiForecastHelper) ruft Wetterdaten von Open-Meteo über eine HTTPS-Verbindung ab. Dabei werden die Geodaten aus der ioBroker-Systemkonfiguration (system.config › latitude/longitude) verwendet. Es werden keine Daten gespeichert oder an Dritte übermittelt. Ohne korrekte Geodaten kann das KI-System keine Vorhersagen erzeugen.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "help_ai_info": {
+          "type": "staticText",
+          "text": "Hinweis: Die KI-Funktionen sind vollständig optional und können jederzeit über den Datenpunkt ‚ai.enabled‘ deaktiviert werden. Die Wetterfunktionen (z. B. Wetterhinweise, Pooltipps, Vorhersage für morgen) lassen sich zusätzlich einzeln über die jeweiligen Schalter unter ‚ai.weather.switches.*‘ ein- oder ausschalten. Für die Erstellung der Wetterdaten verwendet der Adapter den Dienst Open-Meteo. Hierfür werden die in ioBroker hinterlegten Geodaten (Breiten- und Längengrad aus system.config) benötigt.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "info_internet_header": {
+          "type": "header",
+          "text": "Internetzugriffe & Datenschutz",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
+        },
+        "info_internet_text": {
+          "type": "staticText",
+          "text": "Der PoolControl-Adapter arbeitet grundsätzlich vollständig lokal. Aktuell nutzen nur die KI-Funktionen Wetterdaten von Open-Meteo über eine verschlüsselte HTTPS-Verbindung. Dabei werden ausschließlich die in ioBroker hinterlegten Geodaten (Breiten- und Längengrad) übertragen. Es werden keine weiteren Daten gespeichert oder an Dritte übermittelt. Zukünftig können weitere optionale Internetdienste hinzukommen, diese werden jedoch stets klar gekennzeichnet.",
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
+        },
+        "info_season_header": {
+          "type": "header",
+          "text": "Hinweis zur Poolsaison",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
+        },
+        "info_season_text": {
+          "type": "staticText",
+          "text": "Viele automatische Funktionen (z. B. Solarsteuerung, Photovoltaikmodus, KI-Wetterlogik und Diagnosefunktionen) arbeiten nur, wenn die Poolsaison aktiv ist. Der Saisonstatus kann jederzeit über den Datenpunkt 'status.season_active' oder über die Instanzkonfiguration geändert werden.",
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
+        },
+        "info_speech_header": {
+          "type": "header",
+          "text": "Zentrale Sprachausgabe (speech.queue)",
+          "size": 4,
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
+        },
+        "info_speech_text": {
+          "type": "staticText",
+          "text": "Alle Text- und Sprachausgaben des Adapters – einschließlich KI-Vorhersagen, Warnmeldungen, Pumpenstatus, Solarhinweisen und Diagnosemeldungen – werden über den zentralen Datenpunkt 'speech.queue' ausgegeben. Dieser sollte für VIS-Anzeigen, Alexa- oder Telegram-Ausgaben genutzt werden.",
+          "newLine": true,
+          "xs": 12,
+		  "sm": 12,
+		  "md": 12,
+		  "lg": 12,
+		  "xl": 12
         }
       }
     }

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.7.4",
+    "version": "0.8.0",
     "news": {
+       "0.8.0": {
+         "en": "New: Introduction of the AI Forecast System (aiForecastHelper). The adapter now creates a daily weather forecast for tomorrow, including temperature range, weather description, rain probability, wind analysis, and pool recommendations. New switches, schedules and outputs were added under ai.weather.*. First execution runs automatically at adapter start. Admin interface updated with important AI information.",
+         "de": "Neu: Einführung des KI-Vorhersagesystems (aiForecastHelper). Der Adapter erstellt nun täglich eine Wettervorhersage für morgen – inklusive Temperaturspanne, Wetterbeschreibung, Regenwahrscheinlichkeit, Windanalyse und Pool-Empfehlungen. Neue Schalter, Zeitpläne und Ausgaben unter ai.weather.* hinzugefügt. Erste Ausführung erfolgt automatisch beim Adapterstart. Admin-Oberfläche um wichtige KI-Hinweise erweitert.",
+         "ru": "Новое: Введена система ИИ-прогноза (aiForecastHelper). Адаптер теперь ежедневно создаёт прогноз погоды на завтра: диапазон температур, описание погоды, вероятность дождя, анализ ветра и рекомендации по бассейну. Добавлены новые переключатели, расписания и выходы в ai.weather.*. Первое выполнение происходит автоматически при запуске адаптера. Интерфейс администратора обновлён важной информацией об ИИ.",
+         "pt": "Novo: Introdução do sistema de previsão por IA (aiForecastHelper). O adaptador agora cria diariamente uma previsão do tempo para amanhã, incluindo faixa de temperatura, descrição do clima, probabilidade de chuva, análise de vento e recomendações para a piscina. Novos interruptores, horários e saídas adicionados em ai.weather.*. A primeira execução ocorre automaticamente ao iniciar o adaptador. Interface administrativa atualizada com informações importantes sobre IA.",
+         "nl": "Nieuw: Introductie van het AI-voorspellingssysteem (aiForecastHelper). De adapter maakt nu dagelijks een weersvoorspelling voor morgen, inclusief temperatuurbereik, weertype, regenkans, windanalyse en zwembad-aanbevelingen. Nieuwe schakelaars, schema's en outputs toegevoegd onder ai.weather.*. Eerste uitvoering gebeurt automatisch bij het starten van de adapter. Admin-interface uitgebreid met belangrijke AI-informatie.",
+         "fr": "Nouveau : Introduction du système de prévision IA (aiForecastHelper). L’adaptateur génère désormais chaque jour une prévision météo pour le lendemain, incluant plage de températures, description du temps, probabilité de pluie, analyse du vent et recommandations pour la piscine. Nouveaux commutateurs, horaires et sorties ajoutés sous ai.weather.*. Première exécution automatique au démarrage de l’adaptateur. Interface admin enrichie d’informations importantes sur l’IA.",
+         "it": "Novità: Introduzione del sistema di previsione IA (aiForecastHelper). L’adattatore ora genera quotidianamente una previsione del tempo per domani, inclusi intervallo di temperature, descrizione del meteo, probabilità di pioggia, analisi del vento e raccomandazioni per la piscina. Aggiunti nuovi switch, pianificazioni e output sotto ai.weather.*. Prima esecuzione automatica all'avvio dell’adattatore. Interfaccia admin aggiornata con importanti informazioni sull’IA.",
+         "es": "Nuevo: Introducción del sistema de previsión por IA (aiForecastHelper). El adaptador ahora genera un pronóstico diario del clima para mañana, incluyendo rango de temperatura, descripción del clima, probabilidad de lluvia, análisis del viento y recomendaciones para la piscina. Nuevos interruptores, horarios y salidas añadidos en ai.weather.*. La primera ejecución ocurre automáticamente al iniciar el adaptador. Interfaz de administración actualizada con información importante sobre IA.",
+         "pl": "Nowość: Wprowadzenie systemu prognoz opartego na AI (aiForecastHelper). Adapter tworzy teraz codzienną prognozę pogody na jutro, obejmującą zakres temperatur, opis pogody, prawdopodobieństwo opadów, analizę wiatru oraz zalecenia dla basenu. Dodano nowe przełączniki, harmonogramy i wyjścia w ai.weather.*. Pierwsze uruchomienie następuje automatycznie przy starcie adaptera. Interfejs administracyjny został uzupełniony o ważne informacje dotyczące AI.",
+         "uk": "Нове: Впроваджено систему прогнозування на основі ШІ (aiForecastHelper). Адаптер тепер щоденно створює прогноз погоди на завтра: діапазон температур, опис погоди, ймовірність опадів, аналіз вітру та рекомендації для басейну. Додано нові перемикачі, розклади та виходи в ai.weather.*. Перше виконання відбувається автоматично під час запуску адаптера. Адмін-інтерфейс оновлено важливою інформацією щодо ШІ.",
+         "zh-cn": "新增：引入 AI 预报系统（aiForecastHelper）。适配器现在每天生成明天的天气预报，包括温度范围、天气描述、降雨概率、风力分析和泳池建议。新增了 ai.weather.* 下的开关、计划和输出。首次执行在适配器启动时自动进行。管理界面已更新，包含重要的 AI 信息。"
+       },
        "0.7.4": {
          "en": "Improvement: The circulation mode (control.circulation.mode) is now fully protected against reinstall/overinstall. User-defined values are no longer overwritten during adapter update or restart.",
          "de": "Verbesserung: Der Umwälzungsmodus (control.circulation.mode) ist jetzt vollständig gegen Überinstallation geschützt. Benutzerwerte werden bei Adapter-Update oder Neustart nicht mehr überschrieben.",
@@ -69,19 +82,6 @@
          "zh-cn": "新增完整压力传感器集成 (pump.pressure.*)，包括趋势检测、自学习最小/最大值、诊断输出以及可配置的正常压力范围。无自动控制逻辑，仅提供信息。"
        },
        "0.6.5": {
-         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
-         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
-         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
-         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
-         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
-         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
-         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
-         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
-         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
-         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
-         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
-       },
-       "0.6.4": {
          "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
          "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
          "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",

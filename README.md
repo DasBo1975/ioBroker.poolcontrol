@@ -85,6 +85,15 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Stündliche Wetter-Updates zur laufenden Aktualisierung
   - Anti-Spam-System zur Vermeidung doppelter Hinweise
   
+    - **Vorhersage für morgen (aiForecastHelper, ab v0.8.0)**
+    - Erstellt automatisch eine tägliche Wetterprognose für den Folgetag
+    - Analyse von Temperatur, Wetterlage, Regenwahrscheinlichkeit und Windstärke
+    - Erzeugt Pool-Empfehlungen für den nächsten Tag (z. B. Abdeckung schließen, wenig Solarwärme zu erwarten)
+    - Läuft vollständig eventbasiert und benötigt nur die Open-Meteo-Daten aus den ioBroker-Geodaten
+    - Separate Schalter unter `ai.weather.switches.*` zum Aktivieren/Deaktivieren einzelner Prognosefunktionen
+    - Ergebnisse werden unter `ai.weather.outputs.forecast_text` gespeichert
+
+  
 - **Info-System (seit v0.7.x)**
   - Informationssystem des Adapters
   - Saisonale Grüße (Weihnachten, Silvester, Neujahr, Ostern)
@@ -155,6 +164,23 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+
+## v0.8.0 (2025-12-08)
+- Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
+- Automatische Textausgaben mit optionaler Sprachausgabe
+- Stündliche Wetter-Updates zur laufenden Aktualisierung
+- Anti-Spam-System zur Vermeidung doppelter Hinweise
+- Neues KI-Vorhersagesystem `aiForecastHelper` integriert
+- Erstellt täglich eine automatische „Vorhersage für morgen“ mit:
+  - Temperaturspanne
+  - Wetterlage (Beschreibung)
+  - Regenwahrscheinlichkeit
+  - Windanalyse (leicht / frisch / stark)
+  - Pool-Empfehlungen für den Folgetag
+- Neue Schalter, Zeitpläne und Ausgaben unter `ai.weather.*`
+- Sofortige initiale Ausführung nach Instanzstart hinzugefügt
+- Erweiterung der Admin-Übersicht unter „Hilfe & Info“ um wichtige KI-Hinweise
+- Verbesserte interne Struktur des KI-Systems (aiHelper + aiForecastHelper)
 
 
 ## v0.7.4 (2025-12-03)

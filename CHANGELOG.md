@@ -5,6 +5,26 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+## v0.8.0 (2025-12-08)
+- Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
+- Automatische Textausgaben mit optionaler Sprachausgabe
+- Stündliche Wetter-Updates zur laufenden Aktualisierung
+- Anti-Spam-System zur Vermeidung doppelter Hinweise
+- Neues KI-Vorhersagesystem `aiForecastHelper` integriert
+- Erstellt täglich eine automatische „Vorhersage für morgen“ mit:
+  - Temperaturspanne
+  - Wetterlage (Beschreibung)
+  - Regenwahrscheinlichkeit
+  - Windanalyse (leicht / frisch / stark)
+  - Pool-Empfehlungen für den Folgetag
+- Neue Schalter, Zeitpläne und Ausgaben unter `ai.weather.*`
+- Sofortige initiale Ausführung nach Instanzstart hinzugefügt
+- Erweiterung der Admin-Übersicht unter „Hilfe & Info“ um wichtige KI-Hinweise
+- Verbesserte interne Struktur des KI-Systems (aiHelper + aiForecastHelper)
+
+
+---
+
 ## v0.7.4 (2025-12-03)
 - Fix Bug in Controlhelper. Persistenter Schutz bei control.circulation.mode
 
