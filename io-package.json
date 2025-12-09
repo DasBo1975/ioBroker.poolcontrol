@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "news": {
+       "0.8.1": {
+         "en": "Fix: AI messages were executed multiple times (e.g. 3x in Telegram). The timer system in aiHelper has been reworked: late executions now only run during the first 3 minutes after adapter start. All AI weather modules now trigger exactly once per day again. Stability improvements in the daily timers.",
+         "de": "Fix: KI-Meldungen wurden mehrfach ausgeführt (z.B. 3× in Telegram). Das Timer-System im aiHelper wurde überarbeitet: Nachholausführungen laufen jetzt nur noch in den ersten 3 Minuten nach Adapterstart. Alle AI-Wettermodule werden wieder exakt einmal pro Tag ausgelöst. Stabilitätsverbesserungen bei den täglichen Timern.",
+         "ru": "Исправление: сообщения ИИ выполнялись несколько раз (например, 3× в Telegram). Таймерная система в aiHelper была переработана: пропущенные задачи выполняются только в первые 3 минуты после запуска адаптера. Все модули погоды ИИ снова выполняются строго один раз в день.",
+         "pt": "Correção: mensagens de IA eram executadas várias vezes (ex.: 3× no Telegram). O sistema de temporizadores do aiHelper foi reestruturado: execuções atrasadas agora ocorrem apenas nos primeiros 3 minutos após iniciar o adaptador. Todos os módulos de clima da IA voltam a ser executados exatamente uma vez por dia.",
+         "nl": "Fix: AI-berichten werden meerdere keren uitgevoerd (bijv. 3× in Telegram). Het timersysteem in aiHelper is herwerkt: inhaaluitvoeringen draaien nu alleen in de eerste 3 minuten na adapterstart. Alle AI-weermodules worden weer precies één keer per dag uitgevoerd.",
+         "fr": "Correctif : les messages IA étaient exécutés plusieurs fois (ex. 3× dans Telegram). Le système de minuteries dans aiHelper a été revu : les exécutions différées ne s'exécutent plus que pendant les 3 premières minutes après le démarrage. Tous les modules météo IA se déclenchent à nouveau exactement une fois par jour.",
+         "it": "Fix: i messaggi dell'IA venivano eseguiti più volte (es. 3× su Telegram). Il sistema di timer dell'aiHelper è stato rivisto: le esecuzioni recuperate ora avvengono solo nei primi 3 minuti dopo l'avvio dell'adattatore. Tutti i moduli meteo IA ora si attivano nuovamente una sola volta al giorno.",
+         "es": "Corrección: los mensajes de IA se ejecutaban varias veces (p. ej., 3× en Telegram). Se ha rediseñado el sistema de temporizadores en aiHelper: las ejecuciones atrasadas ahora solo ocurren en los primeros 3 minutos tras iniciar el adaptador. Todos los módulos meteorológicos de IA vuelven a ejecutarse una sola vez al día.",
+         "pl": "Poprawka: komunikaty AI były wykonywane wielokrotnie (np. 3× w Telegramie). System timerów w aiHelper został przebudowany: zaległe wykonania działają teraz tylko w pierwszych 3 minutach po uruchomieniu adaptera. Wszystkie moduły pogodowe AI znów uruchamiają się dokładnie raz dziennie.",
+         "uk": "Виправлення: повідомлення ШІ виконувалися кілька разів (наприклад, 3× у Telegram). Систему таймерів в aiHelper перероблено: запізнілі виконання відбуваються лише в перші 3 хвилини після запуску. Усі погодні модулі ШІ знову працюють рівно один раз на добу.",
+         "zh-cn": "修复：AI 消息会被多次执行（例如在 Telegram 中出现 3 次）。已重构 aiHelper 中的计时器系统：补偿执行现在仅在适配器启动后的前 3 分钟内运行。所有 AI 天气模块现在每天只会执行一次。"
+       },
        "0.8.0": {
          "en": "New: Introduction of the AI Forecast System (aiForecastHelper). The adapter now creates a daily weather forecast for tomorrow, including temperature range, weather description, rain probability, wind analysis, and pool recommendations. New switches, schedules and outputs were added under ai.weather.*. First execution runs automatically at adapter start. Admin interface updated with important AI information.",
          "de": "Neu: Einführung des KI-Vorhersagesystems (aiForecastHelper). Der Adapter erstellt nun täglich eine Wettervorhersage für morgen – inklusive Temperaturspanne, Wetterbeschreibung, Regenwahrscheinlichkeit, Windanalyse und Pool-Empfehlungen. Neue Schalter, Zeitpläne und Ausgaben unter ai.weather.* hinzugefügt. Erste Ausführung erfolgt automatisch beim Adapterstart. Admin-Oberfläche um wichtige KI-Hinweise erweitert.",
@@ -80,19 +93,6 @@
          "pl": "Dodano pełną integrację czujnika ciśnienia (pump.pressure.*), w tym wykrywanie trendów, samo uczące się wartości min/max, dane diagnostyczne oraz konfigurowalny zakres ciśnienia normalnego. Bez automatycznej logiki – wyłącznie informacyjne.",
          "uk": "Додано повну інтеграцію датчика тиску (pump.pressure.*), включаючи визначення трендів, самонавчальні мін/макс значення, діагностичний вихід та налаштовуваний діапазон нормального тиску. Без автоматичної логіки – лише інформаційно.",
          "zh-cn": "新增完整压力传感器集成 (pump.pressure.*)，包括趋势检测、自学习最小/最大值、诊断输出以及可配置的正常压力范围。无自动控制逻辑，仅提供信息。"
-       },
-       "0.6.5": {
-         "en": "Fix for weekly, monthly and yearly reset in consumptionHelper",
-         "de": "Fix für Wochen-, Monats- und Jahres-Reset im ConsumptionHelper",
-         "ru": "Исправление еженедельного, ежемесячного и ежегодного сброса в consumptionHelper",
-         "pt": "Correção para redefinição semanal, mensal e anual no consumptionHelper",
-         "nl": "Fix voor wekelijkse, maandelijkse en jaarlijkse reset in consumptionHelper",
-         "fr": "Correctif pour la réinitialisation hebdomadaire, mensuelle et annuelle dans consumptionHelper",
-         "it": "Correzione per il reset settimanale, mensile e annuale in consumptionHelper",
-         "es": "Corrección para el reinicio semanal, mensual y anual en consumptionHelper",
-         "pl": "Poprawka cotygodniowego, comiesięcznego i corocznego resetu w consumptionHelper",
-         "uk": "Виправлення щотижневого, щомісячного та щорічного скидання в consumptionHelper",
-         "zh-cn": "修复 consumptionHelper 中每周、每月和每年重置的问题"
        }
 	},
     "titleLang": {
