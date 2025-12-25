@@ -93,7 +93,7 @@
          "pl": "Poprawka inicjalizacji czujnika ciśnienia: adapter poprawnie rozpoznaje teraz skonfigurowany identyfikator czujnika w pumpHelper4. Ulepszono również obsługę brakujących lub nieprawidłowych wartości.",
          "uk": "Виправлення ініціалізації датчика тиску: адаптер тепер правильно розпізнає налаштований ID датчика в pumpHelper4. Покращено обробку відсутніх або некоректних значень.",
          "zh-cn": "修复压力传感器初始化：适配器现在可以正确识别 pumpHelper4 中配置的传感器 ID，并改进了对缺失或无效数值的处理。"
-       }       }
+       }
 	},
     "titleLang": {
       "en": "PoolControl",
