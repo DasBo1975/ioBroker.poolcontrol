@@ -50,7 +50,6 @@ const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: KI-States
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
 
-
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
         super({
