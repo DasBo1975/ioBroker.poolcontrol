@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "0.8.1",
+    "version": "0.8.2",
     "news": {
+       "0.8.2": {
+         "en": "New AI chemistry help module. Provides an interactive, purely informational help system for common pool water issues (e.g. pH too high/low, chlorine ineffective, green or cloudy water). Generates understandable explanations and solution directions without automatic dosing, product recommendations, device control or speech output.",
+         "de": "Neues KI-Chemie-Hilfesystem. Bietet eine interaktive, rein informative Unterstützung bei typischen Poolwasserproblemen (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, grünes oder trübes Wasser). Erzeugt verständliche Ursachen- und Lösungshinweise ohne automatische Dosierung, Produktempfehlungen, Geräte­steuerung oder Sprachausgabe.",
+         "ru": "Новый модуль помощи по химии бассейна на основе ИИ. Интерактивная, исключительно информационная система поддержки для типичных проблем воды (например, высокий/низкий pH, неэффективный хлор, зелёная или мутная вода). Без автоматического дозирования, рекомендаций продуктов, управления устройствами или голосового вывода.",
+         "pt": "Novo módulo de ajuda química com IA. Sistema interativo e puramente informativo para problemas comuns da água da piscina (por exemplo, pH alto/baixo, cloro ineficaz, água verde ou turva). Sem dosagem automática, recomendações de produtos, controlo de dispositivos ou saída de voz.",
+         "nl": "Nieuw AI-chemiehulpmodule. Biedt een interactieve, puur informatieve hulp voor veelvoorkomende zwembadwaterproblemen (bijv. pH te hoog/laag, chloor werkt niet, groen of troebel water). Geen automatische dosering, productaanbevelingen, apparaatbesturing of spraakuitvoer.",
+         "fr": "Nouveau module d’aide chimique basé sur l’IA. Système interactif et purement informatif pour les problèmes courants de l’eau de piscine (pH trop élevé/bas, chlore inefficace, eau verte ou trouble). Sans dosage automatique, recommandations de produits, contrôle d’appareils ni sortie vocale.",
+         "it": "Nuovo modulo di aiuto chimico basato su IA. Sistema interattivo e puramente informativo per i problemi comuni dell’acqua della piscina (ad es. pH troppo alto/basso, cloro inefficace, acqua verde o torbida). Nessun dosaggio automatico, consigli sui prodotti, controllo dei dispositivi o output vocale.",
+         "es": "Nuevo módulo de ayuda química con IA. Sistema interactivo y puramente informativo para problemas comunes del agua de la piscina (p. ej., pH alto/bajo, cloro ineficaz, agua verde o turbia). Sin dosificación automática, recomendaciones de productos, control de dispositivos ni salida por voz.",
+         "pl": "Nowy moduł pomocy chemicznej oparty na AI. Interaktywny, wyłącznie informacyjny system wsparcia dla typowych problemów wody basenowej (np. zbyt wysokie/niskie pH, nieskuteczny chlor, zielona lub mętna woda). Bez automatycznego dozowania, rekomendacji produktów, sterowania urządzeniami ani komunikatów głosowych.",
+         "uk": "Новий модуль допомоги з хімії басейну на основі ШІ. Інтерактивна, виключно інформаційна система підтримки для типових проблем води (наприклад, високий/низький pH, неефективний хлор, зелена або каламутна вода). Без автоматичного дозування, рекомендацій продуктів, керування пристроями чи голосового виводу.",
+         "zh-cn": "新增 AI 水质化学帮助模块。为常见的泳池水问题（如 pH 过高/过低、氯无效、绿水或浑浊水）提供交互式、纯信息性的帮助说明。不包含自动投加、产品推荐、设备控制或语音输出。"
+       },
        "0.8.1": {
          "en": "Fix: AI messages were executed multiple times (e.g. 3x in Telegram). The timer system in aiHelper has been reworked: late executions now only run during the first 3 minutes after adapter start. All AI weather modules now trigger exactly once per day again. Stability improvements in the daily timers.",
          "de": "Fix: KI-Meldungen wurden mehrfach ausgeführt (z.B. 3× in Telegram). Das Timer-System im aiHelper wurde überarbeitet: Nachholausführungen laufen jetzt nur noch in den ersten 3 Minuten nach Adapterstart. Alle AI-Wettermodule werden wieder exakt einmal pro Tag ausgelöst. Stabilitätsverbesserungen bei den täglichen Timern.",
@@ -80,20 +93,7 @@
          "pl": "Poprawka inicjalizacji czujnika ciśnienia: adapter poprawnie rozpoznaje teraz skonfigurowany identyfikator czujnika w pumpHelper4. Ulepszono również obsługę brakujących lub nieprawidłowych wartości.",
          "uk": "Виправлення ініціалізації датчика тиску: адаптер тепер правильно розпізнає налаштований ID датчика в pumpHelper4. Покращено обробку відсутніх або некоректних значень.",
          "zh-cn": "修复压力传感器初始化：适配器现在可以正确识别 pumpHelper4 中配置的传感器 ID，并改进了对缺失或无效数值的处理。"
-       },
-       "0.7.0": {
-         "en": "Added full pressure sensor integration (pump.pressure.*), including trend detection, self-learning min/max values, diagnostic output and configurable normal pressure range. No automatic control logic – purely informative.",
-         "de": "Vollständige Drucksensor-Integration (pump.pressure.*) hinzugefügt, inklusive Trenderkennung, selbstlernenden Min-/Max-Werten, Diagnoseausgabe und einstellbarem Normaldruckbereich. Keine automatische Logik – rein informativ.",
-         "ru": "Добавлена полная интеграция датчика давления (pump.pressure.*), включая определение тренда, самообучающиеся минимальные/максимальные значения, диагностический вывод и настраиваемый диапазон нормального давления. Без автоматической логики – только информация.",
-         "pt": "Adicionada integração completa do sensor de pressão (pump.pressure.*), incluindo detecção de tendência, valores mínimos/máximos autoaprendidos, saída de diagnóstico e faixa de pressão normal configurável. Sem lógica automática – apenas informativo.",
-         "nl": "Volledige druksensorintegratie (pump.pressure.*) toegevoegd, inclusief trenddetectie, zelflerende min/max-waarden, diagnostische uitvoer en instelbaar normaaldrukbereik. Geen automatische logica – puur informatief.",
-         "fr": "Intégration complète du capteur de pression (pump.pressure.*) ajoutée, comprenant la détection de tendance, des valeurs min/max auto-apprises, une sortie de diagnostic et une plage de pression normale configurable. Aucune logique automatique – uniquement informatif.",
-         "it": "Aggiunta integrazione completa del sensore di pressione (pump.pressure.*), con rilevamento delle tendenze, valori min/max autoapprendenti, output diagnostico e intervallo di pressione normale configurabile. Nessuna logica automatica – solo informativo.",
-         "es": "Se añadió la integración completa del sensor de presión (pump.pressure.*), incluyendo detección de tendencia, valores mínimos/máximos autoaprendidos, salida de diagnóstico y rango de presión normal configurable. Sin lógica automática – solo informativo.",
-         "pl": "Dodano pełną integrację czujnika ciśnienia (pump.pressure.*), w tym wykrywanie trendów, samo uczące się wartości min/max, dane diagnostyczne oraz konfigurowalny zakres ciśnienia normalnego. Bez automatycznej logiki – wyłącznie informacyjne.",
-         "uk": "Додано повну інтеграцію датчика тиску (pump.pressure.*), включаючи визначення трендів, самонавчальні мін/макс значення, діагностичний вихід та налаштовуваний діапазон нормального тиску. Без автоматичної логіки – лише інформаційно.",
-         "zh-cn": "新增完整压力传感器集成 (pump.pressure.*)，包括趋势检测、自学习最小/最大值、诊断输出以及可配置的正常压力范围。无自动控制逻辑，仅提供信息。"
-       }
+       }       }
 	},
     "titleLang": {
       "en": "PoolControl",

@@ -93,6 +93,17 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
     - Separate Schalter unter `ai.weather.switches.*` zum Aktivieren/Deaktivieren einzelner Prognosefunktionen
     - Ergebnisse werden unter `ai.weather.outputs.forecast_text` gespeichert
 
+      - **Chemie-Hilfe (aiChemistryHelpHelper, ab v0.8.x)**
+    - Interaktive, rein informative KI-Hilfe zur Wasserchemie
+    - Auswahl typischer Poolprobleme über ein Auswahlfeld (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, Wasser grün/trüb)
+    - Ausgabe verständlicher Ursachen- und Lösungsbeschreibungen als Text
+    - Keine automatische Dosierung
+    - Keine Produktempfehlungen
+    - Keine Steuerung von Geräten
+    - Keine Sprachausgabe (rein visuelle Information)
+    - Ziel: Ursachen verstehen und strukturiert vorgehen (messen → korrigieren → filtern → erneut messen)
+    - Datenpunkte unter `ai.chemistry_help.*`
+
   
 - **Info-System (seit v0.7.x)**
   - Informationssystem des Adapters
@@ -164,6 +175,18 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+
+## v0.8.2 (2025-12-25)
+- Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
+- Rein informatives Hilfesystem zur Poolwasserchemie
+- Auswahl typischer Poolprobleme (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, Wasser grün/trüb)
+- Verständliche Ursachen- und Lösungshinweise als Textausgabe
+- Keine automatische Dosierung
+- Keine Produktempfehlungen
+- Keine Geräte- oder Pumpensteuerung
+- Keine Sprachausgabe (rein visuelle Information)
+- Neue Datenpunkte unter `ai.chemistry_help.*`
+
 
 ## v0.8.0 (2025-12-08)
 - Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht

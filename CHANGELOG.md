@@ -5,6 +5,21 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+## v0.8.2 (2025-12-25)
+- Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
+- Rein informatives Hilfesystem zur Poolwasserchemie
+- Auswahl typischer Poolprobleme (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, Wasser grün/trüb)
+- Verständliche Ursachen- und Lösungshinweise als Textausgabe
+- Keine automatische Dosierung
+- Keine Produktempfehlungen
+- Keine Geräte- oder Pumpensteuerung
+- Keine Sprachausgabe (rein visuelle Information)
+- Neue Datenpunkte unter `ai.chemistry_help.*`
+
+
+---
+
+
 ## v0.8.0 (2025-12-08)
 - Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
 - Automatische Textausgaben mit optionaler Sprachausgabe

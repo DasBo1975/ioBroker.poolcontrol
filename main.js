@@ -23,6 +23,7 @@ const statusHelper = require('./lib/helpers/statusHelper');
 const photovoltaicHelper = require('./lib/helpers/photovoltaicHelper');
 const aiHelper = require('./lib/helpers/aiHelper');
 const aiForecastHelper = require('./lib/helpers/aiForecastHelper');
+const aiChemistryHelpHelper = require('./lib/helpers/aiChemistryHelpHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
 const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
@@ -47,6 +48,8 @@ const { createControlStates } = require('./lib/stateDefinitions/controlStates');
 const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates');
 const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: KI-States
+const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
+
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -115,6 +118,7 @@ class Poolcontrol extends utils.Adapter {
 
         // --- AI States ---
         await createAiStates(this); // NEU: KI-States anlegen
+        await createAiChemistryHelpStates(this); // NEU: KI-Chemie-Hilfe-States
 
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
@@ -136,6 +140,7 @@ class Poolcontrol extends utils.Adapter {
         photovoltaicHelper.init(this);
         aiHelper.init(this);
         aiForecastHelper.init(this);
+        aiChemistryHelpHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
         infoHelper.init(this);
@@ -200,6 +205,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (aiForecastHelper.cleanup) {
                 aiForecastHelper.cleanup();
+            }
+            if (aiChemistryHelpHelper.cleanup) {
+                aiChemistryHelpHelper.cleanup();
             }
             if (infoHelper.cleanup) {
                 infoHelper.cleanup();
@@ -282,6 +290,11 @@ class Poolcontrol extends utils.Adapter {
             aiForecastHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[main] Fehler in aiForecastHelper.handleStateChange: ${e.message}`);
+        }
+        try {
+            aiChemistryHelpHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[main] Fehler in aiChemistryHelpHelper.handleStateChange: ${e.message}`);
         }
         try {
             statusHelper.handleStateChange(id, state);
