@@ -30,6 +30,7 @@ const debugLogHelper = require('./lib/helpers/debugLogHelper');
 const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const migrationHelper = require('./lib/helpers/migrationHelper');
 const infoHelper = require('./lib/helpers/infoHelper');
+const heatHelper = require('./lib/helpers/heatHelper');
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -49,6 +50,7 @@ const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates'
 const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: KI-States
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
+const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -78,6 +80,9 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Solarverwaltung ---
         await createSolarStates(this);
+
+        // --- Heizung / Wärmepumpe ---
+        await createHeatStates(this);
 
         // --- Photovoltaik ---
         await createPhotovoltaicStates(this);
@@ -136,6 +141,7 @@ class Poolcontrol extends utils.Adapter {
         speechHelper.init(this);
         consumptionHelper.init(this);
         solarHelper.init(this);
+        heatHelper.init(this); // ← NEU
         photovoltaicHelper.init(this);
         aiHelper.init(this);
         aiForecastHelper.init(this);
@@ -195,6 +201,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (controlHelper2.cleanup) {
                 controlHelper2.cleanup();
+            }
+            if (heatHelper.cleanup) {
+                heatHelper.cleanup();
             }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
@@ -278,6 +287,11 @@ class Poolcontrol extends utils.Adapter {
             photovoltaicHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[photovoltaicHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            heatHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[heatHelper] Fehler in handleStateChange: ${e.message}`);
         }
         // --- AI-Helper ---
         try {
