@@ -35,6 +35,29 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Kollektor-Warnung (mit automatischer Rücksetzung bei 10 % unter der Schwelle)
   - Optionale Sprachausgabe bei Warnung
 
+- **Heizungs- / Wärmepumpensteuerung (neu, Testphase)**
+  - Automatische Steuerung von Heizstab oder Wärmepumpe auf Basis der Pooltemperatur
+  - Zieltemperatur und maximale Sicherheitstemperatur konfigurierbar
+  - Aktiv nur bei:
+    - aktiver Poolsaison
+    - Pumpenmodus **Automatik**
+    - nicht aktivem Wartungsmodus
+  - Vorranglogik:
+    - Wartungsmodus blockiert die Heizungssteuerung vollständig
+    - Heizung greift nicht in manuelle oder zeitgesteuerte Pumpenmodi ein
+  - Pumpen-Nachlaufzeit nach Heizende konfigurierbar
+  - Ownership-Schutz:
+    - Die Pumpe wird nur dann ausgeschaltet, wenn sie zuvor vom heatHelper selbst eingeschaltet wurde
+  - Unterstützt:
+    - schaltbare Steckdosen **oder**
+    - boolesche Steuer-States externer Heizungen
+  - Interner Status- und Diagnosebereich unter `heat.*`
+  - Rein steuernd, **keine Chemie- oder Solarlogik**
+  
+  **Hinweis:**  
+  Diese Funktion befindet sich aktuell in einer **Testphase**.  
+  Die Logik ist vollständig implementiert, sollte aber zunächst nur mit interessierten Test-Usern eingesetzt werden.
+
 - **Photovoltaiksteuerung (seit v0.6.0)**
   - Automatische Pumpensteuerung auf Basis von PV-Erzeugung und Hausverbrauchs
   - Einschaltlogik: Überschuss ≥ (Pumpen-Nennleistung + Sicherheitsaufschlag)
@@ -151,8 +174,6 @@ Die Konfiguration erfolgt über Tabs im Admin-Interface:
 - Erweiterte PV- und Solar-Effizienzanalyse (COP-Berechnung, Tagesnutzen, Wetterintegration)
 - Statistik-Exportfunktion (CSV/Excel)
 - Diagnostic-Helper zur automatischen Systemprüfung
-- Erweiterung der Heizungs-/Wärmepumpenlogik (`heatHelper`)
-- Zweite Pumpe (z. B. Wärmetauscher oder Wärmepumpe)
 - Eigene Widgets für VIS/VIS2 (grafische Pool- und Solarvisualisierung)
 - Steuerung von Poolbeleuchtung, Ventilen und Gegenstromanlagen
 - Integration zusätzlicher Sensorboxen (z. B. TempBox, PressureBox, LevelBox)
@@ -175,6 +196,22 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+
+## v0.9.0 (WORK IN PROGRESS)
+- Einführung der Heizungs- / Wärmepumpensteuerung (`heatHelper`)
+- Automatische Heizanforderung basierend auf Pooltemperatur
+- Ziel- und Maximaltemperatur konfigurierbar
+- Unterstützung von:
+  - schaltbaren Steckdosen
+  - booleschen Steuer-States
+- Pumpen-Nachlaufzeit nach Heizende
+- Vorrangsystem:
+  - Wartungsmodus blockiert Heizungssteuerung
+  - Aktiv nur im Automatikmodus
+  - Berücksichtigung des Saisonstatus
+- Ownership-Schutz für Pumpensteuerung
+- Neuer interner State `heat.heating_request` für externe Auswertung
+
 
 ## v0.8.2 (2025-12-25)
 - Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
@@ -242,17 +279,8 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 - Telegram-Benutzerwahl hinzugefügt
 
 ## v0.5.2 (2025-10-30)
-- Erweitertes Helper-Vorrangssystem: Konflikte zwischen Zeit- und Solarsteuerung behoben
-- Frostschutz pausiert während Zeitfenster. Nun stabiles Pumpenverhalten und Verbesserte
-  Koordination zwischen den Helpern
 
 ## v0.5.0 (2025-10-28)
-- Erweiterung der Temperaturstatistik um Wochen- und Monatsauswertung  
-  (`analytics.statistics.temperature.week` / `.month`)
-- Eigenständige, eventbasierte Helper für Woche und Monat
-- Persistente Datenpunkte mit automatischen JSON- und HTML-Zusammenfassungen
-- Vorbereitung für zukünftige Erweiterungen (Saison- und Jahresstatistik)
-
 
 ### **0.4.0 (26.10.2025)**
 

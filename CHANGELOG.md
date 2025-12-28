@@ -5,6 +5,26 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
+
+## v0.9.0 (28.12.2025)
+- Einführung der Heizungs- / Wärmepumpensteuerung (`heatHelper`)
+- Automatische Heizanforderung basierend auf Pooltemperatur
+- Ziel- und Maximaltemperatur konfigurierbar
+- Unterstützung von:
+  - schaltbaren Steckdosen
+  - booleschen Steuer-States
+- Pumpen-Nachlaufzeit nach Heizende
+- Vorrangsystem:
+  - Wartungsmodus blockiert Heizungssteuerung
+  - Aktiv nur im Automatikmodus
+  - Berücksichtigung des Saisonstatus
+- Ownership-Schutz für Pumpensteuerung
+- Neuer interner State `heat.heating_request` für externe Auswertung
+
+
+---
+
+
 ## v0.8.2 (2025-12-25)
 - Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
 - Rein informatives Hilfesystem zur Poolwasserchemie
