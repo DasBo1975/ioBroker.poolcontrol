@@ -35,7 +35,7 @@ Der HeatHelper:
 
 ## Datenpunkte – Übersicht
 
-![HeatHelper – Datenpunkte Übersicht](./images/heat_states_overview.png)
+![HeatHelper – Datenpunkte Übersicht](./images/heat_states_overwiew.png)
 
 *(Screenshot im Repository unter `docs/states/images/` ablegen)*
 
