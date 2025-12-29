@@ -149,6 +149,33 @@ Zeigt an, ob sich der HeatHelper aktuell im Pumpen-Nachlauf befindet.
 
 ---
 
+### 🔹 Pumpenlogik & Vorlauf
+
+#### `heat.pump_prerun_minutes`
+Definiert eine **Pumpen-Vorlaufzeit vor dem Heizstart**.
+
+Wenn ein Heizbedarf erkannt wird und die Pumpe aktuell aus ist,  
+schaltet der HeatHelper zuerst die Pumpe ein und wartet die hier definierte Zeit,  
+bevor die Heizung aktiviert wird.
+
+- `0` → kein Vorlauf (Heizung startet sofort)  
+- `>0` → Pumpe läuft vor Heizstart entsprechend lange  
+
+Typischer Anwendungsfall:
+- Wärmepumpe benötigt Wasserdruck / Durchfluss vor dem Start
+
+---
+
+#### `heat.prerun_active`
+Zeigt an, ob sich der HeatHelper aktuell im **Pumpen-Vorlauf** befindet.
+
+- `true` → Pumpen-Vorlauf läuft  
+- `false` → kein aktiver Vorlauf  
+
+Der State wird **nur gesetzt**, wenn ein Vorlauf tatsächlich ausgeführt wird.
+
+---
+
 ### 🔹 Steuerobjekt (Heizung)
 
 #### `heat.control_type`
