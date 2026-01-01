@@ -330,7 +330,28 @@ Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware**
 
 ---
 
+## Lizenz & Rechtliches
+
+PoolControl ist ein von D. Bertin (DasBo1975) entwickeltes Open-Source-Projekt.
+- Der Name PoolControl sowie das zugehörige Logo sind Eigenentwicklungen und dürfen
+  im Rahmen der Open-Source-Veröffentlichung (Adapter, GitHub-Repository, Wiki, Dokumentation,
+  Visualisierungen) frei verwendet werden.
+
+- Eine kommerzielle Nutzung, Weitergabe oder Veröffentlichung in abgewandelter Form
+ (insbesondere als Teil eines kommerziellen Produkts oder Dienstes) bedarf der ausdrücklichen Zustimmung des Autors.
+
+- Alle entwickelten Sensor‑, Hardware‑ und Gehäusekonstruktionen
+ (z. B. Temperatur‑, Druck‑, Pegel‑, Elektronik‑ oder Steuerboxen) inklusive Entwürfen, Schaltplänen,
+ 3D‑Modellen und Innenaufbauten unterliegen dem Urheberrecht von D. Bertin (DasBo1975).
+
+- Veröffentlichung, Nachbau zum Zweck des Weiterverkaufs oder kommerzielle Nutzung dieser
+  Hardware‑Designs ist nur mit schriftlicher Genehmigung des Autors gestattet.
+
+Der Software‑Quellcode dieses Projekts steht unter der MIT License. Details siehe LICENSE.
+
+---
+
 ## License
-Copyright (c) 2025 DasBo1975 <dasbo1975@outlook.de>  
+Copyright (c) 2025–2026 D. Bertin (DasBo1975) <dasbo1975@outlook.de>  
 
 MIT License
