@@ -4,7 +4,7 @@
   "items": {
     "general": {
       "type": "panel",
-      "label": "Allgemeine Einstellungen",
+      "label": "Allg. Einstellungen",
       "items": {
         "general_header": {
           "type": "header",
@@ -278,7 +278,7 @@
     },
     "temperature": {
       "type": "panel",
-      "label": "Temperaturverwaltung",
+      "label": "Temperaturverw.",
       "items": {
         "tempsensor_header": {
           "type": "header",
@@ -421,7 +421,7 @@
     },
     "solar": {
       "type": "panel",
-      "label": "Solar/Heizungsverwaltung",
+      "label": "Solar/Heizungsverw.",
       "items": {
         "solar_control_active_header": {
           "type": "header",
@@ -1301,6 +1301,82 @@
         }
 	  }
     },	
+    "actuators": {
+        "type": "panel",
+        "label": "Zusatz-Aktoren",
+        "items": {
+            "actuators_header": {
+                "type": "header",
+                "text": "Zusatz-Aktoren (Ventile, Beleuchtung & Zusatzpumpen)",
+                "size": 4,
+                "newLine": true,
+                "xs": 12,
+                "sm": 12,
+                "md": 12,
+                "lg": 12,
+                "xl": 12
+            },
+            "actuators_intro": {
+                "type": "staticText",
+                "text": "In diesem Bereich können optionale Zusatz-Aktoren konfiguriert werden. Aktoren werden nur dann im Adapter angelegt, wenn sie explizit aktiviert werden.",
+                "newLine": true,
+                "xs": 12,
+                "sm": 12,
+                "md": 12,
+                "lg": 12,
+                "xl": 12
+            },
+
+            "lighting_header": {
+                "type": "header",
+                "text": "Beleuchtung",
+                "size": 4,
+                "newLine": true,
+                "xs": 12,
+                "sm": 12,
+                "md": 12,
+                "lg": 12,
+                "xl": 12
+            },
+
+            "light_1_active": { "type": "checkbox", "label": "Beleuchtung 1 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_1_name":   { "type": "text", "label": "Name Beleuchtung 1", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_1_object": { "type": "objectId", "label": "Objekt-ID Beleuchtung 1", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 },
+
+            "light_2_active": { "type": "checkbox", "label": "Beleuchtung 2 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_2_name":   { "type": "text", "label": "Name Beleuchtung 2", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_2_object": { "type": "objectId", "label": "Objekt-ID Beleuchtung 2", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 },
+
+            "light_3_active": { "type": "checkbox", "label": "Beleuchtung 3 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_3_name":   { "type": "text", "label": "Name Beleuchtung 3", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "light_3_object": { "type": "objectId", "label": "Objekt-ID Beleuchtung 3", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 },
+
+            "extrapumps_header": {
+                "type": "header",
+                "text": "Zusatzpumpen & Attraktionen",
+                "size": 4,
+                "newLine": true,
+                "xs": 12,
+                "sm": 12,
+                "md": 12,
+                "lg": 12,
+                "xl": 12
+            },
+
+            "extrapump_1_active": { "type": "checkbox", "label": "Zusatzpumpe 1 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_1_name":   { "type": "text", "label": "Name Zusatzpumpe 1", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_1_object": { "type": "objectId", "label": "Objekt-ID Zusatzpumpe 1", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 },
+
+            "extrapump_2_active": { "type": "checkbox", "label": "Zusatzpumpe 2 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_2_name":   { "type": "text", "label": "Name Zusatzpumpe 2", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_2_object": { "type": "objectId", "label": "Objekt-ID Zusatzpumpe 2", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 },
+
+            "extrapump_3_active": { "type": "checkbox", "label": "Zusatzpumpe 3 aktiv", "default": false, "newLine": true, "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_3_name":   { "type": "text", "label": "Name Zusatzpumpe 3", "default": "", "xs": 12, "sm": 3, "md": 3, "lg": 3, "xl": 3 },
+            "extrapump_3_object": { "type": "objectId", "label": "Objekt-ID Zusatzpumpe 3", "default": "", "xs": 12, "sm": 6, "md": 6, "lg": 6, "xl": 6 }
+        }
+    },
+
 	"help": {
       "type": "panel",
       "label": "Hilfe & Info",

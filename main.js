@@ -31,6 +31,7 @@ const speechTextHelper = require('./lib/helpers/speechTextHelper');
 const migrationHelper = require('./lib/helpers/migrationHelper');
 const infoHelper = require('./lib/helpers/infoHelper');
 const heatHelper = require('./lib/helpers/heatHelper');
+const actuatorsHelper = require('./lib/helpers/actuatorsHelper'); // NEU
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -51,6 +52,7 @@ const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: KI-States
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
 const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
+const { createActuatorsStates } = require('./lib/stateDefinitions/actuatorsStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -124,6 +126,9 @@ class Poolcontrol extends utils.Adapter {
         await createAiStates(this); // NEU: KI-States anlegen
         await createAiChemistryHelpStates(this); // NEU: KI-Chemie-Hilfe-States
 
+        // --- Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) ---
+        await createActuatorsStates(this);
+
         // --- Migration Helper zuletzt starten ---
         await migrationHelper.init(this);
 
@@ -153,6 +158,7 @@ class Poolcontrol extends utils.Adapter {
         controlHelper2.init(this);
         debugLogHelper.init(this);
         speechTextHelper.init(this);
+        actuatorsHelper.init(this); // NEU
     }
 
     onUnload(callback) {
@@ -204,6 +210,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (heatHelper.cleanup) {
                 heatHelper.cleanup();
+            }
+            if (actuatorsHelper.cleanup) {
+                actuatorsHelper.cleanup(); // NEU
             }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
@@ -292,6 +301,11 @@ class Poolcontrol extends utils.Adapter {
             heatHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[heatHelper] Fehler in handleStateChange: ${e.message}`);
+        }
+        try {
+            actuatorsHelper.handleStateChange(id, state); // NEU
+        } catch (e) {
+            this.log.warn(`[actuatorsHelper] Fehler in handleStateChange: ${e.message}`);
         }
         // --- AI-Helper ---
         try {

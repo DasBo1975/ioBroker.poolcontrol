@@ -197,6 +197,28 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## v1.0.0 Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) (02.01.2026)
+  - Steuerung optionaler Pool-Aktoren:
+    - Poolbeleuchtung (bis zu 3 Kanäle)
+    - Zusatzpumpen / Attraktionen (bis zu 3 Kanäle)
+  - Vollständige Konfiguration über die Admin-Oberfläche:
+    - Aktivierung pro Aktor über Checkbox
+    - Hinterlegung einer **externen Objekt-ID**
+      (z. B. schaltbare Steckdose oder boolescher Steuer-State)
+  - Unterstützte Betriebsarten:
+    - Ein / Aus
+    - Zeitbetrieb (Laufzeit in Minuten)
+    - Dauerbetrieb
+  - Interne Status- und Steuer-States:
+    - aktueller Betriebszustand
+    - verbleibende Restlaufzeit
+    - Schaltstatus und Betriebsmodus
+  - Klare Systemtrennung:
+    - Zusatz-Aktoren beeinflussen **keine**
+      Pumpen-, Solar-, Heizungs- oder KI-Logik
+    - Rein optionale Erweiterung des Systems
+
+
 ## v0.9.0 (WORK IN PROGRESS)
 - Einführung der Heizungs- / Wärmepumpensteuerung (`heatHelper`)
 - Automatische Heizanforderung basierend auf Pooltemperatur
