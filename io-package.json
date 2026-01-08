@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+       "1.0.1": {
+         "en": "Bugfix release. Fixes incomplete weather code descriptions in the AI weather forecast module by fully aligning with the official Open-Meteo weather code specification. This prevents raw numeric weather codes from appearing in notifications, speech output, or AI-generated texts and ensures consistent, human-readable weather descriptions across all outputs.",
+         "de": "Bugfix-Release. Behebt unvollständige Wettercode-Beschreibungen im KI-Wettervorhersagemodul durch vollständige Anpassung an die offizielle Open-Meteo-Wettercode-Spezifikation. Dadurch wird verhindert, dass rohe numerische Wettercodes in Benachrichtigungen, Sprachausgaben oder KI-generierten Texten erscheinen, und es werden durchgehend verständliche Klartext-Beschreibungen sichergestellt.",
+         "ru": "Исправляющий релиз. Устраняет неполные описания погодных кодов в модуле ИИ-прогноза погоды за счёт полного соответствия официальной спецификации погодных кодов Open-Meteo. Это предотвращает появление числовых кодов погоды в уведомлениях, голосовых сообщениях и ИИ-текстах, обеспечивая понятные текстовые описания.",
+         "pt": "Versão de correção de erros. Corrige descrições incompletas dos códigos meteorológicos no módulo de previsão meteorológica por IA, alinhando-o totalmente com a especificação oficial de códigos meteorológicos do Open-Meteo. Isto evita a exibição de códigos numéricos brutos em notificações, saídas de voz ou textos gerados por IA, garantindo descrições claras e legíveis.",
+         "nl": "Bugfix-release. Corrigeert onvolledige weerkodebeschrijvingen in de AI-weervoorspellingsmodule door volledige afstemming op de officiële Open-Meteo-weerkodespecificatie. Dit voorkomt dat ruwe numerieke weerkodes verschijnen in meldingen, spraakuitvoer of AI-gegenereerde teksten en zorgt voor consistente, leesbare beschrijvingen.",
+         "fr": "Version corrective. Corrige les descriptions incomplètes des codes météo dans le module de prévision météo basé sur l’IA en les alignant entièrement sur la spécification officielle des codes météo Open-Meteo. Cela empêche l’affichage de codes numériques bruts dans les notifications, les sorties vocales ou les textes générés par l’IA.",
+         "it": "Release di correzione. Risolve descrizioni incomplete dei codici meteo nel modulo di previsione meteorologica basato su IA, allineandolo completamente alla specifica ufficiale dei codici meteo Open-Meteo. Questo evita la visualizzazione di codici numerici grezzi in notifiche, output vocali o testi generati dall’IA.",
+         "es": "Versión de corrección de errores. Corrige descripciones incompletas de los códigos meteorológicos en el módulo de previsión meteorológica con IA mediante una alineación completa con la especificación oficial de códigos meteorológicos de Open-Meteo. Esto evita que aparezcan códigos numéricos sin procesar en notificaciones, salidas de voz o textos generados por IA.",
+         "pl": "Wydanie poprawkowe. Naprawia niekompletne opisy kodów pogodowych w module prognozy pogody opartym na AI poprzez pełne dostosowanie do oficjalnej specyfikacji kodów pogodowych Open-Meteo. Zapobiega to wyświetlaniu surowych kodów numerycznych w powiadomieniach, komunikatach głosowych oraz tekstach generowanych przez AI.",
+         "uk": "Випуск з виправленнями. Усунено неповні описи погодних кодів у модулі прогнозу погоди на основі ШІ шляхом повного узгодження з офіційною специфікацією погодних кодів Open-Meteo. Це запобігає появі сирих числових кодів у сповіщеннях, голосових повідомленнях та текстах, створених ШІ.",
+         "zh-cn": "错误修复版本。通过完全对齐 Open-Meteo 官方天气代码规范，修复了 AI 天气预报模块中不完整的天气代码描述问题，从而避免在通知、语音输出或 AI 生成的文本中显示原始数字天气代码，确保始终提供可读的文字说明。"
+       },
        "1.0.0": {
          "en": "First stable release of ioBroker.poolcontrol. Consolidates all core features developed over previous versions, including pump control, temperature management, solar and photovoltaic logic, heating / heat pump control, statistics, diagnostics, and AI-based information modules. The adapter architecture is now considered stable, modular, and production-ready, with consistent event-based helpers, persistent states, and strict ownership and priority handling across all control domains.",
          "de": "Erste stabile Version von ioBroker.poolcontrol. Bündelt alle in den vorherigen Versionen entwickelten Kernfunktionen, einschließlich Pumpensteuerung, Temperaturverwaltung, Solar- und Photovoltaiklogik, Heizungs- / Wärmepumpensteuerung, Statistik, Diagnose sowie KI-basierter Informationsmodule. Die Adapterarchitektur gilt nun als stabil, modular und produktionsreif, mit durchgängig eventbasierter Logik, persistenten Datenpunkten sowie klarer Ownership- und Vorrangslogik in allen Steuerungsbereichen.",
@@ -80,19 +93,6 @@
          "pl": "Nowość: Wprowadzenie systemu prognoz opartego na AI (aiForecastHelper). Adapter tworzy teraz codzienną prognozę pogody na jutro, obejmującą zakres temperatur, opis pogody, prawdopodobieństwo opadów, analizę wiatru oraz zalecenia dla basenu. Dodano nowe przełączniki, harmonogramy i wyjścia w ai.weather.*. Pierwsze uruchomienie następuje automatycznie przy starcie adaptera. Interfejs administracyjny został uzupełniony o ważne informacje dotyczące AI.",
          "uk": "Нове: Впроваджено систему прогнозування на основі ШІ (aiForecastHelper). Адаптер тепер щоденно створює прогноз погоди на завтра: діапазон температур, опис погоди, ймовірність опадів, аналіз вітру та рекомендації для басейну. Додано нові перемикачі, розклади та виходи в ai.weather.*. Перше виконання відбувається автоматично під час запуску адаптера. Адмін-інтерфейс оновлено важливою інформацією щодо ШІ.",
          "zh-cn": "新增：引入 AI 预报系统（aiForecastHelper）。适配器现在每天生成明天的天气预报，包括温度范围、天气描述、降雨概率、风力分析和泳池建议。新增了 ai.weather.* 下的开关、计划和输出。首次执行在适配器启动时自动进行。管理界面已更新，包含重要的 AI 信息。"
-       },
-       "0.7.4": {
-         "en": "Improvement: The circulation mode (control.circulation.mode) is now fully protected against reinstall/overinstall. User-defined values are no longer overwritten during adapter update or restart.",
-         "de": "Verbesserung: Der Umwälzungsmodus (control.circulation.mode) ist jetzt vollständig gegen Überinstallation geschützt. Benutzerwerte werden bei Adapter-Update oder Neustart nicht mehr überschrieben.",
-         "ru": "Улучшение: режим циркуляции (control.circulation.mode) теперь полностью защищен от переустановки. Пользовательские значения больше не перезаписываются при обновлении или перезапуске адаптера.",
-         "pt": "Melhoria: O modo de circulação (control.circulation.mode) agora está totalmente protegido contra reinstalações. Os valores definidos pelo usuário não são mais substituídos durante atualização ou reinicialização do adaptador.",
-         "nl": "Verbetering: De circulatiemodus (control.circulation.mode) is nu volledig beschermd tegen overinstallaties. Door de gebruiker ingestelde waarden worden niet langer overschreven bij een update of herstart.",
-         "fr": "Amélioration : Le mode de circulation (control.circulation.mode) est désormais entièrement protégé contre les réinstallations. Les valeurs définies par l’utilisateur ne sont plus écrasées lors d’une mise à jour ou d’un redémarrage de l’adaptateur.",
-         "it": "Miglioramento: La modalità di circolazione (control.circulation.mode) è ora completamente protetta da reinstallazioni. I valori utente non vengono più sovrascritti durante aggiornamenti o riavvii dell’adattatore.",
-         "es": "Mejora: El modo de circulación (control.circulation.mode) ahora está completamente protegido contra reinstalaciones. Los valores del usuario ya no se sobrescriben durante actualizaciones o reinicios del adaptador.",
-         "pl": "Ulepszenie: Tryb cyrkulacji (control.circulation.mode) jest teraz w pełni chroniony przed ponowną instalacją. Wartości użytkownika nie są już nadpisywane podczas aktualizacji lub restartu adaptera.",
-         "uk": "Покращення: Режим циркуляції (control.circulation.mode) тепер повністю захищений від повторної інсталяції. Значення користувача більше не перезаписуються під час оновлення або перезапуску адаптера.",
-         "zh-cn": "改进：循环模式（control.circulation.mode）现已完全受保护，不会在重新安装或更新适配器时被覆盖。"
        }
 	},
     "titleLang": {
