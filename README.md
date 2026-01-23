@@ -23,7 +23,8 @@ Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung s
   - Automatik (PV) steuert die Pumpe abhängig vom Photovoltaik-Überschuss
   - Fehlererkennung (kein Stromverbrauch, Leistung trotz „AUS“, Überlast)
   - Sicherheitsfunktionen (Frostschutz, Überhitzungsschutz)
-
+  - Pumpen-Leistungsempfehlung für regelbare Pumpen
+  
 - **Temperaturverwaltung**
   - Bis zu 6 Sensoren (Oberfläche, Grund, Vorlauf, Rücklauf, Kollektor, Außentemperatur)
   - Tages-Minimum / -Maximum
@@ -196,6 +197,25 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ## Changelog
 ### **WORK IN PROGRESS**
+
+## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
+- **Pumpen-Leistungsempfehlung (ab v1.1.0)**
+  - Neuer passiver Bereich `pump.speed`
+  - Ableitung eines eindeutigen logischen Leistungszustands der laufenden Pumpe:
+    - `off`, `frost`, `low`, `normal`, `high`, `boost`
+  - Der Leistungszustand basiert ausschließlich auf:
+    - bestehender Pumpenlogik
+    - aktivem Helper (z. B. Frost, Solar, Wartung)
+    - aktuellem Pumpenstatus
+  - Zusätzlich wird eine **empfohlene Pumpenleistung in Prozent (0–100 %)** bereitgestellt
+  - Prozentwerte sind **frei konfigurierbar** und **überinstallationsgeschützt**
+  - **Keine aktive Drehzahlregelung**
+  - **Kein Eingriff in bestehende Pumpensteuerung**
+  - Gedacht zur Anbindung externer Systeme wie:
+    - Shelly 0–10 V
+    - Frequenzumrichter
+    - Blockly / Skripte
+
 
 ## v1.0.0 Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) (02.01.2026)
   - Steuerung optionaler Pool-Aktoren:

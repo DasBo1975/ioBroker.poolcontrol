@@ -15,6 +15,7 @@ const pumpHelper = require('./lib/helpers/pumpHelper');
 const pumpHelper2 = require('./lib/helpers/pumpHelper2');
 const pumpHelper3 = require('./lib/helpers/pumpHelper3');
 const pumpHelper4 = require('./lib/helpers/pumpHelper4');
+const pumpSpeedHelper = require('./lib/helpers/pumpSpeedHelper'); // NEU
 const speechHelper = require('./lib/helpers/speechHelper');
 const consumptionHelper = require('./lib/helpers/consumptionHelper');
 const solarHelper = require('./lib/helpers/solarHelper');
@@ -37,6 +38,7 @@ const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
 const { createPumpStates3 } = require('./lib/stateDefinitions/pumpStates3');
 const { createPumpStates4 } = require('./lib/stateDefinitions/pumpStates4');
+const { createPumpSpeedStates } = require('./lib/stateDefinitions/pumpSpeedStates'); // NEU
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
 const { createPhotovoltaicStates } = require('./lib/stateDefinitions/photovoltaicStates');
 const { createGeneralStates } = require('./lib/stateDefinitions/generalStates');
@@ -76,6 +78,7 @@ class Poolcontrol extends utils.Adapter {
         await createPumpStates2(this);
         await createPumpStates3(this);
         await createPumpStates4(this);
+        await createPumpSpeedStates(this); // NEU: Pumpen-Leistungsempfehlung
 
         // --- Temperaturverwaltung ---
         await createTemperatureStates(this);
@@ -143,6 +146,7 @@ class Poolcontrol extends utils.Adapter {
         pumpHelper2.init(this);
         pumpHelper3.init(this);
         pumpHelper4.init(this);
+        pumpSpeedHelper.init(this); // NEU
         speechHelper.init(this);
         consumptionHelper.init(this);
         solarHelper.init(this);
@@ -186,6 +190,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (pumpHelper4.cleanup) {
                 pumpHelper4.cleanup();
+            }
+            if (pumpSpeedHelper.cleanup) {
+                pumpSpeedHelper.cleanup(); // NEU
             }
             if (speechHelper.cleanup) {
                 speechHelper.cleanup();
@@ -280,6 +287,12 @@ class Poolcontrol extends utils.Adapter {
             pumpHelper4.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[pumpHelper4] Fehler in handleStateChange: ${e.message}`);
+        }
+
+        try {
+            pumpSpeedHelper.handleStateChange(id, state); // NEU
+        } catch (e) {
+            this.log.warn(`[pumpSpeedHelper] Fehler in handleStateChange: ${e.message}`);
         }
 
         try {
