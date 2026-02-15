@@ -1,0 +1,19 @@
+{
+  "branches": [
+    "main"
+  ],
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": true
+  },
+  "plugins": [
+    [
+      "@alcalzone/release-script-plugin-iobroker",
+      {
+        "updateReadme": true
+      }
+    ]
+  ]
+}
