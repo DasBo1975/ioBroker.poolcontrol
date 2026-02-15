@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "news": {
+       "1.2.0": {
+         "en": "Maintenance release. Prepares PoolControl for the Stable repository by enabling i18n in the instance configuration (jsonConfig) and adding bilingual (DE/EN) labels and texts. No functional changes to the adapter logic.",
+         "de": "Wartungs-Release. Vorbereitung für das Stable-Repository durch Aktivierung von i18n in der Instanzkonfiguration (jsonConfig) und Ergänzung zweisprachiger (DE/EN) Labels und Texte. Keine funktionalen Änderungen an der Adapterlogik.",
+         "ru": "Технический релиз. Подготовка PoolControl к репозиторию Stable: включение i18n в конфигурации экземпляра (jsonConfig) и добавление двуязычных (DE/EN) подписей и текстов. Функциональных изменений в логике адаптера нет.",
+         "pt": "Versão de manutenção. Preparação do PoolControl para o repositório Stable ao ativar o i18n na configuração da instância (jsonConfig) e adicionar rótulos e textos bilingues (DE/EN). Sem alterações funcionais na lógica do adaptador.",
+         "nl": "Onderhoudsrelease. Bereidt PoolControl voor op de Stable-repository door i18n in de instance-configuratie (jsonConfig) te activeren en tweetalige (DE/EN) labels en teksten toe te voegen. Geen functionele wijzigingen in de adapterlogica.",
+         "fr": "Version de maintenance. Prépare PoolControl pour le dépôt Stable en activant i18n dans la configuration de l’instance (jsonConfig) et en ajoutant des libellés et textes bilingues (DE/EN). Aucun changement fonctionnel dans la logique de l’adaptateur.",
+         "it": "Release di manutenzione. Preparazione di PoolControl per il repository Stable abilitando i18n nella configurazione dell’istanza (jsonConfig) e aggiungendo etichette e testi bilingui (DE/EN). Nessuna modifica funzionale alla logica dell’adattatore.",
+         "es": "Versión de mantenimiento. Prepara PoolControl para el repositorio Stable habilitando i18n en la configuración de instancia (jsonConfig) y añadiendo etiquetas y textos bilingües (DE/EN). Sin cambios funcionales en la lógica del adaptador.",
+         "pl": "Wydanie konserwacyjne. Przygotowanie PoolControl do repozytorium Stable poprzez włączenie i18n w konfiguracji instancji (jsonConfig) oraz dodanie dwujęzycznych (DE/EN) etykiet i tekstów. Brak zmian funkcjonalnych w logice adaptera.",
+         "uk": "Реліз обслуговування. Підготовка PoolControl до репозиторію Stable: увімкнення i18n у конфігурації інстансу (jsonConfig) та додавання двомовних (DE/EN) підписів і текстів. Жодних функціональних змін у логіці адаптера.",
+         "zh-cn": "维护版本。为进入 Stable 仓库做准备：在实例配置（jsonConfig）中启用 i18n，并添加双语（德语/英语）标签与文本。适配器逻辑无功能性变更。"
+       },
        "1.1.0": {
          "en": "Feature release. Introduces a new passive pump speed recommendation layer (pump.speed). PoolControl now derives a clear logical pump performance state (off, frost, low, normal, high, boost) from existing pump logic and provides an optional, configurable percentage recommendation (0–100%). This enables seamless integration with external speed control solutions such as Shelly 0–10 V, frequency converters or Blockly scripts, without modifying or interfering with the existing pump control logic.",
          "de": "Feature-Release. Einführung einer neuen passiven Pumpen-Leistungsempfehlung (pump.speed). PoolControl leitet nun einen klaren logischen Leistungszustand der Pumpe (off, frost, low, normal, high, boost) aus der bestehenden Pumpenlogik ab und stellt zusätzlich eine optionale, frei konfigurierbare Prozent-Empfehlung (0–100 %) bereit. Dadurch können externe Drehzahlsteuerungen wie Shelly 0–10 V, Frequenzumrichter oder Blockly-Skripte angebunden werden, ohne die bestehende Pumpensteuerung zu verändern oder zu beeinflussen.",
@@ -80,19 +93,6 @@
          "pl": "Nowy moduł pomocy chemicznej oparty na AI. Interaktywny, wyłącznie informacyjny system wsparcia dla typowych problemów wody basenowej (np. zbyt wysokie/niskie pH, nieskuteczny chlor, zielona lub mętna woda). Bez automatycznego dozowania, rekomendacji produktów, sterowania urządzeniami ani komunikatów głosowych.",
          "uk": "Новий модуль допомоги з хімії басейну на основі ШІ. Інтерактивна, виключно інформаційна система підтримки для типових проблем води (наприклад, високий/низький pH, неефективний хлор, зелена або каламутна вода). Без автоматичного дозування, рекомендацій продуктів, керування пристроями чи голосового виводу.",
          "zh-cn": "新增 AI 水质化学帮助模块。为常见的泳池水问题（如 pH 过高/过低、氯无效、绿水或浑浊水）提供交互式、纯信息性的帮助说明。不包含自动投加、产品推荐、设备控制或语音输出。"
-       },
-       "0.8.1": {
-         "en": "Fix: AI messages were executed multiple times (e.g. 3x in Telegram). The timer system in aiHelper has been reworked: late executions now only run during the first 3 minutes after adapter start. All AI weather modules now trigger exactly once per day again. Stability improvements in the daily timers.",
-         "de": "Fix: KI-Meldungen wurden mehrfach ausgeführt (z.B. 3× in Telegram). Das Timer-System im aiHelper wurde überarbeitet: Nachholausführungen laufen jetzt nur noch in den ersten 3 Minuten nach Adapterstart. Alle AI-Wettermodule werden wieder exakt einmal pro Tag ausgelöst. Stabilitätsverbesserungen bei den täglichen Timern.",
-         "ru": "Исправление: сообщения ИИ выполнялись несколько раз (например, 3× в Telegram). Таймерная система в aiHelper была переработана: пропущенные задачи выполняются только в первые 3 минуты после запуска адаптера. Все модули погоды ИИ снова выполняются строго один раз в день.",
-         "pt": "Correção: mensagens de IA eram executadas várias vezes (ex.: 3× no Telegram). O sistema de temporizadores do aiHelper foi reestruturado: execuções atrasadas agora ocorrem apenas nos primeiros 3 minutos após iniciar o adaptador. Todos os módulos de clima da IA voltam a ser executados exatamente uma vez por dia.",
-         "nl": "Fix: AI-berichten werden meerdere keren uitgevoerd (bijv. 3× in Telegram). Het timersysteem in aiHelper is herwerkt: inhaaluitvoeringen draaien nu alleen in de eerste 3 minuten na adapterstart. Alle AI-weermodules worden weer precies één keer per dag uitgevoerd.",
-         "fr": "Correctif : les messages IA étaient exécutés plusieurs fois (ex. 3× dans Telegram). Le système de minuteries dans aiHelper a été revu : les exécutions différées ne s'exécutent plus que pendant les 3 premières minutes après le démarrage. Tous les modules météo IA se déclenchent à nouveau exactement une fois par jour.",
-         "it": "Fix: i messaggi dell'IA venivano eseguiti più volte (es. 3× su Telegram). Il sistema di timer dell'aiHelper è stato rivisto: le esecuzioni recuperate ora avvengono solo nei primi 3 minuti dopo l'avvio dell'adattatore. Tutti i moduli meteo IA ora si attivano nuovamente una sola volta al giorno.",
-         "es": "Corrección: los mensajes de IA se ejecutaban varias veces (p. ej., 3× en Telegram). Se ha rediseñado el sistema de temporizadores en aiHelper: las ejecuciones atrasadas ahora solo ocurren en los primeros 3 minutos tras iniciar el adaptador. Todos los módulos meteorológicos de IA vuelven a ejecutarse una sola vez al día.",
-         "pl": "Poprawka: komunikaty AI były wykonywane wielokrotnie (np. 3× w Telegramie). System timerów w aiHelper został przebudowany: zaległe wykonania działają teraz tylko w pierwszych 3 minutach po uruchomieniu adaptera. Wszystkie moduły pogodowe AI znów uruchamiają się dokładnie raz dziennie.",
-         "uk": "Виправлення: повідомлення ШІ виконувалися кілька разів (наприклад, 3× у Telegram). Систему таймерів в aiHelper перероблено: запізнілі виконання відбуваються лише в перші 3 хвилини після запуску. Усі погодні модулі ШІ знову працюють рівно один раз на добу.",
-         "zh-cn": "修复：AI 消息会被多次执行（例如在 Telegram 中出现 3 次）。已重构 aiHelper 中的计时器系统：补偿执行现在仅在适配器启动后的前 3 分钟内运行。所有 AI 天气模块现在每天只会执行一次。"
        }
 	},
     "titleLang": {

@@ -198,6 +198,12 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
+## 1.2.0
+- Aktivierung der Mehrsprachigkeit (i18n) in der jsonConfig
+- Zweisprachige Beschriftung (Deutsch/Englisch) der Instanzkonfiguration
+- Keine funktionalen Änderungen am Adapter
+
+
 ## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
 - **Pumpen-Leistungsempfehlung (ab v1.1.0)**
   - Neuer passiver Bereich `pump.speed`
