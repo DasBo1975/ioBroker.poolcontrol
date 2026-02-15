@@ -1,19 +1,18 @@
 {
-  "branches": [
-    "main"
-  ],
-  "github": {
-    "release": true
+  "git": {
+    "commitMessage": "chore(release): ${version}",
+    "tagName": "v${version}",
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true
   },
   "npm": {
     "publish": true
   },
-  "plugins": [
-    [
-      "@alcalzone/release-script-plugin-iobroker",
-      {
-        "updateReadme": true
-      }
-    ]
-  ]
+  "plugins": {
+    "@alcalzone/release-script-plugin-iobroker": {
+      "type": "adapter"
+    },
+    "@alcalzone/release-script-plugin-license": {}
+  }
 }
+
