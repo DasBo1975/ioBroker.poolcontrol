@@ -198,7 +198,8 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 ## Changelog
 ### **WORK IN PROGRESS**
 
-## 1.2.0 (15.02.2026)
+## 1.2.0
+Released: 15.02.2026
 - Aktivierung der Mehrsprachigkeit (i18n) in der jsonConfig
 - Zweisprachige Beschriftung (Deutsch/Englisch) der Instanzkonfiguration
 - Keine funktionalen Änderungen am Adapter
