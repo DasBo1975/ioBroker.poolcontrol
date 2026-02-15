@@ -1,20 +1,19 @@
 {
   "git": {
     "commitMessage": "chore(release): ${version}",
-    "tagName": "v${version}",
-    "requireCleanWorkingDir": true,
-    "requireUpstream": true
+    "tagName": "v${version}"
   },
   "npm": {
     "publish": true
   },
   "plugins": [
     [
-      "@alcalzone/release-script-plugin-iobroker",
+      "iobroker",
       { "type": "adapter" }
     ],
-    "@alcalzone/release-script-plugin-license"
+    "license"
   ]
 }
+
 
 
