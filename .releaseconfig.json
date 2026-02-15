@@ -7,15 +7,11 @@
     "publish": true
   },
   "plugins": [
-    [
-      "iobroker",
-      {
-        "type": "adapter"
-      }
-    ],
+    "iobroker",
     "license"
   ]
 }
+
 
 
 
