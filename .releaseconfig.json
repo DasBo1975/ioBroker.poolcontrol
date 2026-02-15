@@ -8,12 +8,13 @@
   },
   "plugins": [
     [
-      "iobroker",
+      "@alcalzone/release-script-plugin-iobroker",
       { "type": "adapter" }
     ],
-    "license"
+    "@alcalzone/release-script-plugin-license"
   ]
 }
+
 
 
 
