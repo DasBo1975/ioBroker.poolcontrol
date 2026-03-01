@@ -9,189 +9,188 @@
 
 ---
 
-## Beschreibung
+## Description
 
-Der Adapter **ioBroker.poolcontrol** dient zur Steuerung und Überwachung von Poolanlagen.  
-Er ermöglicht die Automatisierung von Pumpen-, Temperatur- und Solarsteuerung sowie die Verbrauchsauswertung.
+The adapter ioBroker.poolcontrol is used for controlling and monitoring pool systems.
+It enables automation of pump, temperature, and solar control as well as energy consumption analysis.
 
 ---
 
-## Funktionen
+## Features
 
-- **Pumpensteuerung**
-  - Betriebsmodi: Automatik, Automatik (PV), Manuell, Zeitsteuerung, Aus
-  - Automatik (PV) steuert die Pumpe abhängig vom Photovoltaik-Überschuss
-  - Fehlererkennung (kein Stromverbrauch, Leistung trotz „AUS“, Überlast)
-  - Sicherheitsfunktionen (Frostschutz, Überhitzungsschutz)
-  - Pumpen-Leistungsempfehlung für regelbare Pumpen
+- **Pump Control**
+  - Operating modes: Automatic, Automatic (PV), Manual, Time Control, Off
+  - Automatic (PV) controls the pump depending on photovoltaic surplus
+  - Error detection (no power consumption, power despite “OFF”, overload)
+  - Safety functions (frost protection, overheating protection)
+  - Pump power recommendation for variable-speed pumps
   
-- **Temperaturverwaltung**
-  - Bis zu 6 Sensoren (Oberfläche, Grund, Vorlauf, Rücklauf, Kollektor, Außentemperatur)
-  - Tages-Minimum / -Maximum
-  - Änderung pro Stunde
-  - Differenzen (z. B. Kollektor – Luft, Oberfläche – Grund, Vorlauf – Rücklauf)
+- **Temperature Management**
+  - Up to 6 sensors (surface, bottom, flow, return, collector, outside temperature)
+  - Daily minimum / maximum
+  - Hourly change
+  - Differences (e.g., collector – air, surface – bottom, flow – return)
 
-- **Solarsteuerung**
-  - Ein-/Ausschaltgrenzen mit Hysterese
-  - Kollektor-Warnung (mit automatischer Rücksetzung bei 10 % unter der Schwelle)
-  - Optionale Sprachausgabe bei Warnung
+- **Solar Control**
+  - On/off thresholds with hysteresis
+  - Collector warning (with automatic reset at 10% below threshold)
+  - Optional speech output on warning
 
-- **Heizungs- / Wärmepumpensteuerung (neu, Testphase)**
-  - Automatische Steuerung von Heizstab oder Wärmepumpe auf Basis der Pooltemperatur
-  - Zieltemperatur und maximale Sicherheitstemperatur konfigurierbar
-  - Aktiv nur bei:
-    - aktiver Poolsaison
-    - Pumpenmodus **Automatik**
-    - nicht aktivem Wartungsmodus
-  - Vorranglogik:
-    - Wartungsmodus blockiert die Heizungssteuerung vollständig
-    - Heizung greift nicht in manuelle oder zeitgesteuerte Pumpenmodi ein
-  - Pumpen-Nachlaufzeit nach Heizende konfigurierbar
-  - Ownership-Schutz:
-    - Die Pumpe wird nur dann ausgeschaltet, wenn sie zuvor vom heatHelper selbst eingeschaltet wurde
-  - Unterstützt:
-    - schaltbare Steckdosen **oder**
-    - boolesche Steuer-States externer Heizungen
-  - Interner Status- und Diagnosebereich unter `heat.*`
-  - Rein steuernd, **keine Chemie- oder Solarlogik**
+- **Heating / Heat Pump Control (new, test phase)**
+  - Automatic control of heating rod or heat pump based on pool temperature
+  - Target temperature and maximum safety temperature configurable
+  - Active only when:
+    - pool season is active
+    - pump mode **Automatic**
+    - maintenance mode is not active
+  - Priority logic:
+    - Maintenance mode fully blocks heating control
+    - Heating does not interfere with manual or time-based pump modes
+  - Configurable pump overrun time after heating ends
+  - Ownership protection:
+    - The pump is only switched off if it was previously switched on by the heatHelper itself
+  - Supports:
+    - switchable sockets **or**
+    - boolean control states of external heating systems
+  - Internal status and diagnostic section under `heat.*`
+  - Purely controlling, **no chemistry or solar logic**
   
-  **Hinweis:**  
-  Diese Funktion befindet sich aktuell in einer **Testphase**.  
-  Die Logik ist vollständig implementiert, sollte aber zunächst nur mit interessierten Test-Usern eingesetzt werden.
+  **Note:**  
+  This function is currently in a **test phase**.  
+  The logic is fully implemented but should initially only be used by interested test users.
 
-- **Photovoltaiksteuerung (seit v0.6.0)**
-  - Automatische Pumpensteuerung auf Basis von PV-Erzeugung und Hausverbrauchs
-  - Einschaltlogik: Überschuss ≥ (Pumpen-Nennleistung + Sicherheitsaufschlag)
-  - Optionaler Nachlauf bei Wolkenphasen
-  - Ignorieren bei erreichter Tagesumwälzung
-  - Konfiguration über zwei Fremd-Objekt-IDs (power_generated_id, power_house_id)
-  - Neuer Pumpenmodus „Automatik (PV)
+- **Photovoltaic Control (since v0.6.0)**
+  - Automatic pump control based on PV generation and household consumption
+  - Start logic: surplus ≥ (pump rated power + safety margin)
+  - Optional overrun during cloudy phases
+  - Ignore if daily circulation target reached
+  - Configuration via two foreign object IDs (power_generated_id, power_house_id)
+  - New pump mode “Automatic (PV)”
 
-- **Zeitsteuerung**
-  - Bis zu 3 frei konfigurierbare Zeitfenster pro Woche
+- **Time Control**
+  - Up to 3 freely configurable time windows per week
 
-- **Laufzeit & Umwälzung**
-  - Zählt Laufzeiten (heute, gesamt)
-  - Berechnet tägliche Umwälzung und Restmenge
-  - Rückspülerinnerung mit konfigurierbarem Intervall (z. B. alle 7 Tage)
-  - Anzeige der letzten Rückspülung inkl. Datum
-  - Automatische Rücksetzung nach erfolgter Rückspülung
-  - PV-Modus berücksichtigt Umwälzstatus (z. B. „Ignoriere bei Umwälzung erreicht“)
+- **Runtime & Circulation**
+  - Counts runtime (today, total)
+  - Calculates daily circulation and remaining volume
+  - Backwash reminder with configurable interval (e.g., every 7 days)
+  - Display of last backwash including date
+  - Automatic reset after completed backwash
+  - PV mode considers circulation status (e.g., “Ignore when circulation reached”)
 
-- **Verbrauch & Kosten**
-  - Auswertung eines externen kWh-Zählers
-  - Tages-, Wochen-, Monats- und Jahresverbrauch
-  - Berechnung der Stromkosten anhand konfigurierbarem Preis  
+- **Consumption & Costs**
+  - Evaluation of an external kWh meter
+  - Daily, weekly, monthly and yearly consumption
+  - Calculation of electricity costs based on configurable price  
 
-  **Hinweis:**  
-  Details zum Verhalten der Verbrauchs- und Kostenwerte (z. B. bei Neustarts oder beim Wechsel des Stromzählers) finden Sie in der Datei 
-  [help.md](https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/admin/help.md)
+**Note:**  
+Details about the behavior of consumption and cost values (e.g., after restarts or when changing the electricity meter) can be found here:  
 
+- [Documentation (English)](https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/en/help.md)  
+- [Dokumentation (Deutsch)](https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/de/help.md)
 
-- **Statistiksystem**
-  - Bereich `analytics.statistics.*` mit Tages-, Wochen- und Monatswerten
-  - Automatische Berechnung von Min-, Max-, Durchschnitts- und Laufzeitwerten
-  - Vollständig persistente Datenpunkte (Überinstallationsschutz)
-  - HTML- und JSON-Zusammenfassungen pro Sensor und Gesamtübersicht
+- **Statistics System**
+  - Section `analytics.statistics.*` with daily, weekly and monthly values
+  - Automatic calculation of min, max, average and runtime values
+  - Fully persistent data points (overinstall protection)
+  - HTML and JSON summaries per sensor and overall overview
 
-- **Drucksensor-Integration (seit v0.7.x)**
-  - Echtzeit-Filterdruckmessung
-  - Trendanalyse: steigend / fallend / stabil
-  - Gleitender lernender Durchschnitt (avg_bar)
-  - Selbstlernende Min-/Max-Druckwerte
-  - Diagnosetext + letzte Aktualisierung
-  - Keine automatische Steuerung – rein informativ
-  - Normaldruckbereich durch Benutzer einstellbar
+- **Pressure Sensor Integration (since v0.7.x)**
+  - Real-time filter pressure measurement
+  - Trend analysis: rising / falling / stable
+  - Moving learning average (avg_bar)
+  - Self-learning min/max pressure values
+  - Diagnostic text + last update
+  - No automatic control – purely informational
+  - Normal pressure range configurable by the user
 
-- **KI-System (ab v0.8.0)**
-  - Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
-  - Automatische Textausgaben mit optionaler Sprachausgabe
-  - Stündliche Wetter-Updates zur laufenden Aktualisierung
-  - Anti-Spam-System zur Vermeidung doppelter Hinweise
+- **AI System (from v0.8.0)**
+  - Modules: Weather hints (Open-Meteo), pool tips, daily summary, weekend report
+  - Automatic text outputs with optional speech output
+  - Hourly weather updates for continuous refresh
+  - Anti-spam system to avoid duplicate hints
   
-    - **Vorhersage für morgen (aiForecastHelper, ab v0.8.0)**
-    - Erstellt automatisch eine tägliche Wetterprognose für den Folgetag
-    - Analyse von Temperatur, Wetterlage, Regenwahrscheinlichkeit und Windstärke
-    - Erzeugt Pool-Empfehlungen für den nächsten Tag (z. B. Abdeckung schließen, wenig Solarwärme zu erwarten)
-    - Läuft vollständig eventbasiert und benötigt nur die Open-Meteo-Daten aus den ioBroker-Geodaten
-    - Separate Schalter unter `ai.weather.switches.*` zum Aktivieren/Deaktivieren einzelner Prognosefunktionen
-    - Ergebnisse werden unter `ai.weather.outputs.forecast_text` gespeichert
+  - **Forecast for Tomorrow (aiForecastHelper, from v0.8.0)**
+    - Automatically creates a daily weather forecast for the next day
+    - Analysis of temperature, weather situation, rain probability and wind strength
+    - Generates pool recommendations for the following day (e.g., close cover, little solar heat expected)
+    - Fully event-based and only requires Open-Meteo data from ioBroker geodata
+    - Separate switches under `ai.weather.switches.*` to enable/disable individual forecast functions
+    - Results stored under `ai.weather.outputs.forecast_text`
 
-      - **Chemie-Hilfe (aiChemistryHelpHelper, ab v0.8.x)**
-    - Interaktive, rein informative KI-Hilfe zur Wasserchemie
-    - Auswahl typischer Poolprobleme über ein Auswahlfeld (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, Wasser grün/trüb)
-    - Ausgabe verständlicher Ursachen- und Lösungsbeschreibungen als Text
-    - Keine automatische Dosierung
-    - Keine Produktempfehlungen
-    - Keine Steuerung von Geräten
-    - Keine Sprachausgabe (rein visuelle Information)
-    - Ziel: Ursachen verstehen und strukturiert vorgehen (messen → korrigieren → filtern → erneut messen)
-    - Datenpunkte unter `ai.chemistry_help.*`
+  - **Chemistry Help (aiChemistryHelpHelper, from v0.8.x)**
+    - Interactive, purely informative AI help for water chemistry
+    - Selection of typical pool problems via selection field (e.g., pH too high/low, chlorine ineffective, green/cloudy water)
+    - Clear cause and solution descriptions as text output
+    - No automatic dosing
+    - No product recommendations
+    - No device control
+    - No speech output (purely visual information)
+    - Goal: understand causes and proceed systematically (measure → correct → filter → measure again)
+    - Data points under `ai.chemistry_help.*`
 
-  
-- **Info-System (seit v0.7.x)**
-  - Informationssystem des Adapters
-  - Saisonale Grüße (Weihnachten, Silvester, Neujahr, Ostern)
-  - Anzeige der installierten Adapterversion
+- **Info System (since v0.7.x)**
+  - Adapter information system
+  - Seasonal greetings (Christmas, New Year’s Eve, New Year, Easter)
+  - Display of installed adapter version
    
-- **Sprachausgaben**
-  - Ausgabe über Alexa oder Telegram
-  - Ansagen bei Pumpenstart/-stopp, Fehlern oder Temperaturschwellen
+- **Speech Outputs**
+  - Output via Alexa or Telegram
+  - Announcements on pump start/stop, errors or temperature thresholds
 
-- **SystemCheck (Diagnosebereich)**
-  - Interner Diagnosebereich für Debug- und Überwachungsfunktionen
-  - Auswahl des zu überwachenden Bereichs (z. B. Pumpe, Solar, Temperatur)
-  - Fortlaufendes Log der letzten Änderungen
-  - Manuelles Löschen des Logs möglich
+- **SystemCheck (Diagnostic Section)**
+  - Internal diagnostic section for debug and monitoring functions
+  - Selection of area to monitor (e.g., pump, solar, temperature)
+  - Continuous log of the latest changes
+  - Manual log clearing possible
 
-  Dieser Bereich dient ausschließlich der Analyse und Fehlerdiagnose.  
-  Im normalen Betrieb sollte die Überwachung deaktiviert bleiben.
+  This section is used exclusively for analysis and troubleshooting.  
+  In normal operation, monitoring should remain disabled.
 
 ---
 
 ## Installation
 
-1. Adapter über ioBroker Admin installieren.  
-2. Instanz anlegen.  
-3. Konfiguration im Admin-Tab vornehmen: Pumpenleistung, Sensoren, Solar, Sprachausgaben usw.
+1. Install adapter via ioBroker Admin.  
+2. Create instance.  
+3. Configure in the Admin tab: pump power, sensors, solar, speech outputs, etc.
 
 ---
 
-## Konfiguration
+## Configuration
 
-Die Konfiguration erfolgt über Tabs im Admin-Interface:
-- **Allgemein** → Poolname, Poolgröße, minimale Umwälzung  
-- **Pumpe** → Pumpenleistung, Leistungsgrenzen, Sicherheitsfunktionen  
-- **Temperaturen** → Auswahl und Objekt-IDs der Sensoren  
-- **Solarverwaltung** → Ein-/Ausschaltgrenzen, Hysterese, Warnschwelle  
-- **Zeitsteuerung** → Zeitfenster für Pumpenbetrieb  
-- **Sprachausgaben** → Aktivierung, Alexa/Telegram-Anbindung  
-- **Verbrauch & Kosten** → externer kWh-Zähler, Strompreis  
-
----
-
-## Geplante Erweiterungen
-
-- Erweiterte PV- und Solar-Effizienzanalyse (COP-Berechnung, Tagesnutzen, Wetterintegration)
-- Statistik-Exportfunktion (CSV/Excel)
-- Diagnostic-Helper zur automatischen Systemprüfung
-- Eigene Widgets für VIS/VIS2 (grafische Pool- und Solarvisualisierung)
-- Steuerung von Poolbeleuchtung, Ventilen und Gegenstromanlagen
-- Integration zusätzlicher Sensorboxen (z. B. TempBox, PressureBox, LevelBox)
-- KI- und Sprach-Assistenten-Erweiterung (Pool-Tagesbericht, Tipps, Sprachbefehle)
-
+Configuration is done via tabs in the Admin interface:
+- **General** → Pool name, pool size, minimum circulation  
+- **Pump** → Pump power, power limits, safety functions  
+- **Temperatures** → Selection and object IDs of sensors  
+- **Solar Management** → On/off thresholds, hysteresis, warning threshold  
+- **Time Control** → Time windows for pump operation  
+- **Speech Outputs** → Activation, Alexa/Telegram integration  
+- **Consumption & Costs** → external kWh meter, electricity price  
 
 ---
 
-## Hinweis
+## Planned Extensions
 
-Der Adapter befindet sich in aktiver Weiterentwicklung.
-Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
+- Extended PV and solar efficiency analysis (COP calculation, daily benefit, weather integration)
+- Statistics export function (CSV/Excel)
+- Diagnostic helper for automatic system checks
+- Own widgets for VIS/VIS2 (graphical pool and solar visualization)
+- Control of pool lighting, valves and counter-current systems
+- Integration of additional sensor boxes (e.g., TempBox, PressureBox, LevelBox)
+- AI and voice assistant extension (pool daily report, tips, voice commands)
 
 ---
 
-## Dokumentation
-- [help.md (ausführliche Beschreibung und Hinweise)](./help.md)
+## Note
+
+The adapter is under active development.  
+New features are added regularly – please refer to the changelog.
+
+---
+
+## Documentation
+- [help.md (detailed description and notes)](./help.md)
 
 ---
 
@@ -200,132 +199,132 @@ Neue Funktionen werden regelmäßig ergänzt – bitte den Changelog beachten.
 
 ### 1.2.0
 Released: 15.02.2026
-- Aktivierung der Mehrsprachigkeit (i18n) in der jsonConfig
-- Zweisprachige Beschriftung (Deutsch/Englisch) der Instanzkonfiguration
-- Keine funktionalen Änderungen am Adapter
+- Activation of multilingual support (i18n) in jsonConfig
+- Bilingual labeling (German/English) of instance configuration
+- No functional changes to the adapter
 
 
-## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
-- **Pumpen-Leistungsempfehlung (ab v1.1.0)**
-  - Neuer passiver Bereich `pump.speed`
-  - Ableitung eines eindeutigen logischen Leistungszustands der laufenden Pumpe:
+## v1.1.0 Pump Power Recommendation (23.01.2026)
+- **Pump Power Recommendation (from v1.1.0)**
+  - New passive section `pump.speed`
+  - Derives a clear logical performance state of the running pump:
     - `off`, `frost`, `low`, `normal`, `high`, `boost`
-  - Der Leistungszustand basiert ausschließlich auf:
-    - bestehender Pumpenlogik
-    - aktivem Helper (z. B. Frost, Solar, Wartung)
-    - aktuellem Pumpenstatus
-  - Zusätzlich wird eine **empfohlene Pumpenleistung in Prozent (0–100 %)** bereitgestellt
-  - Prozentwerte sind **frei konfigurierbar** und **überinstallationsgeschützt**
-  - **Keine aktive Drehzahlregelung**
-  - **Kein Eingriff in bestehende Pumpensteuerung**
-  - Gedacht zur Anbindung externer Systeme wie:
+  - Performance state is based exclusively on:
+    - existing pump logic
+    - active helper (e.g., frost, solar, maintenance)
+    - current pump status
+  - Additionally provides a **recommended pump power in percent (0–100%)**
+  - Percentage values are **freely configurable** and **protected against overinstallation**
+  - **No active speed control**
+  - **No interference with existing pump control**
+  - Intended for connection to external systems such as:
     - Shelly 0–10 V
-    - Frequenzumrichter
-    - Blockly / Skripte
+    - Frequency converters
+    - Blockly / scripts
 
 
-## v1.0.0 Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) (02.01.2026)
-  - Steuerung optionaler Pool-Aktoren:
-    - Poolbeleuchtung (bis zu 3 Kanäle)
-    - Zusatzpumpen / Attraktionen (bis zu 3 Kanäle)
-  - Vollständige Konfiguration über die Admin-Oberfläche:
-    - Aktivierung pro Aktor über Checkbox
-    - Hinterlegung einer **externen Objekt-ID**
-      (z. B. schaltbare Steckdose oder boolescher Steuer-State)
-  - Unterstützte Betriebsarten:
-    - Ein / Aus
-    - Zeitbetrieb (Laufzeit in Minuten)
-    - Dauerbetrieb
-  - Interne Status- und Steuer-States:
-    - aktueller Betriebszustand
-    - verbleibende Restlaufzeit
-    - Schaltstatus und Betriebsmodus
-  - Klare Systemtrennung:
-    - Zusatz-Aktoren beeinflussen **keine**
-      Pumpen-, Solar-, Heizungs- oder KI-Logik
-    - Rein optionale Erweiterung des Systems
+## v1.0.0 Additional Actuators (Lighting & Auxiliary Pumps) (02.01.2026)
+- Control of optional pool actuators:
+  - Pool lighting (up to 3 channels)
+  - Auxiliary pumps / attractions (up to 3 channels)
+- Full configuration via the Admin interface:
+  - Activation per actuator via checkbox
+  - Assignment of an **external object ID**
+    (e.g., switchable socket or boolean control state)
+- Supported operating modes:
+  - On / Off
+  - Timed operation (runtime in minutes)
+  - Continuous operation
+- Internal status and control states:
+  - current operating state
+  - remaining runtime
+  - switching status and operating mode
+- Clear system separation:
+  - Additional actuators do **not**
+    affect pump, solar, heating, or AI logic
+  - Purely optional system extension
 
 
 ## v0.9.0 (WORK IN PROGRESS)
-- Einführung der Heizungs- / Wärmepumpensteuerung (`heatHelper`)
-- Automatische Heizanforderung basierend auf Pooltemperatur
-- Ziel- und Maximaltemperatur konfigurierbar
-- Unterstützung von:
-  - schaltbaren Steckdosen
-  - booleschen Steuer-States
-- Pumpen-Nachlaufzeit nach Heizende
-- Vorrangsystem:
-  - Wartungsmodus blockiert Heizungssteuerung
-  - Aktiv nur im Automatikmodus
-  - Berücksichtigung des Saisonstatus
-- Ownership-Schutz für Pumpensteuerung
-- Neuer interner State `heat.heating_request` für externe Auswertung
+- Introduction of heating / heat pump control (`heatHelper`)
+- Automatic heating request based on pool temperature
+- Target and maximum temperature configurable
+- Support for:
+  - switchable sockets
+  - boolean control states
+- Pump overrun time after heating ends
+- Priority system:
+  - Maintenance mode blocks heating control
+  - Active only in automatic mode
+  - Considers season status
+- Ownership protection for pump control
+- New internal state `heat.heating_request` for external evaluation
 
 
 ## v0.8.2 (2025-12-25)
-- Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
-- Rein informatives Hilfesystem zur Poolwasserchemie
-- Auswahl typischer Poolprobleme (z. B. pH zu hoch/niedrig, Chlor wirkt nicht, Wasser grün/trüb)
-- Verständliche Ursachen- und Lösungshinweise als Textausgabe
-- Keine automatische Dosierung
-- Keine Produktempfehlungen
-- Keine Geräte- oder Pumpensteuerung
-- Keine Sprachausgabe (rein visuelle Information)
-- Neue Datenpunkte unter `ai.chemistry_help.*`
+- New AI module **Chemistry Help** (`aiChemistryHelpHelper`)
+- Purely informative support system for pool water chemistry
+- Selection of typical pool problems (e.g., pH too high/low, chlorine ineffective, green/cloudy water)
+- Clear cause and solution hints as text output
+- No automatic dosing
+- No product recommendations
+- No device or pump control
+- No speech output (purely visual information)
+- New data points under `ai.chemistry_help.*`
 
 
 ## v0.8.0 (2025-12-08)
-- Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht
-- Automatische Textausgaben mit optionaler Sprachausgabe
-- Stündliche Wetter-Updates zur laufenden Aktualisierung
-- Anti-Spam-System zur Vermeidung doppelter Hinweise
-- Neues KI-Vorhersagesystem `aiForecastHelper` integriert
-- Erstellt täglich eine automatische „Vorhersage für morgen“ mit:
-  - Temperaturspanne
-  - Wetterlage (Beschreibung)
-  - Regenwahrscheinlichkeit
-  - Windanalyse (leicht / frisch / stark)
-  - Pool-Empfehlungen für den Folgetag
-- Neue Schalter, Zeitpläne und Ausgaben unter `ai.weather.*`
-- Sofortige initiale Ausführung nach Instanzstart hinzugefügt
-- Erweiterung der Admin-Übersicht unter „Hilfe & Info“ um wichtige KI-Hinweise
-- Verbesserte interne Struktur des KI-Systems (aiHelper + aiForecastHelper)
+- Modules: Weather hints (Open-Meteo), pool tips, daily summary, weekend report
+- Automatic text outputs with optional speech output
+- Hourly weather updates for continuous refresh
+- Anti-spam system to avoid duplicate hints
+- New AI forecast system `aiForecastHelper` integrated
+- Creates a daily automatic “Forecast for Tomorrow” including:
+  - temperature range
+  - weather description
+  - rain probability
+  - wind analysis (light / moderate / strong)
+  - pool recommendations for the following day
+- New switches, schedules and outputs under `ai.weather.*`
+- Immediate initial execution after instance start added
+- Extended Admin overview under “Help & Info” with important AI notes
+- Improved internal structure of the AI system (aiHelper + aiForecastHelper)
 
 
 ## v0.7.4 (2025-12-03)
-- Fix Bug in Controlhelper. Persistenter Schutz bei control.circulation.mode
+- Fixed bug in ControlHelper. Persistent protection for control.circulation.mode
 
 
 ## v0.7.0 (2025-11-29)
-- Einführung eines neuen Drucksensor-Systems unter `pump.pressure.*`
-- Unterstützung externer Drucksensor-ObjektID (bar-Wert aus ioBroker)
-- Trenderkennung (steigend/fallend/stabil) und gleitender Druckdurchschnitt
-- Selbstlernende Min-/Max-Druckwerte mit manuellem Reset-State
-- Neuer Diagnose-Text (`status_text_diagnostic`) mit erweiterten Analyseinformationen
-- Erweiterte Pumpenüberwachung ohne automatische Steuerlogik (rein informativ)
+- Introduction of a new pressure sensor system under `pump.pressure.*`
+- Support for external pressure sensor object ID (bar value from ioBroker)
+- Trend detection (rising/falling/stable) and moving pressure average
+- Self-learning min/max pressure values with manual reset state
+- New diagnostic text (`status_text_diagnostic`) with extended analysis information
+- Extended pump monitoring without automatic control logic (purely informational)
 
 
 ## v0.6.2 (2025-11-07)
-- Überarbeitung der Instanzübersicht mit neuen Header-Strukturen für klarere Bedienung
-- Neues Startseitenbild „Egon im Blaumann“ in der Admin-Oberfläche integriert
-- Erweiterung des Sprachsystems um konfigurierbare Alexa-Ausgabezeiten
-- Anpassungen und Aufräumarbeiten in jsonConfig, speechHelper und speechStates
+- Revision of instance overview with new header structures for clearer operation
+- New start page image “Egon in Workwear” integrated into the Admin interface
+- Extension of speech system with configurable Alexa output times
+- Adjustments and cleanup in jsonConfig, speechHelper and speechStates
 
 
 ## v0.6.0 (2025-11-03)
-- Einführung der vollständigen Photovoltaik-Steuerung mit automatischer Pumpenlogik  
-  (neuer Pumpenmodus `Automatik (PV)` unter `pump.mode`)
-- Adapter reagiert auf PV-Überschuss basierend auf konfigurierbarer Hausverbrauchs- und Erzeugungsleistung
-- Einschaltlogik: Pumpe EIN bei Überschuss ≥ (Nennleistung + Schwellwert)
-- Berücksichtigung von Saisonstatus, Nachlaufzeit und optionalem „Umwälzung erreicht“-Schutz
-- Automatische Migration ergänzt neuen Modus `auto_pv` in bestehenden Installationen
-- Verbesserte interne Logik, Persistenz und Debug-Protokollierung
+- Introduction of full photovoltaic control with automatic pump logic  
+  (new pump mode `Automatic (PV)` under `pump.mode`)
+- Adapter reacts to PV surplus based on configurable household consumption and generation power
+- Start logic: pump ON when surplus ≥ (rated power + threshold)
+- Considers season status, overrun time and optional “circulation reached” protection
+- Automatic migration adds new mode `auto_pv` to existing installations
+- Improved internal logic, persistence and debug logging
 
 ## v0.5.5 (2025-11-01)
-- Endlosschleife in Statistik Woche und Monat behoben
+- Fixed endless loop in weekly and monthly statistics
 
 ## v0.5.3 (2025-10-30)
-- Telegram-Benutzerwahl hinzugefügt
+- Added Telegram user selection
 
 ## v0.5.2 (2025-10-30)
 
@@ -333,29 +332,27 @@ Released: 15.02.2026
 
 ### **0.4.0 (26.10.2025)**
 
-**Neue Funktionen**
-- Einführung des neuen Statistik-Systems unter `analytics.statistics.temperature.today`
-- Automatische Erfassung von **Min-, Max- und Durchschnittswerten** aller aktiven Temperatursensoren
-- Pro Sensor: JSON- und HTML-Zusammenfassungen mit laufender Aktualisierung
-- Gesamtausgabe aller Sensoren (Tabelle) unter  
+**New Features**
+- Introduction of the new statistics system under `analytics.statistics.temperature.today`
+- Automatic collection of **min, max and average values** of all active temperature sensors
+- Per sensor: JSON and HTML summaries with continuous updates
+- Overall output of all sensors (table) under  
   `analytics.statistics.temperature.today.outputs.summary_all_html`
-- Vollständig **persistente Datenpunkte** mit Überinstallationsschutz
-- **Automatischer Mitternachts-Reset** zur Tagesrücksetzung inkl. Zeitstempel
-- Vorbereitung für zukünftige Wochen-, Monats- und Saisonstatistiken
+- Fully **persistent data points** with overinstall protection
+- **Automatic midnight reset** for daily reset including timestamp
+- Preparation for future weekly, monthly and seasonal statistics
 
-**Verbesserungen**
-- Einheitliche Struktur durch neuen Hauptordner `analytics`
-- Keine dauerhaften Loops oder Timerbelastungen – reine Eventverarbeitung
-- Verbesserte Performance und Speicherstabilität
-- Überarbeitete Initialisierung aller Statistik-States beim Start
+**Improvements**
+- Unified structure through new main folder `analytics`
+- No permanent loops or timer load – pure event processing
+- Improved performance and memory stability
+- Revised initialization of all statistics states at startup
 
-**Hinweis**
-Diese Version bildet die stabile Basis für alle folgenden Statistik- und Analysefunktionen  
-(z. B. Wochen- und Monatsstatistik, Historien- und Effizienz-Auswertungen).
+**Note**
+This version forms the stable basis for all following statistics and analysis functions  
+(e.g., weekly and monthly statistics, history and efficiency evaluations).
 
-
-
-*(ältere Versionen siehe [io-package.json](./io-package.json))*  
+*(older versions see [io-package.json](./io-package.json))*  
 
 ---
 
@@ -365,42 +362,37 @@ Diese Version bildet die stabile Basis für alle folgenden Statistik- und Analys
 
 ---
 
-## Unterstützung der Adapterentwicklung
-Wenn Ihnen **ioBroker.poolcontrol** gefällt, denken Sie bitte über eine Spende nach:  
-➡️ [Unterstützen via PayPal](https://www.paypal.com/donate?business=dirk.bertin@t-online.de)
+## Support Adapter Development
+If you like **ioBroker.poolcontrol**, please consider making a donation:  
+➡️ [Support via PayPal](https://www.paypal.com/donate?business=dirk.bertin@t-online.de)
 
 ---
 
-## Haftungsausschluss
-Die Nutzung des Adapters erfolgt **auf eigene Gefahr**.  
-Der Entwickler übernimmt **keine Haftung** für Schäden, die durch die Installation, Nutzung oder Fehlfunktionen entstehen.  
-Dies gilt insbesondere bei direkter Ansteuerung von elektrischen Geräten (z. B. Poolpumpen).  
-Der Nutzer ist für die **sichere Installation und den Betrieb seiner Hardware** verantwortlich.
+## Disclaimer
+Use of the adapter is **at your own risk**.  
+The developer assumes **no liability** for damages resulting from installation, use or malfunctions.  
+This especially applies to direct control of electrical devices (e.g., pool pumps).  
+The user is responsible for the **safe installation and operation of their hardware**.
 
 ---
 
-## Lizenz & Rechtliches
+## License & Legal
 
-PoolControl ist ein von D. Bertin (DasBo1975) entwickeltes Open-Source-Projekt.
-- Der Name PoolControl sowie das zugehörige Logo sind Eigenentwicklungen und dürfen
-  im Rahmen der Open-Source-Veröffentlichung (Adapter, GitHub-Repository, Wiki, Dokumentation,
-  Visualisierungen) frei verwendet werden.
+PoolControl is an open-source project developed by D. Bertin (DasBo1975).
 
-- Eine kommerzielle Nutzung, Weitergabe oder Veröffentlichung in abgewandelter Form
- (insbesondere als Teil eines kommerziellen Produkts oder Dienstes) bedarf der ausdrücklichen Zustimmung des Autors.
+- The name PoolControl and the associated logo are original developments and may be freely used within the scope of the open-source publication (adapter, GitHub repository, wiki, documentation, visualizations).
 
-- Alle entwickelten Sensor‑, Hardware‑ und Gehäusekonstruktionen
- (z. B. Temperatur‑, Druck‑, Pegel‑, Elektronik‑ oder Steuerboxen) inklusive Entwürfen, Schaltplänen,
- 3D‑Modellen und Innenaufbauten unterliegen dem Urheberrecht von D. Bertin (DasBo1975).
+- Commercial use, redistribution or publication in modified form (especially as part of a commercial product or service) requires the explicit permission of the author.
 
-- Veröffentlichung, Nachbau zum Zweck des Weiterverkaufs oder kommerzielle Nutzung dieser
-  Hardware‑Designs ist nur mit schriftlicher Genehmigung des Autors gestattet.
+- All developed sensor, hardware and enclosure constructions (e.g., temperature, pressure, level, electronics or control boxes) including designs, schematics, 3D models and internal constructions are subject to the copyright of D. Bertin (DasBo1975).
 
-Der Software‑Quellcode dieses Projekts steht unter der MIT License. Details siehe LICENSE.
+- Publication, reproduction for resale or commercial use of these hardware designs is only permitted with written authorization from the author.
+
+The software source code of this project is licensed under the MIT License. See LICENSE for details.
 
 ---
 
 ## License
-Copyright (c) 2025–2026 D. Bertin (DasBo1975) <dasbo1975@outlook.de>  
+Copyright (c) 2025–2026 D. Bertin (DasBo1975) <dasbo1975@outlook.de>  
 
 MIT License
