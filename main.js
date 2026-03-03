@@ -62,9 +62,30 @@ class Poolcontrol extends utils.Adapter {
             ...options,
             name: 'poolcontrol',
         });
+
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
         this.on('unload', this.onUnload.bind(this));
+    }
+
+    // FIX: Determine whether an own state is writable (command-like). Cached for performance.
+    async _isWritableOwnState(id) {
+        this._ackWritableCache = this._ackWritableCache || new Map();
+
+        if (this._ackWritableCache.has(id)) {
+            return this._ackWritableCache.get(id);
+        }
+
+        try {
+            const obj = await this.getObjectAsync(id);
+            const isWritable = !!obj?.common?.write;
+            this._ackWritableCache.set(id, isWritable);
+            return isWritable;
+        } catch {
+            // If we cannot read the object, play safe: do NOT filter it out.
+            this._ackWritableCache.set(id, false);
+            return false;
+        }
     }
 
     async onReady() {
@@ -248,6 +269,23 @@ class Poolcontrol extends utils.Adapter {
             this.log.debug(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
         } else {
             this.log.debug(`state ${id} deleted`);
+        }
+
+        // FIX: ignore deleted states completely
+        if (!state) {
+            return;
+        }
+
+        const isOwnState = id.startsWith(`${this.namespace}.`);
+
+        // ACK handling guard (own states)
+        // - ignore ack=true for OWN writeable states (commands)
+        // - still allow ack=true for read-only OWN states (status/live values)
+        if (isOwnState && state.ack === true) {
+            const isWritable = await this._isWritableOwnState(id);
+            if (isWritable) {
+                return;
+            }
         }
 
         // Saisonstatus manuell ändern (z.B. über VIS)

@@ -58,12 +58,12 @@
             "en": "Minimum Circulation per Day"
           },
           "options": [
-            { "label": "0.5x", "value": 0.5 },
-            { "label": "1.0x", "value": 1.0 },
-            { "label": "1.5x", "value": 1.5 },
-            { "label": "2.0x", "value": 2.0 },
-            { "label": "2.5x", "value": 2.5 },
-            { "label": "3.0x", "value": 3.0 }
+            { "label": { "en": "0.5x", "de": "0.5x" }, "value": 0.5 },
+            { "label": { "en": "1.0x", "de": "1.0x" }, "value": 1.0 },
+            { "label": { "en": "1.5x", "de": "1.5x" }, "value": 1.5 },
+            { "label": { "en": "2.0x", "de": "2.0x" }, "value": 2.0 },
+            { "label": { "en": "2.5x", "de": "2.5x" }, "value": 2.5 },
+            { "label": { "en": "3.0x", "de": "3.0x" }, "value": 3.0 }
           ],
           "default": 1,
           "xs": 12,
@@ -1165,7 +1165,10 @@
             },
             "speech_telegram_placeholder": {
                 "type": "staticText",
-                "text": " ",
+                "text": {
+                  "en": " ",
+                  "de": " "
+                },
                 "xs": 12,
                 "sm": 3,
                 "md": 3,
@@ -1781,19 +1784,32 @@
                 "lg": 12,
                 "xl": 12
             },
-            "helpLink": {
-                "type": "staticLink",
-                "label": {
-                    "de": "Öffne die ausführliche Dokumentation auf GitHub",
-                    "en": "Open the detailed documentation on GitHub"
-                },
-                "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/admin/help.md",
+            "helpLink_en": {
+              "type": "staticLink",
+              "label": {
+                "de": "Dokumentation (Englisch) auf GitHub öffnen",
+                "en": "Open documentation (English) on GitHub"
+              },
+              "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/en/help.md",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
                 "md": 12,
                 "lg": 12,
                 "xl": 12
+            },
+            "helpLink_de": {
+              "type": "staticLink",
+              "label": {
+                "de": "Dokumentation (Deutsch) auf GitHub öffnen",
+                "en": "Open documentation (German) on GitHub"
+              },
+              "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/de/help.md",
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "xl": 12
             },
             "helpText": {
                 "type": "staticText",
