@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "news": {
+      "1.2.3": {
+        "en": "Replaced native timers with adapter timers and improved timer cleanup",
+        "de": "Native Timer durch Adapter-Timer ersetzt und Timer-Cleanup verbessert",
+        "ru": "Заменены собственные таймеры на таймеры адаптера и улучшена очистка таймера.",
+        "pt": "Temporizadores nativos substituídos por temporizadores de adaptador e limpeza aprimorada do temporizador",
+        "nl": "Native timers vervangen door adaptertimers en verbeterde timeropschoning",
+        "fr": "Remplacement des minuteries natives par des minuteries d'adaptateur et un nettoyage amélioré des minuteries",
+        "it": "Sostituiti i timer nativi con timer adattatori e migliorata la pulizia dei timer",
+        "es": "Se reemplazaron los temporizadores nativos con temporizadores adaptadores y se mejoró la limpieza del temporizador.",
+        "pl": "Zastąpiono liczniki czasu natywnego licznikami adaptera i ulepszono czyszczenie licznika czasu",
+        "uk": "Вбудовані таймери замінено на адаптерні та покращено очищення таймерів",
+        "zh-cn": "用适配器计时器替换了本机计时器并改进了计时器清理"
+      },
       "1.2.2": {
         "en": "Maintenance update: Raised required admin version to >=7.6.20 and refreshed translations after jsonConfig i18n changes.",
         "de": "Wartungsupdate: Mindestversion für admin auf >=7.6.20 erhöht und Übersetzungen nach jsonConfig-i18n-Änderungen aktualisiert.",

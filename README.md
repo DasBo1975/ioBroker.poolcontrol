@@ -196,6 +196,12 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.3
+Released: 06.03.2026
+- Replaced native timers (setTimeout / setInterval) with adapter timers (adapter.setTimeout / adapter.setInterval)
+- Added proper cleanup of timers on adapter unload
+- Internal code cleanup and maintenance improvements
+
 ### 1.2.2
 Released: 06.03.2026
 - Raised required admin version to >=7.6.20
