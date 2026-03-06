@@ -4,17 +4,11 @@
   "items": {
     "general": {
       "type": "panel",
-      "label": {
-        "de": "Allg. Einstellungen",
-        "en": "General Settings"
-      },
+      "label": "General Settings",
       "items": {
         "general_header": {
           "type": "header",
-          "text": {
-            "de": "Allgemeine Einstellungen zum Pool",
-            "en": "General Pool Settings"
-          },
+          "text": "General Pool Settings",
           "size": 4,
           "newLine": true,
           "xs": 12,
@@ -25,11 +19,8 @@
         },
         "pool_name": {
           "type": "text",
-          "label": {
-            "de": "Name des Pools",
-            "en": "Pool Name"
-          },
-          "default": "Mein Pool",
+          "label": "Pool Name",
+          "default": "My Pool",
           "xs": 12,
           "sm": 3,
           "md": 3,
@@ -39,10 +30,7 @@
         },
         "pool_size": {
           "type": "number",
-          "label": {
-            "de": "Poolgröße (Liter)",
-            "en": "Pool Size (Liters)"
-          },
+          "label": "Pool Size (Liters)",
           "default": 30000,
           "xs": 12,
           "sm": 3,
@@ -53,17 +41,14 @@
         },
         "min_circulation_per_day": {
           "type": "select",
-          "label": {
-            "de": "Min. Umwälzung pro Tag",
-            "en": "Minimum Circulation per Day"
-          },
+          "label": "Minimum Circulation per Day",
           "options": [
-            { "label": { "en": "0.5x", "de": "0.5x" }, "value": 0.5 },
-            { "label": { "en": "1.0x", "de": "1.0x" }, "value": 1.0 },
-            { "label": { "en": "1.5x", "de": "1.5x" }, "value": 1.5 },
-            { "label": { "en": "2.0x", "de": "2.0x" }, "value": 2.0 },
-            { "label": { "en": "2.5x", "de": "2.5x" }, "value": 2.5 },
-            { "label": { "en": "3.0x", "de": "3.0x" }, "value": 3.0 }
+            { "label": "0.5x", "value": 0.5 },
+            { "label": "1.0x", "value": 1.0 },
+            { "label": "1.5x", "value": 1.5 },
+            { "label": "2.0x", "value": 2.0 },
+            { "label": "2.5x", "value": 2.5 },
+            { "label": "3.0x", "value": 3.0 }
           ],
           "default": 1,
           "xs": 12,
@@ -74,10 +59,7 @@
         },
         "general_season_header": {
           "type": "header",
-          "text": {
-            "de": "Saisoneinstellungen",
-            "en": "Season Settings"
-          },
+          "text": "Season Settings",
           "size": 4,
           "newLine": true,
           "xs": 12,
@@ -88,10 +70,7 @@
         },
         "season_active": {
           "type": "checkbox",
-          "label": {
-            "de": "Poolsaison aktiv",
-            "en": "Pool Season Active"
-          },
+          "label": "Pool Season Active",
           "default": false,
           "xs": 12,
           "sm": 3,
@@ -114,17 +93,11 @@
     },
     "pump": {
         "type": "panel",
-        "label": {
-            "de": "Pumpe",
-            "en": "Pump"
-        },
+        "label": "Pump",
         "items": {
             "Leistung_header": {
                 "type": "header",
-                "text": {
-                    "de": "Pumpeneinstellungen (Nennleistung)",
-                    "en": "Pump Settings (Rated Power)"
-                },
+                "text": "Pump Settings (Rated Power)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -135,10 +108,7 @@
             },
             "pump_max_watt": {
                 "type": "number",
-                "label": {
-                    "de": "Max. Leistung (Watt)",
-                    "en": "Max Power (Watt)"
-                },
+                "label": "Max Power (Watt)",
                 "default": 1000,
                 "xs": 12,
                 "sm": 3,
@@ -149,10 +119,7 @@
             },
             "pump_power_lph": {
                 "type": "number",
-                "label": {
-                    "de": "Pumpenleistung (l/h)",
-                    "en": "Pump Flow Rate (l/h)"
-                },
+                "label": "Pump Flow Rate (l/h)",
                 "default": 6000,
                 "xs": 12,
                 "sm": 3,
@@ -162,10 +129,7 @@
             },
             "Frostschutz_header": {
                 "type": "header",
-                "text": {
-                    "de": "Frostschutz",
-                    "en": "Frost Protection"
-                },
+                "text": "Frost Protection",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -176,10 +140,7 @@
             },
             "frost_protection_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Frostschutz aktivieren",
-                    "en": "Enable Frost Protection"
-                },
+                "label": "Enable Frost Protection",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -190,10 +151,7 @@
             },
             "frost_protection_temp": {
                 "type": "number",
-                "label": {
-                    "de": "Frostschutz-Temperatur (°C)",
-                    "en": "Frost Protection Temperature (°C)"
-                },
+                "label": "Frost Protection Temperature (°C)",
                 "default": 2,
                 "xs": 12,
                 "sm": 3,
@@ -203,10 +161,7 @@
             },
             "pumpswitch_header": {
                 "type": "header",
-                "text": {
-                    "de": "Pumpendatenpunkte (Messsteckdose & Aktueller Verbrauch Watt)",
-                    "en": "Pump Data Points (Smart Socket & Current Power Consumption)"
-                },
+                "text": "Pump Data Points (Smart Socket & Current Power Consumption)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -217,10 +172,7 @@
             },
             "pump_switch": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID schaltbare Steckdose Pumpe",
-                    "en": "Object ID Pump Switch Socket"
-                },
+                "label": "Object ID Pump Switch Socket",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -230,10 +182,7 @@
             },
             "pump_current_power_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID aktuelle Leistung (W)",
-                    "en": "Object ID Current Power (W)"
-                },
+                "label": "Object ID Current Power (W)",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -243,10 +192,7 @@
             },
             "pump_mode_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Pumpenmodus (Automatik/Manuell/Aus/Zeit) kann über den Datenpunkt 'pump.mode' gesteuert werden.",
-                    "en": "Pump mode (Auto/Manual/Off/Timer) can be controlled via data point 'pump.mode'."
-                },
+                "text": "Pump mode (Auto/Manual/Off/Timer) can be controlled via data point 'pump.mode'.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -256,10 +202,7 @@
             },
             "pressure_header": {
                 "type": "header",
-                "text": {
-                    "de": "Drucksensor (Filterdruck)",
-                    "en": "Pressure Sensor (Filter Pressure)"
-                },
+                "text": "Pressure Sensor (Filter Pressure)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -270,10 +213,7 @@
             },
             "use_pressure_sensor": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Drucksensor verwenden",
-                    "en": "Use Pressure Sensor"
-                },
+                "label": "Use Pressure Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -284,10 +224,7 @@
             },
             "pressure_sensor_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Drucksensor (bar)",
-                    "en": "Object ID Pressure Sensor (bar)"
-                },
+                "label": "Object ID Pressure Sensor (bar)",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -297,10 +234,7 @@
             },
             "pressure_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hinweis: Unterstützt sowohl externe Sensoren als auch die PoolControl-Druckbox.",
-                    "en": "Note: Supports external sensors as well as the PoolControl pressure box."
-                },
+                "text": "Note: Supports external sensors as well as the PoolControl pressure box.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -310,10 +244,7 @@
             },
             "pump_safety_header": {
                 "type": "header",
-                "text": {
-                    "de": "Sicherheitsfunktionen",
-                    "en": "Safety Functions"
-                },
+                "text": "Safety Functions",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -324,10 +255,7 @@
             },
             "manual_safety_enabled": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sicherheitsfunktionen auch im Modus 'Manuell' aktivieren",
-                    "en": "Enable safety functions also in 'Manual' mode"
-                },
+                "label": "Enable safety functions also in 'Manual' mode",
                 "default": true,
                 "xs": 12,
                 "sm": 6,
@@ -338,10 +266,7 @@
             },
             "manual_safety_enabled_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Wenn aktiviert, werden die Sicherheitsfunktionen wie Frostschutz und Überhitzungsschutz (Solar) weiterhin ausgeführt.",
-                    "en": "If enabled, safety functions such as frost protection and overheating protection (solar) remain active."
-                },
+                "text": "If enabled, safety functions such as frost protection and overheating protection (solar) remain active.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -353,17 +278,11 @@
     },
     "temperature": {
         "type": "panel",
-        "label": {
-            "de": "Temperaturverw.",
-            "en": "Temperature Management"
-        },
+        "label": "Temperature Management",
         "items": {
             "tempsensor_header": {
                 "type": "header",
-                "text": {
-                    "de": "Temperatursensoren",
-                    "en": "Temperature Sensors"
-                },
+                "text": "Temperature Sensors",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -374,10 +293,7 @@
             },
             "surface_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Oberfläche verwenden",
-                    "en": "Use Surface Sensor"
-                },
+                "label": "Use Surface Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -388,10 +304,7 @@
             },
             "surface_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Oberfläche",
-                    "en": "Object ID Surface Sensor"
-                },
+                "label": "Object ID Surface Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -401,10 +314,7 @@
             },
             "ground_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Grund verwenden",
-                    "en": "Use Ground Sensor"
-                },
+                "label": "Use Ground Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -415,10 +325,7 @@
             },
             "ground_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Grund",
-                    "en": "Object ID Ground Sensor"
-                },
+                "label": "Object ID Ground Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -428,10 +335,7 @@
             },
             "flow_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Vorlauf verwenden",
-                    "en": "Use Flow Sensor"
-                },
+                "label": "Use Flow Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -442,10 +346,7 @@
             },
             "flow_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Vorlauf",
-                    "en": "Object ID Flow Sensor"
-                },
+                "label": "Object ID Flow Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -455,10 +356,7 @@
             },
             "return_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Rücklauf verwenden",
-                    "en": "Use Return Sensor"
-                },
+                "label": "Use Return Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -469,10 +367,7 @@
             },
             "return_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Rücklauf",
-                    "en": "Object ID Return Sensor"
-                },
+                "label": "Object ID Return Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -482,10 +377,7 @@
             },
             "collector_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Kollektor verwenden",
-                    "en": "Use Collector Sensor"
-                },
+                "label": "Use Collector Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -496,10 +388,7 @@
             },
             "collector_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Kollektor",
-                    "en": "Object ID Collector Sensor"
-                },
+                "label": "Object ID Collector Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -509,10 +398,7 @@
             },
             "outside_temp_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sensor Außentemperatur verwenden",
-                    "en": "Use Outside Temperature Sensor"
-                },
+                "label": "Use Outside Temperature Sensor",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -523,10 +409,7 @@
             },
             "outside_temp_sensor": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Sensor Außentemperatur",
-                    "en": "Object ID Outside Temperature Sensor"
-                },
+                "label": "Object ID Outside Temperature Sensor",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -538,17 +421,11 @@
     },
     "solar": {
         "type": "panel",
-        "label": {
-            "de": "Solar/Heizungsverw.",
-            "en": "Solar / Heating Control"
-        },
+        "label": "Solar / Heating Control",
         "items": {
             "solar_control_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Solarsteuerung aktivieren",
-                    "en": "Enable Solar Control"
-                },
+                "text": "Enable Solar Control",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -559,10 +436,7 @@
             },
             "solar_control_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Solarsteuerung aktivieren",
-                    "en": "Enable Solar Control"
-                },
+                "label": "Enable Solar Control",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -573,10 +447,7 @@
             },
             "solar_hysteresis_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Hysterese",
-                    "en": "Hysteresis"
-                },
+                "text": "Hysteresis",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -587,10 +458,7 @@
             },
             "solar_hysteresis_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Regelung mit Hysterese verwenden",
-                    "en": "Use Hysteresis Control"
-                },
+                "label": "Use Hysteresis Control",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -601,10 +469,7 @@
             },
             "solar_temp_on": {
                 "type": "number",
-                "label": {
-                    "de": "Kollektortemperatur Einschaltgrenze (°C)",
-                    "en": "Collector Temperature On Threshold (°C)"
-                },
+                "label": "Collector Temperature On Threshold (°C)",
                 "default": 30,
                 "xs": 12,
                 "sm": 3,
@@ -614,10 +479,7 @@
             },
             "solar_temp_off": {
                 "type": "number",
-                "label": {
-                    "de": "Kollektortemperatur Ausschaltgrenze (°C)",
-                    "en": "Collector Temperature Off Threshold (°C)"
-                },
+                "label": "Collector Temperature Off Threshold (°C)",
                 "default": 25,
                 "xs": 12,
                 "sm": 3,
@@ -627,10 +489,7 @@
             },
             "solar_collector_warn_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Kollektortemperatur-Warnung",
-                    "en": "Collector Temperature Warning"
-                },
+                "text": "Collector Temperature Warning",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -641,10 +500,7 @@
             },
             "solar_collector_warn_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Kollektortemperatur-Warnung aktivieren",
-                    "en": "Enable Collector Temperature Warning"
-                },
+                "label": "Enable Collector Temperature Warning",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -655,10 +511,7 @@
             },
             "solar_collector_warn_temp": {
                 "type": "number",
-                "label": {
-                    "de": "Warnschwelle Kollektortemperatur (°C)",
-                    "en": "Collector Temperature Warning Threshold (°C)"
-                },
+                "label": "Collector Temperature Warning Threshold (°C)",
                 "default": 80,
                 "xs": 12,
                 "sm": 3,
@@ -668,10 +521,7 @@
             },
             "solar_collector_warn_speech": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Bei Warnung Sprachausgabe/Benachrichtigung",
-                    "en": "Announce / Notify on Warning"
-                },
+                "label": "Announce / Notify on Warning",
                 "default": true,
                 "xs": 12,
                 "sm": 6,
@@ -682,10 +532,7 @@
             },
             "solar_collector_warn_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hinweis: Die Warnung wird automatisch zurückgesetzt, sobald die Temperatur 10 % unter die eingestellte Schwelle fällt.",
-                    "en": "Note: The warning resets automatically once the temperature drops 10% below the configured threshold."
-                },
+                "text": "Note: The warning resets automatically once the temperature drops 10% below the configured threshold.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -695,10 +542,7 @@
             },
             "heat_control_header": {
                 "type": "header",
-                "text": {
-                    "de": "Heizung / Wärmepumpe",
-                    "en": "Heating / Heat Pump"
-                },
+                "text": "Heating / Heat Pump",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -709,10 +553,7 @@
             },
             "heat_control_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Heizungssteuerung aktivieren",
-                    "en": "Enable Heating Control"
-                },
+                "label": "Enable Heating Control",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -723,23 +564,14 @@
             },
             "heat_control_type": {
                 "type": "select",
-                "label": {
-                    "de": "Art der Heizungssteuerung",
-                    "en": "Type of Heating Control"
-                },
+                "label": "Type of Heating Control",
                 "options": [
                     {
-                        "label": {
-                            "de": "Messsteckdose schalten (Ein / Aus)",
-                            "en": "Switch Smart Plug (On / Off)"
-                        },
+                        "label": "Switch Smart Plug (On / Off)",
                         "value": "socket"
                     },
                     {
-                        "label": {
-                            "de": "Logischer Steuer-State (true / false)",
-                            "en": "Logical Control State (true / false)"
-                        },
+                        "label": "Logical Control State (true / false)",
                         "value": "boolean"
                     }
                 ],
@@ -753,10 +585,7 @@
             },
             "heat_control_object_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Heizung / Wärmepumpe",
-                    "en": "Object ID Heating / Heat Pump"
-                },
+                "label": "Object ID Heating / Heat Pump",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -766,10 +595,7 @@
             },
             "heat_temp_target": {
                 "type": "number",
-                "label": {
-                    "de": "Zieltemperatur Pool (°C)",
-                    "en": "Target Pool Temperature (°C)"
-                },
+                "label": "Target Pool Temperature (°C)",
                 "default": 26,
                 "xs": 12,
                 "sm": 3,
@@ -780,10 +606,7 @@
             },
             "heat_temp_max": {
                 "type": "number",
-                "label": {
-                    "de": "Maximale Pooltemperatur (°C – Sicherheitsabschaltung)",
-                    "en": "Maximum Pool Temperature (°C – Safety Cutoff)"
-                },
+                "label": "Maximum Pool Temperature (°C – Safety Cutoff)",
                 "default": 30,
                 "xs": 12,
                 "sm": 3,
@@ -793,10 +616,7 @@
             },
             "heat_control_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hinweis: Die Heizungssteuerung arbeitet temperaturgeführt und nur, wenn die Poolsaison aktiv ist. Je nach ausgewählter Steuerungsart wird entweder eine Messsteckdose geschaltet oder ein logischer Steuer-State (true/false) gesetzt.",
-                    "en": "Note: Heating control is temperature-driven and only active during pool season. Depending on the selected control type, either a smart plug is switched or a logical control state (true/false) is set."
-                },
+                "text": "Note: Heating control is temperature-driven and only active during pool season. Depending on the selected control type, either a smart plug is switched or a logical control state (true/false) is set.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -808,17 +628,11 @@
     },
     "timecontrol": {
         "type": "panel",
-        "label": {
-            "de": "Zeitsteuerung",
-            "en": "Time Control"
-        },
+        "label": "Time Control",
         "items": {
             "time1_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zeitfenster 1",
-                    "en": "Time Window 1"
-                },
+                "text": "Time Windows",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -829,10 +643,7 @@
             },
             "time1_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zeitfenster 1 aktiv",
-                    "en": "Enable Time Window 1"
-                },
+                "label": "Enable Time Window 1",
                 "default": true,
                 "xs": 12,
                 "sm": 3,
@@ -843,10 +654,7 @@
             },
             "time1_start": {
                 "type": "text",
-                "label": {
-                    "de": "Start (HH:MM)",
-                    "en": "Start (HH:MM)"
-                },
+                "label": "Start (HH:MM)",
                 "default": "08:00",
                 "xs": 12,
                 "sm": 3,
@@ -856,10 +664,7 @@
             },
             "time1_end": {
                 "type": "text",
-                "label": {
-                    "de": "Ende (HH:MM)",
-                    "en": "End (HH:MM)"
-                },
+                "label": "End (HH:MM)",
                 "default": "10:00",
                 "xs": 12,
                 "sm": 3,
@@ -867,20 +672,17 @@
                 "lg": 3,
                 "xl": 3
             },
-            "time1_day_mon": { "type": "checkbox", "label": { "de": "Montag", "en": "Monday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
-            "time1_day_tue": { "type": "checkbox", "label": { "de": "Dienstag", "en": "Tuesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time1_day_wed": { "type": "checkbox", "label": { "de": "Mittwoch", "en": "Wednesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time1_day_thu": { "type": "checkbox", "label": { "de": "Donnerstag", "en": "Thursday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time1_day_fri": { "type": "checkbox", "label": { "de": "Freitag", "en": "Friday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time1_day_sat": { "type": "checkbox", "label": { "de": "Samstag", "en": "Saturday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time1_day_sun": { "type": "checkbox", "label": { "de": "Sonntag", "en": "Sunday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_mon": { "type": "checkbox", "label": "Monday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
+            "time1_day_tue": { "type": "checkbox", "label": "Tuesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_wed": { "type": "checkbox", "label": "Wednesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_thu": { "type": "checkbox", "label": "Thursday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_fri": { "type": "checkbox", "label": "Friday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_sat": { "type": "checkbox", "label": "Saturday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time1_day_sun": { "type": "checkbox", "label": "Sunday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
 
             "time2_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zeitfenster 2",
-                    "en": "Time Window 2"
-                },
+                "text": "Time Window 2",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -891,10 +693,7 @@
             },
             "time2_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zeitfenster 2 aktiv",
-                    "en": "Enable Time Window 2"
-                },
+                "label": "Enable Time Window 2",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -905,10 +704,7 @@
             },
             "time2_start": {
                 "type": "text",
-                "label": {
-                    "de": "Start (HH:MM)",
-                    "en": "Start (HH:MM)"
-                },
+                "label": "Start (HH:MM)",
                 "default": "14:00",
                 "xs": 12,
                 "sm": 3,
@@ -918,10 +714,7 @@
             },
             "time2_end": {
                 "type": "text",
-                "label": {
-                    "de": "Ende (HH:MM)",
-                    "en": "End (HH:MM)"
-                },
+                "label": "End (HH:MM)",
                 "default": "16:00",
                 "xs": 12,
                 "sm": 3,
@@ -929,20 +722,17 @@
                 "lg": 3,
                 "xl": 3
             },
-            "time2_day_mon": { "type": "checkbox", "label": { "de": "Montag", "en": "Monday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
-            "time2_day_tue": { "type": "checkbox", "label": { "de": "Dienstag", "en": "Tuesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time2_day_wed": { "type": "checkbox", "label": { "de": "Mittwoch", "en": "Wednesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time2_day_thu": { "type": "checkbox", "label": { "de": "Donnerstag", "en": "Thursday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time2_day_fri": { "type": "checkbox", "label": { "de": "Freitag", "en": "Friday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time2_day_sat": { "type": "checkbox", "label": { "de": "Samstag", "en": "Saturday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time2_day_sun": { "type": "checkbox", "label": { "de": "Sonntag", "en": "Sunday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_mon": { "type": "checkbox", "label": "Monday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
+            "time2_day_tue": { "type": "checkbox", "label": "Tuesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_wed": { "type": "checkbox", "label": "Wednesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_thu": { "type": "checkbox", "label": "Thursday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_fri": { "type": "checkbox", "label": "Friday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_sat": { "type": "checkbox", "label": "Saturday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time2_day_sun": { "type": "checkbox", "label": "Sunday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
 
             "time3_active_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zeitfenster 3",
-                    "en": "Time Window 3"
-                },
+                "text": "Time Window 3",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -953,10 +743,7 @@
             },
             "time3_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zeitfenster 3 aktiv",
-                    "en": "Enable Time Window 3"
-                },
+                "label": "Enable Time Window 3",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -967,10 +754,7 @@
             },
             "time3_start": {
                 "type": "text",
-                "label": {
-                    "de": "Start (HH:MM)",
-                    "en": "Start (HH:MM)"
-                },
+                "label": "Start (HH:MM)",
                 "default": "18:00",
                 "xs": 12,
                 "sm": 3,
@@ -980,10 +764,7 @@
             },
             "time3_end": {
                 "type": "text",
-                "label": {
-                    "de": "Ende (HH:MM)",
-                    "en": "End (HH:MM)"
-                },
+                "label": "End (HH:MM)",
                 "default": "20:00",
                 "xs": 12,
                 "sm": 3,
@@ -991,28 +772,22 @@
                 "lg": 3,
                 "xl": 3
             },
-            "time3_day_mon": { "type": "checkbox", "label": { "de": "Montag", "en": "Monday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
-            "time3_day_tue": { "type": "checkbox", "label": { "de": "Dienstag", "en": "Tuesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time3_day_wed": { "type": "checkbox", "label": { "de": "Mittwoch", "en": "Wednesday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time3_day_thu": { "type": "checkbox", "label": { "de": "Donnerstag", "en": "Thursday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time3_day_fri": { "type": "checkbox", "label": { "de": "Freitag", "en": "Friday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time3_day_sat": { "type": "checkbox", "label": { "de": "Samstag", "en": "Saturday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
-            "time3_day_sun": { "type": "checkbox", "label": { "de": "Sonntag", "en": "Sunday" }, "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 }
+            "time3_day_mon": { "type": "checkbox", "label": "Monday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1, "newLine": true },
+            "time3_day_tue": { "type": "checkbox", "label": "Tuesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time3_day_wed": { "type": "checkbox", "label": "Wednesday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time3_day_thu": { "type": "checkbox", "label": "Thursday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time3_day_fri": { "type": "checkbox", "label": "Friday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time3_day_sat": { "type": "checkbox", "label": "Saturday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+            "time3_day_sun": { "type": "checkbox", "label": "Sunday", "default": true, "xs": 12, "sm": 1, "md": 1, "lg": 1, "xl": 1 }
         }
     },
     "speech": {
         "type": "panel",
-        "label": {
-            "de": "Sprachausgaben",
-            "en": "Speech Output"
-        },
+        "label": "Speech Output",
         "items": {
             "speech_general_header": {
                 "type": "header",
-                "text": {
-                    "de": "Generell",
-                    "en": "General"
-                },
+                "text": "General",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1023,10 +798,7 @@
             },
             "speech_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Sprachausgaben aktivieren",
-                    "en": "Enable speech output"
-                },
+                "label": "Enable speech output",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -1038,10 +810,7 @@
 
             "speech_alexa_header": {
                 "type": "header",
-                "text": {
-                    "de": "Amazon Alexa",
-                    "en": "Amazon Alexa"
-                },
+                "text": "Amazon Alexa",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1052,10 +821,7 @@
             },
             "speech_alexa_enabled": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Ausgabe über Alexa aktivieren",
-                    "en": "Enable Alexa output"
-                },
+                "label": "Enable Alexa output",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -1066,10 +832,7 @@
             },
             "speech_alexa_device": {
                 "type": "objectId",
-                "label": {
-                    "de": "Alexa-Gerät",
-                    "en": "Alexa device"
-                },
+                "label": "Alexa device",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1079,10 +842,7 @@
             },
             "speech_alexa_volume": {
                 "type": "number",
-                "label": {
-                    "de": "Lautstärke (0–100)",
-                    "en": "Volume (0–100)"
-                },
+                "label": "Volume (0–100)",
                 "default": 50,
                 "xs": 12,
                 "sm": 3,
@@ -1093,23 +853,14 @@
             },
             "speech_alexa_voice": {
                 "type": "select",
-                "label": {
-                    "de": "Stimme",
-                    "en": "Voice"
-                },
+                "label": "Voice",
                 "options": [
                     {
-                        "label": {
-                            "de": "Standard (weiblich)",
-                            "en": "Default (female)"
-                        },
+                        "label": "Default (female)",
                         "value": "female"
                     },
                     {
-                        "label": {
-                            "de": "Männlich",
-                            "en": "Male"
-                        },
+                        "label": "Male",
                         "value": "male"
                     }
                 ],
@@ -1123,10 +874,7 @@
 
             "speech_telegram_header": {
                 "type": "header",
-                "text": {
-                    "de": "Telegram",
-                    "en": "Telegram"
-                },
+                "text": "Telegram",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1137,10 +885,7 @@
             },
             "speech_telegram_enabled": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Ausgabe über Telegram aktivieren",
-                    "en": "Enable Telegram output"
-                },
+                "label": "Enable Telegram output",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -1152,10 +897,7 @@
             "speech_telegram_instance": {
                 "type": "instance",
                 "adapter": "telegram",
-                "label": {
-                    "de": "Telegram-Instanz",
-                    "en": "Telegram instance"
-                },
+                "label": "Telegram instance",
                 "default": "telegram.0",
                 "xs": 12,
                 "sm": 6,
@@ -1165,10 +907,7 @@
             },
             "speech_telegram_placeholder": {
                 "type": "staticText",
-                "text": {
-                  "en": " ",
-                  "de": " "
-                },
+                "text": " ",
                 "xs": 12,
                 "sm": 3,
                 "md": 3,
@@ -1178,14 +917,8 @@
             },
             "speech_telegram_users": {
                 "type": "text",
-                "label": {
-                    "de": "Telegram-Empfänger (Benutzernamen, Komma-getrennt / leer = an alle Benutzer)",
-                    "en": "Telegram recipients (usernames, comma separated / empty = send to all users)"
-                },
-                "tooltip": {
-                    "de": "Beispiel: Dirk,Dennis (leer = an alle Benutzer senden)",
-                    "en": "Example: Dirk,Dennis (empty = send to all users)"
-                },
+                "label": "Telegram recipients (usernames, comma separated / empty = send to all users)",
+                "tooltip": "Example: Dirk,Dennis (empty = send to all users)",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1196,10 +929,7 @@
 
             "speech_mail_header": {
                 "type": "header",
-                "text": {
-                    "de": "Mail",
-                    "en": "Mail"
-                },
+                "text": "Mail",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1210,10 +940,7 @@
             },
             "speech_email_enabled": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Ausgabe über E-Mail aktivieren",
-                    "en": "Enable email output"
-                },
+                "label": "Enable email output",
                 "default": false,
                 "xs": 12,
                 "sm": 3,
@@ -1225,10 +952,7 @@
             "speech_email_instance": {
                 "type": "instance",
                 "adapter": "email",
-                "label": {
-                    "de": "E-Mail Adapter-Instanz",
-                    "en": "Email adapter instance"
-                },
+                "label": "Email adapter instance",
                 "default": "email.0",
                 "xs": 12,
                 "sm": 6,
@@ -1238,10 +962,7 @@
             },
             "speech_email_recipient": {
                 "type": "text",
-                "label": {
-                    "de": "Empfänger-Adresse",
-                    "en": "Recipient address"
-                },
+                "label": "Recipient address",
                 "default": "meineadresse@example.com",
                 "xs": 12,
                 "sm": 6,
@@ -1252,11 +973,8 @@
             },
             "speech_email_subject": {
                 "type": "text",
-                "label": {
-                    "de": "E-Mail Betreff",
-                    "en": "Email subject"
-                },
-                "default": "PoolControl Nachricht",
+                "label": "Email subject",
+                "default": "PoolControl Notification",
                 "xs": 12,
                 "sm": 6,
                 "md": 6,
@@ -1271,10 +989,7 @@
 
             "speech_temp_threshold": {
                 "type": "number",
-                "label": {
-                    "de": "Temperaturschwelle für Ansage (°C)",
-                    "en": "Temperature threshold for announcement (°C)"
-                },
+                "label": "Temperature threshold for announcement (°C)",
                 "default": 25,
                 "xs": 12,
                 "sm": 3,
@@ -1285,10 +1000,7 @@
             },
             "speech_include_errors": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Fehlermeldungen ansagen",
-                    "en": "Announce error messages"
-                },
+                "label": "Announce error messages",
                 "default": true,
                 "xs": 12,
                 "sm": 3,
@@ -1300,17 +1012,11 @@
     },
     "consumption": {
         "type": "panel",
-        "label": {
-            "de": "PV, Verbrauch & Kosten",
-            "en": "PV, Consumption & Costs"
-        },
+        "label": "PV, Consumption & Costs",
         "items": {
             "consumption_header": {
                 "type": "header",
-                "text": {
-                    "de": "Verbrauch- und Kostenberechnung",
-                    "en": "Consumption and cost calculation"
-                },
+                "text": "Consumption and cost calculation",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1321,10 +1027,7 @@
             },
             "consumption_enabled": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Verbrauchs- und Kostenberechnung aktivieren",
-                    "en": "Enable consumption and cost calculation"
-                },
+                "label": "Enable consumption and cost calculation",
                 "default": false,
                 "xs": 12,
                 "sm": 6,
@@ -1336,10 +1039,7 @@
 
             "external_energy_total_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID externer kWh-Zähler",
-                    "en": "Object ID external kWh meter"
-                },
+                "label": "Object ID external kWh meter",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1349,10 +1049,7 @@
             },
             "energy_price_eur_kwh": {
                 "type": "number",
-                "label": {
-                    "de": "Strompreis (€ / kWh)",
-                    "en": "Electricity price (€ / kWh)"
-                },
+                "label": "Electricity price (€ / kWh)",
                 "default": 0.35,
                 "min": 0,
                 "step": 0.01,
@@ -1366,10 +1063,7 @@
 
             "consumption_hint": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hinweis: Für die Verbrauchsberechnung wird ein externer kWh-Zähler benötigt (z. B. Messsteckdose).",
-                    "en": "Note: An external kWh meter is required for consumption calculation (e.g. smart plug)."
-                },
+                "text": "Note: An external kWh meter is required for consumption calculation (e.g. smart plug).",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1380,10 +1074,7 @@
 
             "pv_header": {
                 "type": "header",
-                "text": {
-                    "de": "Photovoltaik (Überschusserkennung)",
-                    "en": "Photovoltaics (Surplus detection)"
-                },
+                "text": "Photovoltaics (Surplus detection)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1395,46 +1086,31 @@
 
             "power_generated_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID PV-Erzeugungsleistung (W)",
-                    "en": "Object ID PV generation power (W)"
-                },
+                "label": "Object ID PV generation power (W)",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
                 "md": 6,
                 "lg": 6,
                 "xl": 6,
-                "tooltip": {
-                    "de": "Datenpunkt mit aktueller PV-Leistung (Watt)",
-                    "en": "Datapoint containing current PV power (Watts)"
-                }
+                "tooltip": "Datapoint containing current PV power (Watts)"
             },
 
             "power_house_id": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Hausverbrauch (W)",
-                    "en": "Object ID house consumption (W)"
-                },
+                "label": "Object ID house consumption (W)",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
                 "md": 6,
                 "lg": 6,
                 "xl": 6,
-                "tooltip": {
-                    "de": "Datenpunkt mit aktuellem Hausverbrauch (Watt)",
-                    "en": "Datapoint containing current house consumption (Watts)"
-                }
+                "tooltip": "Datapoint containing current house consumption (Watts)"
             },
 
             "threshold_w": {
                 "type": "number",
-                "label": {
-                    "de": "Schwellwert für PV-Überschuss (W)",
-                    "en": "Threshold for PV surplus (W)"
-                },
+                "label": "Threshold for PV surplus (W)",
                 "default": 200,
                 "min": 0,
                 "max": 2000,
@@ -1444,26 +1120,17 @@
                 "md": 3,
                 "lg": 3,
                 "xl": 3,
-                "tooltip": {
-                    "de": "Ab welcher Differenz zwischen PV und Hausverbrauch ein Überschuss gilt",
-                    "en": "Difference between PV generation and house consumption that counts as surplus"
-                }
+                "tooltip": "Difference between PV generation and house consumption that counts as surplus"
             }
         }
     },
     "actuators": {
         "type": "panel",
-        "label": {
-            "de": "Zusatz-Aktoren",
-            "en": "Additional Actuators"
-        },
+        "label": "Additional Actuators",
         "items": {
             "actuators_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zusatz-Aktoren (Ventile, Beleuchtung & Zusatzpumpen)",
-                    "en": "Additional actuators (valves, lighting & auxiliary pumps)"
-                },
+                "text": "Additional actuators (valves, lighting & auxiliary pumps)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1474,10 +1141,7 @@
             },
             "actuators_intro": {
                 "type": "staticText",
-                "text": {
-                    "de": "In diesem Bereich können optionale Zusatz-Aktoren konfiguriert werden. Aktoren werden nur dann im Adapter angelegt, wenn sie explizit aktiviert werden.",
-                    "en": "Optional additional actuators can be configured here. Actuators are only created in the adapter if they are explicitly enabled."
-                },
+                "text": "Optional additional actuators can be configured here. Actuators are only created in the adapter if they are explicitly enabled.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1488,10 +1152,7 @@
 
             "lighting_header": {
                 "type": "header",
-                "text": {
-                    "de": "Beleuchtung",
-                    "en": "Lighting"
-                },
+                "text": "Lighting",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1503,10 +1164,7 @@
 
             "light_1_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Beleuchtung 1 aktiv",
-                    "en": "Lighting 1 active"
-                },
+                "label": "Lighting 1 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1517,10 +1175,7 @@
             },
             "light_1_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Beleuchtung 1",
-                    "en": "Name Lighting 1"
-                },
+                "label": "Name Lighting 1",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1530,10 +1185,7 @@
             },
             "light_1_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Beleuchtung 1",
-                    "en": "Object ID Lighting 1"
-                },
+                "label": "Object ID Lighting 1",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1544,10 +1196,7 @@
 
             "light_2_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Beleuchtung 2 aktiv",
-                    "en": "Lighting 2 active"
-                },
+                "label": "Lighting 2 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1558,10 +1207,7 @@
             },
             "light_2_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Beleuchtung 2",
-                    "en": "Name Lighting 2"
-                },
+                "label": "Name Lighting 2",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1571,10 +1217,7 @@
             },
             "light_2_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Beleuchtung 2",
-                    "en": "Object ID Lighting 2"
-                },
+                "label": "Object ID Lighting 2",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1585,10 +1228,7 @@
 
             "light_3_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Beleuchtung 3 aktiv",
-                    "en": "Lighting 3 active"
-                },
+                "label": "Lighting 3 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1599,10 +1239,7 @@
             },
             "light_3_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Beleuchtung 3",
-                    "en": "Name Lighting 3"
-                },
+                "label": "Name Lighting 3",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1612,10 +1249,7 @@
             },
             "light_3_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Beleuchtung 3",
-                    "en": "Object ID Lighting 3"
-                },
+                "label": "Object ID Lighting 3",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1626,10 +1260,7 @@
 
             "extrapumps_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zusatzpumpen & Attraktionen",
-                    "en": "Auxiliary pumps & attractions"
-                },
+                "text": "Auxiliary pumps & attractions",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1641,10 +1272,7 @@
 
             "extrapump_1_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zusatzpumpe 1 aktiv",
-                    "en": "Auxiliary pump 1 active"
-                },
+                "label": "Auxiliary pump 1 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1655,10 +1283,7 @@
             },
             "extrapump_1_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Zusatzpumpe 1",
-                    "en": "Name Auxiliary pump 1"
-                },
+                "label": "Name Auxiliary pump 1",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1668,10 +1293,7 @@
             },
             "extrapump_1_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Zusatzpumpe 1",
-                    "en": "Object ID Auxiliary pump 1"
-                },
+                "label": "Object ID Auxiliary pump 1",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1682,10 +1304,7 @@
 
             "extrapump_2_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zusatzpumpe 2 aktiv",
-                    "en": "Auxiliary pump 2 active"
-                },
+                "label": "Auxiliary pump 2 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1696,10 +1315,7 @@
             },
             "extrapump_2_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Zusatzpumpe 2",
-                    "en": "Name Auxiliary pump 2"
-                },
+                "label": "Name Auxiliary pump 2",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1709,10 +1325,7 @@
             },
             "extrapump_2_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Zusatzpumpe 2",
-                    "en": "Object ID Auxiliary pump 2"
-                },
+                "label": "Object ID Auxiliary pump 2",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1723,10 +1336,7 @@
 
             "extrapump_3_active": {
                 "type": "checkbox",
-                "label": {
-                    "de": "Zusatzpumpe 3 aktiv",
-                    "en": "Auxiliary pump 3 active"
-                },
+                "label": "Auxiliary pump 3 active",
                 "default": false,
                 "newLine": true,
                 "xs": 12,
@@ -1737,10 +1347,7 @@
             },
             "extrapump_3_name": {
                 "type": "text",
-                "label": {
-                    "de": "Name Zusatzpumpe 3",
-                    "en": "Name Auxiliary pump 3"
-                },
+                "label": "Name Auxiliary pump 3",
                 "default": "",
                 "xs": 12,
                 "sm": 3,
@@ -1750,10 +1357,7 @@
             },
             "extrapump_3_object": {
                 "type": "objectId",
-                "label": {
-                    "de": "Objekt-ID Zusatzpumpe 3",
-                    "en": "Object ID Auxiliary pump 3"
-                },
+                "label": "Object ID Auxiliary pump 3",
                 "default": "",
                 "xs": 12,
                 "sm": 6,
@@ -1765,17 +1369,11 @@
     },
     "help": {
         "type": "panel",
-        "label": {
-            "de": "Hilfe & Info",
-            "en": "Help & Info"
-        },
+        "label": "Help & Info",
         "items": {
             "help_header": {
                 "type": "header",
-                "text": {
-                    "de": "Hilfe und Hinweise",
-                    "en": "Help and Information"
-                },
+                "text": "Help and Information",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1786,10 +1384,7 @@
             },
             "helpLink_en": {
               "type": "staticLink",
-              "label": {
-                "de": "Dokumentation (Englisch) auf GitHub öffnen",
-                "en": "Open documentation (English) on GitHub"
-              },
+              "label": "Open documentation (English) on GitHub",
               "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/en/help.md",
                 "newLine": true,
                 "xs": 12,
@@ -1800,10 +1395,7 @@
             },
             "helpLink_de": {
               "type": "staticLink",
-              "label": {
-                "de": "Dokumentation (Deutsch) auf GitHub öffnen",
-                "en": "Open documentation (German) on GitHub"
-              },
+              "label": "Open documentation (German) on GitHub",
               "href": "https://github.com/DasBo1975/ioBroker.poolcontrol/blob/main/docs/de/help.md",
               "xs": 12,
               "sm": 12,
@@ -1813,10 +1405,7 @@
             },
             "helpText": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hier finden Sie die vollständige Dokumentation und Hinweise zu allen Einstellungen. Weitere Hinweise zu künftigen Versionen folgen.",
-                    "en": "Here you will find the complete documentation and information about all settings. Additional information about future versions will follow."
-                },
+                "text": "Here you will find the complete documentation and information about all settings. Additional information about future versions will follow.",
                 "xs": 12,
                 "sm": 12,
                 "md": 12,
@@ -1826,10 +1415,7 @@
 
             "ai_info_header": {
                 "type": "header",
-                "text": {
-                    "de": "Wichtige Hinweise zum KI-System",
-                    "en": "Important information about the AI system"
-                },
+                "text": "Important information about the AI system",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1840,10 +1426,7 @@
             },
             "ai_info_text": {
                 "type": "staticText",
-                "text": {
-                    "de": "Das KI-System (aiHelper & aiForecastHelper) ruft Wetterdaten von Open-Meteo über eine HTTPS-Verbindung ab. Dabei werden die Geodaten aus der ioBroker-Systemkonfiguration (system.config › latitude/longitude) verwendet. Es werden keine Daten gespeichert oder an Dritte übermittelt. Ohne korrekte Geodaten kann das KI-System keine Vorhersagen erzeugen.",
-                    "en": "The AI system (aiHelper & aiForecastHelper) retrieves weather data from Open-Meteo via HTTPS. It uses the geo-coordinates from the ioBroker system configuration (system.config › latitude/longitude). No data is stored or transmitted to third parties. Without valid geo-coordinates, the AI system cannot generate forecasts."
-                },
+                "text": "The AI system (aiHelper & aiForecastHelper) retrieves weather data from Open-Meteo via HTTPS. It uses the geo-coordinates from the ioBroker system configuration (system.config › latitude/longitude). No data is stored or transmitted to third parties. Without valid geo-coordinates, the AI system cannot generate forecasts.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1854,10 +1437,7 @@
 
             "help_ai_info": {
                 "type": "staticText",
-                "text": {
-                    "de": "Hinweis: Die KI-Funktionen sind vollständig optional und können jederzeit über den Datenpunkt ‚ai.enabled‘ deaktiviert werden. Die Wetterfunktionen (z. B. Wetterhinweise, Pooltipps, Vorhersage für morgen) lassen sich zusätzlich einzeln über die jeweiligen Schalter unter ‚ai.weather.switches.*‘ ein- oder ausschalten. Für die Erstellung der Wetterdaten verwendet der Adapter den Dienst Open-Meteo. Hierfür werden die in ioBroker hinterlegten Geodaten (Breiten- und Längengrad aus system.config) benötigt.",
-                    "en": "Note: The AI features are completely optional and can be disabled at any time via the 'ai.enabled' datapoint. Weather features (e.g. weather hints, pool tips, forecast for tomorrow) can also be individually enabled or disabled via 'ai.weather.switches.*'. The adapter uses the Open-Meteo service to generate weather data. For this, the geo-coordinates stored in ioBroker (latitude and longitude from system.config) are required."
-                },
+                "text": "Note: The AI features are completely optional and can be disabled at any time via the 'ai.enabled' datapoint. Weather features (e.g. weather hints, pool tips, forecast for tomorrow) can also be individually enabled or disabled via 'ai.weather.switches.*'. The adapter uses the Open-Meteo service to generate weather data. For this, the geo-coordinates stored in ioBroker (latitude and longitude from system.config) are required.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1868,10 +1448,7 @@
 
             "info_internet_header": {
                 "type": "header",
-                "text": {
-                    "de": "Internetzugriffe & Datenschutz",
-                    "en": "Internet access & data protection"
-                },
+                "text": "Internet access & data protection",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1882,10 +1459,7 @@
             },
             "info_internet_text": {
                 "type": "staticText",
-                "text": {
-                    "de": "Der PoolControl-Adapter arbeitet grundsätzlich vollständig lokal. Aktuell nutzen nur die KI-Funktionen Wetterdaten von Open-Meteo über eine verschlüsselte HTTPS-Verbindung. Dabei werden ausschließlich die in ioBroker hinterlegten Geodaten (Breiten- und Längengrad) übertragen. Es werden keine weiteren Daten gespeichert oder an Dritte übermittelt. Zukünftig können weitere optionale Internetdienste hinzukommen, diese werden jedoch stets klar gekennzeichnet.",
-                    "en": "The PoolControl adapter works completely locally by default. Currently, only the AI features access weather data from Open-Meteo via encrypted HTTPS. Only the geo-coordinates stored in ioBroker (latitude and longitude) are transmitted. No additional data is stored or sent to third parties. Future optional internet services may be added, but they will always be clearly marked."
-                },
+                "text": "The PoolControl adapter works completely locally by default. Currently, only the AI features access weather data from Open-Meteo via encrypted HTTPS. Only the geo-coordinates stored in ioBroker (latitude and longitude) are transmitted. No additional data is stored or sent to third parties. Future optional internet services may be added, but they will always be clearly marked.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1896,10 +1470,7 @@
 
             "info_season_header": {
                 "type": "header",
-                "text": {
-                    "de": "Hinweis zur Poolsaison",
-                    "en": "Note about pool season"
-                },
+                "text": "Note about pool season",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1910,10 +1481,7 @@
             },
             "info_season_text": {
                 "type": "staticText",
-                "text": {
-                    "de": "Viele automatische Funktionen (z. B. Solarsteuerung, Photovoltaikmodus, KI-Wetterlogik und Diagnosefunktionen) arbeiten nur, wenn die Poolsaison aktiv ist. Der Saisonstatus kann jederzeit über den Datenpunkt 'status.season_active' oder über die Instanzkonfiguration geändert werden.",
-                    "en": "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or in the instance configuration."
-                },
+                "text": "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or in the instance configuration.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
@@ -1924,10 +1492,7 @@
 
             "info_speech_header": {
                 "type": "header",
-                "text": {
-                    "de": "Zentrale Sprachausgabe (speech.queue)",
-                    "en": "Central speech output (speech.queue)"
-                },
+                "text": "Central speech output (speech.queue)",
                 "size": 4,
                 "newLine": true,
                 "xs": 12,
@@ -1938,10 +1503,7 @@
             },
             "info_speech_text": {
                 "type": "staticText",
-                "text": {
-                    "de": "Alle Text- und Sprachausgaben des Adapters – einschließlich KI-Vorhersagen, Warnmeldungen, Pumpenstatus, Solarhinweisen und Diagnosemeldungen – werden über den zentralen Datenpunkt 'speech.queue' ausgegeben. Dieser sollte für VIS-Anzeigen, Alexa- oder Telegram-Ausgaben genutzt werden.",
-                    "en": "All text and speech outputs of the adapter – including AI forecasts, warnings, pump status, solar hints and diagnostic messages – are emitted via the central 'speech.queue' datapoint. This datapoint should be used for VIS displays, Alexa or Telegram outputs."
-                },
+                "text": "All text and speech outputs of the adapter – including AI forecasts, warnings, pump status, solar hints and diagnostic messages – are emitted via the central 'speech.queue' datapoint. This datapoint should be used for VIS displays, Alexa or Telegram outputs.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,
