@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "news": {
+      "1.2.2": {
+        "en": "Maintenance update: Raised required admin version to >=7.6.20 and refreshed translations after jsonConfig i18n changes.",
+        "de": "Wartungsupdate: Mindestversion für admin auf >=7.6.20 erhöht und Übersetzungen nach jsonConfig-i18n-Änderungen aktualisiert.",
+        "ru": "Обновление обслуживания: требуемая версия администратора повышена до >=7.6.20 и обновлены переводы после изменений jsonConfig i18n.",
+        "pt": "Atualização de manutenção: versão de administrador necessária aumentada para >=7.6.20 e traduções atualizadas após alterações no jsonConfig i18n.",
+        "nl": "Onderhoudsupdate: vereiste beheerdersversie verhoogd naar >=7.6.20 en vertalingen vernieuwd na jsonConfig i18n-wijzigingen.",
+        "fr": "Mise à jour de maintenance : augmentation de la version d'administrateur requise à >=7.6.20 et traductions actualisées après les modifications de jsonConfig i18n.",
+        "it": "Aggiornamento di manutenzione: versione amministrativa richiesta aumentata a >=7.6.20 e traduzioni aggiornate dopo le modifiche a jsonConfig i18n.",
+        "es": "Actualización de mantenimiento: se elevó la versión de administrador requerida a >=7.6.20 y se actualizaron las traducciones después de los cambios de jsonConfig i18n.",
+        "pl": "Aktualizacja konserwacyjna: Podniesiono wymaganą wersję administracyjną do >= 7.6.20 i odświeżono tłumaczenia po zmianach w jsonConfig i18n.",
+        "uk": "Оновлення обслуговування: підвищено необхідну версію адміністратора до >=7.6.20 і оновлено переклади після змін jsonConfig i18n.",
+        "zh-cn": "维护更新：将所需的管理版本提高到> = 7.6.20，并在 jsonConfig i18n 更改后刷新翻译。"
+      },
       "1.2.1": {
         "en": "Refactored admin configuration to use the ioBroker i18n translation environment. All jsonConfig labels are now defined in English and translations are generated automatically via `npm run translate`. This prepares the adapter for Weblate and improves compatibility with ioBroker latest repository requirements.",
         "de": "Admin-Konfiguration auf das ioBroker i18n-Übersetzungssystem umgestellt. Alle jsonConfig-Texte sind jetzt auf Englisch definiert und Übersetzungen werden automatisch über `npm run translate` erzeugt. Dadurch ist der Adapter für Weblate vorbereitet und erfüllt die Anforderungen für das Latest-Repository.",
@@ -170,7 +183,7 @@
     ],
     "globalDependencies": [
       {
-        "admin": ">=7.6.17"
+        "admin": ">=7.6.20"
       }
     ]
   },
