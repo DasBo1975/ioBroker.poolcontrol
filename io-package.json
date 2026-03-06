@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "news": {
+      "1.2.1": {
+        "en": "Refactored admin configuration to use the ioBroker i18n translation environment. All jsonConfig labels are now defined in English and translations are generated automatically via `npm run translate`. This prepares the adapter for Weblate and improves compatibility with ioBroker latest repository requirements.",
+        "de": "Admin-Konfiguration auf das ioBroker i18n-Übersetzungssystem umgestellt. Alle jsonConfig-Texte sind jetzt auf Englisch definiert und Übersetzungen werden automatisch über `npm run translate` erzeugt. Dadurch ist der Adapter für Weblate vorbereitet und erfüllt die Anforderungen für das Latest-Repository.",
+        "ru": "Переработана конфигурация администратора для использования среды перевода ioBroker i18n. Все метки jsonConfig теперь определены на английском языке, а переводы генерируются автоматически с помощью npm run Translate. Это подготавливает адаптер для Weblate и улучшает совместимость с последними требованиями к репозиторию ioBroker.",
+        "pt": "Configuração de administrador refatorada para usar o ambiente de tradução ioBroker i18n. Todos os rótulos jsonConfig agora são definidos em inglês e as traduções são geradas automaticamente via `npm run translate`. Isso prepara o adaptador para Weblate e melhora a compatibilidade com os requisitos de repositório mais recentes do ioBroker.",
+        "nl": "Herziene beheerdersconfiguratie om de ioBroker i18n-vertaalomgeving te gebruiken. Alle jsonConfig-labels zijn nu in het Engels gedefinieerd en vertalingen worden automatisch gegenereerd via `npm run translate`. Dit bereidt de adapter voor op Weblate en verbetert de compatibiliteit met de nieuwste repositoryvereisten van ioBroker.",
+        "fr": "Configuration d'administration refactorisée pour utiliser l'environnement de traduction ioBroker i18n. Toutes les étiquettes jsonConfig sont désormais définies en anglais et les traductions sont générées automatiquement via `npm run translate`. Cela prépare l'adaptateur pour Weblate et améliore la compatibilité avec les dernières exigences du référentiel ioBroker.",
+        "it": "Configurazione dell'amministratore rifattorizzata per utilizzare l'ambiente di traduzione ioBroker i18n. Tutte le etichette jsonConfig sono ora definite in inglese e le traduzioni vengono generate automaticamente tramite \"npm run Translate\". Questo prepara l'adattatore per Weblate e migliora la compatibilità con i requisiti del repository più recente di ioBroker.",
+        "es": "Configuración de administrador refactorizada para utilizar el entorno de traducción ioBroker i18n. Todas las etiquetas jsonConfig ahora están definidas en inglés y las traducciones se generan automáticamente a través de `npm run Translate`. Esto prepara el adaptador para Weblate y mejora la compatibilidad con los últimos requisitos del repositorio de ioBroker.",
+        "pl": "Zrefaktoryzowana konfiguracja administratora w celu korzystania ze środowiska tłumaczeniowego ioBroker i18n. Wszystkie etykiety jsonConfig są teraz zdefiniowane w języku angielskim, a tłumaczenia są generowane automatycznie za pomocą `npm run Translator`. Przygotowuje to adapter do obsługi Weblate i poprawia zgodność z najnowszymi wymaganiami repozytorium ioBroker.",
+        "uk": "Перероблено конфігурацію адміністратора для використання середовища перекладу ioBroker i18n. Усі мітки jsonConfig тепер визначені англійською мовою, а переклади генеруються автоматично за допомогою `npm run translate`. Це готує адаптер для Weblate і покращує сумісність із останніми вимогами до сховища ioBroker.",
+        "zh-cn": "重构管理配置以使用 ioBroker i18n 翻译环境。所有 jsonConfig 标签现在均以英语定义，并通过“npm run translate”自动生成翻译。这为 Weblate 准备了适配器，并提高了与 ioBroker 最新存储库要求的兼容性。"
+      },
       "1.2.0": {
         "en": "Maintenance release. Prepares PoolControl for the Stable repository by enabling i18n in the instance configuration (jsonConfig) and adding bilingual (DE/EN) labels and texts. No functional changes to the adapter logic.",
         "de": "Wartungs-Release. Vorbereitung für das Stable-Repository durch Aktivierung von i18n in der Instanzkonfiguration (jsonConfig) und Ergänzung zweisprachiger (DE/EN) Labels und Texte. Keine funktionalen Änderungen an der Adapterlogik.",
