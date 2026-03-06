@@ -195,7 +195,18 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+
+### 1.2.2
+Released: 06.03.2026
+- Raised required admin version to >=7.6.20
+- Updated translations after jsonConfig i18n refactoring
+- Maintenance update (no functional changes)
+
+### 1.2.1
+Released: 06.03.2026
+- Migration of admin configuration to i18n translation environment
+- jsonConfig now uses English labels with translations managed in admin/i18n
+- Translations generated using `npm run translate`
 
 ### 1.2.0
 Released: 15.02.2026
@@ -245,7 +256,7 @@ Released: 15.02.2026
   - Purely optional system extension
 
 
-## v0.9.0 (WORK IN PROGRESS)
+## v0.9.0
 - Introduction of heating / heat pump control (`heatHelper`)
 - Automatic heating request based on pool temperature
 - Target and maximum temperature configurable
