@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "news": {
+      "1.2.4": {
+        "en": "Fix: actuatorsHelper did not synchronize instance configuration with internal states (active/name). Additional actuators could not be activated.",
+        "de": "Fix: actuatorsHelper synchronisierte die Instanzkonfiguration nicht mit den internen States (active/name). Zusatzaktoren konnten dadurch nicht aktiviert werden."
+      },
       "1.2.3": {
         "en": "Replaced native timers with adapter timers and improved timer cleanup",
         "de": "Native Timer durch Adapter-Timer ersetzt und Timer-Cleanup verbessert",
