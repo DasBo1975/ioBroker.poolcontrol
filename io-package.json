@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "news": {
+      "1.2.5": {
+        "en": "Fix: corrected synchronization of actuator configuration with internal states (active/name). Additional actuators could not be activated in some cases. Updated translations.",
+        "de": "Fix: Synchronisierung der Aktor-Konfiguration mit den internen States (active/name) korrigiert. Zusatzaktoren konnten in einigen Fällen nicht aktiviert werden. Übersetzungen aktualisiert.",
+        "ru": "Исправлено: исправлена ​​синхронизация конфигурации привода с внутренними состояниями (активный/имя). В некоторых случаях дополнительные исполнительные механизмы не могли быть активированы. Обновлены переводы.",
+        "pt": "Correção: corrigida sincronização da configuração do atuador com estados internos (ativo/nome). Atuadores adicionais não puderam ser ativados em alguns casos. Traduções atualizadas.",
+        "nl": "Fix: gecorrigeerde synchronisatie van actuatorconfiguratie met interne statussen (actief/naam). In sommige gevallen konden extra actuatoren niet worden geactiveerd. Bijgewerkte vertalingen.",
+        "fr": "Correctif : correction de la synchronisation de la configuration de l'actionneur avec les états internes (actif/nom). Des actionneurs supplémentaires n'ont pas pu être activés dans certains cas. Traductions mises à jour.",
+        "it": "Fix: corretta sincronizzazione della configurazione dell'attuatore con gli stati interni (attivo/nome). In alcuni casi non è stato possibile attivare attuatori aggiuntivi. Traduzioni aggiornate.",
+        "es": "Solución: sincronización corregida de la configuración del actuador con los estados internos (activo/nombre). En algunos casos no se pudieron activar actuadores adicionales. Traducciones actualizadas.",
+        "pl": "Poprawka: poprawiona synchronizacja konfiguracji siłownika ze stanami wewnętrznymi (aktywny/nazwa). W niektórych przypadkach nie można było aktywować dodatkowych siłowników. Zaktualizowane tłumaczenia.",
+        "uk": "Виправлення: виправлена ​​синхронізація конфігурації приводу з внутрішніми станами (активний/назва). У деяких випадках не вдається активувати додаткові приводи. Оновлені переклади.",
+        "zh-cn": "修复：更正了执行器配置与内部状态（活动/名称）的同步。在某些情况下无法激活附加执行器。更新了翻译。"
+      },
       "1.2.4": {
         "en": "Fix: actuatorsHelper did not synchronize instance configuration with internal states (active/name). Additional actuators could not be activated.",
         "de": "Fix: actuatorsHelper synchronisierte die Instanzkonfiguration nicht mit den internen States (active/name). Zusatzaktoren konnten dadurch nicht aktiviert werden.",
