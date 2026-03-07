@@ -5,7 +5,16 @@
     "news": {
       "1.2.4": {
         "en": "Fix: actuatorsHelper did not synchronize instance configuration with internal states (active/name). Additional actuators could not be activated.",
-        "de": "Fix: actuatorsHelper synchronisierte die Instanzkonfiguration nicht mit den internen States (active/name). Zusatzaktoren konnten dadurch nicht aktiviert werden."
+        "de": "Fix: actuatorsHelper synchronisierte die Instanzkonfiguration nicht mit den internen States (active/name). Zusatzaktoren konnten dadurch nicht aktiviert werden.",
+        "ru": "Исправлено: приводыHelper не синхронизировали конфигурацию экземпляра с внутренними состояниями (активный/имя). Дополнительные исполнительные механизмы не удалось активировать.",
+        "pt": "Correção: atuatorsHelper não sincronizava a configuração da instância com os estados internos (ativo/nome). Não foi possível ativar atuadores adicionais.",
+        "nl": "Oplossing: actuatorsHelper heeft de instanceconfiguratie niet gesynchroniseerd met interne statussen (actief/naam). Er konden geen extra actuatoren worden geactiveerd.",
+        "fr": "Correctif : activatesHelper ne synchronisait pas la configuration de l'instance avec les états internes (actif/nom). Des actionneurs supplémentaires n'ont pas pu être activés.",
+        "it": "Correzione: attuatoriHelper non sincronizzava la configurazione dell'istanza con gli stati interni (attivo/nome). Non è stato possibile attivare attuatori aggiuntivi.",
+        "es": "Solución: actuadoresHelper no sincronizaba la configuración de la instancia con los estados internos (activo/nombre). No se pudieron activar actuadores adicionales.",
+        "pl": "Poprawka: aktuatorzyHelper nie synchronizowali konfiguracji instancji ze stanami wewnętrznymi (aktywny/nazwa). Nie można było aktywować dodatkowych siłowników.",
+        "uk": "Виправлення: actuatorsHelper не синхронізував конфігурацію екземпляра з внутрішніми станами (активний/назва). Не вдалося активувати додаткові приводи.",
+        "zh-cn": "修复：actuatorsHelper 未将实例配置与内部状态（活动/名称）同步。无法激活其他执行器。"
       },
       "1.2.3": {
         "en": "Replaced native timers with adapter timers and improved timer cleanup",
