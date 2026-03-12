@@ -89,7 +89,7 @@ class Poolcontrol extends utils.Adapter {
     }
 
     async onReady() {
-        this.log.info('Adapter gestartet');
+        this.log.info('Adapter started');
 
         // --- Allgemeine Einstellungen ---
         await createGeneralStates(this);
@@ -258,7 +258,7 @@ class Poolcontrol extends utils.Adapter {
                 infoHelper.cleanup();
             }
         } catch (e) {
-            this.log.warn(`[onUnload] Fehler beim Cleanup: ${e.message}`);
+            this.log.warn(`[onUnload] Error during cleanup: ${e.message}`);
         } finally {
             callback();
         }
@@ -290,7 +290,7 @@ class Poolcontrol extends utils.Adapter {
 
         // Saisonstatus manuell ändern (z.B. über VIS)
         if (id.endsWith('status.season_active') && state && state.ack === false) {
-            this.log.info(`[main] Saisonstatus geändert: ${state.val}`);
+            this.log.info(`[main] Season status changed: ${state.val}`);
             await this.setStateAsync('status.season_active', { val: state.val, ack: true });
             return; // danach keine Helper mehr aufrufen
         }
@@ -298,91 +298,91 @@ class Poolcontrol extends utils.Adapter {
         try {
             temperatureHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[temperatureHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[temperatureHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             runtimeHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[runtimeHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[runtimeHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             pumpHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[pumpHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[pumpHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             pumpHelper2.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[pumpHelper2] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[pumpHelper2] Error in handleStateChange: ${e.message}`);
         }
         try {
             pumpHelper3.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[pumpHelper3] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[pumpHelper3] Error in handleStateChange: ${e.message}`);
         }
 
         try {
             pumpHelper4.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[pumpHelper4] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[pumpHelper4] Error in handleStateChange: ${e.message}`);
         }
 
         try {
             pumpSpeedHelper.handleStateChange(id, state); // NEU
         } catch (e) {
-            this.log.warn(`[pumpSpeedHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[pumpSpeedHelper] Error in handleStateChange: ${e.message}`);
         }
 
         try {
             speechHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[speechHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[speechHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             consumptionHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[consumptionHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[consumptionHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             photovoltaicHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[photovoltaicHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[photovoltaicHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             heatHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[heatHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[heatHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             actuatorsHelper.handleStateChange(id, state); // NEU
         } catch (e) {
-            this.log.warn(`[actuatorsHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[actuatorsHelper] Error in handleStateChange: ${e.message}`);
         }
         // --- AI-Helper ---
         try {
             aiHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[main] Fehler in aiHelper.handleStateChange: ${e.message}`);
+            this.log.warn(`[main] Error in aiHelper.handleStateChange: ${e.message}`);
         }
         try {
             aiForecastHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[main] Fehler in aiForecastHelper.handleStateChange: ${e.message}`);
+            this.log.warn(`[main] Error in aiForecastHelper.handleStateChange: ${e.message}`);
         }
         try {
             aiChemistryHelpHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[main] Fehler in aiChemistryHelpHelper.handleStateChange: ${e.message}`);
+            this.log.warn(`[main] Error in aiChemistryHelpHelper.handleStateChange: ${e.message}`);
         }
         try {
             statusHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[statusHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[statusHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             speechTextHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[speechTextHelper] Fehler in handleStateChange: ${e.message}`);
+            this.log.warn(`[speechTextHelper] Error in handleStateChange: ${e.message}`);
         }
         if (id.includes('control.')) {
             controlHelper.handleStateChange(id, state);
@@ -393,12 +393,12 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Photovoltaik-Parameter ---
         if (id.endsWith('photovoltaic.afterrun_min')) {
-            this.log.debug(`[onStateChange] Nachlaufzeit (PV) geändert auf ${state.val} Minuten`);
+            this.log.debug(`[onStateChange] PV after-run time changed to ${state.val} Minuten`);
             this.config.pv_afterrun_min = Number(state.val);
         }
 
         if (id.endsWith('photovoltaic.ignore_on_circulation')) {
-            this.log.debug(`[onStateChange] PV-Logik ignorieren bei Umwälzmenge = ${state.val}`);
+            this.log.debug(`[onStateChange] Ignore PV logic on circulation = ${state.val}`);
             this.config.pv_ignore_on_circulation = !!state.val;
         }
 
