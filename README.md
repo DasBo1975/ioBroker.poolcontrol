@@ -196,9 +196,15 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.5
+Released: 07.03.2026
+- Fixed an issue in `actuatorsHelper` where state changes were not handled correctly in certain situations
+- Minor internal improvements and stability fixes
+
 ### 1.2.4
 Release: 07.03.2026
 - Fix: actuatorsHelper did not synchronize instance configuration with internal states (active/name). Additional actuators could not be activated.
+
 ### 1.2.3
 Released: 06.03.2026
 - Replaced native timers (setTimeout / setInterval) with adapter timers (adapter.setTimeout / adapter.setInterval)
