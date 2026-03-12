@@ -196,6 +196,14 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.6
+Released: 12.03.2026
+- Fixed remaining adapter checker issues
+- Updated release-script plugins to latest versions
+- Converted remaining log messages to English
+- Updated dependabot configuration (added github-actions ecosystem)
+- Reduced `common.news` entries in io-package.json to comply with repository requirements
+
 ### 1.2.5
 Released: 07.03.2026
 - Fixed an issue in `actuatorsHelper` where state changes were not handled correctly in certain situations

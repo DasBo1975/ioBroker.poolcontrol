@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "news": {
+      "1.2.6": {
+        "en": "Fixed adapter checker issues, converted remaining log messages to English, updated release-script plugins and dependabot configuration.",
+        "de": "Adapter-Checker-Probleme behoben, verbleibende Logmeldungen auf Englisch umgestellt, release-script Plugins und Dependabot-Konfiguration aktualisiert.",
+        "ru": "Исправлены проблемы с проверкой адаптера, преобразованы оставшиеся сообщения журнала на английский язык, обновлены плагины сценариев выпуска и конфигурация зависимостей.",
+        "pt": "Corrigidos problemas do verificador do adaptador, convertidas mensagens de log restantes para inglês, plug-ins de script de lançamento atualizados e configuração do dependabot.",
+        "nl": "Problemen met de adaptercontrole opgelost, resterende logberichten naar het Engels geconverteerd, release-scriptplug-ins en dependabot-configuratie bijgewerkt.",
+        "fr": "Correction des problèmes de vérification d'adaptateur, conversion des messages de journal restants en anglais, mise à jour des plugins de script de version et configuration des dépendances.",
+        "it": "Risolti i problemi di controllo dell'adattatore, convertiti i messaggi di registro rimanenti in inglese, aggiornati i plugin degli script di rilascio e la configurazione di dependabot.",
+        "es": "Se solucionaron problemas del verificador de adaptadores, se convirtieron los mensajes de registro restantes al inglés, se actualizaron los complementos del script de lanzamiento y la configuración del dependabot.",
+        "pl": "Naprawiono problemy z modułem sprawdzania adaptera, przekonwertowano pozostałe komunikaty dziennika na język angielski, zaktualizowano wtyczki skryptu wydania i konfigurację zależnego bota.",
+        "uk": "Виправлено проблеми перевірки адаптера, перетворено решту повідомлень журналу на англійську мову, оновлено плагіни сценарію випуску та конфігурацію dependabot.",
+        "zh-cn": "修复了适配器检查器问题，将剩余日志消息转换为英语，更新了发布脚本插件和 dependentabot 配置。"
+      },
       "1.2.5": {
         "en": "Fix: corrected synchronization of actuator configuration with internal states (active/name). Additional actuators could not be activated in some cases. Updated translations.",
         "de": "Fix: Synchronisierung der Aktor-Konfiguration mit den internen States (active/name) korrigiert. Zusatzaktoren konnten in einigen Fällen nicht aktiviert werden. Übersetzungen aktualisiert.",
