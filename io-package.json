@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "news": {
+      "1.2.7": {
+        "en": "Corrected role definitions for writable states according to ioBroker guidelines.",
+        "de": "Rollen-Definitionen für beschreibbare States gemäß ioBroker-Richtlinien korrigiert.",
+        "ru": "Исправлены определения ролей для записываемых состояний в соответствии с рекомендациями ioBroker.",
+        "pt": "Definições de função corrigidas para estados graváveis ​​de acordo com as diretrizes do ioBroker.",
+        "nl": "Roldefinities voor beschrijfbare statussen gecorrigeerd volgens de richtlijnen van ioBroker.",
+        "fr": "Définitions de rôles corrigées pour les états inscriptibles conformément aux directives ioBroker.",
+        "it": "Corrette le definizioni dei ruoli per gli stati scrivibili secondo le linee guida di ioBroker.",
+        "es": "Definiciones de roles corregidas para estados de escritura según las pautas de ioBroker.",
+        "pl": "Poprawione definicje ról dla stanów zapisywalnych zgodnie z wytycznymi ioBroker.",
+        "uk": "Виправлено визначення ролей для записуваних станів відповідно до вказівок ioBroker.",
+        "zh-cn": "根据 ioBroker 指南更正了可写状态的角色定义。"
+      },
       "1.2.6": {
         "en": "Fixed adapter checker issues, converted remaining log messages to English, updated release-script plugins and dependabot configuration.",
         "de": "Adapter-Checker-Probleme behoben, verbleibende Logmeldungen auf Englisch umgestellt, release-script Plugins und Dependabot-Konfiguration aktualisiert.",

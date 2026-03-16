@@ -4,6 +4,12 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
+## 1.2.7 (2026-03-16)
+
+### v1.2.7
+- Corrected role definitions for writable states according to ioBroker guidelines
+- Set internal learning and diagnostic states to read-only where appropriate
+- Removed obsolete repository files
 
 ## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
 - **Pumpen-Leistungsempfehlung (ab v1.1.0)**
@@ -25,7 +31,6 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 
 ---
-
 
 ## v1.0.0 Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) (02.01.2026)
   - Steuerung optionaler Pool-Aktoren:
@@ -50,7 +55,6 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
-
 ## v0.9.0 (28.12.2025)
 - Einführung der Heizungs- / Wärmepumpensteuerung (`heatHelper`)
 - Automatische Heizanforderung basierend auf Pooltemperatur
@@ -69,7 +73,6 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
 
-
 ## v0.8.2 (2025-12-25)
 - Neues KI-Modul **Chemie-Hilfe** (`aiChemistryHelpHelper`)
 - Rein informatives Hilfesystem zur Poolwasserchemie
@@ -83,7 +86,6 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 
 ---
-
 
 ## v0.8.0 (2025-12-08)
 - Module: Wetterhinweise (Open-Meteo), Pooltipps, Tageszusammenfassung, Wochenendbericht

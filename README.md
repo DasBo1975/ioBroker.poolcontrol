@@ -196,6 +196,12 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.7
+Released: 16.03.2026
+- Corrected role definitions for writable states according to ioBroker guidelines
+- Several internal learning and diagnostic states set to read-only
+- Removed obsolete files from repository
+
 ### 1.2.6
 Released: 12.03.2026
 - Fixed remaining adapter checker issues
@@ -427,6 +433,6 @@ The software source code of this project is licensed under the MIT License. See 
 ---
 
 ## License
-Copyright (c) 2025–2026 D. Bertin (DasBo1975) <dasbo1975@outlook.de>  
+Copyright (c) 2026 D. Bertin (DasBo1975) <dasbo1975@outlook.de>  
 
 MIT License
