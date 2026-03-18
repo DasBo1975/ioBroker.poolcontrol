@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.7",
     "news": {
+      "1.2.8": {
+        "en": "Fixed invalid common object in runtime channel causing admin UI crash.",
+        "de": "Fehler behoben: Ungültiges common-Objekt im runtime-Kanal führte zum Absturz der Admin-Oberfläche.",
+        "ru": "Исправлен недопустимый общий объект в канале среды выполнения, приводивший к сбою пользовательского интерфейса администратора.",
+        "pt": "Corrigido objeto comum inválido no canal de tempo de execução, causando falha na interface do administrador.",
+        "nl": "Een probleem opgelost waarbij een ongeldig gemeenschappelijk object in het runtime-kanaal een crash van de beheerdersinterface veroorzaakte.",
+        "fr": "Correction d'un objet commun non valide dans le canal d'exécution provoquant un crash de l'interface utilisateur de l'administrateur.",
+        "it": "Risolto il problema con l'oggetto comune non valido nel canale di runtime che causava l'arresto anomalo dell'interfaccia utente di amministrazione.",
+        "es": "Se corrigió un objeto común no válido en el canal de tiempo de ejecución que causaba un bloqueo de la interfaz de usuario del administrador.",
+        "pl": "Naprawiono nieprawidłowy wspólny obiekt w kanale wykonawczym powodujący awarię interfejsu administratora.",
+        "uk": "Виправлено недійсний загальний об’єкт у каналі виконання, що спричиняв збій інтерфейсу адміністратора.",
+        "zh-cn": "修复了运行时通道中无效的公共对象导致管理 UI 崩溃的问题。"
+      },
       "1.2.7": {
         "en": "Corrected role definitions for writable states according to ioBroker guidelines.",
         "de": "Rollen-Definitionen für beschreibbare States gemäß ioBroker-Richtlinien korrigiert.",
@@ -67,19 +80,6 @@
         "pl": "Zastąpiono liczniki czasu natywnego licznikami adaptera i ulepszono czyszczenie licznika czasu",
         "uk": "Вбудовані таймери замінено на адаптерні та покращено очищення таймерів",
         "zh-cn": "用适配器计时器替换了本机计时器并改进了计时器清理"
-      },
-      "1.2.2": {
-        "en": "Maintenance update: Raised required admin version to >=7.6.20 and refreshed translations after jsonConfig i18n changes.",
-        "de": "Wartungsupdate: Mindestversion für admin auf >=7.6.20 erhöht und Übersetzungen nach jsonConfig-i18n-Änderungen aktualisiert.",
-        "ru": "Обновление обслуживания: требуемая версия администратора повышена до >=7.6.20 и обновлены переводы после изменений jsonConfig i18n.",
-        "pt": "Atualização de manutenção: versão de administrador necessária aumentada para >=7.6.20 e traduções atualizadas após alterações no jsonConfig i18n.",
-        "nl": "Onderhoudsupdate: vereiste beheerdersversie verhoogd naar >=7.6.20 en vertalingen vernieuwd na jsonConfig i18n-wijzigingen.",
-        "fr": "Mise à jour de maintenance : augmentation de la version d'administrateur requise à >=7.6.20 et traductions actualisées après les modifications de jsonConfig i18n.",
-        "it": "Aggiornamento di manutenzione: versione amministrativa richiesta aumentata a >=7.6.20 e traduzioni aggiornate dopo le modifiche a jsonConfig i18n.",
-        "es": "Actualización de mantenimiento: se elevó la versión de administrador requerida a >=7.6.20 y se actualizaron las traducciones después de los cambios de jsonConfig i18n.",
-        "pl": "Aktualizacja konserwacyjna: Podniesiono wymaganą wersję administracyjną do >= 7.6.20 i odświeżono tłumaczenia po zmianach w jsonConfig i18n.",
-        "uk": "Оновлення обслуговування: підвищено необхідну версію адміністратора до >=7.6.20 і оновлено переклади після змін jsonConfig i18n.",
-        "zh-cn": "维护更新：将所需的管理版本提高到> = 7.6.20，并在 jsonConfig i18n 更改后刷新翻译。"
       }
     },
     "titleLang": {
@@ -146,7 +146,8 @@
       {
         "admin": ">=7.6.20"
       }
-    ]
+    ],
+    "installedFrom": "file:///opt/iobroker/ioBroker.poolcontrol"
   },
   "native": {
     "option1": true,

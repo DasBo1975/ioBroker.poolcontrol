@@ -196,6 +196,10 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.8
+Release: 19.03.2026
+- Fixed invalid common object in runtime channel causing admin UI crash.
+
 ### 1.2.7
 Released: 16.03.2026
 - Corrected role definitions for writable states according to ioBroker guidelines
