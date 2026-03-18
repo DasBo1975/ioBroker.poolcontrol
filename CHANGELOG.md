@@ -4,7 +4,7 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## **WORK IN PROGRESS**
+## 1.2.8 (2026-03-18)
 
 ### v1.2.7
 - Corrected role definitions for writable states according to ioBroker guidelines
