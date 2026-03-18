@@ -198,6 +198,10 @@ New features are added regularly – please refer to the changelog.
 
 ### 1.2.8
 Release: 19.03.2026
+- fix: correct invalid common object in runtime channel.
+
+### 1.2.8
+Release: 19.03.2026
 - Fixed invalid common object in runtime channel causing admin UI crash.
 
 ### 1.2.7

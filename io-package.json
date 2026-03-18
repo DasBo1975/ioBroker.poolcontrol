@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.8",
     "news": {
+      "1.2.9": {
+        "en": "Fixed invalid common definition in runtime states that could crash the admin objects view.",
+        "de": "Fehler behoben: Eine ungültige common-Definition in den Runtime-States konnte die Objektansicht im Admin abstürzen lassen.",
+        "ru": "Исправлено недопустимое общее определение в состояниях среды выполнения, которое могло привести к сбою представления объектов администратора.",
+        "pt": "Corrigida definição comum inválida em estados de tempo de execução que poderiam travar a visualização de objetos administrativos.",
+        "nl": "Er is een probleem opgelost met een ongeldige algemene definitie in runtime-statussen die de weergave van beheerdersobjecten konden laten crashen.",
+        "fr": "Correction d'une définition commune non valide dans les états d'exécution qui pouvait faire planter la vue des objets d'administration.",
+        "it": "Risolta la definizione comune non valida negli stati di runtime che poteva causare l'arresto anomalo della vista degli oggetti di amministrazione.",
+        "es": "Se corrigió una definición común no válida en estados de tiempo de ejecución que podían bloquear la vista de objetos de administración.",
+        "pl": "Naprawiono nieprawidłową wspólną definicję w stanach wykonawczych, która mogła powodować awarię widoku obiektów administracyjnych.",
+        "uk": "Виправлено недійсне загальне визначення в станах виконання, яке могло привести до збою перегляду об’єктів адміністратора.",
+        "zh-cn": "修复了运行时状态中无效的通用定义，该定义可能会导致管理对象视图崩溃。"
+      },
       "1.2.8": {
         "en": "Fixed invalid common object in runtime channel causing admin UI crash.",
         "de": "Fehler behoben: Ungültiges common-Objekt im runtime-Kanal führte zum Absturz der Admin-Oberfläche.",
@@ -67,19 +80,6 @@
         "pl": "Poprawka: aktuatorzyHelper nie synchronizowali konfiguracji instancji ze stanami wewnętrznymi (aktywny/nazwa). Nie można było aktywować dodatkowych siłowników.",
         "uk": "Виправлення: actuatorsHelper не синхронізував конфігурацію екземпляра з внутрішніми станами (активний/назва). Не вдалося активувати додаткові приводи.",
         "zh-cn": "修复：actuatorsHelper 未将实例配置与内部状态（活动/名称）同步。无法激活其他执行器。"
-      },
-      "1.2.3": {
-        "en": "Replaced native timers with adapter timers and improved timer cleanup",
-        "de": "Native Timer durch Adapter-Timer ersetzt und Timer-Cleanup verbessert",
-        "ru": "Заменены собственные таймеры на таймеры адаптера и улучшена очистка таймера.",
-        "pt": "Temporizadores nativos substituídos por temporizadores de adaptador e limpeza aprimorada do temporizador",
-        "nl": "Native timers vervangen door adaptertimers en verbeterde timeropschoning",
-        "fr": "Remplacement des minuteries natives par des minuteries d'adaptateur et un nettoyage amélioré des minuteries",
-        "it": "Sostituiti i timer nativi con timer adattatori e migliorata la pulizia dei timer",
-        "es": "Se reemplazaron los temporizadores nativos con temporizadores adaptadores y se mejoró la limpieza del temporizador.",
-        "pl": "Zastąpiono liczniki czasu natywnego licznikami adaptera i ulepszono czyszczenie licznika czasu",
-        "uk": "Вбудовані таймери замінено на адаптерні та покращено очищення таймерів",
-        "zh-cn": "用适配器计时器替换了本机计时器并改进了计时器清理"
       }
     },
     "titleLang": {
