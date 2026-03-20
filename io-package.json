@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "news": {
       "1.2.10": {
         "en": "Improved German translations and terminology in admin UI (jsonConfig). Fixed incorrect or misleading sensor names (e.g. flow vs temperature sensors) and improved overall wording and consistency.",
