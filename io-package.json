@@ -3,9 +3,31 @@
     "name": "poolcontrol",
     "version": "1.2.10",
     "news": {
+      "1.2.11": {
+        "en": "Repository cleanup and fixes for ioBroker repository checker. Removed invalid properties from io-package.json and updated README.",
+        "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Ungültige Eigenschaften aus der io-package.json entfernt und README aktualisiert.",
+        "ru": "Очистка репозитория и исправления для средства проверки репозитория ioBroker. Удалены недопустимые свойства из io-package.json и обновлен README.",
+        "pt": "Limpeza de repositório e correções para verificador de repositório ioBroker. Propriedades inválidas removidas de io-package.json e README atualizado.",
+        "nl": "Opschonen van opslagplaatsen en oplossingen voor ioBroker-repositorycontrole. Ongeldige eigenschappen uit io-package.json verwijderd en README bijgewerkt.",
+        "fr": "Nettoyage du référentiel et correctifs pour le vérificateur de référentiel ioBroker. Suppression des propriétés invalides de io-package.json et mise à jour du README.",
+        "it": "Pulizia del repository e correzioni per il controllo del repository ioBroker. Rimosse proprietà non valide da io-package.json e README aggiornato.",
+        "es": "Limpieza del repositorio y correcciones para el verificador del repositorio de ioBroker. Se eliminaron propiedades no válidas de io-package.json y se actualizó README.",
+        "pl": "Oczyszczenie repozytorium i poprawki dla modułu sprawdzania repozytorium ioBroker. Usunięto nieprawidłowe właściwości z io-package.json i zaktualizowano plik README.",
+        "uk": "Очищення сховища та виправлення для засобу перевірки сховища ioBroker. Видалено недійсні властивості з io-package.json і оновлено README.",
+        "zh-cn": "ioBroker 存储库检查器的存储库清理和修复。从 io-package.json 中删除了无效属性并更新了 README。"
+      },
       "1.2.10": {
         "en": "Improved German translations and terminology in admin UI (jsonConfig). Fixed incorrect or misleading sensor names (e.g. flow vs temperature sensors) and improved overall wording and consistency.",
-        "de": "Verbesserte deutsche Übersetzungen und Begrifflichkeiten in der Admin-Oberfläche (jsonConfig). Falsche bzw. missverständliche Sensorbezeichnungen (z. B. Flow vs. Temperatursensoren) korrigiert und allgemeine Formulierungen sowie Konsistenz verbessert."
+        "de": "Verbesserte deutsche Übersetzungen und Begrifflichkeiten in der Admin-Oberfläche (jsonConfig). Falsche bzw. missverständliche Sensorbezeichnungen (z. B. Flow vs. Temperatursensoren) korrigiert und allgemeine Formulierungen sowie Konsistenz verbessert.",
+        "ru": "Улучшены немецкие переводы и терминология в пользовательском интерфейсе администратора (jsonConfig). Исправлены неправильные или вводящие в заблуждение названия датчиков (например, датчики расхода и температуры), а также улучшены общие формулировки и согласованность.",
+        "pt": "Traduções e terminologia em alemão aprimoradas na interface de administração (jsonConfig). Corrigimos nomes de sensores incorretos ou enganosos (por exemplo, sensores de fluxo versus temperatura) e melhoramos o texto e a consistência geral.",
+        "nl": "Verbeterde Duitse vertalingen en terminologie in de beheerdersinterface (jsonConfig). Foutieve of misleidende sensornamen opgelost (bijv. flow- versus temperatuursensoren) en verbeterde algemene bewoording en consistentie.",
+        "fr": "Traductions et terminologie allemandes améliorées dans l'interface utilisateur d'administration (jsonConfig). Correction des noms de capteurs incorrects ou trompeurs (par exemple, capteurs de débit ou de température) et amélioration de la formulation et de la cohérence globales.",
+        "it": "Traduzioni e terminologia tedesca migliorate nell'interfaccia utente di amministrazione (jsonConfig). Risolti i nomi dei sensori errati o fuorvianti (ad esempio sensori di flusso o di temperatura) e migliorata la formulazione e la coerenza generale.",
+        "es": "Traducciones y terminología alemanas mejoradas en la interfaz de usuario de administración (jsonConfig). Se corrigieron nombres de sensores incorrectos o engañosos (por ejemplo, sensores de flujo versus temperatura) y se mejoraron la redacción y coherencia generales.",
+        "pl": "Ulepszone niemieckie tłumaczenia i terminologia w interfejsie administratora (jsonConfig). Poprawiono nieprawidłowe lub wprowadzające w błąd nazwy czujników (np. czujniki przepływu i temperatury) oraz poprawiono ogólne sformułowanie i spójność.",
+        "uk": "Покращено німецький переклад і термінологію в інтерфейсі адміністратора (jsonConfig). Виправлено неправильні або оманливі назви датчиків (наприклад, датчики потоку чи температури) і покращено загальне формулювання та послідовність.",
+        "zh-cn": "改进了管理 UI (jsonConfig) 中的德语翻译和术语。修复了不正确或误导性的传感器名称（例如流量与温度传感器）并改进了整体措辞和一致性。"
       },
       "1.2.9": {
         "en": "Fixed invalid common definition in runtime states that could crash the admin objects view.",
@@ -19,19 +41,6 @@
         "pl": "Naprawiono nieprawidłową wspólną definicję w stanach wykonawczych, która mogła powodować awarię widoku obiektów administracyjnych.",
         "uk": "Виправлено недійсне загальне визначення в станах виконання, яке могло привести до збою перегляду об’єктів адміністратора.",
         "zh-cn": "修复了运行时状态中无效的通用定义，该定义可能会导致管理对象视图崩溃。"
-      },
-      "1.2.8": {
-        "en": "Fixed invalid common object in runtime channel causing admin UI crash.",
-        "de": "Fehler behoben: Ungültiges common-Objekt im runtime-Kanal führte zum Absturz der Admin-Oberfläche.",
-        "ru": "Исправлен недопустимый общий объект в канале среды выполнения, приводивший к сбою пользовательского интерфейса администратора.",
-        "pt": "Corrigido objeto comum inválido no canal de tempo de execução, causando falha na interface do administrador.",
-        "nl": "Een probleem opgelost waarbij een ongeldig gemeenschappelijk object in het runtime-kanaal een crash van de beheerdersinterface veroorzaakte.",
-        "fr": "Correction d'un objet commun non valide dans le canal d'exécution provoquant un crash de l'interface utilisateur de l'administrateur.",
-        "it": "Risolto il problema con l'oggetto comune non valido nel canale di runtime che causava l'arresto anomalo dell'interfaccia utente di amministrazione.",
-        "es": "Se corrigió un objeto común no válido en el canal de tiempo de ejecución que causaba un bloqueo de la interfaz de usuario del administrador.",
-        "pl": "Naprawiono nieprawidłowy wspólny obiekt w kanale wykonawczym powodujący awarię interfejsu administratora.",
-        "uk": "Виправлено недійсний загальний об’єкт у каналі виконання, що спричиняв збій інтерфейсу адміністратора.",
-        "zh-cn": "修复了运行时通道中无效的公共对象导致管理 UI 崩溃的问题。"
       },
       "1.2.7": {
         "en": "Corrected role definitions for writable states according to ioBroker guidelines.",
@@ -137,12 +146,7 @@
       {
         "admin": ">=7.6.20"
       }
-    ],
-    "installedFrom": "file:///opt/iobroker/ioBroker.poolcontrol"
-  },
-  "native": {
-    "option1": true,
-    "option2": "42"
+    ]
   },
   "objects": [],
   "instanceObjects": []

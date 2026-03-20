@@ -149,13 +149,6 @@ Details about the behavior of consumption and cost values (e.g., after restarts 
 
 ---
 
-## Installation
-
-1. Install adapter via ioBroker Admin.  
-2. Create instance.  
-3. Configure in the Admin tab: pump power, sensors, solar, speech outputs, etc.
-
----
 
 ## Configuration
 
@@ -196,6 +189,11 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.11
+- Repository cleanup (ioBroker checker issues resolved)
+- Removed invalid properties from io-package.json
+- README updated
+
 ### 1.2.10 (2026-03-20)
 - Improved German translations in the admin UI (jsonConfig)
 - Fixed incorrect and misleading terminology (e.g. flow vs. temperature sensors)
@@ -204,10 +202,6 @@ New features are added regularly – please refer to the changelog.
 ### 1.2.9
 Release: 19.03.2026
 - fix: correct invalid common object in runtime channel.
-
-### 1.2.8
-Release: 19.03.2026
-- Fixed invalid common object in runtime channel causing admin UI crash.
 
 ### 1.2.7
 Released: 16.03.2026
