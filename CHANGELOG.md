@@ -4,6 +4,9 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
+
+## **WORK IN PROGRESS**
+
 ## 1.2.11 (2026-03-20)
 
 ### v1.2.7

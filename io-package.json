@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.11",
     "news": {
+      "1.2.12": {
+        "en": "Repository cleanup and fixes for ioBroker repository checker. Restored required native object in io-package.json, removed invalid properties and updated README.",
+        "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Erforderliches native-Objekt in der io-package.json wiederhergestellt, ungültige Eigenschaften entfernt und README aktualisiert.",
+        "ru": "Очистка репозитория и исправления для средства проверки репозитория ioBroker. Восстановлен необходимый собственный объект в io-package.json, удалены недопустимые свойства и обновлен README.",
+        "pt": "Limpeza de repositório e correções para verificador de repositório ioBroker. Objeto nativo necessário restaurado em io-package.json, propriedades inválidas removidas e README atualizado.",
+        "nl": "Opschonen van opslagplaatsen en oplossingen voor ioBroker-repositorycontrole. Vereist native object in io-package.json hersteld, ongeldige eigenschappen verwijderd en README bijgewerkt.",
+        "fr": "Nettoyage du référentiel et correctifs pour le vérificateur de référentiel ioBroker. Objet natif requis restauré dans io-package.json, suppression des propriétés non valides et mise à jour du README.",
+        "it": "Pulizia del repository e correzioni per il controllo del repository ioBroker. Oggetto nativo richiesto ripristinato in io-package.json, proprietà non valide rimosse e README aggiornato.",
+        "es": "Limpieza del repositorio y correcciones para el verificador del repositorio de ioBroker. Se restauró el objeto nativo requerido en io-package.json, se eliminaron propiedades no válidas y se actualizó README.",
+        "pl": "Oczyszczenie repozytorium i poprawki dla modułu sprawdzania repozytorium ioBroker. Przywrócono wymagany obiekt natywny w io-package.json, usunięto nieprawidłowe właściwości i zaktualizowano plik README.",
+        "uk": "Очищення сховища та виправлення для засобу перевірки сховища ioBroker. Відновлено необхідний рідний об’єкт у io-package.json, видалено недійсні властивості та оновлено README.",
+        "zh-cn": "ioBroker 存储库检查器的存储库清理和修复。恢复了 io-package.json 中所需的本机对象，删除了无效属性并更新了 README。"
+      },
       "1.2.11": {
         "en": "Repository cleanup and fixes for ioBroker repository checker. Removed invalid properties from io-package.json and updated README.",
         "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Ungültige Eigenschaften aus der io-package.json entfernt und README aktualisiert.",
@@ -67,19 +80,6 @@
         "pl": "Naprawiono problemy z modułem sprawdzania adaptera, przekonwertowano pozostałe komunikaty dziennika na język angielski, zaktualizowano wtyczki skryptu wydania i konfigurację zależnego bota.",
         "uk": "Виправлено проблеми перевірки адаптера, перетворено решту повідомлень журналу на англійську мову, оновлено плагіни сценарію випуску та конфігурацію dependabot.",
         "zh-cn": "修复了适配器检查器问题，将剩余日志消息转换为英语，更新了发布脚本插件和 dependentabot 配置。"
-      },
-      "1.2.5": {
-        "en": "Fix: corrected synchronization of actuator configuration with internal states (active/name). Additional actuators could not be activated in some cases. Updated translations.",
-        "de": "Fix: Synchronisierung der Aktor-Konfiguration mit den internen States (active/name) korrigiert. Zusatzaktoren konnten in einigen Fällen nicht aktiviert werden. Übersetzungen aktualisiert.",
-        "ru": "Исправлено: исправлена ​​синхронизация конфигурации привода с внутренними состояниями (активный/имя). В некоторых случаях дополнительные исполнительные механизмы не могли быть активированы. Обновлены переводы.",
-        "pt": "Correção: corrigida sincronização da configuração do atuador com estados internos (ativo/nome). Atuadores adicionais não puderam ser ativados em alguns casos. Traduções atualizadas.",
-        "nl": "Fix: gecorrigeerde synchronisatie van actuatorconfiguratie met interne statussen (actief/naam). In sommige gevallen konden extra actuatoren niet worden geactiveerd. Bijgewerkte vertalingen.",
-        "fr": "Correctif : correction de la synchronisation de la configuration de l'actionneur avec les états internes (actif/nom). Des actionneurs supplémentaires n'ont pas pu être activés dans certains cas. Traductions mises à jour.",
-        "it": "Fix: corretta sincronizzazione della configurazione dell'attuatore con gli stati interni (attivo/nome). In alcuni casi non è stato possibile attivare attuatori aggiuntivi. Traduzioni aggiornate.",
-        "es": "Solución: sincronización corregida de la configuración del actuador con los estados internos (activo/nombre). En algunos casos no se pudieron activar actuadores adicionales. Traducciones actualizadas.",
-        "pl": "Poprawka: poprawiona synchronizacja konfiguracji siłownika ze stanami wewnętrznymi (aktywny/nazwa). W niektórych przypadkach nie można było aktywować dodatkowych siłowników. Zaktualizowane tłumaczenia.",
-        "uk": "Виправлення: виправлена ​​синхронізація конфігурації приводу з внутрішніми станами (активний/назва). У деяких випадках не вдається активувати додаткові приводи. Оновлені переклади.",
-        "zh-cn": "修复：更正了执行器配置与内部状态（活动/名称）的同步。在某些情况下无法激活附加执行器。更新了翻译。"
       }
     },
     "titleLang": {
@@ -148,6 +148,7 @@
       }
     ]
   },
+  "native": {},
   "objects": [],
   "instanceObjects": []
 }

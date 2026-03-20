@@ -189,6 +189,13 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.12
+Release: 21.03.2026
+- Repository cleanup and fixes for ioBroker repository checker
+- Restored required native object in io-package.json
+- Removed invalid properties and outdated entries
+- Updated README
+
 ### 1.2.11
 - Repository cleanup (ioBroker checker issues resolved)
 - Removed invalid properties from io-package.json
