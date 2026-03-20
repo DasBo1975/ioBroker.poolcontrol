@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.11",
+    "version": "1.2.12",
     "news": {
       "1.2.12": {
         "en": "Repository cleanup and fixes for ioBroker repository checker. Restored required native object in io-package.json, removed invalid properties and updated README.",
