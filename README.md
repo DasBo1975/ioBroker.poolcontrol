@@ -196,7 +196,12 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
-### 1.2.8
+### 1.2.10 (2026-03-20)
+- Improved German translations in the admin UI (jsonConfig)
+- Fixed incorrect and misleading terminology (e.g. flow vs. temperature sensors)
+- Improved consistency and wording across all configuration options
+
+### 1.2.9
 Release: 19.03.2026
 - fix: correct invalid common object in runtime channel.
 

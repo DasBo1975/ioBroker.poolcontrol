@@ -3,6 +3,10 @@
     "name": "poolcontrol",
     "version": "1.2.9",
     "news": {
+      "1.2.10": {
+        "en": "Improved German translations and terminology in admin UI (jsonConfig). Fixed incorrect or misleading sensor names (e.g. flow vs temperature sensors) and improved overall wording and consistency.",
+        "de": "Verbesserte deutsche Übersetzungen und Begrifflichkeiten in der Admin-Oberfläche (jsonConfig). Falsche bzw. missverständliche Sensorbezeichnungen (z. B. Flow vs. Temperatursensoren) korrigiert und allgemeine Formulierungen sowie Konsistenz verbessert."
+      },
       "1.2.9": {
         "en": "Fixed invalid common definition in runtime states that could crash the admin objects view.",
         "de": "Fehler behoben: Eine ungültige common-Definition in den Runtime-States konnte die Objektansicht im Admin abstürzen lassen.",
@@ -67,19 +71,6 @@
         "pl": "Poprawka: poprawiona synchronizacja konfiguracji siłownika ze stanami wewnętrznymi (aktywny/nazwa). W niektórych przypadkach nie można było aktywować dodatkowych siłowników. Zaktualizowane tłumaczenia.",
         "uk": "Виправлення: виправлена ​​синхронізація конфігурації приводу з внутрішніми станами (активний/назва). У деяких випадках не вдається активувати додаткові приводи. Оновлені переклади.",
         "zh-cn": "修复：更正了执行器配置与内部状态（活动/名称）的同步。在某些情况下无法激活附加执行器。更新了翻译。"
-      },
-      "1.2.4": {
-        "en": "Fix: actuatorsHelper did not synchronize instance configuration with internal states (active/name). Additional actuators could not be activated.",
-        "de": "Fix: actuatorsHelper synchronisierte die Instanzkonfiguration nicht mit den internen States (active/name). Zusatzaktoren konnten dadurch nicht aktiviert werden.",
-        "ru": "Исправлено: приводыHelper не синхронизировали конфигурацию экземпляра с внутренними состояниями (активный/имя). Дополнительные исполнительные механизмы не удалось активировать.",
-        "pt": "Correção: atuatorsHelper não sincronizava a configuração da instância com os estados internos (ativo/nome). Não foi possível ativar atuadores adicionais.",
-        "nl": "Oplossing: actuatorsHelper heeft de instanceconfiguratie niet gesynchroniseerd met interne statussen (actief/naam). Er konden geen extra actuatoren worden geactiveerd.",
-        "fr": "Correctif : activatesHelper ne synchronisait pas la configuration de l'instance avec les états internes (actif/nom). Des actionneurs supplémentaires n'ont pas pu être activés.",
-        "it": "Correzione: attuatoriHelper non sincronizzava la configurazione dell'istanza con gli stati interni (attivo/nome). Non è stato possibile attivare attuatori aggiuntivi.",
-        "es": "Solución: actuadoresHelper no sincronizaba la configuración de la instancia con los estados internos (activo/nombre). No se pudieron activar actuadores adicionales.",
-        "pl": "Poprawka: aktuatorzyHelper nie synchronizowali konfiguracji instancji ze stanami wewnętrznymi (aktywny/nazwa). Nie można było aktywować dodatkowych siłowników.",
-        "uk": "Виправлення: actuatorsHelper не синхронізував конфігурацію екземпляра з внутрішніми станами (активний/назва). Не вдалося активувати додаткові приводи.",
-        "zh-cn": "修复：actuatorsHelper 未将实例配置与内部状态（活动/名称）同步。无法激活其他执行器。"
       }
     },
     "titleLang": {
