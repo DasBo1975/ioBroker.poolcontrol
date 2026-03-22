@@ -5,6 +5,7 @@
  */
 
 const utils = require('@iobroker/adapter-core');
+const { I18n } = require('@iobroker/adapter-core');
 const temperatureHelper = require('./lib/helpers/temperatureHelper');
 const timeHelper = require('./lib/helpers/timeHelper');
 const runtimeHelper = require('./lib/helpers/runtimeHelper');
@@ -90,6 +91,9 @@ class Poolcontrol extends utils.Adapter {
 
     async onReady() {
         this.log.info('Adapter started');
+
+        // NEU: i18n initialisieren
+        await I18n.init(__dirname, this);
 
         // --- Allgemeine Einstellungen ---
         await createGeneralStates(this);

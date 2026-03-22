@@ -4,12 +4,10 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## 1.2.13 (2026-03-22)
+## **WORK IN PROGRESS**
 
-### v1.2.7
-- Corrected role definitions for writable states according to ioBroker guidelines
-- Set internal learning and diagnostic states to read-only where appropriate
-- Removed obsolete repository files
+### v1.2.14
+- add i18n support for chemistry help texts
 
 ## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
 - **Pumpen-Leistungsempfehlung (ab v1.1.0)**

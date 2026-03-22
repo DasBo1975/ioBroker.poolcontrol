@@ -3,18 +3,18 @@
     "name": "poolcontrol",
     "version": "1.2.13",
     "news": {
-      "1.2.13": {
-        "en": "Added multilingual state names and descriptions (DE/EN). Improved consistency of all state texts. Internal cleanup and stability improvements.",
-        "de": "Mehrsprachige State-Namen und Beschreibungen (DE/EN) ergänzt. Einheitliche Benennung aller Datenpunkte. Interne Verbesserungen und Stabilität optimiert.",
-        "ru": "Добавлены многоязычные названия и описания штатов (DE/EN). Улучшена согласованность всех текстов состояний. Внутренняя очистка и улучшения стабильности.",
-        "pt": "Adicionados nomes e descrições de estados multilíngues (DE/EN). Melhor consistência de todos os textos estaduais. Limpeza interna e melhorias de estabilidade.",
-        "nl": "Meertalige namen en beschrijvingen van staten toegevoegd (DE/EN). Verbeterde consistentie van alle staatsteksten. Interne opschoning en stabiliteitsverbeteringen.",
-        "fr": "Ajout de noms et de descriptions d'état multilingues (DE/EN). Amélioration de la cohérence de tous les textes étatiques. Améliorations du nettoyage interne et de la stabilité.",
-        "it": "Aggiunti nomi e descrizioni degli stati multilingue (DE/EN). Maggiore coerenza di tutti i testi statali. Miglioramenti della pulizia interna e della stabilità.",
-        "es": "Se agregaron nombres y descripciones de estados multilingües (DE/EN). Coherencia mejorada de todos los textos estatales. Mejoras en la limpieza interna y la estabilidad.",
-        "pl": "Dodano wielojęzyczne nazwy i opisy stanów (DE/EN). Poprawiona spójność wszystkich tekstów stanowych. Wewnętrzne porządki i ulepszenia stabilności.",
-        "uk": "Додано багатомовні назви та описи штатів (DE/EN). Покращена узгодженість усіх державних текстів. Внутрішнє очищення та покращення стабільності.",
-        "zh-cn": "添加了多语言状态名称和描述（德语/英语）。提高了所有国家文本的一致性。内部清理和稳定性改进。"
+      "1.2.14": {
+        "en": "Add i18n support for chemistry help (common.states and help texts), fix React issues caused by invalid translations, and improve multilingual user guidance.",
+        "de": "i18n-Unterstützung für Chemie-Hilfe hinzugefügt (common.states und Hilfetexte), React-Fehler durch fehlerhafte Übersetzungen behoben und mehrsprachige Benutzerführung verbessert.",
+        "ru": "Добавьте поддержку i18n для справки по химии (common.states и справочные тексты), исправьте проблемы React, вызванные неверными переводами, и улучшите многоязычное руководство пользователя.",
+        "pt": "Adicione suporte i18n para ajuda química (common.states e textos de ajuda), corrija problemas do React causados ​​por traduções inválidas e melhore a orientação multilíngue do usuário.",
+        "nl": "Voeg i18n-ondersteuning toe voor scheikundige hulp (common.states en helpteksten), repareer React-problemen veroorzaakt door ongeldige vertalingen en verbeter de meertalige gebruikersbegeleiding.",
+        "fr": "Ajoutez la prise en charge d'i18n pour l'aide chimique (common.states et textes d'aide), corrigez les problèmes de React causés par des traductions non valides et améliorez le guidage utilisateur multilingue.",
+        "it": "Aggiungi il supporto i18n per la guida in chimica (common.states e testi di aiuto), risolvi i problemi di React causati da traduzioni non valide e migliora la guida utente multilingue.",
+        "es": "Agregue soporte i18n para ayuda sobre química (estados comunes y textos de ayuda), solucione problemas de React causados ​​por traducciones no válidas y mejore la guía del usuario multilingüe.",
+        "pl": "Dodaj obsługę i18n dla pomocy chemicznej (stany wspólne i teksty pomocy), rozwiąż problemy z React spowodowane nieprawidłowymi tłumaczeniami i ulepsz wielojęzyczne wskazówki dla użytkownika.",
+        "uk": "Додайте підтримку i18n для довідки з хімії (common.states і тексти довідки), виправте проблеми з React, викликані недійсними перекладами, і покращте багатомовні інструкції для користувачів.",
+        "zh-cn": "添加对化学帮助（common.states 和帮助文本）的 i18n 支持，修复无效翻译导致的 React 问题，并改进多语言用户指南。"
       },
       "1.2.12": {
         "en": "Repository cleanup and fixes for ioBroker repository checker. Restored required native object in io-package.json, removed invalid properties and updated README.",
@@ -67,19 +67,6 @@
         "pl": "Poprawione definicje ról dla stanów zapisywalnych zgodnie z wytycznymi ioBroker.",
         "uk": "Виправлено визначення ролей для записуваних станів відповідно до вказівок ioBroker.",
         "zh-cn": "根据 ioBroker 指南更正了可写状态的角色定义。"
-      },
-      "1.2.6": {
-        "en": "Fixed adapter checker issues, converted remaining log messages to English, updated release-script plugins and dependabot configuration.",
-        "de": "Adapter-Checker-Probleme behoben, verbleibende Logmeldungen auf Englisch umgestellt, release-script Plugins und Dependabot-Konfiguration aktualisiert.",
-        "ru": "Исправлены проблемы с проверкой адаптера, преобразованы оставшиеся сообщения журнала на английский язык, обновлены плагины сценариев выпуска и конфигурация зависимостей.",
-        "pt": "Corrigidos problemas do verificador do adaptador, convertidas mensagens de log restantes para inglês, plug-ins de script de lançamento atualizados e configuração do dependabot.",
-        "nl": "Problemen met de adaptercontrole opgelost, resterende logberichten naar het Engels geconverteerd, release-scriptplug-ins en dependabot-configuratie bijgewerkt.",
-        "fr": "Correction des problèmes de vérification d'adaptateur, conversion des messages de journal restants en anglais, mise à jour des plugins de script de version et configuration des dépendances.",
-        "it": "Risolti i problemi di controllo dell'adattatore, convertiti i messaggi di registro rimanenti in inglese, aggiornati i plugin degli script di rilascio e la configurazione di dependabot.",
-        "es": "Se solucionaron problemas del verificador de adaptadores, se convirtieron los mensajes de registro restantes al inglés, se actualizaron los complementos del script de lanzamiento y la configuración del dependabot.",
-        "pl": "Naprawiono problemy z modułem sprawdzania adaptera, przekonwertowano pozostałe komunikaty dziennika na język angielski, zaktualizowano wtyczki skryptu wydania i konfigurację zależnego bota.",
-        "uk": "Виправлено проблеми перевірки адаптера, перетворено решту повідомлень журналу на англійську мову, оновлено плагіни сценарію випуску та конфігурацію dependabot.",
-        "zh-cn": "修复了适配器检查器问题，将剩余日志消息转换为英语，更新了发布脚本插件和 dependentabot 配置。"
       }
     },
     "titleLang": {

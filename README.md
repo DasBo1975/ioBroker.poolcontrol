@@ -189,6 +189,10 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.14
+Release: 22.03.2026
+- ### add i18n support for chemistry help texts
+
 ### 1.2.13
 Release: 22.03.2026
 - Added multilingual state names and descriptions (DE/EN)
