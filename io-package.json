@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.14",
+    "version": "1.2.15",
     "news": {
       "1.2.15": {
         "en": "Fix i18n usage (replace I18n.t with I18n.translate) to resolve adapter startup crash and restart loop on certain systems.",
