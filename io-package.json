@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.13",
+    "version": "1.2.14",
     "news": {
       "1.2.14": {
         "en": "Add i18n support for chemistry help (common.states and help texts), fix React issues caused by invalid translations, and improve multilingual user guidance.",
