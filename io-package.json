@@ -146,8 +146,7 @@
       {
         "admin": ">=7.6.20"
       }
-    ],
-    "installedFrom": "file:///opt/iobroker/ioBroker.poolcontrol"
+    ]
   },
   "native": {},
   "objects": [],
