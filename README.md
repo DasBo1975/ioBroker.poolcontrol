@@ -189,6 +189,12 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.13
+Release: 22.03.2026
+- Added multilingual state names and descriptions (DE/EN)
+- Improved consistency of all state texts
+- Minor text and structure refinements
+
 ### 1.2.12
 Release: 21.03.2026
 - Repository cleanup and fixes for ioBroker repository checker

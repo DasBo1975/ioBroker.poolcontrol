@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.12",
     "news": {
+      "1.2.13": {
+        "en": "Added multilingual state names and descriptions (DE/EN). Improved consistency of all state texts. Internal cleanup and stability improvements.",
+        "de": "Mehrsprachige State-Namen und Beschreibungen (DE/EN) ergänzt. Einheitliche Benennung aller Datenpunkte. Interne Verbesserungen und Stabilität optimiert.",
+        "ru": "Добавлены многоязычные названия и описания штатов (DE/EN). Улучшена согласованность всех текстов состояний. Внутренняя очистка и улучшения стабильности.",
+        "pt": "Adicionados nomes e descrições de estados multilíngues (DE/EN). Melhor consistência de todos os textos estaduais. Limpeza interna e melhorias de estabilidade.",
+        "nl": "Meertalige namen en beschrijvingen van staten toegevoegd (DE/EN). Verbeterde consistentie van alle staatsteksten. Interne opschoning en stabiliteitsverbeteringen.",
+        "fr": "Ajout de noms et de descriptions d'état multilingues (DE/EN). Amélioration de la cohérence de tous les textes étatiques. Améliorations du nettoyage interne et de la stabilité.",
+        "it": "Aggiunti nomi e descrizioni degli stati multilingue (DE/EN). Maggiore coerenza di tutti i testi statali. Miglioramenti della pulizia interna e della stabilità.",
+        "es": "Se agregaron nombres y descripciones de estados multilingües (DE/EN). Coherencia mejorada de todos los textos estatales. Mejoras en la limpieza interna y la estabilidad.",
+        "pl": "Dodano wielojęzyczne nazwy i opisy stanów (DE/EN). Poprawiona spójność wszystkich tekstów stanowych. Wewnętrzne porządki i ulepszenia stabilności.",
+        "uk": "Додано багатомовні назви та описи штатів (DE/EN). Покращена узгодженість усіх державних текстів. Внутрішнє очищення та покращення стабільності.",
+        "zh-cn": "添加了多语言状态名称和描述（德语/英语）。提高了所有国家文本的一致性。内部清理和稳定性改进。"
+      },
       "1.2.12": {
         "en": "Repository cleanup and fixes for ioBroker repository checker. Restored required native object in io-package.json, removed invalid properties and updated README.",
         "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Erforderliches native-Objekt in der io-package.json wiederhergestellt, ungültige Eigenschaften entfernt und README aktualisiert.",
@@ -15,19 +28,6 @@
         "pl": "Oczyszczenie repozytorium i poprawki dla modułu sprawdzania repozytorium ioBroker. Przywrócono wymagany obiekt natywny w io-package.json, usunięto nieprawidłowe właściwości i zaktualizowano plik README.",
         "uk": "Очищення сховища та виправлення для засобу перевірки сховища ioBroker. Відновлено необхідний рідний об’єкт у io-package.json, видалено недійсні властивості та оновлено README.",
         "zh-cn": "ioBroker 存储库检查器的存储库清理和修复。恢复了 io-package.json 中所需的本机对象，删除了无效属性并更新了 README。"
-      },
-      "1.2.11": {
-        "en": "Repository cleanup and fixes for ioBroker repository checker. Removed invalid properties from io-package.json and updated README.",
-        "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Ungültige Eigenschaften aus der io-package.json entfernt und README aktualisiert.",
-        "ru": "Очистка репозитория и исправления для средства проверки репозитория ioBroker. Удалены недопустимые свойства из io-package.json и обновлен README.",
-        "pt": "Limpeza de repositório e correções para verificador de repositório ioBroker. Propriedades inválidas removidas de io-package.json e README atualizado.",
-        "nl": "Opschonen van opslagplaatsen en oplossingen voor ioBroker-repositorycontrole. Ongeldige eigenschappen uit io-package.json verwijderd en README bijgewerkt.",
-        "fr": "Nettoyage du référentiel et correctifs pour le vérificateur de référentiel ioBroker. Suppression des propriétés invalides de io-package.json et mise à jour du README.",
-        "it": "Pulizia del repository e correzioni per il controllo del repository ioBroker. Rimosse proprietà non valide da io-package.json e README aggiornato.",
-        "es": "Limpieza del repositorio y correcciones para el verificador del repositorio de ioBroker. Se eliminaron propiedades no válidas de io-package.json y se actualizó README.",
-        "pl": "Oczyszczenie repozytorium i poprawki dla modułu sprawdzania repozytorium ioBroker. Usunięto nieprawidłowe właściwości z io-package.json i zaktualizowano plik README.",
-        "uk": "Очищення сховища та виправлення для засобу перевірки сховища ioBroker. Видалено недійсні властивості з io-package.json і оновлено README.",
-        "zh-cn": "ioBroker 存储库检查器的存储库清理和修复。从 io-package.json 中删除了无效属性并更新了 README。"
       },
       "1.2.10": {
         "en": "Improved German translations and terminology in admin UI (jsonConfig). Fixed incorrect or misleading sensor names (e.g. flow vs temperature sensors) and improved overall wording and consistency.",
@@ -146,7 +146,8 @@
       {
         "admin": ">=7.6.20"
       }
-    ]
+    ],
+    "installedFrom": "file:///opt/iobroker/ioBroker.poolcontrol"
   },
   "native": {},
   "objects": [],
