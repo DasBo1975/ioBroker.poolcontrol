@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.14",
     "news": {
+      "1.2.15": {
+        "en": "Fix i18n usage (replace I18n.t with I18n.translate) to resolve adapter startup crash and restart loop on certain systems.",
+        "de": "i18n-Nutzung korrigiert (I18n.t durch I18n.translate ersetzt), um Absturz beim Adapterstart und Restart-Loop auf bestimmten Systemen zu beheben.",
+        "ru": "Исправьте использование i18n (замените I18n.t на I18n.translate), чтобы устранить сбой при запуске адаптера и цикл перезапуска в определенных системах.",
+        "pt": "Corrija o uso do i18n (substitua I18n.t por I18n.translate) para resolver falha na inicialização do adaptador e loop de reinicialização em determinados sistemas.",
+        "nl": "I18n-gebruik repareren (vervang I18n.t door I18n.translate) om de opstartcrash van de adapter en de herstartlus op bepaalde systemen op te lossen.",
+        "fr": "Correction de l'utilisation de i18n (remplacez I18n.t par I18n.translate) pour résoudre le crash de démarrage de l'adaptateur et la boucle de redémarrage sur certains systèmes.",
+        "it": "Correggere l'utilizzo di i18n (sostituire I18n.t con I18n.translate) per risolvere il crash di avvio dell'adattatore e riavviare il ciclo su alcuni sistemi.",
+        "es": "Corrija el uso de i18n (reemplace I18n.t con I18n.translate) para resolver el bloqueo de inicio del adaptador y el ciclo de reinicio en ciertos sistemas.",
+        "pl": "Napraw użycie i18n (zamień I18n.t na I18n.translate), aby rozwiązać awarię uruchamiania adaptera i pętlę restartu w niektórych systemach.",
+        "uk": "Виправте використання i18n (замініть I18n.t на I18n.translate), щоб усунути збій запуску адаптера та цикл перезапуску в певних системах.",
+        "zh-cn": "修复 i18n 使用情况（将 I18n.t 替换为 I18n.translate），以解决某些系统上的适配器启动崩溃和重新启动循环问题。"
+      },
       "1.2.14": {
         "en": "Add i18n support for chemistry help (common.states and help texts), fix React issues caused by invalid translations, and improve multilingual user guidance.",
         "de": "i18n-Unterstützung für Chemie-Hilfe hinzugefügt (common.states und Hilfetexte), React-Fehler durch fehlerhafte Übersetzungen behoben und mehrsprachige Benutzerführung verbessert.",
@@ -54,19 +67,6 @@
         "pl": "Naprawiono nieprawidłową wspólną definicję w stanach wykonawczych, która mogła powodować awarię widoku obiektów administracyjnych.",
         "uk": "Виправлено недійсне загальне визначення в станах виконання, яке могло привести до збою перегляду об’єктів адміністратора.",
         "zh-cn": "修复了运行时状态中无效的通用定义，该定义可能会导致管理对象视图崩溃。"
-      },
-      "1.2.7": {
-        "en": "Corrected role definitions for writable states according to ioBroker guidelines.",
-        "de": "Rollen-Definitionen für beschreibbare States gemäß ioBroker-Richtlinien korrigiert.",
-        "ru": "Исправлены определения ролей для записываемых состояний в соответствии с рекомендациями ioBroker.",
-        "pt": "Definições de função corrigidas para estados graváveis ​​de acordo com as diretrizes do ioBroker.",
-        "nl": "Roldefinities voor beschrijfbare statussen gecorrigeerd volgens de richtlijnen van ioBroker.",
-        "fr": "Définitions de rôles corrigées pour les états inscriptibles conformément aux directives ioBroker.",
-        "it": "Corrette le definizioni dei ruoli per gli stati scrivibili secondo le linee guida di ioBroker.",
-        "es": "Definiciones de roles corregidas para estados de escritura según las pautas de ioBroker.",
-        "pl": "Poprawione definicje ról dla stanów zapisywalnych zgodnie z wytycznymi ioBroker.",
-        "uk": "Виправлено визначення ролей для записуваних станів відповідно до вказівок ioBroker.",
-        "zh-cn": "根据 ioBroker 指南更正了可写状态的角色定义。"
       }
     },
     "titleLang": {
