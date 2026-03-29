@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('node:fs');
 
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 const ioPack = JSON.parse(fs.readFileSync('io-package.json', 'utf8'));
