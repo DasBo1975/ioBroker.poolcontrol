@@ -1,0 +1,10 @@
+rules:
+  - match:
+      dependency_type: development
+      update_type: "version-update:semver-minor"
+    merge: true
+
+  - match:
+      dependency_type: development
+      update_type: "version-update:semver-patch"
+    merge: true
