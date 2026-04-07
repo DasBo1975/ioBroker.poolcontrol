@@ -4,7 +4,7 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## **WORK IN PROGRESS**
+## 1.2.16 (2026-04-07)
 
 ### 1.2.16
 Release: 07.04.2026
