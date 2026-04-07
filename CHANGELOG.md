@@ -4,7 +4,7 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## **WORK IN PROGRESS**
+## 1.2.18 (2026-04-07)
 
 ### 1.2.18 (NOT RELEASED)
 - (DasBo) Fixed persistence issue for season_active (no longer overwritten on adapter start)

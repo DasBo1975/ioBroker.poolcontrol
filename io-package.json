@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.17",
+    "version": "1.2.18",
     "news": {
       "1.2.18": {
         "en": "Fixed persistence issues for season and frost states. Season_active is now no longer overwritten on adapter start. Frost protection settings are now stored persistently.",
