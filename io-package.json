@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.15",
+    "version": "1.2.16",
     "news": {
+      "1.2.16": {
+        "en": "Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states (e.g. reset and configuration values), ensuring proper event handling and immediate execution of the reset logic.",
+        "de": "Fix: Problem behoben, bei dem der Reset-Button für das Druck-Lernsystem nicht zuverlässig ausgelöst wurde. Der pumpHelper4 abonniert nun explizit die relevanten eigenen States (z. B. Reset und Konfigurationswerte), wodurch die Eventverarbeitung und die sofortige Ausführung der Reset-Logik sichergestellt sind.",
+        "ru": "Исправление: решена проблема, из-за которой кнопка сброса обучения давлению не срабатывала надежно. PumpHelper4 теперь явно подписывается на соответствующие внутренние состояния (например, значения сброса и конфигурации), обеспечивая правильную обработку событий и немедленное выполнение логики сброса.",
+        "pt": "Correção: Resolvido um problema em que o botão de redefinição do aprendizado de pressão não acionava de maneira confiável. O pumpHelper4 agora assina explicitamente seus estados internos relevantes (por exemplo, valores de redefinição e configuração), garantindo o tratamento adequado de eventos e a execução imediata da lógica de redefinição.",
+        "nl": "Oplossing: een probleem opgelost waarbij de resetknop voor het leren van de druk niet betrouwbaar werd geactiveerd. De pumpHelper4 onderschrijft nu expliciet de relevante interne statussen (bijvoorbeeld reset- en configuratiewaarden), waardoor een juiste afhandeling van gebeurtenissen en onmiddellijke uitvoering van de resetlogica wordt gegarandeerd.",
+        "fr": "Correction : Résolution d'un problème où le bouton de réinitialisation de l'apprentissage de la pression ne se déclenchait pas de manière fiable. Le PumpHelper4 s'abonne désormais explicitement à ses états internes pertinents (par exemple, les valeurs de réinitialisation et de configuration), garantissant une gestion appropriée des événements et l'exécution immédiate de la logique de réinitialisation.",
+        "it": "Correzione: risolto un problema per cui il pulsante di ripristino dell'apprendimento della pressione non si attivava in modo affidabile. Il pumpHelper4 ora sottoscrive esplicitamente i suoi stati interni rilevanti (ad esempio valori di ripristino e configurazione), garantendo la corretta gestione degli eventi e l'esecuzione immediata della logica di ripristino.",
+        "es": "Solución: se resolvió un problema por el cual el botón de reinicio del aprendizaje de presión no se activaba de manera confiable. El pumpHelper4 ahora se suscribe explícitamente a sus estados internos relevantes (por ejemplo, valores de reinicio y configuración), lo que garantiza un manejo adecuado de eventos y la ejecución inmediata de la lógica de reinicio.",
+        "pl": "Poprawka: rozwiązano problem polegający na tym, że przycisk resetowania uczenia się ciśnienia nie uruchamiał się niezawodnie. PumpHelper4 teraz jawnie subskrybuje swoje odpowiednie stany wewnętrzne (np. wartości resetowania i konfiguracji), zapewniając prawidłową obsługę zdarzeń i natychmiastowe wykonanie logiki resetowania.",
+        "uk": "Виправлення: вирішено проблему, через яку кнопка скидання навчання тиску не спрацьовувала надійно. PumpHelper4 тепер явно підписується на свої відповідні внутрішні стани (наприклад, значення скидання та конфігурації), забезпечуючи правильну обробку подій і негайне виконання логіки скидання.",
+        "zh-cn": "修复：解决了压力学习重置按钮无法可靠触发的问题。 PumpHelper4 现在显式订阅其相关的内部状态（例如重置和配置值），确保正确的事件处理和立即执行重置逻辑。"
+      },
       "1.2.15": {
         "en": "Fix i18n usage (replace I18n.t with I18n.translate) to resolve adapter startup crash and restart loop on certain systems.",
         "de": "i18n-Nutzung korrigiert (I18n.t durch I18n.translate ersetzt), um Absturz beim Adapterstart und Restart-Loop auf bestimmten Systemen zu beheben.",
@@ -54,19 +67,6 @@
         "pl": "Ulepszone niemieckie tłumaczenia i terminologia w interfejsie administratora (jsonConfig). Poprawiono nieprawidłowe lub wprowadzające w błąd nazwy czujników (np. czujniki przepływu i temperatury) oraz poprawiono ogólne sformułowanie i spójność.",
         "uk": "Покращено німецький переклад і термінологію в інтерфейсі адміністратора (jsonConfig). Виправлено неправильні або оманливі назви датчиків (наприклад, датчики потоку чи температури) і покращено загальне формулювання та послідовність.",
         "zh-cn": "改进了管理 UI (jsonConfig) 中的德语翻译和术语。修复了不正确或误导性的传感器名称（例如流量与温度传感器）并改进了整体措辞和一致性。"
-      },
-      "1.2.9": {
-        "en": "Fixed invalid common definition in runtime states that could crash the admin objects view.",
-        "de": "Fehler behoben: Eine ungültige common-Definition in den Runtime-States konnte die Objektansicht im Admin abstürzen lassen.",
-        "ru": "Исправлено недопустимое общее определение в состояниях среды выполнения, которое могло привести к сбою представления объектов администратора.",
-        "pt": "Corrigida definição comum inválida em estados de tempo de execução que poderiam travar a visualização de objetos administrativos.",
-        "nl": "Er is een probleem opgelost met een ongeldige algemene definitie in runtime-statussen die de weergave van beheerdersobjecten konden laten crashen.",
-        "fr": "Correction d'une définition commune non valide dans les états d'exécution qui pouvait faire planter la vue des objets d'administration.",
-        "it": "Risolta la definizione comune non valida negli stati di runtime che poteva causare l'arresto anomalo della vista degli oggetti di amministrazione.",
-        "es": "Se corrigió una definición común no válida en estados de tiempo de ejecución que podían bloquear la vista de objetos de administración.",
-        "pl": "Naprawiono nieprawidłową wspólną definicję w stanach wykonawczych, która mogła powodować awarię widoku obiektów administracyjnych.",
-        "uk": "Виправлено недійсне загальне визначення в станах виконання, яке могло привести до збою перегляду об’єктів адміністратора.",
-        "zh-cn": "修复了运行时状态中无效的通用定义，该定义可能会导致管理对象视图崩溃。"
       }
     },
     "titleLang": {

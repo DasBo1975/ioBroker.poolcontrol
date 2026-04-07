@@ -189,6 +189,10 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### 1.2.16
+Release: 07.04.2026
+- Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states to ensure proper event handling.
+
 ### 1.2.15
 Release: 22.03.2026
 - Fix i18n usage (replace I18n.t with I18n.translate) to resolve adapter startup crash and restart loop on certain systems.
