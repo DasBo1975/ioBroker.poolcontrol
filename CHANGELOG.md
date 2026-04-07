@@ -4,9 +4,9 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## 1.2.16 (2026-04-07)
+## **WORK IN PROGRESS**
 
-### 1.2.16
+### 1.2.17
 Release: 07.04.2026
 - Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states to ensure proper event handling.
 
