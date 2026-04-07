@@ -135,12 +135,6 @@ class Poolcontrol extends utils.Adapter {
         // --- Statusübersicht ---
         await createStatusStates(this);
 
-        // Saisonstatus aus Config übernehmen
-        await this.setStateAsync('status.season_active', {
-            val: this.config.season_active,
-            ack: true,
-        });
-
         // --- Control States ---
         await createControlStates(this);
 

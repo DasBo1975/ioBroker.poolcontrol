@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.17",
     "news": {
+      "1.2.18": {
+        "en": "Fixed persistence issues for season and frost states. Season_active is now no longer overwritten on adapter start. Frost protection settings are now stored persistently.",
+        "de": "Persistenzprobleme für Saison- und Frost-States behoben. season_active wird beim Adapterstart nicht mehr überschrieben. Frostschutz-Einstellungen werden nun dauerhaft gespeichert.",
+        "ru": "Исправлены проблемы с постоянством состояний сезона и заморозков. Season_active теперь больше не перезаписывается при запуске адаптера. Настройки защиты от замерзания теперь сохраняются постоянно.",
+        "pt": "Corrigidos problemas de persistência para estados sazonais e de geada. Season_active agora não é mais substituído na inicialização do adaptador. As configurações de proteção contra congelamento agora são armazenadas de forma persistente.",
+        "nl": "Vaste persistentieproblemen voor seizoens- en vorsttoestanden. Season_active wordt nu niet langer overschreven bij het starten van de adapter. De vorstbeveiligingsinstellingen worden nu permanent opgeslagen.",
+        "fr": "Correction de problèmes de persistance pour les états de saison et de gel. Season_active n’est désormais plus écrasé au démarrage de l’adaptateur. Les paramètres de protection contre le gel sont désormais stockés de manière persistante.",
+        "it": "Risolti i problemi di persistenza relativi alla stagione e agli stati di gelo. Season_active ora non viene più sovrascritto all'avvio dell'adattatore. Le impostazioni della protezione antigelo vengono ora memorizzate in modo persistente.",
+        "es": "Se corrigieron problemas de persistencia para los estados de temporada y heladas. Season_active ya no se sobrescribe al iniciar el adaptador. Los ajustes de protección contra heladas ahora se almacenan de forma persistente.",
+        "pl": "Naprawiono problemy z trwałością stanów pór roku i mrozu. Sezon_aktywny nie jest już nadpisywany podczas uruchamiania adaptera. Ustawienia ochrony przed zamarzaniem są teraz przechowywane trwale.",
+        "uk": "Виправлено проблеми стійкості для сезону та морозу. Season_active тепер більше не перезаписується під час запуску адаптера. Параметри захисту від замерзання тепер зберігаються постійно.",
+        "zh-cn": "修复了季节和霜冻状态的持久性问题。 Season_active 现在不再在适配器启动时被覆盖。防霜保护设置现在可以永久存储。"
+      },
       "1.2.17": {
         "en": "Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states (e.g. reset and configuration values), ensuring proper event handling and immediate execution of the reset logic.",
         "de": "Fix: Problem behoben, bei dem der Reset-Button für das Druck-Lernsystem nicht zuverlässig ausgelöst wurde. Der pumpHelper4 abonniert nun explizit die relevanten eigenen States (z. B. Reset und Konfigurationswerte), wodurch die Eventverarbeitung und die sofortige Ausführung der Reset-Logik sichergestellt sind.",
@@ -54,32 +67,6 @@
         "pl": "Dodaj obsługę i18n dla pomocy chemicznej (stany wspólne i teksty pomocy), rozwiąż problemy z React spowodowane nieprawidłowymi tłumaczeniami i ulepsz wielojęzyczne wskazówki dla użytkownika.",
         "uk": "Додайте підтримку i18n для довідки з хімії (common.states і тексти довідки), виправте проблеми з React, викликані недійсними перекладами, і покращте багатомовні інструкції для користувачів.",
         "zh-cn": "添加对化学帮助（common.states 和帮助文本）的 i18n 支持，修复无效翻译导致的 React 问题，并改进多语言用户指南。"
-      },
-      "1.2.12": {
-        "en": "Repository cleanup and fixes for ioBroker repository checker. Restored required native object in io-package.json, removed invalid properties and updated README.",
-        "de": "Repository-Bereinigung und Fehlerbehebungen für den ioBroker Repository-Checker. Erforderliches native-Objekt in der io-package.json wiederhergestellt, ungültige Eigenschaften entfernt und README aktualisiert.",
-        "ru": "Очистка репозитория и исправления для средства проверки репозитория ioBroker. Восстановлен необходимый собственный объект в io-package.json, удалены недопустимые свойства и обновлен README.",
-        "pt": "Limpeza de repositório e correções para verificador de repositório ioBroker. Objeto nativo necessário restaurado em io-package.json, propriedades inválidas removidas e README atualizado.",
-        "nl": "Opschonen van opslagplaatsen en oplossingen voor ioBroker-repositorycontrole. Vereist native object in io-package.json hersteld, ongeldige eigenschappen verwijderd en README bijgewerkt.",
-        "fr": "Nettoyage du référentiel et correctifs pour le vérificateur de référentiel ioBroker. Objet natif requis restauré dans io-package.json, suppression des propriétés non valides et mise à jour du README.",
-        "it": "Pulizia del repository e correzioni per il controllo del repository ioBroker. Oggetto nativo richiesto ripristinato in io-package.json, proprietà non valide rimosse e README aggiornato.",
-        "es": "Limpieza del repositorio y correcciones para el verificador del repositorio de ioBroker. Se restauró el objeto nativo requerido en io-package.json, se eliminaron propiedades no válidas y se actualizó README.",
-        "pl": "Oczyszczenie repozytorium i poprawki dla modułu sprawdzania repozytorium ioBroker. Przywrócono wymagany obiekt natywny w io-package.json, usunięto nieprawidłowe właściwości i zaktualizowano plik README.",
-        "uk": "Очищення сховища та виправлення для засобу перевірки сховища ioBroker. Відновлено необхідний рідний об’єкт у io-package.json, видалено недійсні властивості та оновлено README.",
-        "zh-cn": "ioBroker 存储库检查器的存储库清理和修复。恢复了 io-package.json 中所需的本机对象，删除了无效属性并更新了 README。"
-      },
-      "1.2.10": {
-        "en": "Improved German translations and terminology in admin UI (jsonConfig). Fixed incorrect or misleading sensor names (e.g. flow vs temperature sensors) and improved overall wording and consistency.",
-        "de": "Verbesserte deutsche Übersetzungen und Begrifflichkeiten in der Admin-Oberfläche (jsonConfig). Falsche bzw. missverständliche Sensorbezeichnungen (z. B. Flow vs. Temperatursensoren) korrigiert und allgemeine Formulierungen sowie Konsistenz verbessert.",
-        "ru": "Улучшены немецкие переводы и терминология в пользовательском интерфейсе администратора (jsonConfig). Исправлены неправильные или вводящие в заблуждение названия датчиков (например, датчики расхода и температуры), а также улучшены общие формулировки и согласованность.",
-        "pt": "Traduções e terminologia em alemão aprimoradas na interface de administração (jsonConfig). Corrigimos nomes de sensores incorretos ou enganosos (por exemplo, sensores de fluxo versus temperatura) e melhoramos o texto e a consistência geral.",
-        "nl": "Verbeterde Duitse vertalingen en terminologie in de beheerdersinterface (jsonConfig). Foutieve of misleidende sensornamen opgelost (bijv. flow- versus temperatuursensoren) en verbeterde algemene bewoording en consistentie.",
-        "fr": "Traductions et terminologie allemandes améliorées dans l'interface utilisateur d'administration (jsonConfig). Correction des noms de capteurs incorrects ou trompeurs (par exemple, capteurs de débit ou de température) et amélioration de la formulation et de la cohérence globales.",
-        "it": "Traduzioni e terminologia tedesca migliorate nell'interfaccia utente di amministrazione (jsonConfig). Risolti i nomi dei sensori errati o fuorvianti (ad esempio sensori di flusso o di temperatura) e migliorata la formulazione e la coerenza generale.",
-        "es": "Traducciones y terminología alemanas mejoradas en la interfaz de usuario de administración (jsonConfig). Se corrigieron nombres de sensores incorrectos o engañosos (por ejemplo, sensores de flujo versus temperatura) y se mejoraron la redacción y coherencia generales.",
-        "pl": "Ulepszone niemieckie tłumaczenia i terminologia w interfejsie administratora (jsonConfig). Poprawiono nieprawidłowe lub wprowadzające w błąd nazwy czujników (np. czujniki przepływu i temperatury) oraz poprawiono ogólne sformułowanie i spójność.",
-        "uk": "Покращено німецький переклад і термінологію в інтерфейсі адміністратора (jsonConfig). Виправлено неправильні або оманливі назви датчиків (наприклад, датчики потоку чи температури) і покращено загальне формулювання та послідовність.",
-        "zh-cn": "改进了管理 UI (jsonConfig) 中的德语翻译和术语。修复了不正确或误导性的传感器名称（例如流量与温度传感器）并改进了整体措辞和一致性。"
       }
     },
     "titleLang": {

@@ -4,11 +4,11 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## 1.2.17 (2026-04-07)
+## **WORK IN PROGRESS**
 
-### 1.2.17
-Release: 07.04.2026
-- Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states to ensure proper event handling.
+### 1.2.18 (NOT RELEASED)
+- (DasBo) Fixed persistence issue for season_active (no longer overwritten on adapter start)
+- (DasBo) Added persistent handling for frost protection states
 
 ## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
 - **Pumpen-Leistungsempfehlung (ab v1.1.0)**
