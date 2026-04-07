@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.16",
+    "version": "1.2.15",
     "news": {
       "1.2.16": {
         "en": "Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states (e.g. reset and configuration values), ensuring proper event handling and immediate execution of the reset logic.",
