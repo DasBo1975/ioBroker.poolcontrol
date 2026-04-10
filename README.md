@@ -189,6 +189,14 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+## 1.2.19 (2026-04-10)
+
+- Fixed an interaction issue between `photovoltaicHelper` and `controlHelper` where automatic follow-up pumping could be stopped unexpectedly
+- photovoltaicHelper now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active
+- Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
+- `photovoltaic.threshold_w` is now correctly synchronized with the instance configuration
+- Changes to the PV surplus threshold in adapter settings are now reliably reflected in the corresponding read-only datapoint
+
 ### 1.2.18
 Release: 07.04.2026
 - Fixed persistence issue for `status.season_active` (no longer overwritten on adapter start)
