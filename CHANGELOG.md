@@ -6,8 +6,8 @@ Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 ---
 ## **WORK IN PROGRESS**
 
-## 1.2.19 (2026-04-10)
-
+## 1.2.19 
+(2026-04-10)
 - Fixed an interaction issue between `photovoltaicHelper` and `controlHelper` where automatic follow-up pumping could be stopped unexpectedly
 - photovoltaicHelper now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active
 - Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
