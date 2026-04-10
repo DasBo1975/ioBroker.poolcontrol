@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.18",
+    "version": "1.2.19",
     "news": {
       "1.2.19": {
         "en": "Bugfix release. Fixes an interaction issue between photovoltaicHelper and controlHelper where automatic follow-up pumping could be interrupted unexpectedly. The photovoltaic stop logic now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active. In addition, the read-only state photovoltaic.threshold_w is now synchronized correctly with the instance configuration so that changes in the adapter settings are reflected reliably in the visible datapoint.",
