@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.19",
+    "version": "1.2.20",
     "news": {
       "1.2.20": {
         "en": "Bugfix release. Reduced unnecessary state writes in the status and photovoltaic helpers. Summary timestamps and PV update timestamps are now only written when the related functional result actually changes. This makes the adapter noticeably quieter and avoids needless state updates without changing the existing control logic.",

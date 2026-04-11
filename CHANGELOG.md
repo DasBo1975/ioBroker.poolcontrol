@@ -4,7 +4,7 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## **WORK IN PROGRESS**
+## 1.2.20 (2026-04-11)
 
 Release: 11.04.2026
 - (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
