@@ -4,14 +4,10 @@ Alle nennenswerten Änderungen dieses Projekts werden in dieser Datei dokumentie
 Die Versionsnummern folgen dem Schema **MAJOR.MINOR.PATCH**.
 
 ---
-## 1.2.19 (2026-04-10)
+## **WORK IN PROGRESS**
 
-(2026-04-10)
-- Fixed an interaction issue between `photovoltaicHelper` and `controlHelper` where automatic follow-up pumping could be stopped unexpectedly
-- photovoltaicHelper now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active
-- Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
-- `photovoltaic.threshold_w` is now correctly synchronized with the instance configuration
-- Changes to the PV surplus threshold in adapter settings are now reliably reflected in the corresponding read-only datapoint
+Release: 11.04.2026
+- (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
 
 ## v1.1.0 Pumpen-Leistungsempfehlung (23.01.2026)
 - **Pumpen-Leistungsempfehlung (ab v1.1.0)**

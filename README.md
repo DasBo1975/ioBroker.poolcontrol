@@ -189,8 +189,12 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
-## 1.2.19 (2026-04-10)
+### 1.2.20
+Release: 11.04.2026
+- (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
 
+### 1.2.19
+Release: 10.04.2026
 - Fixed an interaction issue between `photovoltaicHelper` and `controlHelper` where automatic follow-up pumping could be stopped unexpectedly
 - photovoltaicHelper now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active
 - Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
