@@ -187,7 +187,12 @@ New features are added regularly – please refer to the changelog.
 
 ---
 
-## Changelog
+## **WORK IN PROGRESS**
+
+### Bugfixes
+- Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
+- Afterrun now starts only once and runs reliably to completion
+- Proper cleanup when surplus becomes active again during afterrun
 
 ### 1.2.20
 Release: 11.04.2026
