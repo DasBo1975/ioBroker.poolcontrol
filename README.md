@@ -187,9 +187,8 @@ New features are added regularly – please refer to the changelog.
 
 ---
 
-## **WORK IN PROGRESS**
+### **WORK IN PROGRESS**
 
-### Bugfixes
 - Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
 - Afterrun now starts only once and runs reliably to completion
 - Proper cleanup when surplus becomes active again during afterrun
