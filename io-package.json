@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.20",
+    "version": "1.2.21",
     "news": {
       "1.2.21": {
         "en": "Bugfix: Fixed an issue in the photovoltaic helper where the afterrun timer was unintentionally restarted on every recalculation without PV surplus. This could delay the pump shutdown significantly. The afterrun now starts only once when surplus ends and runs reliably to completion. Also ensures proper cleanup when surplus becomes active again during afterrun.",

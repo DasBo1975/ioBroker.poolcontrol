@@ -4,6 +4,14 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.2.15
+Release: 22.03.2026
+- Fix i18n usage (replace I18n.t with I18n.translate) to resolve adapter startup crash and restart loop on certain systems.
+
+
+*(older versions are automatically moved to CHANGELOG_OLD.md)*
+
+---
 
 ## 1.2.14 (2026-03-22)
 - Added i18n support for chemistry help texts
