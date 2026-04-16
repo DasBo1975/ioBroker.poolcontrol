@@ -186,7 +186,7 @@ New features are added regularly – please refer to the changelog.
 - [help.md (detailed description and notes)](./help.md)
 
 ---
-### **WORK IN PROGRESS**
+### 1.3.0 (2026-04-16)
 
 - Added extended solar control (delta-based temperature logic)
 - Support for external actuator control (boolean/socket)
@@ -218,11 +218,6 @@ Release: 10.04.2026
 - Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
 - `photovoltaic.threshold_w` is now correctly synchronized with the instance configuration
 - Changes to the PV surplus threshold in adapter settings are now reliably reflected in the corresponding read-only datapoint
-
-### 1.2.18
-Release: 07.04.2026
-- Fixed persistence issue for `status.season_active` (no longer overwritten on adapter start)
-- Improved persistence for frost protection settings
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  

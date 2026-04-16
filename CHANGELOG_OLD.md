@@ -4,6 +4,11 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.2.18
+Release: 07.04.2026
+- Fixed persistence issue for `status.season_active` (no longer overwritten on adapter start)
+- Improved persistence for frost protection settings
+
 ## 1.2.17
 Release: 07.04.2026
 - Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states to ensure proper event handling.
