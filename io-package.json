@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.2.21",
+    "version": "1.2.22",
     "news": {
       "1.2.22": {
         "en": "Added new read-only state solar.request_active to indicate when solar logic would request the pump. Improved robustness of solarHelper by handling invalid temperature values.",

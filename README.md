@@ -186,7 +186,7 @@ New features are added regularly – please refer to the changelog.
 - [help.md (detailed description and notes)](./help.md)
 
 ---
-### **WORK IN PROGRESS**
+### 1.2.22 (2026-04-16)
 
 - Added new read-only state `solar.request_active` to indicate when solar logic would request the pump
 - Improved solarHelper robustness by handling invalid temperature values
@@ -213,10 +213,6 @@ Release: 10.04.2026
 Release: 07.04.2026
 - Fixed persistence issue for `status.season_active` (no longer overwritten on adapter start)
 - Improved persistence for frost protection settings
-
-### 1.2.17
-Release: 07.04.2026
-- Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states to ensure proper event handling.
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
