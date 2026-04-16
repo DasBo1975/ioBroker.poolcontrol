@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.22",
     "news": {
+      "1.3.0": {
+        "en": "Added extended solar control with selectable standard/extended mode, delta-based control logic, external actuator support, priority/blocking handling, and localized status texts.",
+        "de": "Erweiterte Solarsteuerung ergänzt mit wählbarem Standard-/Extended-Modus, differenzbasierter Regelung, externer Aktor-Ansteuerung, Vorrang-/Blockierlogik und lokalisierten Statusmeldungen.",
+        "ru": "Добавлено расширенное управление солнечной батареей с возможностью выбора стандартного/расширенного режима, логикой управления на основе дельты, поддержкой внешнего исполнительного механизма, обработкой приоритета/блокировки и локализованными текстами состояния.",
+        "pt": "Adicionado controle solar estendido com modo padrão/estendido selecionável, lógica de controle baseada em delta, suporte a atuador externo, tratamento de prioridade/bloqueio e textos de status localizados.",
+        "nl": "Uitgebreide zonneregeling toegevoegd met selecteerbare standaard/uitgebreide modus, op delta gebaseerde besturingslogica, ondersteuning voor externe actuatoren, afhandeling van prioriteiten/blokkeringen en gelokaliseerde statusteksten.",
+        "fr": "Ajout d'un contrôle solaire étendu avec mode standard/étendu sélectionnable, logique de contrôle basée sur le delta, prise en charge d'actionneurs externes, gestion des priorités/blocages et textes d'état localisés.",
+        "it": "Aggiunto controllo solare esteso con modalità standard/estesa selezionabile, logica di controllo basata su delta, supporto per attuatori esterni, gestione priorità/blocco e testi di stato localizzati.",
+        "es": "Se agregó control solar extendido con modo estándar/extendido seleccionable, lógica de control basada en delta, soporte de actuador externo, manejo de prioridad/bloqueo y textos de estado localizados.",
+        "pl": "Dodano rozszerzone sterowanie solarne z możliwością wyboru trybu standardowego/rozszerzonego, logikę sterowania opartą na delta, obsługę zewnętrznych siłowników, obsługę priorytetów/blokowania i zlokalizowane teksty stanu.",
+        "uk": "Додано розширене керування геліосистемою з вибором стандартного/розширеного режиму, логікою керування на основі дельти, підтримкою зовнішнього приводу, обробкою пріоритетів/блокування та локалізованими текстами стану.",
+        "zh-cn": "添加了扩展太阳能控制，具有可选的标准/扩展模式、基于增量的控制逻辑、外部执行器支持、优先级/阻止处理和本地化状态文本。"
+      },
       "1.2.22": {
         "en": "Added new read-only state solar.request_active to indicate when solar logic would request the pump. Improved robustness of solarHelper by handling invalid temperature values.",
         "de": "Neuer read-only Datenpunkt solar.request_active hinzugefügt, der anzeigt, wann die Solarlogik die Pumpe anfordern würde. Stabilität des solarHelpers verbessert durch Behandlung ungültiger Temperaturwerte.",
@@ -54,19 +67,6 @@
         "pl": "Wydanie poprawek błędów. Rozwiązuje problem interakcji pomiędzy photovoltaicHelper i controlHelper, powodujący nieoczekiwane przerwanie automatycznego pompowania uzupełniającego. Logika zatrzymania fotowoltaiki uwzględnia teraz priorytet ControlHelper i nie zatrzymuje już pompy, gdy aktywne jest automatyczne pompowanie uzupełniające. Ponadto stan tylko do odczytu photovoltaic.threshold_w jest teraz poprawnie zsynchronizowany z konfiguracją instancji, dzięki czemu zmiany w ustawieniach adaptera są niezawodnie odzwierciedlane w widocznym punkcie danych.",
         "uk": "Реліз виправлення помилок. Вирішує проблему взаємодії між photovoltaicHelper і controlHelper, через яку автоматичне подальше відкачування може бути несподівано перервано. Логіка фотоелектричної зупинки тепер враховує пріоритет controlHelper і більше не зупиняє насос, поки активна автоматична подальша перекачування. Крім того, стан тільки для читання photovoltaic.threshold_w тепер правильно синхронізовано з конфігурацією екземпляра, щоб зміни в налаштуваннях адаптера надійно відображалися у видимій точці даних.",
         "zh-cn": "错误修复版本。修复了 PVHelper 和 controlHelper 之间的交互问题，其中自动后续泵送可能会意外中断。光伏停止逻辑现在尊重 controlHelper 优先级，并且在自动后续泵送处于活动状态时不再停止泵。此外，只读状态 PV.threshold_w 现在已与实例配置正确同步，以便适配器设置中的更改能够可靠地反映在可见数据点中。"
-      },
-      "1.2.18": {
-        "en": "Fixed persistence issues for season and frost states. Season_active is now no longer overwritten on adapter start. Frost protection settings are now stored persistently.",
-        "de": "Persistenzprobleme für Saison- und Frost-States behoben. season_active wird beim Adapterstart nicht mehr überschrieben. Frostschutz-Einstellungen werden nun dauerhaft gespeichert.",
-        "ru": "Исправлены проблемы с постоянством состояний сезона и заморозков. Season_active теперь больше не перезаписывается при запуске адаптера. Настройки защиты от замерзания теперь сохраняются постоянно.",
-        "pt": "Corrigidos problemas de persistência para estados sazonais e de geada. Season_active agora não é mais substituído na inicialização do adaptador. As configurações de proteção contra congelamento agora são armazenadas de forma persistente.",
-        "nl": "Vaste persistentieproblemen voor seizoens- en vorsttoestanden. Season_active wordt nu niet langer overschreven bij het starten van de adapter. De vorstbeveiligingsinstellingen worden nu permanent opgeslagen.",
-        "fr": "Correction de problèmes de persistance pour les états de saison et de gel. Season_active n’est désormais plus écrasé au démarrage de l’adaptateur. Les paramètres de protection contre le gel sont désormais stockés de manière persistante.",
-        "it": "Risolti i problemi di persistenza relativi alla stagione e agli stati di gelo. Season_active ora non viene più sovrascritto all'avvio dell'adattatore. Le impostazioni della protezione antigelo vengono ora memorizzate in modo persistente.",
-        "es": "Se corrigieron problemas de persistencia para los estados de temporada y heladas. Season_active ya no se sobrescribe al iniciar el adaptador. Los ajustes de protección contra heladas ahora se almacenan de forma persistente.",
-        "pl": "Naprawiono problemy z trwałością stanów pór roku i mrozu. Sezon_aktywny nie jest już nadpisywany podczas uruchamiania adaptera. Ustawienia ochrony przed zamarzaniem są teraz przechowywane trwale.",
-        "uk": "Виправлено проблеми стійкості для сезону та морозу. Season_active тепер більше не перезаписується під час запуску адаптера. Параметри захисту від замерзання тепер зберігаються постійно.",
-        "zh-cn": "修复了季节和霜冻状态的持久性问题。 Season_active 现在不再在适配器启动时被覆盖。防霜保护设置现在可以永久存储。"
       }
     },
     "titleLang": {

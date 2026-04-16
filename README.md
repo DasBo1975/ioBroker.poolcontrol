@@ -186,6 +186,16 @@ New features are added regularly – please refer to the changelog.
 - [help.md (detailed description and notes)](./help.md)
 
 ---
+### **WORK IN PROGRESS**
+
+- Added extended solar control (delta-based temperature logic)
+- Support for external actuator control (boolean/socket)
+- Standard / Extended solar mode selection
+- Priority and blocking logic (controlHelper, timeHelper, pump mode, season)
+- Improved status states (active, request, blocked, reason, info)
+- Added i18n support for solar extended status texts
+- Added selectable configuration for temperature source and control type
+
 ### 1.2.22 (2026-04-16)
 
 - Added new read-only state `solar.request_active` to indicate when solar logic would request the pump

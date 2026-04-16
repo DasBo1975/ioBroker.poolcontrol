@@ -20,6 +20,7 @@ const pumpSpeedHelper = require('./lib/helpers/pumpSpeedHelper'); // NEU
 const speechHelper = require('./lib/helpers/speechHelper');
 const consumptionHelper = require('./lib/helpers/consumptionHelper');
 const solarHelper = require('./lib/helpers/solarHelper');
+const solarExtendedHelper = require('./lib/helpers/solarExtendedHelper'); // NEU
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
 const photovoltaicHelper = require('./lib/helpers/photovoltaicHelper');
@@ -41,6 +42,7 @@ const { createPumpStates3 } = require('./lib/stateDefinitions/pumpStates3');
 const { createPumpStates4 } = require('./lib/stateDefinitions/pumpStates4');
 const { createPumpSpeedStates } = require('./lib/stateDefinitions/pumpSpeedStates'); // NEU
 const { createSolarStates } = require('./lib/stateDefinitions/solarStates');
+const { createSolarExtendedStates } = require('./lib/stateDefinitions/solarExtendedStates'); // NEU
 const { createPhotovoltaicStates } = require('./lib/stateDefinitions/photovoltaicStates');
 const { createGeneralStates } = require('./lib/stateDefinitions/generalStates');
 const { createTimeStates } = require('./lib/stateDefinitions/timeStates');
@@ -110,6 +112,7 @@ class Poolcontrol extends utils.Adapter {
 
         // --- Solarverwaltung ---
         await createSolarStates(this);
+        await createSolarExtendedStates(this); // NEU
 
         // --- Heizung / Wärmepumpe ---
         await createHeatStates(this);
@@ -169,6 +172,7 @@ class Poolcontrol extends utils.Adapter {
         speechHelper.init(this);
         consumptionHelper.init(this);
         solarHelper.init(this);
+        solarExtendedHelper.init(this); // NEU
         heatHelper.init(this); // ← NEU
         photovoltaicHelper.init(this);
         aiHelper.init(this);
@@ -221,6 +225,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (solarHelper.cleanup) {
                 solarHelper.cleanup();
+            }
+            if (solarExtendedHelper.cleanup) {
+                solarExtendedHelper.cleanup();
             }
             if (frostHelper.cleanup) {
                 frostHelper.cleanup();
