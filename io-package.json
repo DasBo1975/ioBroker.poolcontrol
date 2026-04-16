@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.2.21",
     "news": {
+      "1.2.22": {
+        "en": "Added new read-only state solar.request_active to indicate when solar logic would request the pump. Improved robustness of solarHelper by handling invalid temperature values.",
+        "de": "Neuer read-only Datenpunkt solar.request_active hinzugefügt, der anzeigt, wann die Solarlogik die Pumpe anfordern würde. Stabilität des solarHelpers verbessert durch Behandlung ungültiger Temperaturwerte.",
+        "ru": "Добавлено новое состояние Solar.request_active, доступное только для чтения, чтобы указать, когда солнечная логика запросит насос. Повышена надежность SolarHelper за счет обработки недопустимых значений температуры.",
+        "pt": "Adicionado novo estado somente leitura solar.request_active para indicar quando a lógica solar solicitaria a bomba. Robustez aprimorada do solarHelper ao lidar com valores de temperatura inválidos.",
+        "nl": "Nieuwe alleen-lezen status solar.request_active toegevoegd om aan te geven wanneer de zonnelogica de pomp zou aanvragen. Verbeterde robuustheid van solarHelper door ongeldige temperatuurwaarden te verwerken.",
+        "fr": "Ajout d'un nouvel état en lecture seule solar.request_active pour indiquer quand la logique solaire demanderait la pompe. Robustesse améliorée de solarHelper en gérant des valeurs de température invalides.",
+        "it": "Aggiunto nuovo stato di sola lettura solar.request_active per indicare quando la logica solare richiederebbe la pompa. Robustezza migliorata di solarHelper gestendo valori di temperatura non validi.",
+        "es": "Se agregó un nuevo estado de solo lectura solar.request_active para indicar cuándo la lógica solar solicitaría la bomba. Robustez mejorada de solarHelper al manejar valores de temperatura no válidos.",
+        "pl": "Dodano nowy stan tylko do odczytu solar.request_active, aby wskazać, kiedy logika solarna zażąda pompy. Poprawiona niezawodność solarHelper poprzez obsługę nieprawidłowych wartości temperatur.",
+        "uk": "Додано новий стан solar.request_active лише для читання, щоб вказати, коли сонячна логіка запитуватиме насос. Покращена надійність solarHelper завдяки обробці недійсних значень температури.",
+        "zh-cn": "添加了新的只读状态 Solar.request_active 以指示太阳能逻辑何时请求泵。通过处理无效温度值提高了 SolarHelper 的稳健性。"
+      },
       "1.2.21": {
         "en": "Bugfix: Fixed an issue in the photovoltaic helper where the afterrun timer was unintentionally restarted on every recalculation without PV surplus. This could delay the pump shutdown significantly. The afterrun now starts only once when surplus ends and runs reliably to completion. Also ensures proper cleanup when surplus becomes active again during afterrun.",
         "de": "Bugfix: Fehler im Photovoltaik-Helper behoben, bei dem der Nachlauf-Timer bei jedem Recalc ohne PV-Überschuss erneut gestartet wurde. Dadurch konnte sich das Abschalten der Pumpe stark verzögern. Der Nachlauf startet jetzt nur noch einmal beim Wegfall des Überschusses und läuft zuverlässig zu Ende. Zusätzlich wird der Nachlauf sauber beendet, wenn währenddessen wieder Überschuss vorhanden ist.",
@@ -54,19 +67,6 @@
         "pl": "Naprawiono problemy z trwałością stanów pór roku i mrozu. Sezon_aktywny nie jest już nadpisywany podczas uruchamiania adaptera. Ustawienia ochrony przed zamarzaniem są teraz przechowywane trwale.",
         "uk": "Виправлено проблеми стійкості для сезону та морозу. Season_active тепер більше не перезаписується під час запуску адаптера. Параметри захисту від замерзання тепер зберігаються постійно.",
         "zh-cn": "修复了季节和霜冻状态的持久性问题。 Season_active 现在不再在适配器启动时被覆盖。防霜保护设置现在可以永久存储。"
-      },
-      "1.2.17": {
-        "en": "Fix: Resolved an issue where the pressure learning reset button did not trigger reliably. The pumpHelper4 now explicitly subscribes to its relevant internal states (e.g. reset and configuration values), ensuring proper event handling and immediate execution of the reset logic.",
-        "de": "Fix: Problem behoben, bei dem der Reset-Button für das Druck-Lernsystem nicht zuverlässig ausgelöst wurde. Der pumpHelper4 abonniert nun explizit die relevanten eigenen States (z. B. Reset und Konfigurationswerte), wodurch die Eventverarbeitung und die sofortige Ausführung der Reset-Logik sichergestellt sind.",
-        "ru": "Исправление: решена проблема, из-за которой кнопка сброса обучения давлению не срабатывала надежно. PumpHelper4 теперь явно подписывается на соответствующие внутренние состояния (например, значения сброса и конфигурации), обеспечивая правильную обработку событий и немедленное выполнение логики сброса.",
-        "pt": "Correção: Resolvido um problema em que o botão de redefinição do aprendizado de pressão não acionava de maneira confiável. O pumpHelper4 agora assina explicitamente seus estados internos relevantes (por exemplo, valores de redefinição e configuração), garantindo o tratamento adequado de eventos e a execução imediata da lógica de redefinição.",
-        "nl": "Oplossing: een probleem opgelost waarbij de resetknop voor het leren van de druk niet betrouwbaar werd geactiveerd. De pumpHelper4 onderschrijft nu expliciet de relevante interne statussen (bijvoorbeeld reset- en configuratiewaarden), waardoor een juiste afhandeling van gebeurtenissen en onmiddellijke uitvoering van de resetlogica wordt gegarandeerd.",
-        "fr": "Correction : Résolution d'un problème où le bouton de réinitialisation de l'apprentissage de la pression ne se déclenchait pas de manière fiable. Le PumpHelper4 s'abonne désormais explicitement à ses états internes pertinents (par exemple, les valeurs de réinitialisation et de configuration), garantissant une gestion appropriée des événements et l'exécution immédiate de la logique de réinitialisation.",
-        "it": "Correzione: risolto un problema per cui il pulsante di ripristino dell'apprendimento della pressione non si attivava in modo affidabile. Il pumpHelper4 ora sottoscrive esplicitamente i suoi stati interni rilevanti (ad esempio valori di ripristino e configurazione), garantendo la corretta gestione degli eventi e l'esecuzione immediata della logica di ripristino.",
-        "es": "Solución: se resolvió un problema por el cual el botón de reinicio del aprendizaje de presión no se activaba de manera confiable. El pumpHelper4 ahora se suscribe explícitamente a sus estados internos relevantes (por ejemplo, valores de reinicio y configuración), lo que garantiza un manejo adecuado de eventos y la ejecución inmediata de la lógica de reinicio.",
-        "pl": "Poprawka: rozwiązano problem polegający na tym, że przycisk resetowania uczenia się ciśnienia nie uruchamiał się niezawodnie. PumpHelper4 teraz jawnie subskrybuje swoje odpowiednie stany wewnętrzne (np. wartości resetowania i konfiguracji), zapewniając prawidłową obsługę zdarzeń i natychmiastowe wykonanie logiki resetowania.",
-        "uk": "Виправлення: вирішено проблему, через яку кнопка скидання навчання тиску не спрацьовувала надійно. PumpHelper4 тепер явно підписується на свої відповідні внутрішні стани (наприклад, значення скидання та конфігурації), забезпечуючи правильну обробку подій і негайне виконання логіки скидання.",
-        "zh-cn": "修复：解决了压力学习重置按钮无法可靠触发的问题。 PumpHelper4 现在显式订阅其相关的内部状态（例如重置和配置值），确保正确的事件处理和立即执行重置逻辑。"
       }
     },
     "titleLang": {

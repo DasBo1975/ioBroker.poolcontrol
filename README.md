@@ -186,6 +186,11 @@ New features are added regularly – please refer to the changelog.
 - [help.md (detailed description and notes)](./help.md)
 
 ---
+### **WORK IN PROGRESS**
+
+- Added new read-only state `solar.request_active` to indicate when solar logic would request the pump
+- Improved solarHelper robustness by handling invalid temperature values
+
 ### 1.2.21 (2026-04-15)
 
 - Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
