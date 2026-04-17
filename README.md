@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.1 (2026-04-17)
 
 - Fix: Solar Extended now correctly controls the pump
 - Fix: Integrated Solar Extended into existing solar status handling via `speech.solar_active`
@@ -220,14 +219,6 @@ New features are added regularly – please refer to the changelog.
 ### 1.2.20
 Release: 11.04.2026
 - (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
-
-### 1.2.19
-Release: 10.04.2026
-- Fixed an interaction issue between `photovoltaicHelper` and `controlHelper` where automatic follow-up pumping could be stopped unexpectedly
-- photovoltaicHelper now respects controlHelper priority and no longer stops the pump while automatic follow-up pumping is active
-- Fixed an issue where `controlHelper` could remain in "nachpumpen" state if the pump was stopped externally
-- `photovoltaic.threshold_w` is now correctly synchronized with the instance configuration
-- Changes to the PV surplus threshold in adapter settings are now reliably reflected in the corresponding read-only datapoint
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
