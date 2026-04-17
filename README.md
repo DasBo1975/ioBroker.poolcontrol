@@ -189,6 +189,13 @@ New features are added regularly – please refer to the changelog.
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+
+- Fix: Solar Extended now correctly controls the pump
+- Fix: Integrated Solar Extended into existing solar status handling via `speech.solar_active`
+- Improvement: Consistent pump status display for Solar and Solar Extended
+- Minor bug fixes and internal optimizations
+
 ### 1.3.0 (2026-04-16)
 
 - Added extended solar control (delta-based temperature logic)
