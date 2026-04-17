@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.2 (2026-04-17)
 
 - Fix: Solar Extended no longer interferes with controlHelper or timeHelper (prevents unwanted pump shutdown)
 - Fix: Solar Extended no longer interferes with standard solar mode
@@ -225,10 +224,6 @@ New features are added regularly – please refer to the changelog.
 - Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
 - Afterrun now starts only once and runs reliably to completion
 - Proper cleanup when surplus becomes active again during afterrun
-
-### 1.2.20
-Release: 11.04.2026
-- (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
