@@ -188,6 +188,16 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- Fix: Solar Extended no longer interferes with controlHelper or timeHelper (prevents unwanted pump shutdown)
+- Fix: Solar Extended no longer interferes with standard solar mode
+- Fix: Improved handling of external actuator (clean ON/OFF behavior depending on Solar Extended state)
+- Improvement: Added stable delta hysteresis (delta_on / delta_off) to prevent switching fluctuations
+- Improvement: Replaced global timers with adapter timers in solarExtendedHelper
+- Cleanup: Removed duplicate reading of request_active state
+
 ### 1.3.1 (2026-04-17)
 
 - Fix: Solar Extended now correctly controls the pump
