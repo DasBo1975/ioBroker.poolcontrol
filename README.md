@@ -186,6 +186,9 @@ New features are added regularly – please refer to the changelog.
 - [help.md (detailed description and notes)](./help.md)
 
 ---
+
+## Changelog
+
 ### 1.3.0 (2026-04-16)
 
 - Added extended solar control (delta-based temperature logic)
