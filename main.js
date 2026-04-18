@@ -35,6 +35,8 @@ const migrationHelper = require('./lib/helpers/migrationHelper');
 const infoHelper = require('./lib/helpers/infoHelper');
 const heatHelper = require('./lib/helpers/heatHelper');
 const actuatorsHelper = require('./lib/helpers/actuatorsHelper'); // NEU
+const solarInsightsHelper = require('./lib/helpers/solarInsightsHelper');
+const solarLogbookHelper = require('./lib/helpers/solarLogbookHelper'); // NEU
 const { createTemperatureStates } = require('./lib/stateDefinitions/temperatureStates');
 const { createPumpStates } = require('./lib/stateDefinitions/pumpStates');
 const { createPumpStates2 } = require('./lib/stateDefinitions/pumpStates2');
@@ -58,6 +60,7 @@ const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: K
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
 const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
 const { createActuatorsStates } = require('./lib/stateDefinitions/actuatorsStates');
+const { createSolarInsightsStates } = require('./lib/stateDefinitions/solarInsightsStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -129,6 +132,9 @@ class Poolcontrol extends utils.Adapter {
         // Statistik-States (Temperaturen)
         await createStatisticsStates(this);
 
+        // --- Solar Insights / Analyse ---
+        await createSolarInsightsStates(this);
+
         // --- Sprachausgaben ---
         await createSpeechStates(this);
 
@@ -186,6 +192,8 @@ class Poolcontrol extends utils.Adapter {
         debugLogHelper.init(this);
         speechTextHelper.init(this);
         actuatorsHelper.init(this); // NEU
+        solarInsightsHelper.init(this);
+        solarLogbookHelper.init(this); // NEU
     }
 
     onUnload(callback) {
@@ -247,8 +255,14 @@ class Poolcontrol extends utils.Adapter {
             if (actuatorsHelper.cleanup) {
                 actuatorsHelper.cleanup(); // NEU
             }
+            if (solarLogbookHelper.cleanup) {
+                solarLogbookHelper.cleanup(); // NEU
+            }
             if (speechTextHelper.cleanup) {
                 speechTextHelper.cleanup();
+            }
+            if (solarInsightsHelper.cleanup) {
+                solarInsightsHelper.cleanup();
             }
             if (aiHelper.cleanup) {
                 aiHelper.cleanup();
@@ -388,6 +402,16 @@ class Poolcontrol extends utils.Adapter {
             speechTextHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[speechTextHelper] Error in handleStateChange: ${e.message}`);
+        }
+        try {
+            solarLogbookHelper.handleStateChange(id, state); // NEU
+        } catch (e) {
+            this.log.warn(`[solarLogbookHelper] Error in handleStateChange: ${e.message}`);
+        }
+        try {
+            solarInsightsHelper.onStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[solarInsightsHelper] Error in handleStateChange: ${e.message}`);
         }
         if (id.includes('control.')) {
             controlHelper.handleStateChange(id, state);

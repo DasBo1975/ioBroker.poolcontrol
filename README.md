@@ -188,6 +188,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- Added solar COP calculation to evaluate system efficiency
+- Added solar logbook helper with easy-to-read daily summaries for better user understanding
+
 ### 1.3.2 (2026-04-17)
 
 - Fix: Solar Extended no longer interferes with controlHelper or timeHelper (prevents unwanted pump shutdown)

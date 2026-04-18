@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.2",
     "news": {
+      "1.3.3": {
+        "en": "Added solar COP calculation and solar logbook helper with human-readable daily entries based on solar insights.",
+        "de": "Solar-COP-Berechnung sowie Solar-Logbuch-Helper mit verständlichen Tages-Einträgen basierend auf Solar-Insights hinzugefügt.",
+        "ru": "Добавлен расчет солнечного КПД и помощник в журнале солнечной энергии с удобочитаемыми ежедневными записями на основе данных о солнечной энергии.",
+        "pt": "Adicionado cálculo de COP solar e auxiliar de diário de bordo solar com entradas diárias legíveis por humanos com base em insights solares.",
+        "nl": "Zonne-COP-berekening en zonne-logboekhulp toegevoegd met voor mensen leesbare dagelijkse gegevens op basis van zonne-inzichten.",
+        "fr": "Ajout du calcul du COP solaire et d'un assistant de journal de bord solaire avec des entrées quotidiennes lisibles par l'homme basées sur des informations solaires.",
+        "it": "Aggiunto il calcolo del COP solare e l'assistente del registro solare con voci giornaliere leggibili dall'uomo basate su informazioni solari.",
+        "es": "Se agregó un cálculo de COP solar y un asistente de registro solar con entradas diarias legibles por humanos basadas en conocimientos solares.",
+        "pl": "Dodano obliczenia COP energii słonecznej i pomocnika dziennika słonecznego z czytelnymi dla człowieka codziennymi wpisami opartymi na spostrzeżeniach dotyczących energii słonecznej.",
+        "uk": "Додано розрахунок COP сонячної енергії та помічник сонячного журналу із зрозумілими для людини щоденними записами на основі даних про сонячну енергію.",
+        "zh-cn": "添加了太阳能 COP 计算和太阳能日志助手，其中包含基于太阳能洞察的人类可读的每日条目。"
+      },
       "1.3.2": {
         "en": "Fixed Solar Extended conflicts with controlHelper/timeHelper and standard solar mode, improved external actuator handling, added stable delta hysteresis, and aligned timer handling with adapter timers.",
         "de": "Solar-Extended-Konflikte mit controlHelper/timeHelper und dem Standard-Solarmodus behoben, externe Aktorsteuerung verbessert, stabile Delta-Hysterese ergänzt und Timer auf Adapter-Timer umgestellt.",
@@ -54,19 +67,6 @@
         "pl": "Dodano nowy stan tylko do odczytu solar.request_active, aby wskazać, kiedy logika solarna zażąda pompy. Poprawiona niezawodność solarHelper poprzez obsługę nieprawidłowych wartości temperatur.",
         "uk": "Додано новий стан solar.request_active лише для читання, щоб вказати, коли сонячна логіка запитуватиме насос. Покращена надійність solarHelper завдяки обробці недійсних значень температури.",
         "zh-cn": "添加了新的只读状态 Solar.request_active 以指示太阳能逻辑何时请求泵。通过处理无效温度值提高了 SolarHelper 的稳健性。"
-      },
-      "1.2.21": {
-        "en": "Bugfix: Fixed an issue in the photovoltaic helper where the afterrun timer was unintentionally restarted on every recalculation without PV surplus. This could delay the pump shutdown significantly. The afterrun now starts only once when surplus ends and runs reliably to completion. Also ensures proper cleanup when surplus becomes active again during afterrun.",
-        "de": "Bugfix: Fehler im Photovoltaik-Helper behoben, bei dem der Nachlauf-Timer bei jedem Recalc ohne PV-Überschuss erneut gestartet wurde. Dadurch konnte sich das Abschalten der Pumpe stark verzögern. Der Nachlauf startet jetzt nur noch einmal beim Wegfall des Überschusses und läuft zuverlässig zu Ende. Zusätzlich wird der Nachlauf sauber beendet, wenn währenddessen wieder Überschuss vorhanden ist.",
-        "ru": "Исправление: исправлена ​​проблема в фотоэлектрическом помощнике, из-за которой таймер выключения непреднамеренно перезапускался при каждом перерасчете без избытка фотоэлектрической энергии. Это может значительно задержать остановку насоса. Последующий запуск теперь запускается только один раз, когда заканчивается избыток, и надежно выполняется до завершения. Также обеспечивает правильную очистку, когда излишки снова становятся активными во время выбега.",
-        "pt": "Correção de bug: Corrigido um problema no auxiliar fotovoltaico em que o temporizador pós-execução era reiniciado involuntariamente em cada recálculo sem excedente de PV. Isto pode atrasar significativamente o encerramento da bomba. A pós-execução agora começa apenas uma vez quando o excedente termina e funciona de forma confiável até a conclusão. Também garante a limpeza adequada quando o excedente fica ativo novamente durante o pós-execução.",
-        "nl": "Bugfix: Probleem opgelost in de fotovoltaïsche helper waarbij de nalooptimer onbedoeld opnieuw werd gestart bij elke herberekening zonder PV-overschot. Dit kan het uitschakelen van de pomp aanzienlijk vertragen. De afterrun start nu slechts één keer als het overschot op is en loopt betrouwbaar door tot voltooiing. Zorgt ook voor een goede opruiming wanneer het overschot weer actief wordt tijdens de afterrun.",
-        "fr": "Correction d'un bug : correction d'un problème dans l'assistant photovoltaïque où la minuterie de post-exécution était involontairement redémarrée à chaque recalcul sans excédent PV. Cela pourrait retarder considérablement l’arrêt de la pompe. L'afterrun ne démarre désormais qu'une seule fois lorsque l'excédent se termine et se déroule de manière fiable jusqu'à son terme. Assure également un nettoyage approprié lorsque le surplus redevient actif pendant la post-exécution.",
-        "it": "Bugfix: risolto un problema nell'helper fotovoltaico per cui il timer di postesecuzione veniva riavviato involontariamente ad ogni ricalcolo senza surplus fotovoltaico. Ciò potrebbe ritardare notevolmente l'arresto della pompa. L'afterrun ora inizia solo una volta quando termina il surplus e viene eseguito in modo affidabile fino al completamento. Garantisce inoltre una corretta pulizia quando il surplus diventa nuovamente attivo durante l'afterrun.",
-        "es": "Corrección de errores: se solucionó un problema en el asistente fotovoltaico por el cual el temporizador de retardo se reiniciaba involuntariamente en cada recálculo sin excedente de fotovoltaico. Esto podría retrasar significativamente el apagado de la bomba. La ejecución posterior ahora comienza solo una vez cuando termina el excedente y se ejecuta de manera confiable hasta su finalización. También garantiza una limpieza adecuada cuando el excedente se vuelve a activar durante la ejecución posterior.",
-        "pl": "Poprawka błędu: Naprawiono problem w pomocniku fotowoltaicznym polegający na niezamierzonym ponownym uruchomieniu licznika czasu dobiegu przy każdym ponownym obliczeniu bez nadwyżki PV. Może to znacznie opóźnić wyłączenie pompy. Dobieg rozpoczyna się teraz tylko raz, gdy kończy się nadwyżka i przebiega niezawodnie do końca. Zapewnia również właściwe czyszczenie, gdy nadwyżka stanie się ponownie aktywna podczas dobiegu.",
-        "uk": "Виправлення помилки: виправлено проблему у фотоелектричному помічнику, через яку таймер післязапуску ненавмисно перезапускався під час кожного перерахунку без надлишку PV. Це може значно затримати зупинку насоса. Післязапуск тепер починається лише один раз, коли закінчується надлишок і працює надійно до кінця. Також забезпечує належне очищення, коли надлишки знову стають активними під час повторного циклу.",
-        "zh-cn": "错误修复：修复了光伏助手中的一个问题，即每次重新计算时没有光伏剩余时，后运行计时器会无意中重新启动。这可能会显着延迟泵的关闭。现在，后运行仅在盈余结束时启动一次，并可靠地运行直至完成。还确保在后运行期间剩余物再次活跃时进行适当的清理。"
       }
     },
     "titleLang": {
