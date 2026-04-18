@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.3 (2026-04-18)
 
 - Added solar COP calculation to evaluate system efficiency
 - Added solar logbook helper with easy-to-read daily summaries for better user understanding
@@ -224,12 +223,6 @@ New features are added regularly – please refer to the changelog.
 
 - Added new read-only state `solar.request_active` to indicate when solar logic would request the pump
 - Improved solarHelper robustness by handling invalid temperature values
-
-### 1.2.21 (2026-04-15)
-
-- Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
-- Afterrun now starts only once and runs reliably to completion
-- Proper cleanup when surplus becomes active again during afterrun
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  

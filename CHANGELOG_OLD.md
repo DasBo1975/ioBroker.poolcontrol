@@ -4,6 +4,12 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.2.21 (2026-04-15)
+
+- Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus
+- Afterrun now starts only once and runs reliably to completion
+- Proper cleanup when surplus becomes active again during afterrun
+
 ## 1.2.20
 Release: 11.04.2026
 - (DasBo) Reduced unnecessary state writes in status and photovoltaic helpers. Summary and PV timestamps are now only updated when the functional result actually changes, making the adapter quieter without affecting existing logic.
