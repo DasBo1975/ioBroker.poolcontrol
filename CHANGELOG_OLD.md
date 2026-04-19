@@ -4,6 +4,11 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.2.22 (2026-04-16)
+
+- Added new read-only state `solar.request_active` to indicate when solar logic would request the pump
+- Improved solarHelper robustness by handling invalid temperature values
+
 ## 1.2.21 (2026-04-15)
 
 - Fixed photovoltaic afterrun timer restarting on every recalculation without PV surplus

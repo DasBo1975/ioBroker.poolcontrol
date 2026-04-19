@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.4 (2026-04-19)
 
 - Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes
 - Switched translation handling to I18n.translate() for stable and consistent i18n behavior
@@ -224,11 +223,6 @@ New features are added regularly – please refer to the changelog.
 - Improved status states (active, request, blocked, reason, info)
 - Added i18n support for solar extended status texts
 - Added selectable configuration for temperature source and control type
-
-### 1.2.22 (2026-04-16)
-
-- Added new read-only state `solar.request_active` to indicate when solar logic would request the pump
-- Improved solarHelper robustness by handling invalid temperature values
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
