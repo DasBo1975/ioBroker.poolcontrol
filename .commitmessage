@@ -1,0 +1,4 @@
+chore: release v1.3.4
+
+- Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes
+- Switched translation handling to I18n.translate() for stable and consistent i18n behavior
