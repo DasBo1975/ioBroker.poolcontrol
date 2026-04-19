@@ -188,6 +188,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes
+- Switched translation handling to I18n.translate() for stable and consistent i18n behavior
+
 ### 1.3.3 (2026-04-18)
 
 - Added solar COP calculation to evaluate system efficiency

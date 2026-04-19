@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.3",
     "news": {
+      "1.3.4": {
+        "en": "Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes. Switched translation handling to I18n.translate() to ensure stable operation.",
+        "de": "Kritischer i18n-Fehler in solarInsightsHelper und solarLogbookHelper behoben, der zu Instabilität oder Abstürzen führen konnte. Übersetzungen wurden auf I18n.translate() umgestellt, um einen stabilen Betrieb sicherzustellen.",
+        "ru": "Исправлена ​​критическая проблема i18n в SolarInsightsHelper и SolarLogbookHelper, которая могла привести к нестабильности или сбоям. Обработку перевода переключили на I18n.translate() для обеспечения стабильной работы.",
+        "pt": "Foi corrigido um problema crítico do i18n no solarInsightsHelper e no solarLogbookHelper que poderia causar instabilidade ou travamentos. Manipulação de tradução alterada para I18n.translate() para garantir uma operação estável.",
+        "nl": "Een kritiek i18n-probleem in solarInsightsHelper en solarLogbookHelper opgelost dat tot instabiliteit of crashes kon leiden. De verwerking van de vertalingen is gewijzigd naar I18n.translate() om een ​​stabiele werking te garanderen.",
+        "fr": "Correction d'un problème i18n critique dans solarInsightsHelper et solarLogbookHelper qui pouvait entraîner une instabilité ou des plantages. Gestion de la traduction commutée vers I18n.translate() pour garantir un fonctionnement stable.",
+        "it": "Risolto un problema critico i18n in solarInsightsHelper e solarLogbookHelper che poteva portare a instabilità o arresti anomali. Modificata la gestione della traduzione su I18n.translate() per garantire un funzionamento stabile.",
+        "es": "Se solucionó un problema crítico de i18n en solarInsightsHelper y solarLogbookHelper que podía provocar inestabilidad o fallas. Se cambió el manejo de traducción a I18n.translate() para garantizar un funcionamiento estable.",
+        "pl": "Naprawiono krytyczny problem i18n w programach solarInsightsHelper i solarLogbookHelper, który mógł prowadzić do niestabilności lub awarii. Przełączono obsługę tłumaczeń na I18n.translate(), aby zapewnić stabilne działanie.",
+        "uk": "Виправлено критичну проблему i18n у solarInsightsHelper і solarLogbookHelper, яка могла призвести до нестабільності або збоїв. Перемкнуто обробку перекладу на I18n.translate(), щоб забезпечити стабільну роботу.",
+        "zh-cn": "修复了 SolarInsightsHelper 和 SolarLogbookHelper 中可能导致不稳定或崩溃的关键 i18n 问题。将翻译处理切换为 I18n.translate() 以确保稳定运行。"
+      },
       "1.3.3": {
         "en": "Added solar COP calculation and solar logbook helper with human-readable daily entries based on solar insights.",
         "de": "Solar-COP-Berechnung sowie Solar-Logbuch-Helper mit verständlichen Tages-Einträgen basierend auf Solar-Insights hinzugefügt.",
@@ -54,19 +67,6 @@
         "pl": "Dodano rozszerzone sterowanie solarne z możliwością wyboru trybu standardowego/rozszerzonego, logikę sterowania opartą na delta, obsługę zewnętrznych siłowników, obsługę priorytetów/blokowania i zlokalizowane teksty stanu.",
         "uk": "Додано розширене керування геліосистемою з вибором стандартного/розширеного режиму, логікою керування на основі дельти, підтримкою зовнішнього приводу, обробкою пріоритетів/блокування та локалізованими текстами стану.",
         "zh-cn": "添加了扩展太阳能控制，具有可选的标准/扩展模式、基于增量的控制逻辑、外部执行器支持、优先级/阻止处理和本地化状态文本。"
-      },
-      "1.2.22": {
-        "en": "Added new read-only state solar.request_active to indicate when solar logic would request the pump. Improved robustness of solarHelper by handling invalid temperature values.",
-        "de": "Neuer read-only Datenpunkt solar.request_active hinzugefügt, der anzeigt, wann die Solarlogik die Pumpe anfordern würde. Stabilität des solarHelpers verbessert durch Behandlung ungültiger Temperaturwerte.",
-        "ru": "Добавлено новое состояние Solar.request_active, доступное только для чтения, чтобы указать, когда солнечная логика запросит насос. Повышена надежность SolarHelper за счет обработки недопустимых значений температуры.",
-        "pt": "Adicionado novo estado somente leitura solar.request_active para indicar quando a lógica solar solicitaria a bomba. Robustez aprimorada do solarHelper ao lidar com valores de temperatura inválidos.",
-        "nl": "Nieuwe alleen-lezen status solar.request_active toegevoegd om aan te geven wanneer de zonnelogica de pomp zou aanvragen. Verbeterde robuustheid van solarHelper door ongeldige temperatuurwaarden te verwerken.",
-        "fr": "Ajout d'un nouvel état en lecture seule solar.request_active pour indiquer quand la logique solaire demanderait la pompe. Robustesse améliorée de solarHelper en gérant des valeurs de température invalides.",
-        "it": "Aggiunto nuovo stato di sola lettura solar.request_active per indicare quando la logica solare richiederebbe la pompa. Robustezza migliorata di solarHelper gestendo valori di temperatura non validi.",
-        "es": "Se agregó un nuevo estado de solo lectura solar.request_active para indicar cuándo la lógica solar solicitaría la bomba. Robustez mejorada de solarHelper al manejar valores de temperatura no válidos.",
-        "pl": "Dodano nowy stan tylko do odczytu solar.request_active, aby wskazać, kiedy logika solarna zażąda pompy. Poprawiona niezawodność solarHelper poprzez obsługę nieprawidłowych wartości temperatur.",
-        "uk": "Додано новий стан solar.request_active лише для читання, щоб вказати, коли сонячна логіка запитуватиме насос. Покращена надійність solarHelper завдяки обробці недійсних значень температури.",
-        "zh-cn": "添加了新的只读状态 Solar.request_active 以指示太阳能逻辑何时请求泵。通过处理无效温度值提高了 SolarHelper 的稳健性。"
       }
     },
     "titleLang": {
