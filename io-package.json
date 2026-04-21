@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.5",
+    "version": "1.3.6",
     "news": {
       "1.3.6": {
         "en": "Fix for frostHelper: prevents incorrect pump shutdown when other helpers (e.g. photovoltaic) are active. Frost protection now only disables the pump if it previously activated it itself. Improved speech state logic for frost indication. Switched frostHelper timer to adapter.setInterval for better stability and ioBroker compliance.",

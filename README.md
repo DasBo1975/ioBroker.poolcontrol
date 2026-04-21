@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.6 (2026-04-21)
 
 frostHelper
 - Fixed incorrect pump shutdown when other helpers (e.g. photovoltaicHelper) are active
@@ -221,13 +220,6 @@ frostHelper
 - Improvement: Added stable delta hysteresis (delta_on / delta_off) to prevent switching fluctuations
 - Improvement: Replaced global timers with adapter timers in solarExtendedHelper
 - Cleanup: Removed duplicate reading of request_active state
-
-### 1.3.1 (2026-04-17)
-
-- Fix: Solar Extended now correctly controls the pump
-- Fix: Integrated Solar Extended into existing solar status handling via `speech.solar_active`
-- Improvement: Consistent pump status display for Solar and Solar Extended
-- Minor bug fixes and internal optimizations
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  

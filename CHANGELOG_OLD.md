@@ -4,6 +4,13 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.1 (2026-04-17)
+
+- Fix: Solar Extended now correctly controls the pump
+- Fix: Integrated Solar Extended into existing solar status handling via `speech.solar_active`
+- Improvement: Consistent pump status display for Solar and Solar Extended
+- Minor bug fixes and internal optimizations
+
 ## 1.3.0 (2026-04-16)
 
 - Added extended solar control (delta-based temperature logic)
