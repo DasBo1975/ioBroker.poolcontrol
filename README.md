@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.7 (2026-04-23)
 
 Bugfixes
 - solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
@@ -218,15 +217,6 @@ frostHelper
 
 - Added solar COP calculation to evaluate system efficiency
 - Added solar logbook helper with easy-to-read daily summaries for better user understanding
-
-### 1.3.2 (2026-04-17)
-
-- Fix: Solar Extended no longer interferes with controlHelper or timeHelper (prevents unwanted pump shutdown)
-- Fix: Solar Extended no longer interferes with standard solar mode
-- Fix: Improved handling of external actuator (clean ON/OFF behavior depending on Solar Extended state)
-- Improvement: Added stable delta hysteresis (delta_on / delta_off) to prevent switching fluctuations
-- Improvement: Replaced global timers with adapter timers in solarExtendedHelper
-- Cleanup: Removed duplicate reading of request_active state
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
