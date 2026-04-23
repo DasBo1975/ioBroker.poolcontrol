@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.6",
     "news": {
+      "1.3.7": {
+        "en": "Fix solarInsights detection for standard solar (use solar.request_active instead of non-existing solar.active). photovoltaicHelper improvements: rounded surplus value in status text and switched afterrun timer to adapter.setTimeout/clearTimeout.",
+        "de": "Fix der solarInsights-Erkennung für Standard-Solar (Verwendung von solar.request_active statt nicht vorhandenem solar.active). Verbesserungen im photovoltaicHelper: Rundung des Überschusswerts im Status-Text und Umstellung des Afterrun-Timers auf adapter.setTimeout/clearTimeout.",
+        "ru": "Исправлено обнаружение SolarInsights для стандартной солнечной энергии (используйте Solar.request_active вместо несуществующего Solar.active). Улучшения photovoltaicHelper: округленное лишнее значение в тексте состояния и переключение таймера послезапуска на адаптер.setTimeout/clearTimeout.",
+        "pt": "Corrija a detecção do solarInsights para energia solar padrão (use solar.request_active em vez de solar.active inexistente). Melhorias no photovoltaicHelper: valor excedente arredondado no texto de status e temporizador pós-execução alterado para adaptador.setTimeout/clearTimeout.",
+        "nl": "Fix solarInsights-detectie voor standaard zonne-energie (gebruik solar.request_active in plaats van niet-bestaande solar.active). photovoltaicHelper-verbeteringen: afgeronde meerwaarde in statustekst en geschakelde nalooptimer naar adapter.setTimeout/clearTimeout.",
+        "fr": "Correction de la détection solarInsights pour l'énergie solaire standard (utilisez solar.request_active au lieu de solar.active inexistant). Améliorations de photovoltaicHelper : valeur excédentaire arrondie dans le texte d'état et minuterie de post-exécution commutée sur adapter.setTimeout/clearTimeout.",
+        "it": "Correggere il rilevamento di solarInsights per l'energia solare standard (utilizzare solar.request_active anziché solar.active inesistente). Miglioramenti di fotovoltaicoHelper: valore surplus arrotondato nel testo di stato e timer di postesecuzione commutato su Adapter.setTimeout/clearTimeout.",
+        "es": "Se corrigió la detección de solarInsights para energía solar estándar (use solar.request_active en lugar de solar.active no existente). Mejoras en photovoltaicHelper: valor excedente redondeado en el texto de estado y temporizador de posejecución cambiado a adaptor.setTimeout/clearTimeout.",
+        "pl": "Napraw wykrywanie solarInsights dla standardowej energii słonecznej (użyj solar.request_active zamiast nieistniejącego solar.active). Udoskonalenia programu photovoltaicHelper: zaokrąglona wartość nadwyżki w tekście statusu i przełączona licznik czasu afterrun na adapter.setTimeout/clearTimeout.",
+        "uk": "Виправте виявлення solarInsights для стандартної сонячної енергії (використовуйте solar.request_active замість неіснуючого solar.active). Покращення photovoltaicHelper: округлене надлишкове значення в тексті стану та переключений таймер післязапуску на adapter.setTimeout/clearTimeout.",
+        "zh-cn": "修复标准太阳能的 SolarInsights 检测（使用 Solar.request_active 而不是不存在的 Solar.active）。 PVHelper 改进：对状态文本中的剩余值进行四舍五入，并将 Afterrun 计时器切换为 adapter.setTimeout/clearTimeout。"
+      },
       "1.3.6": {
         "en": "Fix for frostHelper: prevents incorrect pump shutdown when other helpers (e.g. photovoltaic) are active. Frost protection now only disables the pump if it previously activated it itself. Improved speech state logic for frost indication. Switched frostHelper timer to adapter.setInterval for better stability and ioBroker compliance.",
         "de": "Fix für frostHelper: verhindert falsches Abschalten der Pumpe, wenn andere Helper (z. B. Photovoltaik) aktiv sind. Frostschutz schaltet die Pumpe jetzt nur noch aus, wenn er sie zuvor selbst aktiviert hat. Sprach-State für Frostanzeige korrigiert. Timer im frostHelper auf adapter.setInterval umgestellt für bessere Stabilität und ioBroker-Konformität.",
@@ -54,19 +67,6 @@
         "pl": "Dodano obliczenia COP energii słonecznej i pomocnika dziennika słonecznego z czytelnymi dla człowieka codziennymi wpisami opartymi na spostrzeżeniach dotyczących energii słonecznej.",
         "uk": "Додано розрахунок COP сонячної енергії та помічник сонячного журналу із зрозумілими для людини щоденними записами на основі даних про сонячну енергію.",
         "zh-cn": "添加了太阳能 COP 计算和太阳能日志助手，其中包含基于太阳能洞察的人类可读的每日条目。"
-      },
-      "1.3.2": {
-        "en": "Fixed Solar Extended conflicts with controlHelper/timeHelper and standard solar mode, improved external actuator handling, added stable delta hysteresis, and aligned timer handling with adapter timers.",
-        "de": "Solar-Extended-Konflikte mit controlHelper/timeHelper und dem Standard-Solarmodus behoben, externe Aktorsteuerung verbessert, stabile Delta-Hysterese ergänzt und Timer auf Adapter-Timer umgestellt.",
-        "ru": "Исправлены конфликты Solar Extended с controlHelper/timeHelper и стандартным солнечным режимом, улучшено управление внешним приводом, добавлен стабильный дельта-гистерезис и согласована обработка таймера с таймерами адаптера.",
-        "pt": "Corrigidos conflitos Solar Extended com controlHelper/timeHelper e modo solar padrão, manuseio aprimorado do atuador externo, histerese delta estável adicionada e manuseio de temporizador alinhado com temporizadores adaptadores.",
-        "nl": "Vaste Solar Extended-conflicten met controlHelper/timeHelper en standaard zonnemodus, verbeterde afhandeling van externe actuatoren, toegevoegde stabiele delta-hysteresis en afgestemde timerafhandeling met adaptertimers.",
-        "fr": "Correction des conflits solaires étendus avec controlHelper/timeHelper et le mode solaire standard, gestion améliorée des actionneurs externes, ajout d'une hystérésis delta stable et gestion des minuteries alignées avec les minuteries de l'adaptateur.",
-        "it": "Risolti i conflitti Solar Extended con controlHelper/timeHelper e la modalità solare standard, migliore gestione dell'attuatore esterno, aggiunta isteresi delta stabile e gestione del timer allineata con i timer dell'adattatore.",
-        "es": "Se corrigieron los conflictos de Solar Extended con controlHelper/timeHelper y el modo solar estándar, manejo mejorado del actuador externo, histéresis delta estable agregada y manejo del temporizador alineado con temporizadores adaptadores.",
-        "pl": "Naprawiono konflikty Solar Extended z ControlHelper/timeHelper i standardowym trybem solarnym, ulepszono obsługę zewnętrznego siłownika, dodano stabilną histerezę delta i dostosowano obsługę timera z timerami adaptera.",
-        "uk": "Виправлено конфлікти Solar Extended з controlHelper/timeHelper і стандартним сонячним режимом, покращено обробку зовнішнього приводу, додано стабільний дельта-гістерезис і узгоджено обробку таймера з таймерами адаптера.",
-        "zh-cn": "修复了 Solar Extended 与 controlHelper/timeHelper 和标准太阳能模式的冲突，改进了外部执行器处理，添加了稳定的增量迟滞，以及与适配器计时器对齐的计时器处理。"
       }
     },
     "titleLang": {

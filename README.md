@@ -188,6 +188,13 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+Bugfixes
+- solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
+- photovoltaicHelper: round surplus value in status text (avoid long decimal numbers), switched afterrun timer to adapter.setTimeout / clearTimeout
+
 ### 1.3.6 (2026-04-21)
 
 frostHelper
