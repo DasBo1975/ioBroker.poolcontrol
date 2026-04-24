@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.7",
+    "version": "1.3.8",
     "news": {
       "1.3.8": {
         "en": "Fix solar logbook duplication and invalid entries, improve log stability and weather text handling; fix solar insights runtime calculation and debug timestamp update.",

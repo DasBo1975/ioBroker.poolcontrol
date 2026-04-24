@@ -4,6 +4,11 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.3 (2026-04-18)
+
+- Added solar COP calculation to evaluate system efficiency
+- Added solar logbook helper with easy-to-read daily summaries for better user understanding
+
 ## 1.3.2 (2026-04-17)
 
 - Fix: Solar Extended no longer interferes with controlHelper or timeHelper (prevents unwanted pump shutdown)
