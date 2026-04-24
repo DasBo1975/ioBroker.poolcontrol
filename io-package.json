@@ -3,7 +3,7 @@
     "name": "poolcontrol",
     "version": "1.3.8",
     "news": {
-      "1.3.8": {
+      "1.3.9": {
         "en": "Fix solar logbook duplication and invalid entries, improve log stability and weather text handling; fix solar insights runtime calculation and debug timestamp update.",
         "de": "Behebung von doppelten und ungültigen Solar-Logbuch-Einträgen, Verbesserung der Log-Stabilität und Wettertext-Verarbeitung; Korrektur der Laufzeitberechnung im Solar-Insights-Bereich sowie Aktualisierung des Debug-Zeitstempels.",
         "ru": "Исправьте дублирование журнала солнечной энергии и неверные записи, улучшите стабильность журнала и обработку текста о погоде; исправить расчет времени выполнения Solar Insights и обновить временную метку отладки.",
