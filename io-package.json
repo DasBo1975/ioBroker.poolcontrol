@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.7",
     "news": {
+      "1.3.8": {
+        "en": "Fix solar logbook duplication and invalid entries, improve log stability and weather text handling; fix solar insights runtime calculation and debug timestamp update.",
+        "de": "Behebung von doppelten und ungültigen Solar-Logbuch-Einträgen, Verbesserung der Log-Stabilität und Wettertext-Verarbeitung; Korrektur der Laufzeitberechnung im Solar-Insights-Bereich sowie Aktualisierung des Debug-Zeitstempels.",
+        "ru": "Исправьте дублирование журнала солнечной энергии и неверные записи, улучшите стабильность журнала и обработку текста о погоде; исправить расчет времени выполнения Solar Insights и обновить временную метку отладки.",
+        "pt": "Corrija a duplicação do diário de bordo solar e entradas inválidas, melhore a estabilidade do registro e o manuseio de textos meteorológicos; corrigir o cálculo do tempo de execução do Solar Insights e depurar a atualização do carimbo de data/hora.",
+        "nl": "Herstel het dupliceren van zonnelogboeken en ongeldige vermeldingen, verbeter de logstabiliteit en de verwerking van weerteksten; runtimeberekening van zonne-inzichten repareren en tijdstempelupdate debuggen.",
+        "fr": "Corrigez la duplication du journal solaire et les entrées invalides, améliorez la stabilité du journal et la gestion des textes météorologiques ; correction du calcul d'exécution des informations solaires et de la mise à jour de l'horodatage de débogage.",
+        "it": "Correggere la duplicazione del registro solare e le voci non valide, migliorare la stabilità del registro e la gestione del testo meteorologico; correggere il calcolo del runtime di Solar Insights e l'aggiornamento del timestamp di debug.",
+        "es": "Corrija la duplicación del libro de registro solar y las entradas no válidas, mejore la estabilidad del registro y el manejo de textos meteorológicos; corrige el cálculo del tiempo de ejecución de Solar Insights y la actualización de la marca de tiempo de depuración.",
+        "pl": "Napraw duplikację dziennika słonecznego i nieprawidłowe wpisy, popraw stabilność dziennika i obsługę tekstu pogodowego; napraw obliczenia czasu działania Solar Insights i aktualizację znacznika czasu debugowania.",
+        "uk": "Виправте дублювання сонячного журналу та недійсні записи, покращте стабільність журналу та обробку тексту погоди; виправити розрахунок часу виконання solar insights і налагодити оновлення часових позначок.",
+        "zh-cn": "修复太阳能日志重复和无效条目，提高日志稳定性和天气文本处理；修复 Solar Insights 运行时计算和调试时间戳更新。"
+      },
       "1.3.7": {
         "en": "Fix solarInsights detection for standard solar (use solar.request_active instead of non-existing solar.active). photovoltaicHelper improvements: rounded surplus value in status text and switched afterrun timer to adapter.setTimeout/clearTimeout.",
         "de": "Fix der solarInsights-Erkennung für Standard-Solar (Verwendung von solar.request_active statt nicht vorhandenem solar.active). Verbesserungen im photovoltaicHelper: Rundung des Überschusswerts im Status-Text und Umstellung des Afterrun-Timers auf adapter.setTimeout/clearTimeout.",
@@ -41,32 +54,6 @@
         "pl": "Naprawiono krytyczny problem i18n w programach solarInsightsHelper i solarLogbookHelper, który mógł prowadzić do niestabilności lub awarii. Przełączono obsługę tłumaczeń na I18n.translate(), aby zapewnić stabilne działanie.",
         "uk": "Виправлено критичну проблему i18n у solarInsightsHelper і solarLogbookHelper, яка могла призвести до нестабільності або збоїв. Перемкнуто обробку перекладу на I18n.translate(), щоб забезпечити стабільну роботу.",
         "zh-cn": "修复了 SolarInsightsHelper 和 SolarLogbookHelper 中可能导致不稳定或崩溃的关键 i18n 问题。将翻译处理切换为 I18n.translate() 以确保稳定运行。"
-      },
-      "1.3.4": {
-        "en": "Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes. Switched translation handling to I18n.translate() to ensure stable operation.",
-        "de": "Kritischer i18n-Fehler in solarInsightsHelper und solarLogbookHelper behoben, der zu Instabilität oder Abstürzen führen konnte. Übersetzungen wurden auf I18n.translate() umgestellt, um einen stabilen Betrieb sicherzustellen.",
-        "ru": "Исправлена ​​критическая проблема i18n в SolarInsightsHelper и SolarLogbookHelper, которая могла привести к нестабильности или сбоям. Обработку перевода переключили на I18n.translate() для обеспечения стабильной работы.",
-        "pt": "Foi corrigido um problema crítico do i18n no solarInsightsHelper e no solarLogbookHelper que poderia causar instabilidade ou travamentos. Manipulação de tradução alterada para I18n.translate() para garantir uma operação estável.",
-        "nl": "Een kritiek i18n-probleem in solarInsightsHelper en solarLogbookHelper opgelost dat tot instabiliteit of crashes kon leiden. De verwerking van de vertalingen is gewijzigd naar I18n.translate() om een ​​stabiele werking te garanderen.",
-        "fr": "Correction d'un problème i18n critique dans solarInsightsHelper et solarLogbookHelper qui pouvait entraîner une instabilité ou des plantages. Gestion de la traduction commutée vers I18n.translate() pour garantir un fonctionnement stable.",
-        "it": "Risolto un problema critico i18n in solarInsightsHelper e solarLogbookHelper che poteva portare a instabilità o arresti anomali. Modificata la gestione della traduzione su I18n.translate() per garantire un funzionamento stabile.",
-        "es": "Se solucionó un problema crítico de i18n en solarInsightsHelper y solarLogbookHelper que podía provocar inestabilidad o fallas. Se cambió el manejo de traducción a I18n.translate() para garantizar un funcionamiento estable.",
-        "pl": "Naprawiono krytyczny problem i18n w programach solarInsightsHelper i solarLogbookHelper, który mógł prowadzić do niestabilności lub awarii. Przełączono obsługę tłumaczeń na I18n.translate(), aby zapewnić stabilne działanie.",
-        "uk": "Виправлено критичну проблему i18n у solarInsightsHelper і solarLogbookHelper, яка могла призвести до нестабільності або збоїв. Перемкнуто обробку перекладу на I18n.translate(), щоб забезпечити стабільну роботу.",
-        "zh-cn": "修复了 SolarInsightsHelper 和 SolarLogbookHelper 中可能导致不稳定或崩溃的关键 i18n 问题。将翻译处理切换为 I18n.translate() 以确保稳定运行。"
-      },
-      "1.3.3": {
-        "en": "Added solar COP calculation and solar logbook helper with human-readable daily entries based on solar insights.",
-        "de": "Solar-COP-Berechnung sowie Solar-Logbuch-Helper mit verständlichen Tages-Einträgen basierend auf Solar-Insights hinzugefügt.",
-        "ru": "Добавлен расчет солнечного КПД и помощник в журнале солнечной энергии с удобочитаемыми ежедневными записями на основе данных о солнечной энергии.",
-        "pt": "Adicionado cálculo de COP solar e auxiliar de diário de bordo solar com entradas diárias legíveis por humanos com base em insights solares.",
-        "nl": "Zonne-COP-berekening en zonne-logboekhulp toegevoegd met voor mensen leesbare dagelijkse gegevens op basis van zonne-inzichten.",
-        "fr": "Ajout du calcul du COP solaire et d'un assistant de journal de bord solaire avec des entrées quotidiennes lisibles par l'homme basées sur des informations solaires.",
-        "it": "Aggiunto il calcolo del COP solare e l'assistente del registro solare con voci giornaliere leggibili dall'uomo basate su informazioni solari.",
-        "es": "Se agregó un cálculo de COP solar y un asistente de registro solar con entradas diarias legibles por humanos basadas en conocimientos solares.",
-        "pl": "Dodano obliczenia COP energii słonecznej i pomocnika dziennika słonecznego z czytelnymi dla człowieka codziennymi wpisami opartymi na spostrzeżeniach dotyczących energii słonecznej.",
-        "uk": "Додано розрахунок COP сонячної енергії та помічник сонячного журналу із зрозумілими для людини щоденними записами на основі даних про сонячну енергію.",
-        "zh-cn": "添加了太阳能 COP 计算和太阳能日志助手，其中包含基于太阳能洞察的人类可读的每日条目。"
       }
     },
     "titleLang": {

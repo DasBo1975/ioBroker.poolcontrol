@@ -188,6 +188,18 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+
+- Fix: solarLogbookHelper no longer creates duplicate or unnecessary log entries (improved filtering & throttling logic)
+- Fix: Removed obsolete "no runtime today" entries once solar has actually run
+- Fix: Improved handling of weather summary text to avoid broken or cut-off sentences
+- Fix: solarLogbookHelper now updates `last_entry_time` only when a real log entry is written
+- Fix: solarInsightsHelper runtime calculation improved (no incorrect time accumulation on state changes)
+- Fix: solarInsightsHelper now correctly tracks previous solar state for more accurate active time calculation
+- Fix: Added missing `debug.last_update` update on successful calculation
+- Improvement: General stability and plausibility improvements in solar insights and logbook processing
+
 ### 1.3.7 (2026-04-23)
 
 Bugfixes
