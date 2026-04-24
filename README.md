@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.9 (2026-04-24)
 
 - Fix: solarLogbookHelper no longer creates duplicate or unnecessary log entries (improved filtering & throttling logic)
 - Fix: Removed obsolete "no runtime today" entries once solar has actually run
