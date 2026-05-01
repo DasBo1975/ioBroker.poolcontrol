@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.9",
     "news": {
+      "1.3.10": {
+        "en": "Added photovoltaic insights (runtime, energy, savings) with new analytics states and helper. Improved active_helper ownership handling across photovoltaic, solar and extended solar helpers. Fixed PV circulation logic when ignore_on_circulation is disabled.",
+        "de": "Photovoltaik-Einblicke (Laufzeit, Energie, Einsparungen) mit neuen Analysezuständen und Hilfsfunktionen hinzugefügt. Verbesserte Handhabung des Active_Helper-Besitzes für Photovoltaik-, Solar- und erweiterte Solar-Helfer. Die PV-Zirkulationslogik wurde korrigiert, wenn „ignore_on_circulation“ deaktiviert ist.",
+        "ru": "Добавлены данные по фотоэлектрической энергии (время работы, энергия, экономия) с новыми аналитическими состояниями и помощником. Улучшено управление владением active_helper для фотоэлектрических, солнечных и расширенных солнечных помощников. Исправлена ​​логика циркуляции PV, когда ignore_on_circulation отключен.",
+        "pt": "Adicionados insights fotovoltaicos (tempo de execução, energia, economia) com novos estados analíticos e auxiliares. Melhor gerenciamento de propriedade de active_helper em ajudantes fotovoltaicos, solares e solares estendidos. Lógica de circulação fotovoltaica corrigida quando ignore_on_circulation está desativado.",
+        "nl": "Fotovoltaïsche inzichten toegevoegd (runtime, energie, besparingen) met nieuwe analysestatussen en helper. Verbeterde afhandeling van active_helper-eigendom voor fotovoltaïsche, zonne-energie en uitgebreide zonne-helpers. Vaste PV-circulatielogica wanneer negeer_on_circulatie is uitgeschakeld.",
+        "fr": "Ajout d'informations photovoltaïques (durée de fonctionnement, énergie, économies) avec de nouveaux états d'analyse et une nouvelle aide. Amélioration de la gestion de la propriété active_helper pour les assistants photovoltaïques, solaires et solaires étendus. Correction de la logique de circulation PV lorsque ignore_on_circulation est désactivé.",
+        "it": "Aggiunti approfondimenti sul fotovoltaico (autonomia, energia, risparmio) con nuovi stati di analisi e supporto. Migliorata la gestione della proprietà di active_helper tra gli helper fotovoltaici, solari e solari estesi. Risolta la logica di circolazione FV quando ignore_on_circulation è disabilitato.",
+        "es": "Se agregaron conocimientos fotovoltaicos (tiempo de ejecución, energía, ahorros) con nuevos estados analíticos y ayuda. Se mejoró el manejo de la propiedad de active_helper en los asistentes fotovoltaicos, solares y solares extendidos. Se corrigió la lógica de circulación de PV cuando ignore_on_circulation estaba deshabilitado.",
+        "pl": "Dodano statystyki fotowoltaiczne (czas pracy, energia, oszczędności) z nowymi stanami analitycznymi i pomocą. Ulepszona obsługa własności active_helper w przypadku fotowoltaiki, energii słonecznej i rozszerzonych pomocników energii słonecznej. Naprawiono logikę cyrkulacji PV, gdy ignorowanie_cyrkulacji jest wyłączone.",
+        "uk": "Додано статистику фотоелектричної системи (час роботи, енергія, економія) з новими аналітичними станами та помічником. Покращено керування правами власності active_helper на фотоелектричні, сонячні та розширені сонячні помічники. Виправлена ​​логіка циркуляції PV, коли ignore_on_circulation вимкнено.",
+        "zh-cn": "通过新的分析状态和帮助器添加了光伏见解（运行时间、能源、节省）。改进了跨光伏、太阳能和扩展太阳能助手的 active_helper 所有权处理。修复了禁用ignore_on_circulation时的PV循环逻辑。"
+      },
       "1.3.9": {
         "en": "Fix solar logbook duplication and invalid entries, improve log stability and weather text handling; fix solar insights runtime calculation and debug timestamp update.",
         "de": "Behebung von doppelten und ungültigen Solar-Logbuch-Einträgen, Verbesserung der Log-Stabilität und Wettertext-Verarbeitung; Korrektur der Laufzeitberechnung im Solar-Insights-Bereich sowie Aktualisierung des Debug-Zeitstempels.",

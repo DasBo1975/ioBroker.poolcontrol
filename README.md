@@ -188,6 +188,37 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+## **WORK IN PROGRESS**
+
+### ✨ New: Photovoltaic Insights
+- Introduced a new analytics module `analytics.insights.photovoltaic`
+- Tracks PV-based pump runtime, energy usage and estimated savings
+- New helper: `photovoltaicInsightsHelper`
+- New states: inputs, calculation, results, debug
+- Includes summary outputs (text, JSON, HTML)
+- Fully integrated with i18n translations
+
+### 🔧 Improvement: Active Helper Handling
+- Added consistent `pump.active_helper` ownership handling for:
+  - photovoltaicHelper
+  - solarHelper
+  - solarExtendedHelper
+- Each helper now:
+  - sets its own identifier when controlling the pump
+  - releases it when stopping
+  - does not override other active helpers
+- Ensures correct priority handling and prevents conflicts
+
+### 🧠 Improvement: PV Runtime Evaluation
+- Photovoltaic runtime is now only counted when:
+  - PV surplus is active
+  - AND photovoltaicHelper actually owns the pump
+- Enables accurate runtime, energy and savings calculation
+
+### 🐛 Fix: PV Circulation Logic
+- Fixed issue where pump stopped despite `photovoltaic.ignore_on_circulation = false`
+- Circulation check is now only applied when explicitly enabled
+
 ### 1.3.9 (2026-04-24)
 
 - Fix: solarLogbookHelper no longer creates duplicate or unnecessary log entries (improved filtering & throttling logic)
