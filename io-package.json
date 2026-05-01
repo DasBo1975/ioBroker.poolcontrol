@@ -3,7 +3,7 @@
     "name": "poolcontrol",
     "version": "1.3.9",
     "news": {
-      "1.3.10": {
+      "1.3.11": {
         "en": "Added photovoltaic insights (runtime, energy, savings) with new analytics states and helper. Improved active_helper ownership handling across photovoltaic, solar and extended solar helpers. Fixed PV circulation logic when ignore_on_circulation is disabled.",
         "de": "Photovoltaik-Einblicke (Laufzeit, Energie, Einsparungen) mit neuen Analysezuständen und Hilfsfunktionen hinzugefügt. Verbesserte Handhabung des Active_Helper-Besitzes für Photovoltaik-, Solar- und erweiterte Solar-Helfer. Die PV-Zirkulationslogik wurde korrigiert, wenn „ignore_on_circulation“ deaktiviert ist.",
         "ru": "Добавлены данные по фотоэлектрической энергии (время работы, энергия, экономия) с новыми аналитическими состояниями и помощником. Улучшено управление владением active_helper для фотоэлектрических, солнечных и расширенных солнечных помощников. Исправлена ​​логика циркуляции PV, когда ignore_on_circulation отключен.",
