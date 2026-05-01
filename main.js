@@ -24,6 +24,7 @@ const solarExtendedHelper = require('./lib/helpers/solarExtendedHelper'); // NEU
 const frostHelper = require('./lib/helpers/frostHelper');
 const statusHelper = require('./lib/helpers/statusHelper');
 const photovoltaicHelper = require('./lib/helpers/photovoltaicHelper');
+const photovoltaicInsightsHelper = require('./lib/helpers/photovoltaicInsightsHelper');
 const aiHelper = require('./lib/helpers/aiHelper');
 const aiForecastHelper = require('./lib/helpers/aiForecastHelper');
 const aiChemistryHelpHelper = require('./lib/helpers/aiChemistryHelpHelper');
@@ -61,6 +62,7 @@ const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemis
 const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
 const { createActuatorsStates } = require('./lib/stateDefinitions/actuatorsStates');
 const { createSolarInsightsStates } = require('./lib/stateDefinitions/solarInsightsStates');
+const { createPhotovoltaicInsightsStates } = require('./lib/stateDefinitions/photovoltaicInsightsStates');
 
 class Poolcontrol extends utils.Adapter {
     constructor(options) {
@@ -135,6 +137,9 @@ class Poolcontrol extends utils.Adapter {
         // --- Solar Insights / Analyse ---
         await createSolarInsightsStates(this);
 
+        // --- Photovoltaic Insights / Analyse ---
+        await createPhotovoltaicInsightsStates(this);
+
         // --- Sprachausgaben ---
         await createSpeechStates(this);
 
@@ -181,6 +186,7 @@ class Poolcontrol extends utils.Adapter {
         solarExtendedHelper.init(this); // NEU
         heatHelper.init(this); // ← NEU
         photovoltaicHelper.init(this);
+        photovoltaicInsightsHelper.init(this);
         aiHelper.init(this);
         aiForecastHelper.init(this);
         aiChemistryHelpHelper.init(this);
@@ -269,6 +275,12 @@ class Poolcontrol extends utils.Adapter {
             }
             if (aiForecastHelper.cleanup) {
                 aiForecastHelper.cleanup();
+            }
+            if (photovoltaicHelper.cleanup) {
+                photovoltaicHelper.cleanup();
+            }
+            if (photovoltaicInsightsHelper.cleanup) {
+                photovoltaicInsightsHelper.cleanup();
             }
             if (aiChemistryHelpHelper.cleanup) {
                 aiChemistryHelpHelper.cleanup();
@@ -366,6 +378,11 @@ class Poolcontrol extends utils.Adapter {
             photovoltaicHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[photovoltaicHelper] Error in handleStateChange: ${e.message}`);
+        }
+        try {
+            photovoltaicInsightsHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[photovoltaicInsightsHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             heatHelper.handleStateChange(id, state);

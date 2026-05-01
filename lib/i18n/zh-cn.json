@@ -239,5 +239,21 @@
   "solar_log_text_weather_supported_with_text": "已启用基于天气的合理性校验。当前天气概况：%s",
   "solar_log_text_weather_supported": "此评估已启用基于天气的合理性校验。",
   "solar_log_text_small_gain_detail": "当前估算当日增益约为 %s Wh，约等于 %s kWh。",
-  "solar_log_text_quality_level": "当前评估质量等级为 %s。"
+  "solar_log_text_quality_level": "当前评估质量等级为 %s。",
+  "photovoltaic_insights_calculation_mode_daily": "每日光伏余电分析",
+  "photovoltaic_insights_price_source_adapter_config": "适配器配置",
+  "photovoltaic_insights_calculation_note_block_2": "计算块为光伏洞察分析准备源信息。",
+  "photovoltaic_insights_summary_text_block_3": "光伏余电今天使泵运行了 %s 分钟，使用约 %s kWh，并节省约 %s €。",
+  "photovoltaic_insights_label_mode": "模式",
+  "photovoltaic_insights_label_pv_surplus_active": "光伏余电已激活",
+  "photovoltaic_insights_label_pv_controls_pump": "光伏控制泵",
+  "photovoltaic_insights_label_runtime_today": "今天运行时间",
+  "photovoltaic_insights_label_energy_used_today": "今天使用的能源",
+  "photovoltaic_insights_label_savings_today": "今天节省",
+  "photovoltaic_insights_label_starts_today": "今天启动次数",
+  "photovoltaic_insights_label_summary": "摘要",
+  "photovoltaic_insights_debug_reason_pv_runtime_active": "光伏余电运行已激活",
+  "photovoltaic_insights_debug_reason_no_pv_runtime": "没有活跃的光伏余电运行",
+  "photovoltaic_insights_debug_text_pv_runtime_active": "光伏余电处于激活状态，并且 photovoltaic helper 当前拥有泵。",
+  "photovoltaic_insights_debug_text_no_pv_runtime": "当前未统计光伏运行时间，因为没有活跃的光伏余电，或者 photovoltaic helper 未拥有泵。"
 }

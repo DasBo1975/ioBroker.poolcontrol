@@ -239,5 +239,21 @@
   "solar_log_text_weather_supported_with_text": "La plausibilidad basada en el clima está activa. Resumen meteorológico actual: %s",
   "solar_log_text_weather_supported": "La plausibilidad basada en el clima está activa para esta evaluación.",
   "solar_log_text_small_gain_detail": "La ganancia diaria estimada actualmente es de aproximadamente %s Wh, lo que corresponde a unos %s kWh.",
-  "solar_log_text_quality_level": "El nivel de calidad actual de la evaluación es %s."
+  "solar_log_text_quality_level": "El nivel de calidad actual de la evaluación es %s.",
+  "photovoltaic_insights_calculation_mode_daily": "Análisis diario de excedente fotovoltaico",
+  "photovoltaic_insights_price_source_adapter_config": "Configuración del adaptador",
+  "photovoltaic_insights_calculation_note_block_2": "El bloque de cálculo prepara la información de origen para el análisis de información fotovoltaica.",
+  "photovoltaic_insights_summary_text_block_3": "El excedente fotovoltaico hizo funcionar la bomba durante %s minutos hoy, utilizó aproximadamente %s kWh y ahorró alrededor de %s €.",
+  "photovoltaic_insights_label_mode": "Modo",
+  "photovoltaic_insights_label_pv_surplus_active": "Excedente FV activo",
+  "photovoltaic_insights_label_pv_controls_pump": "FV controla la bomba",
+  "photovoltaic_insights_label_runtime_today": "Tiempo de funcionamiento hoy",
+  "photovoltaic_insights_label_energy_used_today": "Energía utilizada hoy",
+  "photovoltaic_insights_label_savings_today": "Ahorro hoy",
+  "photovoltaic_insights_label_starts_today": "Arranques hoy",
+  "photovoltaic_insights_label_summary": "Resumen",
+  "photovoltaic_insights_debug_reason_pv_runtime_active": "Operación con excedente FV activa",
+  "photovoltaic_insights_debug_reason_no_pv_runtime": "Sin operación activa con excedente FV",
+  "photovoltaic_insights_debug_text_pv_runtime_active": "El excedente FV está activo y el helper fotovoltaico posee actualmente la bomba.",
+  "photovoltaic_insights_debug_text_no_pv_runtime": "Actualmente no se cuenta ningún tiempo de funcionamiento FV porque no hay excedente FV activo o el helper fotovoltaico no posee la bomba."
 }

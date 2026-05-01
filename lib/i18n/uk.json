@@ -239,5 +239,21 @@
   "solar_log_text_weather_supported_with_text": "Погодна перевірка достовірності активна. Поточний опис погоди: %s",
   "solar_log_text_weather_supported": "Для цієї оцінки активна погодна перевірка достовірності.",
   "solar_log_text_small_gain_detail": "Поточний оцінений добовий приріст становить приблизно %s Wh, що відповідає приблизно %s кВт·год.",
-  "solar_log_text_quality_level": "Поточний рівень якості оцінки — %s."
+  "solar_log_text_quality_level": "Поточний рівень якості оцінки — %s.",
+  "photovoltaic_insights_calculation_mode_daily": "Щоденний аналіз надлишку PV",
+  "photovoltaic_insights_price_source_adapter_config": "Конфігурація адаптера",
+  "photovoltaic_insights_calculation_note_block_2": "Блок розрахунку готує вихідну інформацію для аналізу даних фотоелектричної системи.",
+  "photovoltaic_insights_summary_text_block_3": "Надлишок PV сьогодні забезпечував роботу насоса протягом %s хвилин, використав близько %s кВт·год і заощадив приблизно %s €.",
+  "photovoltaic_insights_label_mode": "Режим",
+  "photovoltaic_insights_label_pv_surplus_active": "Надлишок PV активний",
+  "photovoltaic_insights_label_pv_controls_pump": "PV керує насосом",
+  "photovoltaic_insights_label_runtime_today": "Час роботи сьогодні",
+  "photovoltaic_insights_label_energy_used_today": "Використана енергія сьогодні",
+  "photovoltaic_insights_label_savings_today": "Економія сьогодні",
+  "photovoltaic_insights_label_starts_today": "Запуски сьогодні",
+  "photovoltaic_insights_label_summary": "Підсумок",
+  "photovoltaic_insights_debug_reason_pv_runtime_active": "Робота від надлишку PV активна",
+  "photovoltaic_insights_debug_reason_no_pv_runtime": "Немає активної роботи від надлишку PV",
+  "photovoltaic_insights_debug_text_pv_runtime_active": "Надлишок PV активний, і photovoltaic helper наразі володіє насосом.",
+  "photovoltaic_insights_debug_text_no_pv_runtime": "Наразі час роботи PV не підраховується, оскільки або немає активного надлишку PV, або photovoltaic helper не володіє насосом."
 }
