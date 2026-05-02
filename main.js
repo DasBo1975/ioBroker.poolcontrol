@@ -28,6 +28,8 @@ const photovoltaicInsightsHelper = require('./lib/helpers/photovoltaicInsightsHe
 const aiHelper = require('./lib/helpers/aiHelper');
 const aiForecastHelper = require('./lib/helpers/aiForecastHelper');
 const aiChemistryHelpHelper = require('./lib/helpers/aiChemistryHelpHelper');
+const chemistryPhHelper = require('./lib/helpers/chemistryPhHelper');
+const chemistryTdsHelper = require('./lib/helpers/chemistryTdsHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
 const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
@@ -59,6 +61,8 @@ const { createDebugLogStates } = require('./lib/stateDefinitions/debugLogStates'
 const { createInfoStates } = require('./lib/stateDefinitions/infoStates');
 const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: KI-States
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
+const { createChemistryPhStates } = require('./lib/stateDefinitions/chemistryPhStates');
+const { createChemistryTdsStates } = require('./lib/stateDefinitions/chemistryTdsStates');
 const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
 const { createActuatorsStates } = require('./lib/stateDefinitions/actuatorsStates');
 const { createSolarInsightsStates } = require('./lib/stateDefinitions/solarInsightsStates');
@@ -162,6 +166,12 @@ class Poolcontrol extends utils.Adapter {
         await createAiStates(this); // NEU: KI-States anlegen
         await createAiChemistryHelpStates(this); // NEU: KI-Chemie-Hilfe-States
 
+        // --- Chemistry / pH evaluation ---
+        await createChemistryPhStates(this);
+
+        // --- Chemistry / TDS evaluation ---
+        await createChemistryTdsStates(this);
+
         // --- Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) ---
         await createActuatorsStates(this);
 
@@ -190,6 +200,8 @@ class Poolcontrol extends utils.Adapter {
         aiHelper.init(this);
         aiForecastHelper.init(this);
         aiChemistryHelpHelper.init(this);
+        chemistryPhHelper.init(this);
+        chemistryTdsHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
         infoHelper.init(this);
@@ -281,6 +293,12 @@ class Poolcontrol extends utils.Adapter {
             }
             if (photovoltaicInsightsHelper.cleanup) {
                 photovoltaicInsightsHelper.cleanup();
+            }
+            if (chemistryPhHelper.cleanup) {
+                chemistryPhHelper.cleanup();
+            }
+            if (chemistryTdsHelper.cleanup) {
+                chemistryTdsHelper.cleanup();
             }
             if (aiChemistryHelpHelper.cleanup) {
                 aiChemistryHelpHelper.cleanup();
@@ -409,6 +427,16 @@ class Poolcontrol extends utils.Adapter {
             aiChemistryHelpHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[main] Error in aiChemistryHelpHelper.handleStateChange: ${e.message}`);
+        }
+        try {
+            await chemistryPhHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[chemistryPhHelper] Error in handleStateChange: ${e.message}`);
+        }
+        try {
+            await chemistryTdsHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[chemistryTdsHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             statusHelper.handleStateChange(id, state);
