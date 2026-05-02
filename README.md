@@ -188,6 +188,9 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
+
 ### 1.3.11 (2026-05-02)
 
 - (DasBo) New: pH evaluation module (`chemistry.ph`)
