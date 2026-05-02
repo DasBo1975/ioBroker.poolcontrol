@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.12 (2026-05-02)
 
 **Solar Insights – Calculation fix & structure improvement**
 
@@ -305,15 +304,6 @@ Fix: PV Circulation Logic
 Bugfixes
 - solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
 - photovoltaicHelper: round surplus value in status text (avoid long decimal numbers), switched afterrun timer to adapter.setTimeout / clearTimeout
-
-### 1.3.6 (2026-04-21)
-
-frostHelper
-- Fixed incorrect pump shutdown when other helpers (e.g. photovoltaicHelper) are active
-- frostHelper now only disables the pump if it previously activated it itself
-- improved internal ownership logic for safer multi-helper interaction
-- corrected frost speech state handling (no longer based on current pump state)
-- switched timer to adapter.setInterval / adapter.clearInterval for better stability and ioBroker compliance
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
