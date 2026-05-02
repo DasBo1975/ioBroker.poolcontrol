@@ -4,6 +4,11 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.5 (2026-04-19)
+
+- Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes
+- Switched translation handling to I18n.translate() for stable and consistent i18n behavior
+
 ## 1.3.4 (2026-04-19)
 
 - Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes

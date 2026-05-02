@@ -188,8 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.3.11 (2026-05-02)
 
 - (DasBo) New: pH evaluation module (`chemistry.ph`)
     - supports manual input and external state sources
@@ -272,11 +271,6 @@ frostHelper
 - improved internal ownership logic for safer multi-helper interaction
 - corrected frost speech state handling (no longer based on current pump state)
 - switched timer to adapter.setInterval / adapter.clearInterval for better stability and ioBroker compliance
-
-### 1.3.5 (2026-04-19)
-
-- Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes
-- Switched translation handling to I18n.translate() for stable and consistent i18n behavior
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  

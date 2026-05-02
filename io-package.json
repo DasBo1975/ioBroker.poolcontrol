@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.10",
+    "version": "1.3.11",
     "news": {
       "1.3.11": {
         "en": "New: Added pH evaluation module (chemistry.ph) with manual and external input, validation, measurement location handling and recommendations. New: Added TDS evaluation module (chemistry.tds) with trend analysis (24h, 7d, 30d), reference tracking and summary outputs (text/JSON/HTML). Fix: Resolved solar speech toggle issue between standard and extended mode. solarExtendedHelper no longer overwrites speech.solar_active in standard mode.",
