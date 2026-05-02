@@ -109,6 +109,7 @@
   "solar_insights_label_solar_effective_now": "Solar aktuell wirksam",
   "solar_insights_label_pool_reference_source": "Pool-Referenzquelle",
   "solar_insights_label_flow_source": "Durchflussquelle",
+  "solar_insights_label_thermal_delta_source": "Quelle Wärme-Delta",
   "solar_insights_label_weather_correction_active": "Wetterkorrektur aktiv",
   "solar_insights_label_confidence": "Vertrauen",
   "solar_insights_label_used_sensors": "Verwendete Sensoren",
@@ -185,6 +186,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "Kein aktiver PV-Überschussbetrieb",
   "photovoltaic_insights_debug_text_pv_runtime_active": "PV-Überschuss ist aktiv und der Photovoltaik-Helper besitzt aktuell die Pumpe.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "Aktuell wird keine PV-Laufzeit gezählt, weil entweder kein PV-Überschuss aktiv ist oder der Photovoltaik-Helper die Pumpe nicht besitzt.",
+  "photovoltaic_insights_debug_reason_daily_reset": "Täglicher Reset",
+  "photovoltaic_insights_debug_text_daily_reset": "Die täglichen Photovoltaik-Insights-Werte wurden zurückgesetzt.",
 
   "pH source state configured.": "pH-Quell-Datenpunkt konfiguriert.",
   "pH source state could not be subscribed.": "pH-Quell-Datenpunkt konnte nicht abonniert werden.",

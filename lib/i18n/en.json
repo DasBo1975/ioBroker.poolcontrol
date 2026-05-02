@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "Solar effective now",
   "solar_insights_label_pool_reference_source": "Pool reference source",
   "solar_insights_label_flow_source": "Flow source",
+  "solar_insights_label_thermal_delta_source": "Thermal delta source",
   "solar_insights_label_weather_correction_active": "Weather correction active",
   "solar_insights_label_confidence": "Confidence",
   "solar_insights_label_used_sensors": "Used sensors",
@@ -257,7 +258,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "No active PV surplus operation",
   "photovoltaic_insights_debug_text_pv_runtime_active": "PV surplus is active and the photovoltaic helper currently owns the pump.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "No PV runtime is currently counted because either no PV surplus is active or the photovoltaic helper does not own the pump.",
-
+  "photovoltaic_insights_debug_reason_daily_reset": "Daily reset",
+  "photovoltaic_insights_debug_text_daily_reset": "Photovoltaic insights daily values have been reset.",
   "pH source state configured.": "pH source state configured.",
   "pH source state could not be subscribed.": "pH source state could not be subscribed.",
   "No pH source state configured.": "No pH source state configured.",

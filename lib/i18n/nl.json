@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "Zonne-energie momenteel actief",
   "solar_insights_label_pool_reference_source": "Zwembadreferentiebron",
   "solar_insights_label_flow_source": "Debietbron",
+  "solar_insights_label_thermal_delta_source": "Bron thermisch verschil",
   "solar_insights_label_weather_correction_active": "Weercorrectie actief",
   "solar_insights_label_confidence": "Betrouwbaarheid",
   "solar_insights_label_used_sensors": "Gebruikte sensoren",
@@ -256,6 +257,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "Geen actief PV-overschotbedrijf",
   "photovoltaic_insights_debug_text_pv_runtime_active": "PV-overschot is actief en de photovoltaic helper bezit momenteel de pomp.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "Er wordt momenteel geen PV-looptijd geteld omdat er geen PV-overschot actief is of omdat de photovoltaic helper de pomp niet bezit.",
+  "photovoltaic_insights_debug_reason_daily_reset": "Dagelijkse reset",
+  "photovoltaic_insights_debug_text_daily_reset": "De dagelijkse fotovoltaïsche inzichten zijn gereset.",
 
   "pH source state configured.": "pH-bronstatus geconfigureerd.",
   "pH source state could not be subscribed.": "Kon niet abonneren op de pH-bronstatus.",

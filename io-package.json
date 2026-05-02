@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.11",
     "news": {
+      "1.3.12": {
+        "en": "Solar Insights calculation fixed and photovoltaic runtime tracking stabilized",
+        "de": "Solar Insights Berechnung korrigiert und Photovoltaik-Laufzeit stabilisiert",
+        "ru": "Исправлен расчет Solar Insights и стабилизировано отслеживание времени работы фотоэлектрических систем.",
+        "pt": "Cálculo do Solar Insights corrigido e rastreamento de tempo de execução fotovoltaico estabilizado",
+        "nl": "Solar Insights-berekening vast en tracking van fotovoltaïsche looptijd gestabiliseerd",
+        "fr": "Calcul de Solar Insights corrigé et suivi de la durée de fonctionnement photovoltaïque stabilisé",
+        "it": "Calcolo Solar Insights fisso e monitoraggio dell'autonomia fotovoltaica stabilizzato",
+        "es": "Cálculo de Solar Insights fijo y seguimiento del tiempo de funcionamiento fotovoltaico estabilizado",
+        "pl": "Naprawiono obliczenia Solar Insights i ustabilizowano śledzenie czasu działania fotowoltaiki",
+        "uk": "Виправлено розрахунок Solar Insights і стабілізовано відстеження часу роботи фотоелектричної системи",
+        "zh-cn": "Solar Insights 计算固定，光伏运行时间跟踪稳定"
+      },
       "1.3.11": {
         "en": "New: Added pH evaluation module (chemistry.ph) with manual and external input, validation, measurement location handling and recommendations. New: Added TDS evaluation module (chemistry.tds) with trend analysis (24h, 7d, 30d), reference tracking and summary outputs (text/JSON/HTML). Fix: Resolved solar speech toggle issue between standard and extended mode. solarExtendedHelper no longer overwrites speech.solar_active in standard mode.",
         "de": "Neu: pH-Auswertungsmodul (chemistry.ph) mit manueller und externer Eingabe, Validierung, Messort-Berücksichtigung und Handlungsempfehlungen. Neu: TDS-Auswertungsmodul (chemistry.tds) mit Trendanalyse (24h, 7 Tage, 30 Tage), Referenzwert-Verfolgung und Zusammenfassungen (Text/JSON/HTML). Fix: Problem mit Solar-Sprachausgabe zwischen Standard- und Extended-Modus behoben. Der solarExtendedHelper überschreibt speech.solar_active im Standard-Modus nicht mehr.",
@@ -54,19 +67,6 @@
         "pl": "Napraw wykrywanie solarInsights dla standardowej energii słonecznej (użyj solar.request_active zamiast nieistniejącego solar.active). Udoskonalenia programu photovoltaicHelper: zaokrąglona wartość nadwyżki w tekście statusu i przełączona licznik czasu afterrun na adapter.setTimeout/clearTimeout.",
         "uk": "Виправте виявлення solarInsights для стандартної сонячної енергії (використовуйте solar.request_active замість неіснуючого solar.active). Покращення photovoltaicHelper: округлене надлишкове значення в тексті стану та переключений таймер післязапуску на adapter.setTimeout/clearTimeout.",
         "zh-cn": "修复标准太阳能的 SolarInsights 检测（使用 Solar.request_active 而不是不存在的 Solar.active）。 PVHelper 改进：对状态文本中的剩余值进行四舍五入，并将 Afterrun 计时器切换为 adapter.setTimeout/clearTimeout。"
-      },
-      "1.3.6": {
-        "en": "Fix for frostHelper: prevents incorrect pump shutdown when other helpers (e.g. photovoltaic) are active. Frost protection now only disables the pump if it previously activated it itself. Improved speech state logic for frost indication. Switched frostHelper timer to adapter.setInterval for better stability and ioBroker compliance.",
-        "de": "Fix für frostHelper: verhindert falsches Abschalten der Pumpe, wenn andere Helper (z. B. Photovoltaik) aktiv sind. Frostschutz schaltet die Pumpe jetzt nur noch aus, wenn er sie zuvor selbst aktiviert hat. Sprach-State für Frostanzeige korrigiert. Timer im frostHelper auf adapter.setInterval umgestellt für bessere Stabilität und ioBroker-Konformität.",
-        "ru": "Исправление FrostHelper: предотвращает некорректное выключение насоса, когда активны другие помощники (например, фотоэлектрические). Защита от замерзания теперь отключает насос только в том случае, если он ранее активировал его сам. Улучшена логика речевого состояния для индикации замерзания. Таймер FrostHelper переключен на адаптер.setInterval для большей стабильности и соответствия требованиям ioBroker.",
-        "pt": "Correção parafrostHelper: evita o desligamento incorreto da bomba quando outros auxiliares (por exemplo, fotovoltaicos) estão ativos. A proteção contra congelamento agora só desativa a bomba se ela mesma a tiver ativado anteriormente. Lógica de estado de fala aprimorada para indicação de congelamento. Mudou o temporizadorfrostHelper para adaptador.setInterval para melhor estabilidade e conformidade com ioBroker.",
-        "nl": "Oplossing voor FrostHelper: voorkomt onjuiste pompuitschakeling wanneer andere helpers (bijv. fotovoltaïsche energie) actief zijn. De vorstbeveiliging schakelt de pomp nu alleen uit als deze deze eerder zelf heeft geactiveerd. Verbeterde spraakstatuslogica voor vorstindicatie. FrostHelper-timer omgeschakeld naar adapter.setInterval voor betere stabiliteit en ioBroker-compliance.",
-        "fr": "Correctif pour frostHelper : empêche un arrêt incorrect de la pompe lorsque d'autres assistants (par exemple photovoltaïques) sont actifs. La protection antigel désactive désormais la pompe uniquement si elle l'a activée elle-même auparavant. Logique d’état vocale améliorée pour l’indication de gel. La minuterie FrostHelper a été remplacée par adapter.setInterval pour une meilleure stabilité et une meilleure conformité à ioBroker.",
-        "it": "Correzione per FrostHelper: impedisce lo spegnimento errato della pompa quando altri helper (ad esempio fotovoltaico) sono attivi. La protezione antigelo ora disabilita la pompa solo se precedentemente l'aveva attivata da sola. Logica dello stato vocale migliorata per l'indicazione del gelo. Cambiato il timer FrostHelper su Adapter.setInterval per una migliore stabilità e conformità con ioBroker.",
-        "es": "Solución para frostHelper: evita el apagado incorrecto de la bomba cuando otros ayudantes (por ejemplo, fotovoltaicos) están activos. La protección contra heladas ahora solo desactiva la bomba si previamente la activó ella misma. Lógica de estado de voz mejorada para indicación de escarcha. Se cambió el temporizador frostHelper a adaptor.setInterval para una mejor estabilidad y cumplimiento de ioBroker.",
-        "pl": "Poprawka dla FrostHelper: zapobiega nieprawidłowemu wyłączeniu pompy, gdy aktywne są inne pomoce (np. fotowoltaiczne). Ochrona przed zamarzaniem wyłącza teraz pompę tylko wtedy, gdy wcześniej sama ją uruchomiła. Ulepszona logika stanu mowy dla sygnalizacji mrozu. Zmieniono licznik czasu FrostHelper na adapter.setInterval, aby zapewnić lepszą stabilność i zgodność z ioBrokerem.",
-        "uk": "Виправлення для frostHelper: запобігає неправильному вимкненню насоса, коли інші помічники (наприклад, фотоелектричні) активні. Захист від замерзання тепер вимикає насос лише в тому випадку, якщо він раніше сам його активував. Покращена логіка стану мови для індикації морозу. Перемкнуто таймер frostHelper на adapter.setInterval для кращої стабільності та відповідності ioBroker.",
-        "zh-cn": "修复霜助手：防止当其他助手（例如光伏）处于活动状态时错误地关闭泵。现在，防冻保护只会在泵之前自行激活的情况下禁用泵。改进了霜冻指示的语音状态逻辑。将frostHelper计时器切换为adapter.setInterval以获得更好的稳定性和ioBroker合规性。"
       }
     },
     "titleLang": {

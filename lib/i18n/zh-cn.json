@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "当前太阳能有效",
   "solar_insights_label_pool_reference_source": "泳池参考来源",
   "solar_insights_label_flow_source": "流量来源",
+  "solar_insights_label_thermal_delta_source": "热量差来源",
   "solar_insights_label_weather_correction_active": "天气修正已启用",
   "solar_insights_label_confidence": "可信度",
   "solar_insights_label_used_sensors": "使用的传感器",
@@ -256,6 +257,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "没有活跃的光伏余电运行",
   "photovoltaic_insights_debug_text_pv_runtime_active": "光伏余电处于激活状态，并且 photovoltaic helper 当前拥有泵。",
   "photovoltaic_insights_debug_text_no_pv_runtime": "当前未统计光伏运行时间，因为没有活跃的光伏余电，或者 photovoltaic helper 未拥有泵。",
+  "photovoltaic_insights_debug_reason_daily_reset": "每日重置",
+  "photovoltaic_insights_debug_text_daily_reset": "光伏分析的每日数据已重置。",
 
   "pH source state configured.": "已配置 pH 源状态。",
   "pH source state could not be subscribed.": "无法订阅 pH 源状态。",
