@@ -305,6 +305,8 @@ Bugfixes
 - solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
 - photovoltaicHelper: round surplus value in status text (avoid long decimal numbers), switched afterrun timer to adapter.setTimeout / clearTimeout
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
 - [GitHub Issues](https://github.com/DasBo1975/ioBroker.poolcontrol/issues)
