@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "Solar activo actualmente",
   "solar_insights_label_pool_reference_source": "Fuente de referencia del pool",
   "solar_insights_label_flow_source": "Fuente de caudal",
+  "solar_insights_label_thermal_delta_source": "Fuente delta térmica",
   "solar_insights_label_weather_correction_active": "Corrección meteorológica activa",
   "solar_insights_label_confidence": "Confianza",
   "solar_insights_label_used_sensors": "Sensores utilizados",
@@ -256,6 +257,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "Sin operación activa con excedente FV",
   "photovoltaic_insights_debug_text_pv_runtime_active": "El excedente FV está activo y el helper fotovoltaico posee actualmente la bomba.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "Actualmente no se cuenta ningún tiempo de funcionamiento FV porque no hay excedente FV activo o el helper fotovoltaico no posee la bomba.",
+  "photovoltaic_insights_debug_reason_daily_reset": "Reinicio diario",
+  "photovoltaic_insights_debug_text_daily_reset": "Los valores diarios de los insights fotovoltaicos han sido restablecidos.",
 
   "pH source state configured.": "Estado de origen de pH configurado.",
   "pH source state could not be subscribed.": "No se pudo suscribir el estado de origen de pH.",

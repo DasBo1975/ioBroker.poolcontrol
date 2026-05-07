@@ -4,6 +4,15 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.6 (2026-04-21)
+
+frostHelper
+- Fixed incorrect pump shutdown when other helpers (e.g. photovoltaicHelper) are active
+- frostHelper now only disables the pump if it previously activated it itself
+- improved internal ownership logic for safer multi-helper interaction
+- corrected frost speech state handling (no longer based on current pump state)
+- switched timer to adapter.setInterval / adapter.clearInterval for better stability and ioBroker compliance
+
 ## 1.3.5 (2026-04-19)
 
 - Fixed critical i18n issue in solarInsightsHelper and solarLogbookHelper that could lead to instability or crashes

@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "Solary aktywne teraz",
   "solar_insights_label_pool_reference_source": "Źródło odniesienia basenu",
   "solar_insights_label_flow_source": "Źródło przepływu",
+  "solar_insights_label_thermal_delta_source": "Źródło różnicy temperatur",
   "solar_insights_label_weather_correction_active": "Korekcja pogodowa aktywna",
   "solar_insights_label_confidence": "Wiarygodność",
   "solar_insights_label_used_sensors": "Użyte czujniki",
@@ -256,6 +257,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "Brak aktywnej pracy z nadwyżki PV",
   "photovoltaic_insights_debug_text_pv_runtime_active": "Nadwyżka PV jest aktywna, a helper fotowoltaiczny aktualnie posiada pompę.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "Obecnie nie jest zliczany czas pracy PV, ponieważ nie ma aktywnej nadwyżki PV albo helper fotowoltaiczny nie posiada pompy.",
+  "photovoltaic_insights_debug_reason_daily_reset": "Reset dzienny",
+  "photovoltaic_insights_debug_text_daily_reset": "Dzienne dane fotowoltaiczne zostały zresetowane.",
 
   "pH source state configured.": "Skonfigurowano stan źródła pH.",
   "pH source state could not be subscribed.": "Nie można zasubskrybować stanu źródła pH.",

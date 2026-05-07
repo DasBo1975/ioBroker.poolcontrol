@@ -181,6 +181,7 @@
   "solar_insights_label_solar_effective_now": "Солнечная система сейчас активна",
   "solar_insights_label_pool_reference_source": "Источник опорного значения бассейна",
   "solar_insights_label_flow_source": "Источник потока",
+  "solar_insights_label_thermal_delta_source": "Источник тепловой разницы",
   "solar_insights_label_weather_correction_active": "Погодная коррекция активна",
   "solar_insights_label_confidence": "Надёжность",
   "solar_insights_label_used_sensors": "Используемые датчики",
@@ -256,6 +257,8 @@
   "photovoltaic_insights_debug_reason_no_pv_runtime": "Нет активной работы от излишка PV",
   "photovoltaic_insights_debug_text_pv_runtime_active": "Излишек PV активен, и photovoltaic helper сейчас владеет насосом.",
   "photovoltaic_insights_debug_text_no_pv_runtime": "Время работы PV сейчас не учитывается, потому что либо нет активного излишка PV, либо photovoltaic helper не владеет насосом.",
+  "photovoltaic_insights_debug_reason_daily_reset": "Ежедневный сброс",
+  "photovoltaic_insights_debug_text_daily_reset": "Дневные значения фотогальванических данных были сброшены.",
 
   "pH source state configured.": "Состояние источника pH настроено.",
   "pH source state could not be subscribed.": "Не удалось подписаться на состояние источника pH.",
