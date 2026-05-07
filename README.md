@@ -188,6 +188,8 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
 ### 1.3.12 (2026-05-02)
 
 **Solar Insights – Calculation fix & structure improvement**
