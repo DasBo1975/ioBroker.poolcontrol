@@ -188,6 +188,14 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Improved runtime handling and persistence
+- Fixed season runtime calculation using the correct season state
+- Unified live runtime calculations for total, today and season values
+- Added numeric runtime second states for robust persistence and recovery
+- Converted runtime timers to adapter-managed timers for improved ioBroker compatibility
+
 ### 1.3.13 (2026-05-08)
 - (copilot) Adapter requires node.js >= 22 now
 - Fixed invalid `common.installedFrom` entry in `io-package.json`
