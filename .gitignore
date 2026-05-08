@@ -15,6 +15,7 @@ coverage/
 # Editor / IDE
 .idea/
 *.swp
+*.code-workspace
 
 # System
 .DS_Store
