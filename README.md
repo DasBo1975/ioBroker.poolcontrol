@@ -188,6 +188,23 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added speech source cooldown handling for solar and time announcements
+- Added configurable `speech.sources.*` states for source-based speech control
+- Reduced excessive solar speech notifications during unstable weather conditions
+- Added persistent numeric runtime second states:
+  - `runtime.total_seconds`
+  - `runtime.today_seconds`
+  - `runtime.current_session_seconds`
+  - `runtime.season_total_seconds`
+- Improved runtime restore handling using numeric fallback logic
+- Fixed live runtime display consistency for total, today and season runtimes
+- Improved season runtime handling using `status.season_active`
+- Converted runtime helper timers to ioBroker adapter timer methods
+- Improved runtime timer cleanup and reset protection
+- Improved speech logging for skipped and cooldown-limited announcements
+
 ### 1.3.14 (2026-05-08)
 
 - Improved runtime handling and persistence
