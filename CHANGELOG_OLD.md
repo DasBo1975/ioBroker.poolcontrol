@@ -4,6 +4,14 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.7 (2026-04-23)
+
+Bugfixes
+- solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
+- photovoltaicHelper: round surplus value in status text (avoid long decimal numbers), switched afterrun timer to adapter.setTimeout / clearTimeout
+
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## 1.3.6 (2026-04-21)
 
 frostHelper

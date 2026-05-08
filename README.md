@@ -188,11 +188,10 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.13 (2026-05-08)
 - (copilot) Adapter requires node.js >= 22 now
 - Fixed invalid `common.installedFrom` entry in `io-package.json`
 - Added German and English function overview documentation
-
 
 ### 1.3.12 (2026-05-02)
 
@@ -304,14 +303,6 @@ Fix: PV Circulation Logic
 - Fix: solarInsightsHelper now correctly tracks previous solar state for more accurate active time calculation
 - Fix: Added missing `debug.last_update` update on successful calculation
 - Improvement: General stability and plausibility improvements in solar insights and logbook processing
-
-### 1.3.7 (2026-04-23)
-
-Bugfixes
-- solarInsightsHelper: fixed detection of standard solar runtime, replaced non-existing solar.active with solar.request_active, improved reliability of solar_ran_today for normal solar setups
-- photovoltaicHelper: round surplus value in status text (avoid long decimal numbers), switched afterrun timer to adapter.setTimeout / clearTimeout
-
-[Older changelogs can be found there](CHANGELOG_OLD.md)
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
