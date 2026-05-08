@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.15 (2026-05-08)
 
 - Added speech source cooldown handling for solar and time announcements
 - Added configurable `speech.sources.*` states for source-based speech control
@@ -286,37 +286,6 @@ New features are added regularly – please refer to the changelog.
     - eliminates repeated "solar on/off" speech messages
     - improves separation of solar control modes
     - stabilizes speech output behavior
-
-### 1.3.10 (2026-05-01)
-
-New: Photovoltaic Insights
-- Introduced a new analytics module `analytics.insights.photovoltaic`
-- Tracks PV-based pump runtime, energy usage and estimated savings
-- New helper: `photovoltaicInsightsHelper`
-- New states: inputs, calculation, results, debug
-- Includes summary outputs (text, JSON, HTML)
-- Fully integrated with i18n translations
-
-Improvement: Active Helper Handling
-- Added consistent `pump.active_helper` ownership handling for:
-  - photovoltaicHelper
-  - solarHelper
-  - solarExtendedHelper
-- Each helper now:
-  - sets its own identifier when controlling the pump
-  - releases it when stopping
-  - does not override other active helpers
-- Ensures correct priority handling and prevents conflicts
-
-Improvement: PV Runtime Evaluation
-- Photovoltaic runtime is now only counted when:
-  - PV surplus is active
-  - AND photovoltaicHelper actually owns the pump
-- Enables accurate runtime, energy and savings calculation
-
-Fix: PV Circulation Logic
-- Fixed issue where pump stopped despite `photovoltaic.ignore_on_circulation = false`
-- Circulation check is now only applied when explicitly enabled
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
