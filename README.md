@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.14 (2026-05-08)
 
 - Improved runtime handling and persistence
 - Fixed season runtime calculation using the correct season state
@@ -300,17 +300,6 @@ Improvement: PV Runtime Evaluation
 Fix: PV Circulation Logic
 - Fixed issue where pump stopped despite `photovoltaic.ignore_on_circulation = false`
 - Circulation check is now only applied when explicitly enabled
-
-### 1.3.9 (2026-04-24)
-
-- Fix: solarLogbookHelper no longer creates duplicate or unnecessary log entries (improved filtering & throttling logic)
-- Fix: Removed obsolete "no runtime today" entries once solar has actually run
-- Fix: Improved handling of weather summary text to avoid broken or cut-off sentences
-- Fix: solarLogbookHelper now updates `last_entry_time` only when a real log entry is written
-- Fix: solarInsightsHelper runtime calculation improved (no incorrect time accumulation on state changes)
-- Fix: solarInsightsHelper now correctly tracks previous solar state for more accurate active time calculation
-- Fix: Added missing `debug.last_update` update on successful calculation
-- Improvement: General stability and plausibility improvements in solar insights and logbook processing
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
