@@ -4,6 +4,11 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.13 (2026-05-08)
+- (copilot) Adapter requires node.js >= 22 now
+- Fixed invalid `common.installedFrom` entry in `io-package.json`
+- Added German and English function overview documentation
+
 ## 1.3.12 (2026-05-02)
 
 **Solar Insights – Calculation fix & structure improvement**

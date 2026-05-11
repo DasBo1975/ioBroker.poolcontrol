@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.18 (2026-05-11)
 
 - Fixed incorrect date display in the pH, ORP and TDS areas.
 - Time states with `value.time` are now stored as numeric timestamps instead of localized date strings.
@@ -279,11 +279,6 @@ New features are added regularly – please refer to the changelog.
 - Unified live runtime calculations for total, today and season values
 - Added numeric runtime second states for robust persistence and recovery
 - Converted runtime timers to adapter-managed timers for improved ioBroker compatibility
-
-### 1.3.13 (2026-05-08)
-- (copilot) Adapter requires node.js >= 22 now
-- Fixed invalid `common.installedFrom` entry in `io-package.json`
-- Added German and English function overview documentation
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
