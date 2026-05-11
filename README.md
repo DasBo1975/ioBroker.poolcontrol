@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.16 (2026-05-11)
 
 - Fixed circulation calculation in time mode when live flow values were not recalculated after helper-driven pump starts.
 - Improved speech system stability.
@@ -216,7 +216,6 @@ New features are added regularly – please refer to the changelog.
   - added `chemistry.ph.outputs.*`
   - extended pH helper with history, trend and summary logic
   - existing pH input, evaluation and mix-run logic remain backward compatible
-
 
 ### 1.3.15 (2026-05-08)
 
@@ -289,33 +288,6 @@ New features are added regularly – please refer to the changelog.
   - all daily values reset at midnight
   - runtime, energy, savings, starts and active state cleared
   - internal helper states reset
-
-### 1.3.11 (2026-05-02)
-
-- (DasBo) New: pH evaluation module (`chemistry.ph`)
-    - supports manual input and external state sources
-    - includes validation, measurement location handling and plausibility checks
-    - evaluation logic with status and user recommendations (no automatic dosing)
-    - manual mixing run with proper pump ownership handling
-    - includes history tracking (last valid value, previous value, time differences)
-    - fully integrated with i18n translations
-
-- (DasBo) New: TDS evaluation module (`chemistry.tds`)
-    - supports manual input and external state sources
-    - includes validation, measurement location and flow-dependent evaluation
-    - reference value tracking (initial water quality baseline)
-    - long-term trend analysis (24h, 7d, 30d)
-    - evaluation based on absolute value, trend and reference delta (no automatic control)
-    - stores measurement history (up to 30 days)
-    - summary outputs (text, JSON, HTML)
-    - fully integrated with i18n translations
-
-- (DasBo) Fix: solar speech toggle (standard vs. extended)
-    - solarExtendedHelper no longer writes to `speech.solar_active` when `solar.control_mode = standard`
-    - prevents conflicting updates between `solarHelper` and `solarExtendedHelper`
-    - eliminates repeated "solar on/off" speech messages
-    - improves separation of solar control modes
-    - stabilizes speech output behavior
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
