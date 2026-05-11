@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.17",
     "news": {
+      "1.3.18": {
+        "en": "Fixed incorrect date display for pH, ORP and TDS time states by storing value.time states as numeric timestamps.",
+        "de": "Falsche Datumsanzeige für pH-, ORP- und TDS-Zeitzustände behoben, indem value.time-Zustände als numerische Zeitstempel gespeichert wurden.",
+        "ru": "Исправлено неправильное отображение даты для состояний времени pH, ОВП и TDS за счет сохранения состояний value.time в виде числовых меток времени.",
+        "pt": "Corrigida a exibição incorreta de data para estados de tempo de pH, ORP e TDS, armazenando estados de valor.tempo como carimbos de data/hora numéricos.",
+        "nl": "Foutieve datumweergave voor pH-, ORP- en TDS-tijdstatussen opgelost door value.time-statussen op te slaan als numerieke tijdstempels.",
+        "fr": "Correction de l'affichage incorrect de la date pour les états temporels pH, ORP et TDS en stockant les états value.time sous forme d'horodatages numériques.",
+        "it": "Risolto il problema con la visualizzazione errata della data per gli stati temporali pH, ORP e TDS memorizzando gli stati value.time come timestamp numerici.",
+        "es": "Se corrigió la visualización de fecha incorrecta para los estados de tiempo de pH, ORP y TDS al almacenar los estados de valor.hora como marcas de tiempo numéricas.",
+        "pl": "Naprawiono nieprawidłowe wyświetlanie daty dla stanów czasowych pH, ​​ORP i TDS poprzez przechowywanie stanów wartość.czas jako numeryczne znaczniki czasu.",
+        "uk": "Виправлено неправильне відображення дати для часових станів pH, ORP і TDS шляхом збереження станів value.time як числових позначок часу.",
+        "zh-cn": "通过将 value.time 状态存储为数字时间戳，修复了 pH、ORP 和 TDS 时间状态的不正确日期显示。"
+      },
       "1.3.17": {
         "en": "Fixed release packaging issue from v1.3.16. Improved speech system stability, stabilized runtime persistence, reduced repeated solar notifications, fixed circulation calculation in time mode and prepared new ORP/Redox chemistry analysis area.",
         "de": "Release-/Uploadproblem aus v1.3.16 behoben. Sprachsystem verbessert, Runtime-Persistenz stabilisiert, wiederholte Solarbenachrichtigungen reduziert, Umwälzberechnung im Zeitmodus korrigiert und neuer ORP-/Redox-Chemiebereich vorbereitet.",
@@ -54,19 +67,6 @@
         "pl": "Poprawiona obsługa i trwałość środowiska wykonawczego. Naprawiono obliczanie czasu wykonania sezonu w celu wykorzystania prawidłowego stanu sezonu, ulepszono aktualizacje czasu działania na żywo, dodano solidne numeryczne drugie stany czasu działania dla bezpieczniejszej trwałości i odzyskiwania oraz przekonwertowano liczniki czasu działania na zegary zarządzane przez adapter dla lepszej kompatybilności z ioBroker.",
         "uk": "Покращена обробка та збереження часу виконання. Виправлено розрахунок часу виконання сезону для використання правильного стану сезону, покращено поточні оновлення середовища виконання, додано надійні численні секунди часу виконання для безпечнішого збереження та відновлення, а також перетворено таймери часу виконання на таймери, керовані адаптером, для кращої сумісності з ioBroker.",
         "zh-cn": "改进了运行时处理和持久性。修复了季节运行时计算以使用正确的季节状态，改进了实时运行时更新，添加了强大的数字运行时第二状态以实现更安全的持久性和恢复，并将运行时计时器转换为适配器管理的计时器以实现更好的 ioBroker 兼容性。"
-      },
-      "1.3.13": {
-        "en": "Added German and English function overview documentation. Fixed invalid common.installedFrom entry in io-package.json.",
-        "de": "Deutsche und englische Funktionsübersicht ergänzt. Ungültigen common.installedFrom-Eintrag in der io-package.json korrigiert.",
-        "ru": "Добавлена ​​обзорная документация по функциям на немецком и английском языках. Исправлена ​​неверная запись common.installedFrom в io-package.json.",
-        "pt": "Adicionada documentação de visão geral das funções em alemão e inglês. Corrigida entrada common.installedFrom inválida em io-package.json.",
-        "nl": "Duitse en Engelse functieoverzichtdocumentatie toegevoegd. Ongeldige common.installedFrom-vermelding in io-package.json opgelost.",
-        "fr": "Ajout d'une documentation de présentation des fonctions en allemand et en anglais. Correction de l'entrée common.installedFrom invalide dans io-package.json.",
-        "it": "Aggiunta la documentazione panoramica delle funzioni in tedesco e inglese. Risolto il problema con la voce common.installedFrom non valida in io-package.json.",
-        "es": "Se agregó documentación de descripción general de funciones en alemán e inglés. Se corrigió la entrada common.installedFrom no válida en io-package.json.",
-        "pl": "Dodano dokumentację przeglądu funkcji w języku niemieckim i angielskim. Naprawiono nieprawidłowy wpis common.installedFrom w io-package.json.",
-        "uk": "Додано документацію щодо огляду функцій німецькою та англійською мовами. Виправлено недійсний запис common.installedFrom у io-package.json.",
-        "zh-cn": "添加了德语和英语功能概述文档。修复了 io-package.json 中无效的 common.installedFrom 条目。"
       }
     },
     "titleLang": {

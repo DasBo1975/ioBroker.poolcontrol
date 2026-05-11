@@ -188,6 +188,14 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed incorrect date display in the pH, ORP and TDS areas.
+- Time states with `value.time` are now stored as numeric timestamps instead of localized date strings.
+- Improved compatibility with ioBroker/Admin date handling.
+- Added backward-compatible handling for previously stored German date strings.
+- Kept history JSON output unchanged with readable date strings for users and VIS displays.
+
 ### 1.3.17 (2026-05-11)
 
 - Fixed release/upload issue from v1.3.16.
