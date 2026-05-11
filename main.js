@@ -30,6 +30,7 @@ const aiForecastHelper = require('./lib/helpers/aiForecastHelper');
 const aiChemistryHelpHelper = require('./lib/helpers/aiChemistryHelpHelper');
 const chemistryPhHelper = require('./lib/helpers/chemistryPhHelper');
 const chemistryTdsHelper = require('./lib/helpers/chemistryTdsHelper');
+const chemistryOrpHelper = require('./lib/helpers/chemistryOrpHelper');
 const controlHelper = require('./lib/helpers/controlHelper');
 const controlHelper2 = require('./lib/helpers/controlHelper2');
 const debugLogHelper = require('./lib/helpers/debugLogHelper');
@@ -63,6 +64,7 @@ const { createAiStates } = require('./lib/stateDefinitions/aiStates'); // NEU: K
 const { createAiChemistryHelpStates } = require('./lib/stateDefinitions/aiChemistryHelpStates'); // NEU: KI-Chemie-Hilfe
 const { createChemistryPhStates } = require('./lib/stateDefinitions/chemistryPhStates');
 const { createChemistryTdsStates } = require('./lib/stateDefinitions/chemistryTdsStates');
+const { createChemistryOrpStates } = require('./lib/stateDefinitions/chemistryOrpStates');
 const { createHeatStates } = require('./lib/stateDefinitions/heatStates');
 const { createActuatorsStates } = require('./lib/stateDefinitions/actuatorsStates');
 const { createSolarInsightsStates } = require('./lib/stateDefinitions/solarInsightsStates');
@@ -172,6 +174,9 @@ class Poolcontrol extends utils.Adapter {
         // --- Chemistry / TDS evaluation ---
         await createChemistryTdsStates(this);
 
+        // --- Chemistry / ORP evaluation ---
+        await createChemistryOrpStates(this);
+
         // --- Zusatz-Aktoren (Beleuchtung & Zusatzpumpen) ---
         await createActuatorsStates(this);
 
@@ -202,6 +207,7 @@ class Poolcontrol extends utils.Adapter {
         aiChemistryHelpHelper.init(this);
         chemistryPhHelper.init(this);
         chemistryTdsHelper.init(this);
+        chemistryOrpHelper.init(this);
         frostHelper.init(this);
         statusHelper.init(this);
         infoHelper.init(this);
@@ -299,6 +305,9 @@ class Poolcontrol extends utils.Adapter {
             }
             if (chemistryTdsHelper.cleanup) {
                 chemistryTdsHelper.cleanup();
+            }
+            if (chemistryOrpHelper.cleanup) {
+                chemistryOrpHelper.cleanup();
             }
             if (aiChemistryHelpHelper.cleanup) {
                 aiChemistryHelpHelper.cleanup();
@@ -437,6 +446,11 @@ class Poolcontrol extends utils.Adapter {
             await chemistryTdsHelper.handleStateChange(id, state);
         } catch (e) {
             this.log.warn(`[chemistryTdsHelper] Error in handleStateChange: ${e.message}`);
+        }
+        try {
+            await chemistryOrpHelper.handleStateChange(id, state);
+        } catch (e) {
+            this.log.warn(`[chemistryOrpHelper] Error in handleStateChange: ${e.message}`);
         }
         try {
             statusHelper.handleStateChange(id, state);
