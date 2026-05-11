@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.16",
+    "version": "1.3.17",
     "news": {
       "1.3.17": {
         "en": "Fixed release packaging issue from v1.3.16. Improved speech system stability, stabilized runtime persistence, reduced repeated solar notifications, fixed circulation calculation in time mode and prepared new ORP/Redox chemistry analysis area.",

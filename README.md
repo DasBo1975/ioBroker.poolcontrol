@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.17 (2026-05-11)
 
 - Fixed release/upload issue from v1.3.16.
 - Fixed circulation calculation in time mode when live flow values were not recalculated after helper-driven pump starts.
@@ -276,48 +276,6 @@ New features are added regularly – please refer to the changelog.
 - (copilot) Adapter requires node.js >= 22 now
 - Fixed invalid `common.installedFrom` entry in `io-package.json`
 - Added German and English function overview documentation
-
-### 1.3.12 (2026-05-02)
-
-**Solar Insights – Calculation fix & structure improvement**
-
-- Fixed incorrect thermal power and energy calculation
-- Previously used collector – pool temperature → caused unrealistic values
-- Switched to correct physical calculation: return – flow (water delta)
-- Thermal power is now only calculated when:
-  - valid flow is available
-  - delta T > 0
-- Prevents unrealistic values (e.g. hundreds of kW or >100 kWh daily gain)
-- Stabilized daily gain and peak power calculation
-- No accumulation with invalid or missing data
-- Improved sensor logic:
-  - introduced `flow` and `water_delta`
-  - clear separation between flow and temperature delta
-- Increased transparency:
-  - new output: `thermal_delta_source = return_flow_delta`
-  - HTML and JSON outputs extended
-- Added new i18n key:
-  - `solar_insights_label_thermal_delta_source`
-
-**Photovoltaic Insights – Runtime & stability fix**
-
-- Fixed incorrect runtime calculation
-- Root cause: runtime was only calculated on state changes
-- Added internal periodic recalculation (every 60 seconds during PV runtime)
-- Runtime is now accumulated continuously and correctly
-- Logic unchanged:
-  - only real PV surplus runtime is counted (`pv_surplus_active && photovoltaicHelper`)
-  - no afterrun included
-- Improved calculation:
-  - runtime is now independent from pump power availability
-  - energy is only calculated with valid pump power
-- Increased stability:
-  - improved start detection (`starts_today`)
-  - more reliable time delta handling
-- Added daily reset:
-  - all daily values reset at midnight
-  - runtime, energy, savings, starts and active state cleared
-  - internal helper states reset
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
