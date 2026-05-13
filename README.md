@@ -188,6 +188,13 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added runtime self-healing for missed pump start events
+- Stabilized runtime and circulation calculations for delayed or filtered pump switch updates
+- Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available
+- Improved internal runtime synchronization
+
 ### 1.3.18 (2026-05-11)
 
 - Fixed incorrect date display in the pH, ORP and TDS areas.
