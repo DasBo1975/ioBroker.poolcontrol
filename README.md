@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.20 (2026-05-13)
 
 - Added runtime self-healing for missed pump start events.
 - Stabilized runtime and circulation calculations for delayed or filtered pump switch updates.
@@ -269,23 +269,6 @@ New features are added regularly – please refer to the changelog.
   - added `chemistry.ph.outputs.*`
   - extended pH helper with history, trend and summary logic
   - existing pH input, evaluation and mix-run logic remain backward compatible
-
-### 1.3.15 (2026-05-08)
-
-- Added speech source cooldown handling for solar and time announcements
-- Added configurable `speech.sources.*` states for source-based speech control
-- Reduced excessive solar speech notifications during unstable weather conditions
-- Added persistent numeric runtime second states:
-  - `runtime.total_seconds`
-  - `runtime.today_seconds`
-  - `runtime.current_session_seconds`
-  - `runtime.season_total_seconds`
-- Improved runtime restore handling using numeric fallback logic
-- Fixed live runtime display consistency for total, today and season runtimes
-- Improved season runtime handling using `status.season_active`
-- Converted runtime helper timers to ioBroker adapter timer methods
-- Improved runtime timer cleanup and reset protection
-- Improved speech logging for skipped and cooldown-limited announcements
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
