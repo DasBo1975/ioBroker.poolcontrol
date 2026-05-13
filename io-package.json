@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.19",
     "news": {
+      "1.3.20": {
+        "en": "Added runtime self-healing for missed pump start events and protected time control states from being overwritten during adapter updates.",
+        "de": "Runtime-Selbstheilung für verpasste Pumpenstart-Ereignisse ergänzt und Zeitsteuerungs-Datenpunkte vor dem Überschreiben bei Adapter-Updates geschützt.",
+        "ru": "Добавлено самовосстановление во время выполнения для пропущенных событий запуска насоса и защищены состояния контроля времени от перезаписи во время обновлений адаптера.",
+        "pt": "Adicionada autocorreção em tempo de execução para eventos de inicialização de bomba perdidos e estados de controle de tempo protegidos contra substituição durante atualizações do adaptador.",
+        "nl": "Zelfherstel tijdens runtime toegevoegd voor gemiste pompstartgebeurtenissen en beschermde tijdcontrolestatussen tegen overschrijving tijdens adapterupdates.",
+        "fr": "Ajout de l'auto-réparation au moment de l'exécution pour les événements de démarrage de pompe manqués et des états de contrôle du temps protégés contre l'écrasement lors des mises à jour de l'adaptateur.",
+        "it": "Aggiunta l'autoriparazione del runtime per gli eventi di mancato avvio della pompa e gli stati di controllo temporale protetti dalla sovrascrittura durante gli aggiornamenti dell'adattatore.",
+        "es": "Se agregó autorreparación en tiempo de ejecución para eventos de inicio de bomba perdidos y estados de control de tiempo protegidos para que no se sobrescriban durante las actualizaciones del adaptador.",
+        "pl": "Dodano funkcję samonaprawy w czasie wykonywania w przypadku nieodebranych zdarzeń uruchomienia pompy i zabezpieczono stany kontroli czasu przed nadpisaniem podczas aktualizacji adaptera.",
+        "uk": "Додано самовідновлення під час виконання для пропущених подій запуску насоса та захищено стани керування часом від перезапису під час оновлення адаптера.",
+        "zh-cn": "添加了针对错过的泵启动事件的运行时自我修复，并保护时间控制状态在适配器更新期间不被覆盖。"
+      },
       "1.3.19": {
         "en": "Added runtime self-healing for missed pump start events. Stabilized runtime and circulation calculations for delayed or filtered pump switch updates. Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available. Improved internal runtime synchronization.",
         "de": "Runtime-Selbstheilung für verpasste Pumpenstart-Ereignisse ergänzt. Laufzeit- und Umwälzberechnung bei verzögerten oder gefilterten Pumpenschalter-Updates stabilisiert. Seltenen Synchronisationsfehler behoben, bei dem die Umwälzberechnung trotz aktiver Pumpen-Livewerte stehen bleiben konnte. Interne Runtime-Synchronisierung verbessert.",
@@ -54,19 +67,6 @@
         "pl": "Poprawiona stabilność systemu mowy, ustabilizowana trwałość czasu działania, zmniejszona liczba powtarzających się powiadomień słonecznych, stałe obliczanie cyrkulacji w trybie czasowym i przygotowany nowy obszar analizy chemicznej ORP/Redox.",
         "uk": "Покращена стабільність мовної системи, стабілізована стійкість під час виконання, зменшено кількість повторюваних сонячних сповіщень, виправлено обчислення циркуляції в часовому режимі та підготовлено нову область аналізу ORP/Redox.",
         "zh-cn": "提高了语音系统的稳定性，稳定了运行时间的持久性，减少了重复的太阳通知，修复了时间模式下的循环计算，并准备了新的ORP/氧化还原化学分析区域。"
-      },
-      "1.3.15": {
-        "en": "Added speech source cooldown handling, improved solar/time speech control, added persistent runtime second states, improved runtime restore logic and converted runtime timers to ioBroker adapter timers.",
-        "de": "Sprachquellen mit Cooldown-Steuerung ergänzt, Solar-/Zeit-Sprachsteuerung verbessert, persistente Runtime-Sekundenstates hinzugefügt, Runtime-Wiederherstellung verbessert und Runtime-Timer auf ioBroker-Adapter-Timer umgestellt.",
-        "ru": "Добавлена ​​обработка перезарядки источника речи, улучшено управление речью по солнечной энергии и времени, добавлены постоянные секунды времени выполнения, улучшена логика восстановления времени выполнения и преобразованы таймеры времени выполнения в таймеры адаптера ioBroker.",
-        "pt": "Adicionado tratamento de resfriamento da fonte de fala, controle de fala solar/tempo aprimorado, segundos estados de tempo de execução persistentes adicionados, lógica de restauração de tempo de execução aprimorada e temporizadores de tempo de execução convertidos em temporizadores de adaptador ioBroker.",
-        "nl": "Afkoeling van spraakbronnen toegevoegd, verbeterde spraakcontrole op zonne-energie/tijd, persistente tweede runtime-statussen toegevoegd, verbeterde runtime-herstellogica en geconverteerde runtime-timers naar ioBroker-adaptertimers.",
-        "fr": "Ajout de la gestion du temps de recharge de la source vocale, du contrôle vocal solaire/temporel amélioré, ajout des seconds états d'exécution persistants, amélioration de la logique de restauration de l'exécution et conversion des minuteries d'exécution en minuteries d'adaptateur ioBroker.",
-        "it": "Aggiunta la gestione del raffreddamento della sorgente vocale, controllo vocale solare/ora migliorato, aggiunti secondi stati di runtime persistenti, logica di ripristino del runtime migliorata e timer di runtime convertiti in timer dell'adattatore ioBroker.",
-        "es": "Se agregó manejo de enfriamiento de la fuente de voz, control de voz solar/tiempo mejorado, se agregaron segundos estados de tiempo de ejecución persistentes, lógica de restauración de tiempo de ejecución mejorada y temporizadores de tiempo de ejecución convertidos en temporizadores de adaptador ioBroker.",
-        "pl": "Dodano obsługę schładzania źródła mowy, ulepszoną kontrolę mowy w czasie słonecznym/czasem, dodano trwałe drugie stany czasu wykonania, ulepszoną logikę przywracania w czasie wykonywania i przekonwertowano liczniki czasu działania na liczniki czasu adaptera ioBroker.",
-        "uk": "Додано обробку перезарядки джерела мовлення, покращено керування мовленням із сонячними променями/часом, додано постійні другі стани під час виконання, покращено логіку відновлення під час виконання та перетворено таймери часу виконання на таймери адаптера ioBroker.",
-        "zh-cn": "添加了语音源冷却处理、改进了太阳/时间语音控制、添加了持久运行时第二状态、改进了运行时恢复逻辑并将运行时计时器转换为 ioBroker 适配器计时器。"
       }
     },
     "titleLang": {
