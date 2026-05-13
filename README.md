@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.19 (2026-05-13)
 
 - Added runtime self-healing for missed pump start events
 - Stabilized runtime and circulation calculations for delayed or filtered pump switch updates
@@ -278,14 +278,6 @@ New features are added regularly – please refer to the changelog.
 - Converted runtime helper timers to ioBroker adapter timer methods
 - Improved runtime timer cleanup and reset protection
 - Improved speech logging for skipped and cooldown-limited announcements
-
-### 1.3.14 (2026-05-08)
-
-- Improved runtime handling and persistence
-- Fixed season runtime calculation using the correct season state
-- Unified live runtime calculations for total, today and season values
-- Added numeric runtime second states for robust persistence and recovery
-- Converted runtime timers to adapter-managed timers for improved ioBroker compatibility
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
