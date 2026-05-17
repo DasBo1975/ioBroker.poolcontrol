@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.20",
     "news": {
+      "1.3.21": {
+        "en": "Added new follow-pump devices. Up to three external devices can now automatically follow the main pump operation. Added validation for target states including existence, boolean type and writable checks. Added protection against internal follow-pump loops.",
+        "de": "Neue Geräte mit Pumpenlauf hinzugefügt. Bis zu drei externe Geräte können jetzt automatisch dem Lauf der Hauptpumpe folgen. Zusätzlich wurden Prüfungen für Ziel-Datenpunkte (Existenz, Boolean-Typ und Schreibbarkeit) ergänzt. Schutz gegen interne Follow-Pump-Schleifen hinzugefügt.",
+        "ru": "Добавлены новые устройства, следующие за работой насоса. До трёх внешних устройств теперь могут автоматически следовать за работой основного насоса. Добавлена проверка целевых состояний (существование, тип boolean и возможность записи). Добавлена защита от внутренних циклов Follow-Pump.",
+        "pt": "Adicionados novos dispositivos dependentes da bomba. Até três dispositivos externos podem agora seguir automaticamente o funcionamento da bomba principal. Adicionadas verificações para estados alvo (existência, tipo booleano e permissão de escrita). Adicionada proteção contra loops internos Follow-Pump.",
+        "nl": "Nieuwe apparaten met pompkoppeling toegevoegd. Tot drie externe apparaten kunnen nu automatisch de hoofdpomp volgen. Validatie voor doelstatussen toegevoegd inclusief bestaan, boolean-type en schrijfbaarheid. Bescherming tegen interne Follow-Pump-lussen toegevoegd.",
+        "fr": "Ajout de nouveaux appareils liés à la pompe. Jusqu'à trois appareils externes peuvent désormais suivre automatiquement le fonctionnement de la pompe principale. Validation des états cibles ajoutée (existence, type booléen et écriture). Protection contre les boucles internes Follow-Pump ajoutée.",
+        "it": "Aggiunti nuovi dispositivi collegati alla pompa. Fino a tre dispositivi esterni possono ora seguire automaticamente il funzionamento della pompa principale. Aggiunti controlli per gli stati di destinazione (esistenza, tipo booleano e scrivibilità). Aggiunta protezione contro i loop interni Follow-Pump.",
+        "es": "Añadidos nuevos dispositivos dependientes de la bomba. Hasta tres dispositivos externos ahora pueden seguir automáticamente el funcionamiento de la bomba principal. Se añadieron validaciones para estados destino (existencia, tipo booleano y escritura). Añadida protección contra bucles internos Follow-Pump.",
+        "pl": "Dodano nowe urządzenia podążające za pompą. Do trzech urządzeń zewnętrznych może teraz automatycznie podążać za pracą głównej pompy. Dodano sprawdzanie stanów docelowych (istnienie, typ boolean i możliwość zapisu). Dodano ochronę przed wewnętrznymi pętlami Follow-Pump.",
+        "uk": "Додано нові пристрої, що слідують за насосом. До трьох зовнішніх пристроїв тепер можуть автоматично працювати разом з головним насосом. Додано перевірку цільових станів (існування, тип boolean та можливість запису). Додано захист від внутрішніх циклів Follow-Pump.",
+        "zh-cn": "新增随泵运行设备。现在最多可让三个外部设备自动跟随主泵运行。增加了目标状态验证（存在性、布尔类型和可写性）。增加了内部 Follow-Pump 循环保护。"
+      },
       "1.3.20": {
         "en": "Added runtime self-healing for missed pump start events and protected time control states from being overwritten during adapter updates.",
         "de": "Runtime-Selbstheilung für verpasste Pumpenstart-Ereignisse ergänzt und Zeitsteuerungs-Datenpunkte vor dem Überschreiben bei Adapter-Updates geschützt.",
@@ -54,19 +67,6 @@
         "pl": "Naprawiono problem z pakowaniem wersji od wersji 1.3.16. Poprawiona stabilność systemu mowy, ustabilizowana trwałość czasu działania, zmniejszona liczba powtarzających się powiadomień słonecznych, stałe obliczanie cyrkulacji w trybie czasowym i przygotowany nowy obszar analizy chemicznej ORP/Redox.",
         "uk": "Виправлена ​​проблема упаковки випуску з версії 1.3.16. Покращена стабільність мовної системи, стабілізована стійкість під час виконання, зменшено кількість повторюваних сонячних сповіщень, виправлено обчислення циркуляції в часовому режимі та підготовлено нову область аналізу ORP/Redox.",
         "zh-cn": "修复了 v1.3.16 版本的打包问题。提高了语音系统的稳定性，稳定了运行时间的持久性，减少了重复的太阳通知，修复了时间模式下的循环计算，并准备了新的ORP/氧化还原化学分析区域。"
-      },
-      "1.3.16": {
-        "en": "Improved speech system stability, stabilized runtime persistence, reduced repeated solar notifications, fixed circulation calculation in time mode and prepared new ORP/Redox chemistry analysis area.",
-        "de": "Sprachsystem verbessert, Runtime-Persistenz stabilisiert, wiederholte Solarbenachrichtigungen reduziert, Umwälzberechnung im Zeitmodus korrigiert und neuer ORP-/Redox-Chemiebereich vorbereitet.",
-        "ru": "Улучшена стабильность речевой системы, стабилизировано постоянство времени выполнения, уменьшено количество повторных уведомлений о солнечной радиации, исправлен расчет циркуляции во временном режиме и подготовлена ​​новая область химического анализа ОВП/окислительно-восстановительного потенциала.",
-        "pt": "Melhor estabilidade do sistema de fala, persistência de tempo de execução estabilizada, redução de notificações solares repetidas, cálculo de circulação fixo no modo de tempo e nova área de análise química ORP/Redox preparada.",
-        "nl": "Verbeterde stabiliteit van het spraaksysteem, gestabiliseerde runtime-persistentie, minder herhaalde zonnemeldingen, vaste circulatieberekening in tijdmodus en voorbereid voor een nieuw ORP/Redox-chemieanalysegebied.",
-        "fr": "Amélioration de la stabilité du système vocal, persistance d'exécution stabilisée, réduction des notifications solaires répétées, calcul de la circulation fixe en mode temps et préparation d'une nouvelle zone d'analyse chimique ORP/Redox.",
-        "it": "Stabilità del sistema vocale migliorata, persistenza del tempo di esecuzione stabilizzata, notifiche solari ripetute ridotte, calcolo della circolazione fissa in modalità temporale e nuova area di analisi chimica ORP/Redox preparata.",
-        "es": "Se mejoró la estabilidad del sistema de voz, se estabilizó la persistencia del tiempo de ejecución, se redujeron las notificaciones solares repetidas, se arregló el cálculo de la circulación en el modo de tiempo y se preparó una nueva área de análisis de química ORP/Redox.",
-        "pl": "Poprawiona stabilność systemu mowy, ustabilizowana trwałość czasu działania, zmniejszona liczba powtarzających się powiadomień słonecznych, stałe obliczanie cyrkulacji w trybie czasowym i przygotowany nowy obszar analizy chemicznej ORP/Redox.",
-        "uk": "Покращена стабільність мовної системи, стабілізована стійкість під час виконання, зменшено кількість повторюваних сонячних сповіщень, виправлено обчислення циркуляції в часовому режимі та підготовлено нову область аналізу ORP/Redox.",
-        "zh-cn": "提高了语音系统的稳定性，稳定了运行时间的持久性，减少了重复的太阳通知，修复了时间模式下的循环计算，并准备了新的ORP/氧化还原化学分析区域。"
       }
     },
     "titleLang": {
