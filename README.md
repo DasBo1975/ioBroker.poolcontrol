@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.21 (2026-05-17)
 
 NEW: Follow-pump devices
 
@@ -214,7 +214,6 @@ Features:
   - writable required
 - Protection against invalid internal follow-pump targets
 - Persistent configuration values
-
 
 ### 1.3.20 (2026-05-13)
 
@@ -242,35 +241,6 @@ Features:
 ### 1.3.17 (2026-05-11)
 
 - Fixed release/upload issue from v1.3.16.
-- Fixed circulation calculation in time mode when live flow values were not recalculated after helper-driven pump starts.
-- Improved speech system stability.
-- Stabilized runtime persistence.
-- Reduced repeated solar notifications.
-- Added internal stability improvements.
-
-- Added new ORP/Redox chemistry preparation:
-  - new `chemistryOrpStates.js`
-  - new `chemistryOrpHelper.js`
-  - integrated ORP handling into `main.js`
-  - supports disabled/manual/state input modes
-  - ORP value handling in mV
-  - pH reference from `chemistry.ph.enabled` and `chemistry.ph.input.current_value`
-  - measurement location, pump and stabilization logic aligned with pH/TDS
-  - ORP evaluation without automatic dosing or chlorine control
-  - ORP 24h/7d/30d trend support
-  - ORP history support
-  - ORP text/HTML/JSON outputs
-
-- Added ORP i18n texts.
-- Aligned pH structure with TDS/ORP:
-  - added `chemistry.ph.history.*`
-  - added `chemistry.ph.trend.*`
-  - added `chemistry.ph.outputs.*`
-  - extended pH helper with history, trend and summary logic
-  - existing pH input, evaluation and mix-run logic remain backward compatible
-
-### 1.3.16 (2026-05-11)
-
 - Fixed circulation calculation in time mode when live flow values were not recalculated after helper-driven pump starts.
 - Improved speech system stability.
 - Stabilized runtime persistence.
