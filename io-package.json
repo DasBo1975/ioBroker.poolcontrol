@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.21",
     "news": {
+      "1.3.22": {
+        "en": "Improved ORP pH reference synchronization. The ORP helper now updates the pH reference independently from ORP value processing and immediately reflects pH state changes.",
+        "de": "ORP-pH-Referenz verbessert. Der ORP-Helper aktualisiert die pH-Referenz jetzt unabhängig von der ORP-Wertverarbeitung und übernimmt pH-Änderungen sofort.",
+        "ru": "Улучшена синхронизация эталонного значения pH ОВП. Помощник по ОВП теперь обновляет эталонное значение pH независимо от обработки значений ОВП и немедленно отражает изменения состояния pH.",
+        "pt": "Sincronização de referência de pH ORP aprimorada. O auxiliar ORP agora atualiza a referência de pH independentemente do processamento do valor ORP e reflete imediatamente as alterações do estado de pH.",
+        "nl": "Verbeterde ORP pH-referentiesynchronisatie. De ORP-helper werkt nu de pH-referentie onafhankelijk van de ORP-waardeverwerking bij en weerspiegelt onmiddellijk veranderingen in de pH-toestand.",
+        "fr": "Synchronisation améliorée de la référence ORP pH. L'assistant ORP met désormais à jour la référence pH indépendamment du traitement de la valeur ORP et reflète immédiatement les changements d'état du pH.",
+        "it": "Sincronizzazione del riferimento pH ORP migliorata. L'assistente ORP ora aggiorna il riferimento del pH indipendentemente dall'elaborazione del valore ORP e riflette immediatamente i cambiamenti dello stato del pH.",
+        "es": "Sincronización de referencia de pH ORP mejorada. El asistente de ORP ahora actualiza la referencia de pH independientemente del procesamiento del valor de ORP y refleja inmediatamente los cambios en el estado del pH.",
+        "pl": "Ulepszona synchronizacja odniesienia pH ORP. Pomocnik ORP aktualizuje teraz wartość odniesienia pH niezależnie od przetwarzania wartości ORP i natychmiast odzwierciedla zmiany stanu pH.",
+        "uk": "Покращена синхронізація еталонного pH ОВП. Помічник ОВП тепер оновлює еталонний рН незалежно від обробки значення ОВП і негайно відображає зміни стану рН.",
+        "zh-cn": "改进了 ORP pH 参考同步。 ORP 助手现在独立于 ORP 值处理更新 pH 参考值，并立即反映 pH 状态变化。"
+      },
       "1.3.21": {
         "en": "Added new follow-pump devices. Up to three external devices can now automatically follow the main pump operation. Added validation for target states including existence, boolean type and writable checks. Added protection against internal follow-pump loops.",
         "de": "Neue Geräte mit Pumpenlauf hinzugefügt. Bis zu drei externe Geräte können jetzt automatisch dem Lauf der Hauptpumpe folgen. Zusätzlich wurden Prüfungen für Ziel-Datenpunkte (Existenz, Boolean-Typ und Schreibbarkeit) ergänzt. Schutz gegen interne Follow-Pump-Schleifen hinzugefügt.",
@@ -54,19 +67,6 @@
         "pl": "Naprawiono nieprawidłowe wyświetlanie daty dla stanów czasowych pH, ​​ORP i TDS poprzez przechowywanie stanów wartość.czas jako numeryczne znaczniki czasu.",
         "uk": "Виправлено неправильне відображення дати для часових станів pH, ORP і TDS шляхом збереження станів value.time як числових позначок часу.",
         "zh-cn": "通过将 value.time 状态存储为数字时间戳，修复了 pH、ORP 和 TDS 时间状态的不正确日期显示。"
-      },
-      "1.3.17": {
-        "en": "Fixed release packaging issue from v1.3.16. Improved speech system stability, stabilized runtime persistence, reduced repeated solar notifications, fixed circulation calculation in time mode and prepared new ORP/Redox chemistry analysis area.",
-        "de": "Release-/Uploadproblem aus v1.3.16 behoben. Sprachsystem verbessert, Runtime-Persistenz stabilisiert, wiederholte Solarbenachrichtigungen reduziert, Umwälzberechnung im Zeitmodus korrigiert und neuer ORP-/Redox-Chemiebereich vorbereitet.",
-        "ru": "Исправлена ​​проблема с упаковкой выпуска версии 1.3.16. Улучшена стабильность речевой системы, стабилизировано постоянство времени выполнения, уменьшено количество повторных уведомлений о солнечной радиации, исправлен расчет циркуляции во временном режиме и подготовлена ​​новая область химического анализа ОВП/окислительно-восстановительного потенциала.",
-        "pt": "Problema de empacotamento de lançamento corrigido da v1.3.16. Melhor estabilidade do sistema de fala, persistência de tempo de execução estabilizada, redução de notificações solares repetidas, cálculo de circulação fixo no modo de tempo e nova área de análise química ORP/Redox preparada.",
-        "nl": "Probleem met releaseverpakking vanaf v1.3.16 opgelost. Verbeterde stabiliteit van het spraaksysteem, gestabiliseerde runtime-persistentie, minder herhaalde zonnemeldingen, vaste circulatieberekening in tijdmodus en voorbereid voor een nieuw ORP/Redox-chemieanalysegebied.",
-        "fr": "Correction d'un problème d'emballage de version à partir de la v1.3.16. Amélioration de la stabilité du système vocal, persistance d'exécution stabilisée, réduction des notifications solaires répétées, calcul de la circulation fixe en mode temps et préparation d'une nouvelle zone d'analyse chimique ORP/Redox.",
-        "it": "Risolto il problema relativo al pacchetto di rilascio dalla v1.3.16. Stabilità del sistema vocale migliorata, persistenza del tempo di esecuzione stabilizzata, notifiche solari ripetute ridotte, calcolo della circolazione fissa in modalità temporale e nuova area di analisi chimica ORP/Redox preparata.",
-        "es": "Se solucionó el problema del paquete de lanzamiento desde v1.3.16. Se mejoró la estabilidad del sistema de voz, se estabilizó la persistencia del tiempo de ejecución, se redujeron las notificaciones solares repetidas, se arregló el cálculo de la circulación en el modo de tiempo y se preparó una nueva área de análisis de química ORP/Redox.",
-        "pl": "Naprawiono problem z pakowaniem wersji od wersji 1.3.16. Poprawiona stabilność systemu mowy, ustabilizowana trwałość czasu działania, zmniejszona liczba powtarzających się powiadomień słonecznych, stałe obliczanie cyrkulacji w trybie czasowym i przygotowany nowy obszar analizy chemicznej ORP/Redox.",
-        "uk": "Виправлена ​​проблема упаковки випуску з версії 1.3.16. Покращена стабільність мовної системи, стабілізована стійкість під час виконання, зменшено кількість повторюваних сонячних сповіщень, виправлено обчислення циркуляції в часовому режимі та підготовлено нову область аналізу ORP/Redox.",
-        "zh-cn": "修复了 v1.3.16 版本的打包问题。提高了语音系统的稳定性，稳定了运行时间的持久性，减少了重复的太阳通知，修复了时间模式下的循环计算，并准备了新的ORP/氧化还原化学分析区域。"
       }
     },
     "titleLang": {
