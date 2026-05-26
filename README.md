@@ -147,6 +147,25 @@ Details about the behavior of consumption and cost values (e.g., after restarts 
   This section is used exclusively for analysis and troubleshooting.  
   In normal operation, monitoring should remain disabled.
 
+- **Additional Actuators**
+  - Follow-pump devices
+  - Automatic ON/OFF with pump operation
+  - Validation of external targets
+  - Suitable for UV, water features and auxiliary systems
+
+- **Water Chemistry Analysis**
+  - pH evaluation with manual or external sources
+  - TDS analysis with trends (24h / 7d / 30d)
+  - ORP / Redox evaluation with pH reference support
+  - Measurement location logic
+  - Plausibility checks
+  - HTML / JSON / text outputs
+  - No automatic dosing
+
+- Source monitoring and diagnostics
+- Last valid value tracking
+- Recovery logic for missing updates
+- Source status monitoring
 ---
 
 
@@ -188,6 +207,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Updated release-script dependencies to current versions
+- Improved README and changelog structure
+- Repository checker recommendations reviewed
+
 ### 1.3.23 (2026-05-26)
 
 - Added extended temperature diagnostics for all temperature sensors:
@@ -249,6 +274,16 @@ Features:
 - Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available
 - Improved internal runtime synchronization
 
+---
+
+## Archived Release History
+
+For older releases and archived version history see:
+
+[CHANGELOG_OLD.md](./CHANGELOG_OLD.md)
+
+---
+
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
 - [GitHub Issues](https://github.com/DasBo1975/ioBroker.poolcontrol/issues)
@@ -269,7 +304,7 @@ The user is responsible for the **safe installation and operation of their hardw
 
 ---
 
-## License & Legal
+## Legal Notice
 
 PoolControl is an open-source project developed by D. Bertin (DasBo1975).
 

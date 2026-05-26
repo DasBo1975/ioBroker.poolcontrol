@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.23",
     "news": {
+      "1.3.24": {
+        "en": "Updated repository and maintainer components: updated release-script dependencies, improved README/changelog structure and reviewed repository checker suggestions",
+        "de": "Repository- und Maintainer-Komponenten aktualisiert: Release-Script-Abhängigkeiten aktualisiert, README-/Changelog-Struktur verbessert und Repository-Checker-Hinweise überarbeitet",
+        "ru": "Обновлены компоненты репозитория и сопровождающего: обновлены зависимости сценариев выпуска, улучшена структура README/журнала изменений и рассмотрены предложения по проверке репозитория.",
+        "pt": "Repositório atualizado e componentes do mantenedor: dependências de script de lançamento atualizadas, estrutura README/changelog aprimorada e sugestões revisadas do verificador de repositório",
+        "nl": "Bijgewerkte repository- en onderhoudercomponenten: bijgewerkte release-scriptafhankelijkheden, verbeterde README/changelog-structuur en herziene suggesties voor repositorycontrole",
+        "fr": "Composants du référentiel et du responsable mis à jour : dépendances de script de version mises à jour, structure README/changelog améliorée et suggestions révisées du vérificateur de référentiel",
+        "it": "Componenti del repository e del manutentore aggiornati: dipendenze aggiornate degli script di rilascio, struttura README/log delle modifiche migliorata e suggerimenti rivisti per il controllo del repository",
+        "es": "Componentes actualizados del repositorio y del mantenedor: dependencias actualizadas del script de lanzamiento, estructura README/registro de cambios mejorada y sugerencias revisadas del verificador del repositorio",
+        "pl": "Zaktualizowane komponenty repozytorium i opiekuna: zaktualizowane zależności skryptu wydania, ulepszona struktura README/dziennika zmian i sprawdzone sugestie dotyczące sprawdzania repozytorium",
+        "uk": "Оновлений репозиторій і компоненти супроводжувача: оновлені залежності сценарію випуску, покращена структура README/журналу змін і переглянуті пропозиції перевірки сховища",
+        "zh-cn": "更新了存储库和维护者组件：更新了发布脚本依赖项，改进了自述文件/变更日志结构并审查了存储库检查器建议"
+      },
       "1.3.23": {
         "en": "Temperature diagnostics extended: Added new diagnostic states for all temperature sensors (last valid value, timestamp, minutes since last value, source status). Added self-healing/recovery mechanism for stalled or missing temperature events. Temperature helper updated to ioBroker-compliant timers.",
         "de": "Temperaturbereich erweitert: Neue Diagnosewerte für alle Temperatursensoren ergänzt (letzter gültiger Wert, Zeitstempel, Minuten seit letztem Wert, Quellenstatus). Zusätzlich Selbstheilungs-/Recovery-Mechanismus für ausgefallene oder hängende Temperatur-Events ergänzt. Temperaturhelper auf ioBroker-konforme Timer umgestellt.",
@@ -54,19 +67,6 @@
         "pl": "Dodano funkcję samonaprawy w czasie wykonywania w przypadku nieodebranych zdarzeń uruchomienia pompy i zabezpieczono stany kontroli czasu przed nadpisaniem podczas aktualizacji adaptera.",
         "uk": "Додано самовідновлення під час виконання для пропущених подій запуску насоса та захищено стани керування часом від перезапису під час оновлення адаптера.",
         "zh-cn": "添加了针对错过的泵启动事件的运行时自我修复，并保护时间控制状态在适配器更新期间不被覆盖。"
-      },
-      "1.3.19": {
-        "en": "Added runtime self-healing for missed pump start events. Stabilized runtime and circulation calculations for delayed or filtered pump switch updates. Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available. Improved internal runtime synchronization.",
-        "de": "Runtime-Selbstheilung für verpasste Pumpenstart-Ereignisse ergänzt. Laufzeit- und Umwälzberechnung bei verzögerten oder gefilterten Pumpenschalter-Updates stabilisiert. Seltenen Synchronisationsfehler behoben, bei dem die Umwälzberechnung trotz aktiver Pumpen-Livewerte stehen bleiben konnte. Interne Runtime-Synchronisierung verbessert.",
-        "ru": "Добавлено самовосстановление во время выполнения для пропущенных событий запуска насоса. Стабилизированные расчеты времени работы и циркуляции для отложенных или отфильтрованных обновлений переключателей насосов. Исправлена ​​редкая проблема синхронизации, из-за которой подсчет циркуляции мог остановиться, хотя текущие значения насоса все еще были доступны. Улучшена внутренняя синхронизация времени выполнения.",
-        "pt": "Adicionada autocorreção em tempo de execução para eventos de inicialização de bomba perdidos. Cálculos de tempo de execução e circulação estabilizados para atualizações de interruptores de bomba filtrados ou atrasados. Foi corrigido um raro problema de sincronização em que a contagem de circulação poderia parar embora os valores ativos da bomba ainda estivessem disponíveis. Sincronização de tempo de execução interna aprimorada.",
-        "nl": "Zelfherstel tijdens runtime toegevoegd voor gemiste pompstartgebeurtenissen. Gestabiliseerde looptijd- en circulatieberekeningen voor vertraagde of gefilterde updates van pompschakelaars. Er is een zeldzaam synchronisatieprobleem opgelost waarbij het tellen van de circulatie kon stoppen, hoewel de live-waarden van de pomp nog steeds beschikbaar waren. Verbeterde interne runtime-synchronisatie.",
-        "fr": "Ajout de l'auto-réparation du temps d'exécution pour les événements de démarrage de pompe manqués. Calculs de temps de fonctionnement et de circulation stabilisés pour les mises à jour retardées ou filtrées des interrupteurs de pompe. Correction d'un problème de synchronisation rare où le comptage de circulation pouvait s'arrêter même si les valeurs en direct de la pompe étaient toujours disponibles. Synchronisation d'exécution interne améliorée.",
-        "it": "Aggiunta l'autoriparazione del tempo di esecuzione per gli eventi di avvio della pompa mancati. Calcoli di autonomia e circolazione stabilizzati per aggiornamenti ritardati o filtrati dell'interruttore della pompa. Risolto un raro problema di sincronizzazione per cui il conteggio della circolazione poteva interrompersi anche se i valori in tempo reale della pompa erano ancora disponibili. Sincronizzazione runtime interna migliorata.",
-        "es": "Se agregó autorreparación en tiempo de ejecución para eventos de inicio de bomba perdidos. Cálculos de circulación y tiempo de funcionamiento estabilizados para actualizaciones retrasadas o filtradas del interruptor de la bomba. Se solucionó un problema de sincronización poco común por el cual el conteo de circulación podía detenerse aunque los valores activos de la bomba todavía estaban disponibles. Sincronización interna del tiempo de ejecución mejorada.",
-        "pl": "Dodano funkcję samonaprawy w czasie wykonywania w przypadku zdarzeń związanych z nieudanym uruchomieniem pompy. Stabilizowane obliczenia czasu pracy i cyrkulacji dla opóźnionych lub filtrowanych aktualizacji przełączników pomp. Naprawiono rzadki problem z synchronizacją, w wyniku którego zliczanie cyrkulacji mogło zostać zatrzymane, mimo że wartości bieżące pompy były nadal dostępne. Ulepszona wewnętrzna synchronizacja środowiska wykonawczego.",
-        "uk": "Додано самовідновлення під час виконання для пропущених подій запуску насоса. Стабілізований час роботи та обчислення циркуляції для відкладених або фільтрованих оновлень перемикача насоса. Виправлено рідкісну проблему синхронізації, через яку підрахунок циркуляції міг припинитися, хоча поточні значення насоса все ще були доступні. Покращена внутрішня синхронізація часу виконання.",
-        "zh-cn": "为错过的泵启动事件添加了运行时自我修复功能。延迟或过滤泵开关更新的稳定运行时间和循环计算。修复了一个罕见的同步问题，即尽管泵的实时值仍然可用，但循环计数可能会停止。改进了内部运行时同步。"
       }
     },
     "titleLang": {
