@@ -207,7 +207,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.24 (2026-05-26)
 
 - Updated release-script dependencies to current versions
 - Improved README and changelog structure
@@ -266,15 +266,6 @@ Features:
 - Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available.
 - Protected time control states from being overwritten during adapter updates.
 - Preserved configured time windows, start/end times and weekdays during adapter reinstallations or updates.
-
-### 1.3.19 (2026-05-13)
-
-- Added runtime self-healing for missed pump start events
-- Stabilized runtime and circulation calculations for delayed or filtered pump switch updates
-- Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available
-- Improved internal runtime synchronization
-
----
 
 ## Archived Release History
 
