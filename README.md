@@ -252,7 +252,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.25 (2026-05-26)
 
 - Updated README structure and feature overview
 - Synchronized German and English function overviews
@@ -309,14 +309,6 @@ Features:
   - writable required
 - Protection against invalid internal follow-pump targets
 - Persistent configuration values
-
-### 1.3.20 (2026-05-13)
-
-- Added runtime self-healing for missed pump start events.
-- Stabilized runtime and circulation calculations for delayed or filtered pump switch updates.
-- Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available.
-- Protected time control states from being overwritten during adapter updates.
-- Preserved configured time windows, start/end times and weekdays during adapter reinstallations or updates.
 
 ## Archived Release History
 

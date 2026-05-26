@@ -4,6 +4,14 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.20 (2026-05-13)
+
+- Added runtime self-healing for missed pump start events.
+- Stabilized runtime and circulation calculations for delayed or filtered pump switch updates.
+- Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available.
+- Protected time control states from being overwritten during adapter updates.
+- Preserved configured time windows, start/end times and weekdays during adapter reinstallations or updates.
+
 ## 1.3.19 (2026-05-13)
 
 - Added runtime self-healing for missed pump start events
