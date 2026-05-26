@@ -14,7 +14,7 @@ PoolControl deckt folgende Hauptbereiche ab:
 
 - Pumpensteuerung mit Automatik-, Zeit-, manuellen, PV- und Systemmodi
 - Prioritäts- und Ownership-Logik über `pump.active_helper`
-- Temperaturverwaltung für bis zu sechs Sensorrollen
+- Temperaturverwaltung für bis zu sechs Sensorrollen inklusive Diagnose und Recovery
 - Standard-Solarsteuerung und erweiterte Solarsteuerung
 - Photovoltaik-Überschusssteuerung der Pumpe
 - Heizungs- bzw. Wärmepumpensteuerung
@@ -24,8 +24,9 @@ PoolControl deckt folgende Hauptbereiche ab:
 - Solar Insights und Photovoltaic Insights unter `analytics.insights.*`
 - zentrale Text- und Sprachausgabe über eine gemeinsame Queue-Struktur
 - Diagnosebereich `SystemCheck.debug_logs`
-- pH- und TDS-Auswertung ohne automatische Dosierung
-- optionale Zusatzaktoren für Beleuchtung und Zusatzpumpen
+- pH-, TDS- und ORP-/Redox-Auswertung ohne automatische Dosierung
+- optionale Zusatzaktoren für Beleuchtung, Zusatzpumpen und pumpengekoppelte Geräte
+- Follow-pump devices mit Validierung externer Zielstates
 
 ## 3. Pumpensteuerung
 
@@ -162,6 +163,8 @@ Zusätzlich werden berechnet:
 - `temperature.delta.surface_ground`
 - `temperature.delta.flow_return`
 
+Die Temperaturdiagnose schreibt pro aktiver Sensorrolle den letzten gültigen Wert, den Zeitpunkt des letzten gültigen Werts, die Minuten seit der letzten Aktualisierung und einen Quellstatus. Der Quellstatus kann normale, verspätete, fehlende oder ungültige Aktualisierungen sichtbar machen. Wenn ein Sensor in den Warnstatus läuft, kann die Recovery-Logik den konfigurierten Foreign-State gezielt einmal nachlesen und bei gültigem Wert den normalen Verarbeitungspfad erneut nutzen.
+
 Diese Werte werden von mehreren Bereichen genutzt, unter anderem Solar, Solar Insights, Heizung, Frostschutz, Statistik und Textausgaben.
 
 ## 8. Heizungs- und Wärmefunktionen
@@ -287,9 +290,9 @@ Für Alexa gibt es Ruhezeiten für Woche und Wochenende. Während aktiver Ruheze
 
 Textoutputs existieren vor allem als lesbare States in den jeweiligen Bereichen, zum Beispiel Status-, Debug-, AI-, Chemistry-, Solar-Insights-, PV-Insights-, JSON- und HTML-Ausgaben. Ein eigener Objektkanal mit dem Namen `textoutputs` ist nicht eindeutig aus dem Code ableitbar.
 
-## 11. Chemie-, pH- und TDS-Bereiche
+## 11. Chemie-, pH-, TDS- und ORP/Redox-Bereiche
 
-Die Chemiebereiche sind vorhanden und werden beim Adapterstart angelegt. Die Bereiche dienen aktuell der Analyse, Bewertung und Trendbeobachtung von Wasserwerten. Sie dienen der Auswertung und Empfehlung, nicht der automatischen Dosierung.
+Die Chemiebereiche sind vorhanden und werden beim Adapterstart angelegt. Die Bereiche dienen aktuell der Analyse, Bewertung und Trendbeobachtung von Wasserwerten. Sie dienen der Auswertung und Empfehlung, nicht der automatischen Dosierung, Chlorsteuerung oder automatischen Aktorsteuerung.
 
 ### pH-Auswertung
 
@@ -324,7 +327,11 @@ Der Bereich `chemistry.tds.*` unterstützt:
 
 Auch hier ist im Code festgehalten: keine automatische Steuerung, keine automatische Dosierung und keine Pumpensteuerung.
 
-Die ältere Entwicklungsnotiz nennt außerdem pH-/ORP-Integration und Dosierlogik als Planung. Der aktuell vorhandene Code enthält pH und TDS als Auswertebereiche ohne Dosierung. ORP ist als vollständig implementierter Bereich nicht eindeutig aus dem Code ableitbar.
+### ORP-/Redox-Auswertung
+
+Der Bereich `chemistry.orp.*` ist als Analyse- und Hinweisbereich vorhanden. Er unterstützt manuelle Werte oder einen externen ioBroker-Datenpunkt als ORP-Quelle, Plausibilitätsprüfung, Messortlogik, Historie, Trends, Bewertung und Text-, JSON- und HTML-Zusammenfassungen.
+
+Die ORP-Auswertung kann eine pH-Referenz berücksichtigen und synchronisiert diese unabhängig vom ORP-Wert. Sie dient der Einordnung und Empfehlung. Es gibt keine automatische Chlorsteuerung, keine automatische Dosierung und keine automatische Pumpen- oder Aktorsteuerung auf Basis des ORP-Werts.
 
 ## 12. Hardware-, MQTT- und ESP32-Integration
 
@@ -339,6 +346,8 @@ Die vorhandene Implementierung bindet externe Hardware überwiegend über frei k
 - Heizungsaktor
 - Solar-Extended-Aktor
 - Beleuchtung und Zusatzpumpen
+
+Zusatzaktoren sind unter `actuators.*` vorhanden. Dazu gehören Beleuchtung, Zusatzpumpen und Follow-pump devices. Follow-pump devices können externe Geräte automatisch an den Pumpenstatus koppeln. Externe Zielstates werden validiert, unter anderem auf Existenz, booleschen Typ und Schreibbarkeit. Typische Beispiele sind UV-Anlagen, Wasserattraktionen und Zusatzfilter.
 
 Eine Drucksensor-Integration ist implementiert. Der Admin-Hinweis nennt ausdrücklich externe Sensoren und eine PoolControl PressureBox. `pump.pressure.*` enthält aktuellen Druck, vorherigen Druck, Normalbereich, Lernwerte, Trendwerte, Diagnose und Reset.
 
@@ -360,7 +369,9 @@ HTML-Ausgaben sind in mehreren Analysebereichen vorhanden:
 - Solar Insights
 - Solar Logbook
 - Photovoltaic Insights
+- pH-Auswertung
 - TDS-Auswertung
+- ORP-/Redox-Auswertung
 
 JSON-Ausgaben sind ebenfalls vorhanden, vor allem für:
 
@@ -368,7 +379,9 @@ JSON-Ausgaben sind ebenfalls vorhanden, vor allem für:
 - Statistikzusammenfassungen
 - Solar Insights
 - Photovoltaic Insights
+- pH-Auswertung
 - TDS-Auswertung
+- ORP-/Redox-Auswertung
 
 Der Schwerpunkt liegt aktuell auf der Bereitstellung strukturierter Datenpunkte, HTML-Ausgaben und JSON-Zusammenfassungen zur freien Nutzung in VIS, Blockly oder anderen Dashboardsystemen.
 
@@ -409,7 +422,9 @@ Implementiert sind vor allem interne Analyseausgaben:
 - Textzusammenfassungen
 - Tages-, Wochen- und Monatsstatistiken
 - Solar- und PV-Insights
+- pH-Auswertung
 - TDS-Trendauswertung
+- ORP-/Redox-Auswertung
 - Statusübersicht als JSON
 
 Ein direkter CSV- oder Excel-Export ist in README und Entwicklungsnotizen als geplante Erweiterung genannt. Eine fertige CSV-Exportfunktion ist im aktuellen Code nicht eindeutig aus dem Code ableitbar.
@@ -437,7 +452,7 @@ Typische Einrichtung:
 ## 17. Wichtige Hinweise und Grenzen des Systems
 
 - Der Adapter kann reale Hardware schalten. Die sichere elektrische und hydraulische Installation liegt außerhalb des Codes und muss vom Betreiber gewährleistet werden.
-- Chemie pH und TDS sind Auswertungs- und Empfehlungssysteme. Es findet keine automatische Dosierung statt.
+- Chemie pH, TDS und ORP/Redox sind Auswertungs- und Empfehlungssysteme. Es findet keine automatische Dosierung oder automatische Chlorsteuerung statt.
 - Solar Insights und Photovoltaic Insights sind Analysebereiche. Sie ersetzen keine geeichten Energiezähler.
 - Solar-Insights-Werte sind im Code als Schätzungen angelegt und hängen stark von Sensorqualität, Durchflusswerten und verfügbaren Temperaturdaten ab.
 - PV-Insights zählen nur den PV-Überschussbetrieb, wenn `photovoltaicHelper` die Pumpe besitzt.

@@ -14,7 +14,7 @@ PoolControl covers the following main areas:
 
 - Pump control with automatic, time-based, manual, PV, and system modes
 - Priority and ownership logic via `pump.active_helper`
-- Temperature management for up to six sensor roles
+- Temperature management for up to six sensor roles including diagnostics and recovery
 - Standard solar control and extended solar control
 - Photovoltaic surplus control of the pump
 - Heating or heat pump control
@@ -24,8 +24,9 @@ PoolControl covers the following main areas:
 - Solar Insights and Photovoltaic Insights under `analytics.insights.*`
 - Central text and speech output via a shared queue structure
 - Diagnostic area `SystemCheck.debug_logs`
-- pH and TDS evaluation without automatic dosing
-- Optional additional actuators for lighting and extra pumps
+- pH, TDS, and ORP/Redox evaluation without automatic dosing
+- Optional additional actuators for lighting, extra pumps, and pump-coupled devices
+- Follow-pump devices with validation of external target states
 
 ## 3. Pump Control
 
@@ -162,6 +163,8 @@ In addition, the following are calculated:
 - `temperature.delta.surface_ground`
 - `temperature.delta.flow_return`
 
+Temperature diagnostics write the last valid value, the timestamp of the last valid value, the minutes since the last update, and a source status for each active sensor role. The source status can make normal, delayed, missing, or invalid updates visible. When a sensor enters warning state, the recovery logic can selectively read the configured foreign state once and, if the value is valid, run it through the normal processing path again.
+
 These values are used by several areas, including solar, Solar Insights, heating, frost protection, statistics, and text outputs.
 
 ## 8. Heating and Heat Functions
@@ -287,9 +290,9 @@ For Alexa, there are quiet times for weekdays and weekends. While a quiet time i
 
 Textoutputs mainly exist as readable States in the respective areas, for example status, debug, AI, Chemistry, Solar Insights, PV Insights, JSON, and HTML outputs. A separate object channel named `textoutputs` is not clearly derivable from the code.
 
-## 11. Chemistry, pH, and TDS Areas
+## 11. Chemistry, pH, TDS, and ORP/Redox Areas
 
-The chemistry areas are present and are created when the adapter starts. The areas currently serve analysis, evaluation, and trend observation of water values. They are used for evaluation and recommendations, not for automatic dosing.
+The chemistry areas are present and are created when the adapter starts. The areas currently serve analysis, evaluation, and trend observation of water values. They are used for evaluation and recommendations, not for automatic dosing, chlorine control, or automatic actuator control.
 
 ### pH Evaluation
 
@@ -324,7 +327,11 @@ The area `chemistry.tds.*` supports:
 
 Here too, the code states: no automatic control, no automatic dosing, and no pump control.
 
-The older development note also mentions pH/ORP integration and dosing logic as planning. The currently available code contains pH and TDS as evaluation areas without dosing. ORP as a fully implemented area is not clearly derivable from the code.
+### ORP/Redox Evaluation
+
+The area `chemistry.orp.*` is present as an analysis and recommendation area. It supports manual values or an external ioBroker data point as ORP source, plausibility checks, measurement location logic, history, trends, evaluation, and text, JSON, and HTML summaries.
+
+The ORP evaluation can use a pH reference and synchronizes it independently from the ORP value. It is intended for classification and recommendations. There is no automatic chlorine control, no automatic dosing, and no automatic pump or actuator control based on the ORP value.
 
 ## 12. Hardware, MQTT, and ESP32 Integration
 
@@ -339,6 +346,8 @@ The existing implementation connects external hardware mostly via freely configu
 - Heating actuator
 - Solar Extended actuator
 - Lighting and extra pumps
+
+Additional actuators are available under `actuators.*`. They include lighting, extra pumps, and follow-pump devices. Follow-pump devices can automatically couple external devices to the pump status. External target states are validated, including existence, boolean type, and writeability. Typical examples are UV systems, water features, and auxiliary filters.
 
 Pressure sensor integration is implemented. The Admin hint explicitly mentions external sensors and a PoolControl PressureBox. `pump.pressure.*` contains current pressure, previous pressure, normal range, learned values, trend values, diagnostics, and reset.
 
@@ -360,7 +369,9 @@ HTML outputs are present in several analysis areas:
 - Solar Insights
 - Solar Logbook
 - Photovoltaic Insights
+- pH evaluation
 - TDS evaluation
+- ORP/Redox evaluation
 
 JSON outputs are also present, especially for:
 
@@ -368,7 +379,9 @@ JSON outputs are also present, especially for:
 - Statistics summaries
 - Solar Insights
 - Photovoltaic Insights
+- pH evaluation
 - TDS evaluation
+- ORP/Redox evaluation
 
 The current focus is on providing structured data points, HTML outputs, and JSON summaries for free use in VIS, Blockly, or other dashboard systems.
 
@@ -409,7 +422,9 @@ Mainly internal analysis outputs are implemented:
 - Text summaries
 - Daily, weekly, and monthly statistics
 - Solar and PV Insights
+- pH evaluation
 - TDS trend evaluation
+- ORP/Redox evaluation
 - Status overview as JSON
 
 A direct CSV or Excel export is mentioned in README and development notes as a planned extension. A finished CSV export function is not clearly derivable from the current code.
@@ -437,7 +452,7 @@ Typical setup:
 ## 17. Important Notes and System Limits
 
 - The adapter can switch real hardware. Safe electrical and hydraulic installation is outside the code and must be ensured by the operator.
-- Chemistry pH and TDS are evaluation and recommendation systems. No automatic dosing takes place.
+- Chemistry pH, TDS, and ORP/Redox are evaluation and recommendation systems. No automatic dosing or automatic chlorine control takes place.
 - Solar Insights and Photovoltaic Insights are analysis areas. They do not replace calibrated energy meters.
 - Solar Insights values are implemented in the code as estimates and depend heavily on sensor quality, flow values, and available temperature data.
 - PV Insights only counts PV surplus operation when `photovoltaicHelper` owns the pump.
