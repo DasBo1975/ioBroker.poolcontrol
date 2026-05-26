@@ -188,7 +188,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.23 (2026-05-26)
 
 - Added extended temperature diagnostics for all temperature sensors:
   - last valid value
@@ -248,14 +248,6 @@ Features:
 - Stabilized runtime and circulation calculations for delayed or filtered pump switch updates
 - Fixed a rare synchronization issue where circulation counting could stop although pump live values were still available
 - Improved internal runtime synchronization
-
-### 1.3.18 (2026-05-11)
-
-- Fixed incorrect date display in the pH, ORP and TDS areas.
-- Time states with `value.time` are now stored as numeric timestamps instead of localized date strings.
-- Improved compatibility with ioBroker/Admin date handling.
-- Added backward-compatible handling for previously stored German date strings.
-- Kept history JSON output unchanged with readable date strings for users and VIS displays.
 
 ## Support
 - [ioBroker Forum](https://forum.iobroker.net/)  
