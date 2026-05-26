@@ -188,6 +188,18 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added extended temperature diagnostics for all temperature sensors:
+  - last valid value
+  - last valid value timestamp
+  - minutes since last value
+  - source status (`ok`, `warning`, `not_received`, `invalid_timestamp`)
+- Added automatic recovery mechanism for stalled temperature updates
+- Recovery runs only when a sensor enters warning state and uses cooldown protection
+- Switched temperature helper timers to ioBroker adapter timers
+- Improved visibility and troubleshooting for missing or delayed temperature updates
+
 ### 1.3.22 (2026-05-24)
 
 - Improved ORP pH reference synchronization

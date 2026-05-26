@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.22",
     "news": {
+      "1.3.23": {
+        "en": "Temperature diagnostics extended: Added new diagnostic states for all temperature sensors (last valid value, timestamp, minutes since last value, source status). Added self-healing/recovery mechanism for stalled or missing temperature events. Temperature helper updated to ioBroker-compliant timers.",
+        "de": "Temperaturbereich erweitert: Neue Diagnosewerte für alle Temperatursensoren ergänzt (letzter gültiger Wert, Zeitstempel, Minuten seit letztem Wert, Quellenstatus). Zusätzlich Selbstheilungs-/Recovery-Mechanismus für ausgefallene oder hängende Temperatur-Events ergänzt. Temperaturhelper auf ioBroker-konforme Timer umgestellt.",
+        "ru": "Расширенная диагностика температуры: добавлены новые диагностические состояния для всех датчиков температуры (последнее действительное значение, временная метка, минуты с момента последнего значения, состояние источника). Добавлен механизм самовосстановления/восстановления при остановке или отсутствии температурных событий. Помощник по температуре обновлен до таймеров, совместимых с ioBroker.",
+        "pt": "Diagnóstico de temperatura estendido: Adicionados novos estados de diagnóstico para todos os sensores de temperatura (último valor válido, carimbo de data/hora, minutos desde o último valor, status da fonte). Adicionado mecanismo de autocorreção/recuperação para eventos de temperatura paralisados ​​ou ausentes. Auxiliar de temperatura atualizado para temporizadores compatíveis com ioBroker.",
+        "nl": "Temperatuurdiagnostiek uitgebreid: Nieuwe diagnostische statussen toegevoegd voor alle temperatuursensoren (laatste geldige waarde, tijdstempel, minuten sinds laatste waarde, bronstatus). Zelfherstel-/herstelmechanisme toegevoegd voor vastgelopen of ontbrekende temperatuurgebeurtenissen. Temperatuurhelper bijgewerkt naar ioBroker-compatibele timers.",
+        "fr": "Diagnostics de température étendus : ajout de nouveaux états de diagnostic pour tous les capteurs de température (dernière valeur valide, horodatage, minutes depuis la dernière valeur, état de la source). Ajout d'un mécanisme d'auto-guérison/récupération pour les événements de température bloqués ou manquants. Assistant de température mis à jour avec des minuteries conformes à ioBroker.",
+        "it": "Diagnostica della temperatura estesa: aggiunti nuovi stati diagnostici per tutti i sensori di temperatura (ultimo valore valido, timestamp, minuti dall'ultimo valore, stato della sorgente). Aggiunto meccanismo di autoriparazione/recupero per eventi di temperatura bloccati o mancanti. Assistente per la temperatura aggiornato ai timer compatibili con ioBroker.",
+        "es": "Diagnóstico de temperatura extendido: se agregaron nuevos estados de diagnóstico para todos los sensores de temperatura (último valor válido, marca de tiempo, minutos desde el último valor, estado de fuente). Se agregó un mecanismo de autorreparación/recuperación para eventos de temperatura estancados o faltantes. Asistente de temperatura actualizado a temporizadores compatibles con ioBroker.",
+        "pl": "Rozszerzona diagnostyka temperatury: Dodano nowe stany diagnostyczne dla wszystkich czujników temperatury (ostatnia ważna wartość, znacznik czasu, minuty od ostatniej wartości, stan źródła). Dodano mechanizm samonaprawy/odzyskiwania w przypadku zablokowania lub braku zdarzeń związanych z temperaturą. Pomocnik temperatury zaktualizowany do timerów zgodnych z ioBroker.",
+        "uk": "Розширено діагностику температури: додано нові діагностичні стани для всіх датчиків температури (останнє дійсне значення, позначка часу, хвилини з останнього значення, статус джерела). Додано механізм самовідновлення/відновлення для зупинених або відсутніх температурних подій. Помічник температури оновлено до таймерів, сумісних із ioBroker.",
+        "zh-cn": "温度诊断扩展：为所有温度传感器添加了新的诊断状态（最后一个有效值、时间戳、自最后一个值以来的分钟数、源状态）。添加了针对停滞或丢失温度事件的自我修复/恢复机制。温度助手更新为符合 ioBroker 标准的计时器。"
+      },
       "1.3.22": {
         "en": "Improved ORP pH reference synchronization. The ORP helper now updates the pH reference independently from ORP value processing and immediately reflects pH state changes.",
         "de": "ORP-pH-Referenz verbessert. Der ORP-Helper aktualisiert die pH-Referenz jetzt unabhängig von der ORP-Wertverarbeitung und übernimmt pH-Änderungen sofort.",
@@ -54,19 +67,6 @@
         "pl": "Dodano funkcję samonaprawy w czasie wykonywania w przypadku zdarzeń związanych z nieudanym uruchomieniem pompy. Stabilizowane obliczenia czasu pracy i cyrkulacji dla opóźnionych lub filtrowanych aktualizacji przełączników pomp. Naprawiono rzadki problem z synchronizacją, w wyniku którego zliczanie cyrkulacji mogło zostać zatrzymane, mimo że wartości bieżące pompy były nadal dostępne. Ulepszona wewnętrzna synchronizacja środowiska wykonawczego.",
         "uk": "Додано самовідновлення під час виконання для пропущених подій запуску насоса. Стабілізований час роботи та обчислення циркуляції для відкладених або фільтрованих оновлень перемикача насоса. Виправлено рідкісну проблему синхронізації, через яку підрахунок циркуляції міг припинитися, хоча поточні значення насоса все ще були доступні. Покращена внутрішня синхронізація часу виконання.",
         "zh-cn": "为错过的泵启动事件添加了运行时自我修复功能。延迟或过滤泵开关更新的稳定运行时间和循环计算。修复了一个罕见的同步问题，即尽管泵的实时值仍然可用，但循环计数可能会停止。改进了内部运行时同步。"
-      },
-      "1.3.18": {
-        "en": "Fixed incorrect date display for pH, ORP and TDS time states by storing value.time states as numeric timestamps.",
-        "de": "Falsche Datumsanzeige für pH-, ORP- und TDS-Zeitzustände behoben, indem value.time-Zustände als numerische Zeitstempel gespeichert wurden.",
-        "ru": "Исправлено неправильное отображение даты для состояний времени pH, ОВП и TDS за счет сохранения состояний value.time в виде числовых меток времени.",
-        "pt": "Corrigida a exibição incorreta de data para estados de tempo de pH, ORP e TDS, armazenando estados de valor.tempo como carimbos de data/hora numéricos.",
-        "nl": "Foutieve datumweergave voor pH-, ORP- en TDS-tijdstatussen opgelost door value.time-statussen op te slaan als numerieke tijdstempels.",
-        "fr": "Correction de l'affichage incorrect de la date pour les états temporels pH, ORP et TDS en stockant les états value.time sous forme d'horodatages numériques.",
-        "it": "Risolto il problema con la visualizzazione errata della data per gli stati temporali pH, ORP e TDS memorizzando gli stati value.time come timestamp numerici.",
-        "es": "Se corrigió la visualización de fecha incorrecta para los estados de tiempo de pH, ORP y TDS al almacenar los estados de valor.hora como marcas de tiempo numéricas.",
-        "pl": "Naprawiono nieprawidłowe wyświetlanie daty dla stanów czasowych pH, ​​ORP i TDS poprzez przechowywanie stanów wartość.czas jako numeryczne znaczniki czasu.",
-        "uk": "Виправлено неправильне відображення дати для часових станів pH, ORP і TDS шляхом збереження станів value.time як числових позначок часу.",
-        "zh-cn": "通过将 value.time 状态存储为数字时间戳，修复了 pH、ORP 和 TDS 时间状态的不正确日期显示。"
       }
     },
     "titleLang": {
