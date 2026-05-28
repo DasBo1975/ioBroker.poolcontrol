@@ -4,6 +4,33 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.21 (2026-05-17)
+
+NEW: Follow-pump devices
+
+Added a new `actuators.follow_pump_devices` area.
+
+Up to three external devices can now automatically follow the operation of the main pump.
+
+Typical examples:
+
+- UV systems
+- Water features
+- Auxiliary filters
+- Additional circulation devices
+
+Features:
+
+- Automatic ON when the main pump starts
+- Automatic OFF when the main pump stops
+- Configurable target state per device
+- Validation of target states:
+  - state exists
+  - boolean type required
+  - writable required
+- Protection against invalid internal follow-pump targets
+- Persistent configuration values
+
 ## 1.3.20 (2026-05-13)
 
 - Added runtime self-healing for missed pump start events.
