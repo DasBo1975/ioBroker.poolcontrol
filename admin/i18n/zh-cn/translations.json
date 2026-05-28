@@ -1,5 +1,4 @@
 {
-  " ": " ",
   "0.5x": "0.5倍",
   "1.0x": "1.0倍",
   "1.5x": "1.5倍",
@@ -152,6 +151,5 @@
   "Use Surface Sensor": "使用表面传感器",
   "Voice": "嗓音",
   "Volume (0–100)": "音量 (0–100)",
-  "Wednesday": "周三",
-  "poolcontrol adapter settings": "poolcontrol的适配器设置"
+  "Wednesday": "周三"
 }

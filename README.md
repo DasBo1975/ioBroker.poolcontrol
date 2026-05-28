@@ -252,6 +252,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Reworked multiple warnings and review notes from official ioBroker checks
+- Internal cleanup and small structural improvements
+- Further preparation for cleaner review and repository checks
+
 ### 1.3.25 (2026-05-26)
 
 - Updated README structure and feature overview

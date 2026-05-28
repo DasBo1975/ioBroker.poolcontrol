@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.25",
     "news": {
+      "1.3.26": {
+        "en": "Reworked several warnings and review notes from official ioBroker checks. Various small improvements and internal cleanups.",
+        "de": "Mehrere Warnungen und Review-Hinweise aus offiziellen ioBroker-Checks überarbeitet. Diverse kleine Verbesserungen und interne Bereinigungen.",
+        "ru": "Переработано несколько предупреждений и примечаний к обзору официальных проверок ioBroker. Различные мелкие улучшения и внутренние чистки.",
+        "pt": "Vários avisos e notas de revisão das verificações oficiais do ioBroker foram reformulados. Várias pequenas melhorias e limpezas internas.",
+        "nl": "Verschillende waarschuwingen en beoordelingsnotities van officiële ioBroker-controles herwerkt. Diverse kleine verbeteringen en interne opruimingen.",
+        "fr": "Retravaillé plusieurs avertissements et notes de révision des contrôles officiels d'ioBroker. Diverses petites améliorations et nettoyages internes.",
+        "it": "Rielaborati diversi avvisi e note di revisione dai controlli ufficiali di ioBroker. Varie piccole migliorie e pulizie interne.",
+        "es": "Se modificaron varias advertencias y notas de revisión de las comprobaciones oficiales de ioBroker. Varias pequeñas mejoras y limpiezas internas.",
+        "pl": "Przerobiono kilka ostrzeżeń i uwag z oficjalnych kontroli ioBroker. Różne drobne ulepszenia i wewnętrzne porządki.",
+        "uk": "Перероблено кілька попереджень і приміток до огляду з офіційних перевірок ioBroker. Різні невеликі покращення та внутрішні очищення.",
+        "zh-cn": "重新设计了官方 ioBroker 检查中的几条警告和审查说明。各种小的改进和内部清理。"
+      },
       "1.3.25": {
         "en": "Updated documentation and repository maintenance: improved README structure, synchronized function overviews and updated development dependencies",
         "de": "Dokumentation und Repository-Wartung aktualisiert: README-Struktur verbessert, Funktionsübersichten synchronisiert und Entwicklungsabhängigkeiten aktualisiert",
@@ -54,19 +67,6 @@
         "pl": "Ulepszona synchronizacja odniesienia pH ORP. Pomocnik ORP aktualizuje teraz wartość odniesienia pH niezależnie od przetwarzania wartości ORP i natychmiast odzwierciedla zmiany stanu pH.",
         "uk": "Покращена синхронізація еталонного pH ОВП. Помічник ОВП тепер оновлює еталонний рН незалежно від обробки значення ОВП і негайно відображає зміни стану рН.",
         "zh-cn": "改进了 ORP pH 参考同步。 ORP 助手现在独立于 ORP 值处理更新 pH 参考值，并立即反映 pH 状态变化。"
-      },
-      "1.3.21": {
-        "en": "Added new follow-pump devices. Up to three external devices can now automatically follow the main pump operation. Added validation for target states including existence, boolean type and writable checks. Added protection against internal follow-pump loops.",
-        "de": "Neue Geräte mit Pumpenlauf hinzugefügt. Bis zu drei externe Geräte können jetzt automatisch dem Lauf der Hauptpumpe folgen. Zusätzlich wurden Prüfungen für Ziel-Datenpunkte (Existenz, Boolean-Typ und Schreibbarkeit) ergänzt. Schutz gegen interne Follow-Pump-Schleifen hinzugefügt.",
-        "ru": "Добавлены новые устройства, следующие за работой насоса. До трёх внешних устройств теперь могут автоматически следовать за работой основного насоса. Добавлена проверка целевых состояний (существование, тип boolean и возможность записи). Добавлена защита от внутренних циклов Follow-Pump.",
-        "pt": "Adicionados novos dispositivos dependentes da bomba. Até três dispositivos externos podem agora seguir automaticamente o funcionamento da bomba principal. Adicionadas verificações para estados alvo (existência, tipo booleano e permissão de escrita). Adicionada proteção contra loops internos Follow-Pump.",
-        "nl": "Nieuwe apparaten met pompkoppeling toegevoegd. Tot drie externe apparaten kunnen nu automatisch de hoofdpomp volgen. Validatie voor doelstatussen toegevoegd inclusief bestaan, boolean-type en schrijfbaarheid. Bescherming tegen interne Follow-Pump-lussen toegevoegd.",
-        "fr": "Ajout de nouveaux appareils liés à la pompe. Jusqu'à trois appareils externes peuvent désormais suivre automatiquement le fonctionnement de la pompe principale. Validation des états cibles ajoutée (existence, type booléen et écriture). Protection contre les boucles internes Follow-Pump ajoutée.",
-        "it": "Aggiunti nuovi dispositivi collegati alla pompa. Fino a tre dispositivi esterni possono ora seguire automaticamente il funzionamento della pompa principale. Aggiunti controlli per gli stati di destinazione (esistenza, tipo booleano e scrivibilità). Aggiunta protezione contro i loop interni Follow-Pump.",
-        "es": "Añadidos nuevos dispositivos dependientes de la bomba. Hasta tres dispositivos externos ahora pueden seguir automáticamente el funcionamiento de la bomba principal. Se añadieron validaciones para estados destino (existencia, tipo booleano y escritura). Añadida protección contra bucles internos Follow-Pump.",
-        "pl": "Dodano nowe urządzenia podążające za pompą. Do trzech urządzeń zewnętrznych może teraz automatycznie podążać za pracą głównej pompy. Dodano sprawdzanie stanów docelowych (istnienie, typ boolean i możliwość zapisu). Dodano ochronę przed wewnętrznymi pętlami Follow-Pump.",
-        "uk": "Додано нові пристрої, що слідують за насосом. До трьох зовнішніх пристроїв тепер можуть автоматично працювати разом з головним насосом. Додано перевірку цільових станів (існування, тип boolean та можливість запису). Додано захист від внутрішніх циклів Follow-Pump.",
-        "zh-cn": "新增随泵运行设备。现在最多可让三个外部设备自动跟随主泵运行。增加了目标状态验证（存在性、布尔类型和可写性）。增加了内部 Follow-Pump 循环保护。"
       }
     },
     "titleLang": {

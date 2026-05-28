@@ -1,5 +1,4 @@
 {
-  " ": " ",
   "0.5x": "0,5x",
   "1.0x": "1,0x",
   "1.5x": "1,5x",
@@ -152,6 +151,5 @@
   "Use Surface Sensor": "Użyj czujnika powierzchniowego",
   "Voice": "Głos",
   "Volume (0–100)": "Głośność (0–100)",
-  "Wednesday": "Środa",
-  "poolcontrol adapter settings": "Ustawienia adaptera dla poolcontrol"
+  "Wednesday": "Środa"
 }
