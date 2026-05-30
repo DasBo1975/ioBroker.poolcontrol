@@ -263,7 +263,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.27 (2026-05-30)
 
 - Added new Chemistry Tools section
 - Added pH Plus Calculator
@@ -272,7 +272,6 @@ New features are added regularly – please refer to the changelog.
 - Added validation, result texts and error handling for all calculators
 - Added automatic pool volume prefill support
 - Expanded documentation and function overviews
-
 
 ### 1.3.26 (2026-05-28)
 
@@ -303,13 +302,6 @@ New features are added regularly – please refer to the changelog.
 - Recovery runs only when a sensor enters warning state and uses cooldown protection
 - Switched temperature helper timers to ioBroker adapter timers
 - Improved visibility and troubleshooting for missing or delayed temperature updates
-
-### 1.3.22 (2026-05-24)
-
-- Improved ORP pH reference synchronization
-- ORP helper now updates pH reference independently from ORP value processing
-- Immediate update of ORP pH reference when pH enabled state or pH value changes
-- Fixed missing pH reference updates when ORP evaluation was blocked, invalid or waiting for measurement conditions
 
 ## Archived Release History
 

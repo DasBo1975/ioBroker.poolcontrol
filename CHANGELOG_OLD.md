@@ -4,6 +4,13 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.22 (2026-05-24)
+
+- Improved ORP pH reference synchronization
+- ORP helper now updates pH reference independently from ORP value processing
+- Immediate update of ORP pH reference when pH enabled state or pH value changes
+- Fixed missing pH reference updates when ORP evaluation was blocked, invalid or waiting for measurement conditions
+
 ## 1.3.21 (2026-05-17)
 
 NEW: Follow-pump devices

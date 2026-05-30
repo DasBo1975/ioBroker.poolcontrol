@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.26",
+    "version": "1.3.27",
     "news": {
       "1.3.27": {
         "en": "Added new Chemistry Tools with pH Plus Calculator, pH Minus Calculator and Salt Calculator. Added validation, result texts, error handling and automatic pool volume prefill. Expanded documentation and function overviews.",
