@@ -347,5 +347,23 @@
   "Current ORP value": "Valore ORP attuale",
   "pH reference": "Riferimento pH",
   "Status": "Stato",
-  "ORP evaluation is disabled.": "La valutazione ORP è disattivata."
+  "ORP evaluation is disabled.": "La valutazione ORP è disattivata.",
+
+  "Calculated amount": "Quantità calcolata",
+  "Reference value based on common manufacturer dosage.": "Valore di riferimento basato sul dosaggio standard del produttore.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Seguire le istruzioni del produttore ed effettuare una nuova misurazione successivamente.",
+
+  "Pool volume must be greater than 0 liters.": "Il volume della piscina deve essere maggiore di 0 litri.",
+  "Current pH value must be between 0 and 14.": "Il valore attuale del pH deve essere compreso tra 0 e 14.",
+  "Target pH value must be between 0 and 14.": "Il valore target del pH deve essere compreso tra 0 e 14.",
+  "Dosage factor must be greater than 0 grams.": "Il fattore di dosaggio deve essere maggiore di 0 grammi.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Per pH Plus, il valore target del pH deve essere superiore al valore attuale del pH.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Per pH Minus, il valore target del pH deve essere inferiore al valore attuale del pH.",
+  "Current salt concentration must be 0 ppm or higher.": "La concentrazione attuale di sale deve essere pari o superiore a 0 ppm.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "La concentrazione target di sale deve essere superiore alla concentrazione attuale di sale.",
+  "Reference value for raising the salt concentration in pool water.": "Valore di riferimento per aumentare la concentrazione di sale nell’acqua della piscina.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Seguire le istruzioni del produttore del sistema a sale e aggiungere il sale gradualmente.",
+  "salt": "sale"
 }

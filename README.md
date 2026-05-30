@@ -48,7 +48,7 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - Priority and block logic
   - Status section under `solar.extended.*`
 
-- **Photovoltaic Control (since v0.6.0)**
+- **Photovoltaic Control**
   - Pump control based on PV surplus and household consumption
   - Start logic using configurable surplus margins
   - Optional overrun during cloudy phases
@@ -56,7 +56,7 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - Supports external energy object IDs
   - Pump mode: `Automatic (PV)`
 
-- **Heating / Heat Pump Control (test phase)**
+- **Heating / Heat Pump Control**
   - Automatic control of heating rod or heat pump
   - Configurable target and safety temperatures
   - Optional pump prerun and overrun
@@ -102,7 +102,7 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - Automatic reset after completed backwash
   - PV integration for circulation targets
 
-- **Pressure Sensor Integration (since v0.7.x)**
+- **Pressure Sensor Integration**
   - Real-time pressure measurement
   - Trend analysis
   - Learning average values
@@ -175,6 +175,17 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - Informational only
   - No chlorine control
   - No automatic dosing
+
+  **Chemistry Tools**
+  - pH Plus calculator
+  - pH Minus calculator
+  - Salt calculator
+  - Manual calculation helpers
+  - Pool volume prefill support
+  - Optional manual value override
+  - Result texts with validation and error handling
+  -No automatic chemical dosing
+  - Informational only
 
 - **AI System**
   - Weather hints (Open-Meteo)
@@ -252,6 +263,17 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added new Chemistry Tools section
+- Added pH Plus Calculator
+- Added pH Minus Calculator
+- Added Salt Calculator
+- Added validation, result texts and error handling for all calculators
+- Added automatic pool volume prefill support
+- Expanded documentation and function overviews
+
+
 ### 1.3.26 (2026-05-28)
 
 - Reworked multiple warnings and review notes from official ioBroker checks

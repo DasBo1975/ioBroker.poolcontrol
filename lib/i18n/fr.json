@@ -347,5 +347,23 @@
   "Current ORP value": "Valeur ORP actuelle",
   "pH reference": "Référence pH",
   "Status": "État",
-  "ORP evaluation is disabled.": "L'évaluation ORP est désactivée."
+  "ORP evaluation is disabled.": "L'évaluation ORP est désactivée.",
+
+  "Calculated amount": "Quantité calculée",
+  "Reference value based on common manufacturer dosage.": "Valeur de référence basée sur le dosage habituel du fabricant.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Veuillez suivre les instructions du fabricant et mesurer à nouveau ensuite.",
+
+  "Pool volume must be greater than 0 liters.": "Le volume de la piscine doit être supérieur à 0 litre.",
+  "Current pH value must be between 0 and 14.": "La valeur actuelle du pH doit être comprise entre 0 et 14.",
+  "Target pH value must be between 0 and 14.": "La valeur cible du pH doit être comprise entre 0 et 14.",
+  "Dosage factor must be greater than 0 grams.": "Le facteur de dosage doit être supérieur à 0 gramme.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Pour pH Plus, la valeur cible du pH doit être supérieure à la valeur actuelle du pH.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Pour pH Minus, la valeur cible du pH doit être inférieure à la valeur actuelle du pH.",
+  "Current salt concentration must be 0 ppm or higher.": "La concentration actuelle en sel doit être de 0 ppm ou plus.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "La concentration cible en sel doit être supérieure à la concentration actuelle en sel.",
+  "Reference value for raising the salt concentration in pool water.": "Valeur de référence pour augmenter la concentration en sel dans l’eau de la piscine.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Respectez les instructions du fabricant du système au sel et ajoutez le sel progressivement.",
+  "salt": "sel"
 }

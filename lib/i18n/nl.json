@@ -347,5 +347,23 @@
   "Current ORP value": "Huidige ORP-waarde",
   "pH reference": "pH-referentie",
   "Status": "Status",
-  "ORP evaluation is disabled.": "ORP-evaluatie is uitgeschakeld."
+  "ORP evaluation is disabled.": "ORP-evaluatie is uitgeschakeld.",
+
+  "Calculated amount": "Berekende hoeveelheid",
+  "Reference value based on common manufacturer dosage.": "Referentiewaarde gebaseerd op de gebruikelijke dosering van de fabrikant.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Volg de instructies van de fabrikant en meet daarna opnieuw.",
+
+  "Pool volume must be greater than 0 liters.": "Het zwembadvolume moet groter zijn dan 0 liter.",
+  "Current pH value must be between 0 and 14.": "De huidige pH-waarde moet tussen 0 en 14 liggen.",
+  "Target pH value must be between 0 and 14.": "De doel-pH-waarde moet tussen 0 en 14 liggen.",
+  "Dosage factor must be greater than 0 grams.": "De doseringsfactor moet groter zijn dan 0 gram.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Voor pH Plus moet de doel-pH-waarde hoger zijn dan de huidige pH-waarde.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Voor pH Minus moet de doel-pH-waarde lager zijn dan de huidige pH-waarde.",
+  "Current salt concentration must be 0 ppm or higher.": "De huidige zoutconcentratie moet 0 ppm of hoger zijn.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "De doel-zoutconcentratie moet hoger zijn dan de huidige zoutconcentratie.",
+  "Reference value for raising the salt concentration in pool water.": "Referentiewaarde voor het verhogen van de zoutconcentratie in het zwembadwater.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Volg de instructies van de fabrikant van het zoutsysteem en voeg zout geleidelijk toe.",
+  "salt": "zout"
 }

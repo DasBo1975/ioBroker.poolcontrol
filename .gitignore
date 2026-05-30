@@ -24,3 +24,6 @@ Thumbs.db
 # ioBroker release
 .commitinfo
 deploy.sh
+
+# Local helper tools
+local-tools/

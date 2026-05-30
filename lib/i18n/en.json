@@ -351,5 +351,23 @@
   "pH reference": "pH reference",
   "Status": "Status",
   "Recommendation": "Recommendation",
-  "ORP evaluation is disabled.": "ORP evaluation is disabled."
+  "ORP evaluation is disabled.": "ORP evaluation is disabled.",
+  
+  "Calculated amount": "Calculated amount",
+  "Reference value based on common manufacturer dosage.": "Reference value based on common manufacturer dosage.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Follow the manufacturer instructions and re-measure afterwards.",
+
+  "Pool volume must be greater than 0 liters.": "Pool volume must be greater than 0 liters.",
+  "Current pH value must be between 0 and 14.": "Current pH value must be between 0 and 14.",
+  "Target pH value must be between 0 and 14.": "Target pH value must be between 0 and 14.",
+  "Dosage factor must be greater than 0 grams.": "Dosage factor must be greater than 0 grams.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "For pH Plus, the target pH value must be higher than the current pH value.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "For pH Minus, the target pH value must be lower than the current pH value.",
+  "Current salt concentration must be 0 ppm or higher.": "Current salt concentration must be 0 ppm or higher.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "Target salt concentration must be higher than the current salt concentration.",
+  "Reference value for raising the salt concentration in pool water.": "Reference value for raising the salt concentration in pool water.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Follow the salt system manufacturer instructions and add salt gradually.",
+  "salt": "salt"
 }

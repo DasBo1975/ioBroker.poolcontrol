@@ -333,6 +333,40 @@ The area `chemistry.orp.*` is present as an analysis and recommendation area. It
 
 The ORP evaluation can use a pH reference and synchronizes it independently from the ORP value. It is intended for classification and recommendations. There is no automatic chlorine control, no automatic dosing, and no automatic pump or actuator control based on the ORP value.
 
+### ### Chemistry Tools
+
+PoolControl includes simple chemistry calculators as helper tools for manual pool maintenance. These calculators are intended solely for calculation and informational purposes. No chemicals are dosed automatically.
+
+**Currently included:**
+
+- **pH Plus Calculator**
+
+  - Calculates the required amount of pH Plus
+  - Considers pool volume, current pH value and target pH value
+  - All input values can be adjusted manually
+
+- **pH Minus Calculator**
+
+  - Calculates the required amount of pH Minus
+  - Considers pool volume, current pH value and target pH value
+  - All input values can be adjusted manually
+
+- **Salt Calculator**
+
+  - Calculates the required amount of salt in kilograms
+  - Considers pool volume, current salt concentration and target salt concentration
+  - All input values can be adjusted manually
+
+**Features:**
+
+- Prefills available PoolControl values (e.g. pool volume)
+- Input values can always be overwritten manually
+- Plausibility checks and error detection
+- Result texts with additional information
+- No automatic chemical dosing
+- Calculation and information purposes only
+
+
 ## 12. Hardware, MQTT, and ESP32 Integration
 
 The existing implementation connects external hardware mostly via freely configurable ioBroker object IDs:

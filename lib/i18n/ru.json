@@ -347,5 +347,23 @@
   "Current ORP value": "Текущее значение ORP",
   "pH reference": "Опорное значение pH",
   "Status": "Статус",
-  "ORP evaluation is disabled.": "Оценка ORP отключена."
+  "ORP evaluation is disabled.": "Оценка ORP отключена.",
+
+  "Calculated amount": "Рассчитанное количество",
+  "Reference value based on common manufacturer dosage.": "Ориентировочное значение на основе стандартной дозировки производителя.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Следуйте инструкциям производителя и выполните повторное измерение после обработки.",
+
+  "Pool volume must be greater than 0 liters.": "Объём бассейна должен быть больше 0 литров.",
+  "Current pH value must be between 0 and 14.": "Текущее значение pH должно находиться в диапазоне от 0 до 14.",
+  "Target pH value must be between 0 and 14.": "Целевое значение pH должно находиться в диапазоне от 0 до 14.",
+  "Dosage factor must be greater than 0 grams.": "Коэффициент дозировки должен быть больше 0 граммов.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Для pH Plus целевое значение pH должно быть выше текущего значения pH.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Для pH Minus целевое значение pH должно быть ниже текущего значения pH.",
+  "Current salt concentration must be 0 ppm or higher.": "Текущая концентрация соли должна быть 0 ppm или выше.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "Целевая концентрация соли должна быть выше текущей концентрации соли.",
+  "Reference value for raising the salt concentration in pool water.": "Ориентировочное значение для повышения концентрации соли в воде бассейна.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Следуйте инструкциям производителя солевой системы и добавляйте соль постепенно.",
+  "salt": "соль"
 }

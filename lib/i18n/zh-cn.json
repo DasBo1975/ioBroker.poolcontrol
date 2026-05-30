@@ -347,5 +347,23 @@
   "Current ORP value": "当前 ORP 值",
   "pH reference": "pH 参考值",
   "Status": "状态",
-  "ORP evaluation is disabled.": "ORP 评估已禁用。"
+  "ORP evaluation is disabled.": "ORP 评估已禁用。",
+
+  "Calculated amount": "计算结果",
+  "Reference value based on common manufacturer dosage.": "基于常见制造商剂量说明的参考值。",
+  "Follow the manufacturer instructions and re-measure afterwards.": "请遵循制造商说明，并在处理后重新测量。",
+
+  "Pool volume must be greater than 0 liters.": "泳池容量必须大于 0 升。",
+  "Current pH value must be between 0 and 14.": "当前 pH 值必须在 0 到 14 之间。",
+  "Target pH value must be between 0 and 14.": "目标 pH 值必须在 0 到 14 之间。",
+  "Dosage factor must be greater than 0 grams.": "剂量系数必须大于 0 克。",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "对于 pH Plus，目标 pH 值必须高于当前 pH 值。",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "对于 pH Minus，目标 pH 值必须低于当前 pH 值。",
+  "Current salt concentration must be 0 ppm or higher.": "当前盐浓度必须为 0 ppm 或更高。",
+
+  "Target salt concentration must be higher than the current salt concentration.": "目标盐浓度必须高于当前盐浓度。",
+  "Reference value for raising the salt concentration in pool water.": "用于提高泳池水中盐浓度的参考值。",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "请遵循盐系统制造商说明，并逐步加盐。",
+  "salt": "盐"
 }

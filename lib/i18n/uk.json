@@ -347,5 +347,23 @@
   "Current ORP value": "Поточне значення ORP",
   "pH reference": "Еталон pH",
   "Status": "Статус",
-  "ORP evaluation is disabled.": "Оцінювання ORP вимкнено."
+  "ORP evaluation is disabled.": "Оцінювання ORP вимкнено.",
+
+  "Calculated amount": "Розрахована кількість",
+  "Reference value based on common manufacturer dosage.": "Орієнтовне значення на основі стандартного дозування виробника.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Дотримуйтесь інструкцій виробника та виконайте повторне вимірювання після обробки.",
+
+  "Pool volume must be greater than 0 liters.": "Об’єм басейну повинен бути більшим за 0 літрів.",
+  "Current pH value must be between 0 and 14.": "Поточне значення pH повинно бути в межах від 0 до 14.",
+  "Target pH value must be between 0 and 14.": "Цільове значення pH повинно бути в межах від 0 до 14.",
+  "Dosage factor must be greater than 0 grams.": "Коефіцієнт дозування повинен бути більшим за 0 грамів.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Для pH Plus цільове значення pH повинно бути вищим за поточне значення pH.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Для pH Minus цільове значення pH повинно бути нижчим за поточне значення pH.",
+  "Current salt concentration must be 0 ppm or higher.": "Поточна концентрація солі має бути 0 ppm або вище.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "Цільова концентрація солі має бути вищою за поточну концентрацію солі.",
+  "Reference value for raising the salt concentration in pool water.": "Орієнтовне значення для підвищення концентрації солі у воді басейну.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Дотримуйтесь інструкцій виробника сольової системи та додавайте сіль поступово.",
+  "salt": "сіль"
 }

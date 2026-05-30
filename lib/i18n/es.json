@@ -347,5 +347,23 @@
   "Current ORP value": "Valor actual de ORP",
   "pH reference": "Referencia de pH",
   "Status": "Estado",
-  "ORP evaluation is disabled.": "La evaluación de ORP está desactivada."
+  "ORP evaluation is disabled.": "La evaluación de ORP está desactivada.",
+
+  "Calculated amount": "Cantidad calculada",
+  "Reference value based on common manufacturer dosage.": "Valor de referencia basado en la dosificación habitual del fabricante.",
+  "Follow the manufacturer instructions and re-measure afterwards.": "Siga las instrucciones del fabricante y vuelva a medir después.",
+
+  "Pool volume must be greater than 0 liters.": "El volumen de la piscina debe ser superior a 0 litros.",
+  "Current pH value must be between 0 and 14.": "El valor actual de pH debe estar entre 0 y 14.",
+  "Target pH value must be between 0 and 14.": "El valor objetivo de pH debe estar entre 0 y 14.",
+  "Dosage factor must be greater than 0 grams.": "El factor de dosificación debe ser superior a 0 gramos.",
+
+  "For pH Plus, the target pH value must be higher than the current pH value.": "Para pH Plus, el valor objetivo de pH debe ser superior al valor actual de pH.",
+  "For pH Minus, the target pH value must be lower than the current pH value.": "Para pH Minus, el valor objetivo de pH debe ser inferior al valor actual de pH.",
+  "Current salt concentration must be 0 ppm or higher.": "La concentración actual de sal debe ser de 0 ppm o superior.",
+
+  "Target salt concentration must be higher than the current salt concentration.": "La concentración objetivo de sal debe ser superior a la concentración actual de sal.",
+  "Reference value for raising the salt concentration in pool water.": "Valor de referencia para aumentar la concentración de sal en el agua de la piscina.",
+  "Follow the salt system manufacturer instructions and add salt gradually.": "Siga las instrucciones del fabricante del sistema de sal y añada sal gradualmente.",
+  "salt": "sal"
 }

@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.26",
     "news": {
+      "1.3.27": {
+        "en": "Added new Chemistry Tools with pH Plus Calculator, pH Minus Calculator and Salt Calculator. Added validation, result texts, error handling and automatic pool volume prefill. Expanded documentation and function overviews.",
+        "de": "Neuen Bereich Chemistry Tools mit pH-Plus-Rechner, pH-Minus-Rechner und Salz-Rechner hinzugefügt. Validierungen, Ergebnistexte, Fehlerbehandlung und automatische Vorbelegung des Poolvolumens ergänzt. Dokumentation und Funktionsübersichten erweitert.",
+        "ru": "Добавлены новые химические инструменты с калькулятором pH плюс, калькулятором pH минус и калькулятором соли. Добавлена ​​проверка, тексты результатов, обработка ошибок и автоматическое предварительное заполнение объема пула. Расширенная документация и обзоры функций.",
+        "pt": "Adicionadas novas ferramentas de química com calculadora pH Plus, calculadora pH menos e calculadora de sal. Adicionados validação, textos de resultados, tratamento de erros e preenchimento automático do volume do pool. Documentação expandida e visões gerais de funções.",
+        "nl": "Nieuwe chemiehulpmiddelen toegevoegd met pH Plus-calculator, pH-minuscalculator en Zoutcalculator. Validatie, resultaatteksten, foutafhandeling en automatisch vooraf invullen van poolvolumes toegevoegd. Uitgebreide documentatie en functieoverzichten.",
+        "fr": "Ajout de nouveaux outils de chimie avec calculateur de pH Plus, calculateur de pH Moins et calculateur de sel. Ajout de la validation, des textes de résultats, de la gestion des erreurs et du pré-remplissage automatique du volume du pool. Documentation étendue et aperçus des fonctions.",
+        "it": "Aggiunti nuovi strumenti di chimica con calcolatore di pH più, calcolatore di pH meno e calcolatore di sale. Aggiunta convalida, testi dei risultati, gestione degli errori e precompilazione automatica del volume del pool. Documentazione estesa e panoramiche delle funzioni.",
+        "es": "Se agregaron nuevas herramientas de química con calculadora de pH Plus, calculadora de pH Minus y calculadora de sal. Se agregó validación, textos de resultados, manejo de errores y precarga automática del volumen del grupo. Documentación ampliada y descripciones generales de funciones.",
+        "pl": "Dodano nowe narzędzia chemiczne z kalkulatorem pH Plus, kalkulatorem pH Minus i kalkulatorem soli. Dodano weryfikację, teksty wyników, obsługę błędów i automatyczne wstępne wypełnianie objętości puli. Rozszerzona dokumentacja i przeglądy funkcji.",
+        "uk": "Додано нові хімічні інструменти з калькулятором pH Plus, калькулятором pH мінус і калькулятором солі. Додано перевірку, тексти результатів, обробку помилок і автоматичне попереднє заповнення обсягу пулу. Розширена документація та огляд функцій.",
+        "zh-cn": "添加了新的化学工具，包括 pH 加计算器、pH 减计算器和盐计算器。添加了验证、结果文本、错误处理和自动池容量预填充。扩展的文档和功能概述。"
+      },
       "1.3.26": {
         "en": "Reworked several warnings and review notes from official ioBroker checks. Various small improvements and internal cleanups.",
         "de": "Mehrere Warnungen und Review-Hinweise aus offiziellen ioBroker-Checks überarbeitet. Diverse kleine Verbesserungen und interne Bereinigungen.",
@@ -54,19 +67,6 @@
         "pl": "Rozszerzona diagnostyka temperatury: Dodano nowe stany diagnostyczne dla wszystkich czujników temperatury (ostatnia ważna wartość, znacznik czasu, minuty od ostatniej wartości, stan źródła). Dodano mechanizm samonaprawy/odzyskiwania w przypadku zablokowania lub braku zdarzeń związanych z temperaturą. Pomocnik temperatury zaktualizowany do timerów zgodnych z ioBroker.",
         "uk": "Розширено діагностику температури: додано нові діагностичні стани для всіх датчиків температури (останнє дійсне значення, позначка часу, хвилини з останнього значення, статус джерела). Додано механізм самовідновлення/відновлення для зупинених або відсутніх температурних подій. Помічник температури оновлено до таймерів, сумісних із ioBroker.",
         "zh-cn": "温度诊断扩展：为所有温度传感器添加了新的诊断状态（最后一个有效值、时间戳、自最后一个值以来的分钟数、源状态）。添加了针对停滞或丢失温度事件的自我修复/恢复机制。温度助手更新为符合 ioBroker 标准的计时器。"
-      },
-      "1.3.22": {
-        "en": "Improved ORP pH reference synchronization. The ORP helper now updates the pH reference independently from ORP value processing and immediately reflects pH state changes.",
-        "de": "ORP-pH-Referenz verbessert. Der ORP-Helper aktualisiert die pH-Referenz jetzt unabhängig von der ORP-Wertverarbeitung und übernimmt pH-Änderungen sofort.",
-        "ru": "Улучшена синхронизация эталонного значения pH ОВП. Помощник по ОВП теперь обновляет эталонное значение pH независимо от обработки значений ОВП и немедленно отражает изменения состояния pH.",
-        "pt": "Sincronização de referência de pH ORP aprimorada. O auxiliar ORP agora atualiza a referência de pH independentemente do processamento do valor ORP e reflete imediatamente as alterações do estado de pH.",
-        "nl": "Verbeterde ORP pH-referentiesynchronisatie. De ORP-helper werkt nu de pH-referentie onafhankelijk van de ORP-waardeverwerking bij en weerspiegelt onmiddellijk veranderingen in de pH-toestand.",
-        "fr": "Synchronisation améliorée de la référence ORP pH. L'assistant ORP met désormais à jour la référence pH indépendamment du traitement de la valeur ORP et reflète immédiatement les changements d'état du pH.",
-        "it": "Sincronizzazione del riferimento pH ORP migliorata. L'assistente ORP ora aggiorna il riferimento del pH indipendentemente dall'elaborazione del valore ORP e riflette immediatamente i cambiamenti dello stato del pH.",
-        "es": "Sincronización de referencia de pH ORP mejorada. El asistente de ORP ahora actualiza la referencia de pH independientemente del procesamiento del valor de ORP y refleja inmediatamente los cambios en el estado del pH.",
-        "pl": "Ulepszona synchronizacja odniesienia pH ORP. Pomocnik ORP aktualizuje teraz wartość odniesienia pH niezależnie od przetwarzania wartości ORP i natychmiast odzwierciedla zmiany stanu pH.",
-        "uk": "Покращена синхронізація еталонного pH ОВП. Помічник ОВП тепер оновлює еталонний рН незалежно від обробки значення ОВП і негайно відображає зміни стану рН.",
-        "zh-cn": "改进了 ORP pH 参考同步。 ORP 助手现在独立于 ORP 值处理更新 pH 参考值，并立即反映 pH 状态变化。"
       }
     },
     "titleLang": {
