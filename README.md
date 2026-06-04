@@ -271,14 +271,13 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.29 (2026-06-04)
 
 - Added Pool Insights V1 with observations, status evaluation and runtime i18n support.
 - Improved Pool Insights text generation and removed dependency on external summary blocks.
 - Added configurable startup power check timeout state for pump startup monitoring.
 - Fixed missing initialization of season and solar warning runtime states from adapter configuration.
 - Added admin UI information about initial configuration values and runtime datapoint control.
-
 
 ### 1.3.28 (2026-06-03)
 
@@ -307,12 +306,6 @@ New features are added regularly – please refer to the changelog.
 - Updated README structure and feature overview
 - Synchronized German and English function overviews
 - Updated repository maintenance dependencies
-
-### 1.3.24 (2026-05-26)
-
-- Updated release-script dependencies to current versions
-- Improved README and changelog structure
-- Repository checker recommendations reviewed
 
 ## Archived Release History
 

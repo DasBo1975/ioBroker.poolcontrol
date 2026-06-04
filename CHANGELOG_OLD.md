@@ -4,6 +4,12 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.24 (2026-05-26)
+
+- Updated release-script dependencies to current versions
+- Improved README and changelog structure
+- Repository checker recommendations reviewed
+
 ## 1.3.23 (2026-05-26)
 
 - Added extended temperature diagnostics for all temperature sensors:
