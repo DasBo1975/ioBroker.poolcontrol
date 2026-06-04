@@ -262,6 +262,12 @@ Among other things, the following are recorded:
 
 Runtime is only counted when PV surplus is active and `photovoltaicHelper` owns the pump. According to code comments, pump post-runtimes are not counted as PV surplus runtime.
 
+### Pool Insights
+
+Pool Insights are located under analytics.insights.pool.*. This area is a rule-based overall analysis and reads existing PoolControl data from temperature, runtime, pump, solar, photovoltaic, consumption, and chemistry areas. V1 is disabled by default and only creates its own analysis outputs as text, JSON, and HTML.
+
+Pool Insights does not perform control, does not start dosing, and does not switch the pump or actuators. Optionally, the summary can be handed off to speech.queue when the corresponding switch is enabled.
+
 ### COP and Efficiency Functions
 
 Efficiency and estimated values are visible in the code especially in the Solar Insights area, such as thermal power, estimated daily gain, and estimated efficiency ratio. A standalone, fully separate COP control for heat pumps is not clearly derivable from the code.

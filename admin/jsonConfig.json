@@ -17,6 +17,16 @@
           "lg": 12,
           "xl": 12
         },
+        "general_runtime_hint": {
+          "type": "staticText",
+          "text": "Note: These settings are mainly used as initial values when PoolControl is set up for the first time. Later operation should be done via the PoolControl datapoints or your visualization. Existing runtime datapoints are not overwritten on adapter restart.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
         "pool_name": {
           "type": "text",
           "label": "Pool Name",
@@ -78,6 +88,16 @@
           "lg": 3,
           "xl": 3,
           "newLine": true
+        },
+        "season_active_hint": {
+          "type": "staticText",
+          "text": "This value is used as the initial season status when the datapoint is created for the first time. Later changes should be made via 'status.season_active' or your visualization.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         },
         "egon_image": {
           "type": "staticImage",
@@ -529,6 +549,16 @@
                 "lg": 6,
                 "xl": 6,
                 "newLine": true
+            },
+            "solar_collector_warn_runtime_hint": {
+                "type": "staticText",
+                "text": "These warning values are used as initial values when the datapoints are created for the first time. Later changes should be made via 'solar.warn_active', 'solar.warn_temp' and 'solar.warn_speech' or your visualization.",
+                "newLine": true,
+                "xs": 12,
+                "sm": 12,
+                "md": 12,
+                "lg": 12,
+                "xl": 12
             },
             "solar_collector_warn_hint": {
                 "type": "staticText",
@@ -1481,7 +1511,7 @@
             },
             "info_season_text": {
                 "type": "staticText",
-                "text": "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or in the instance configuration.",
+                "text": "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or your visualization. The instance configuration only provides the initial value when the datapoint is created for the first time.",
                 "newLine": true,
                 "xs": 12,
                 "sm": 12,

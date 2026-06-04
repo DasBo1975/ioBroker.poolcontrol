@@ -262,6 +262,12 @@ Erfasst werden unter anderem:
 
 Die Laufzeit wird nur gezählt, wenn PV-Überschuss aktiv ist und `photovoltaicHelper` die Pumpe besitzt. Nachlaufzeiten werden nach Codekommentaren nicht als PV-Überschusslaufzeit gezählt.
 
+### Pool Insights
+
+Pool Insights liegen unter analytics.insights.pool.*. Der Bereich ist eine regelbasierte Gesamtanalyse und liest vorhandene PoolControl-Daten aus Temperatur, Laufzeit, Pumpe, Solar, Photovoltaik, Verbrauch und Chemie. V1 ist standardmaessig deaktiviert und erzeugt nur eigene Analyseausgaben als Text, JSON und HTML.
+
+Pool Insights fuehrt keine Steuerung aus, startet keine Dosierung und schaltet weder Pumpe noch Aktoren. Optional kann die Zusammenfassung an speech.queue uebergeben werden, wenn der zugehoerige Schalter aktiviert ist.
+
 ### COP- und Effizienzfunktionen
 
 Im Code sind Effizienz- und Schätzwerte besonders im Solar-Insights-Bereich sichtbar, etwa thermische Leistung, geschätzter Tagesgewinn und geschätztes Effizienzverhältnis. Eine eigenständige, vollständig getrennte COP-Steuerung für Wärmepumpen ist nicht eindeutig aus dem Code ableitbar.

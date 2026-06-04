@@ -144,6 +144,14 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - Starts and operating statistics
   - HTML / JSON summaries
 
+- **Pool Insights**
+  - Rule-based overall pool analysis under analytics.insights.pool.*
+  - Reads existing PoolControl data only
+  - No automatic control, dosing, pump switching, or actuator switching
+  - Disabled by default
+  - Optional summary handoff to speech.queue
+  - HTML / JSON / text outputs
+
 - **VIS-ready Outputs**
   - Structured text outputs
   - HTML outputs
@@ -263,6 +271,15 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added Pool Insights V1 with observations, status evaluation and runtime i18n support.
+- Improved Pool Insights text generation and removed dependency on external summary blocks.
+- Added configurable startup power check timeout state for pump startup monitoring.
+- Fixed missing initialization of season and solar warning runtime states from adapter configuration.
+- Added admin UI information about initial configuration values and runtime datapoint control.
+
+
 ### 1.3.28 (2026-06-03)
 
 - Added configurable startup power check timeout for pump monitoring (`pump.startup_power_check_timeout_sec`).

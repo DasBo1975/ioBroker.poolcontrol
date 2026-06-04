@@ -346,13 +346,13 @@
   "ORP value is high. Check whether the measurement is plausible and evaluate the water values together.": "ORP value is high. Check whether the measurement is plausible and evaluate the water values together.",
   "ORP value is within the configured reference range.": "ORP value is within the configured reference range.",
   "unknown": "unknown",
-  "not enough data": "not enough data",
+
   "Current ORP value": "Current ORP value",
   "pH reference": "pH reference",
   "Status": "Status",
-  "Recommendation": "Recommendation",
+
   "ORP evaluation is disabled.": "ORP evaluation is disabled.",
-  
+
   "Calculated amount": "Calculated amount",
   "Reference value based on common manufacturer dosage.": "Reference value based on common manufacturer dosage.",
   "Follow the manufacturer instructions and re-measure afterwards.": "Follow the manufacturer instructions and re-measure afterwards.",
@@ -369,5 +369,35 @@
   "Target salt concentration must be higher than the current salt concentration.": "Target salt concentration must be higher than the current salt concentration.",
   "Reference value for raising the salt concentration in pool water.": "Reference value for raising the salt concentration in pool water.",
   "Follow the salt system manufacturer instructions and add salt gradually.": "Follow the salt system manufacturer instructions and add salt gradually.",
-  "salt": "salt"
+  "salt": "salt",
+
+  "pool_insights_summary_ok": "The pool overall analysis contains no anomalies.",
+  "pool_insights_summary_info": "The pool overall analysis contains some notes to observe.",
+  "pool_insights_summary_warning": "The pool overall analysis detected several anomalies.",
+  "pool_insights_summary_completed": "The pool overall analysis has been created.",
+  "pool_insights_label_recommendations": "Recommendations",
+  "pool_insights_observation_temperature_delta": "Note: The pool temperature changed by about {delta} °C today.",
+  "pool_insights_observation_pump_runtime": "Note: The pump ran for {runtime} today.",
+  "pool_insights_observation_pump_starts": "Note: {count} pump starts were detected today.",
+  "pool_insights_observation_pump_error": "Note: The pump error status is active.",
+  "pool_insights_observation_not_enough_data": "Note: Only limited data is currently available for the pool overall analysis.",
+  "pool_insights_observation_consumption_today": "Note: Today’s power consumption is about {kwh} kWh.",
+  "pool_insights_observation_costs_today": "Note: Today’s costs are about {eur} EUR.",
+  "pool_insights_recommendation_temperature_low_change": "Note: The temperature changed only slightly today. Observe solar, heating and runtime if needed.",
+  "pool_insights_recommendation_many_pump_starts": "Note: Many pump starts were detected. Please observe cycling, time windows or external requests.",
+  "pool_insights_recommendation_pump_error": "Please check the pump status, power consumption and connected hardware.",
+  "pool_insights_recommendation_many_pv_starts": "Note: Many PV starts were detected. Please observe whether photovoltaic surplus operation cycles frequently.",
+  "pool_insights_error_analysis_failed": "Note: The pool overall analysis could not be completed.",
+  "pool_insights_error_check_log": "Please check the log and run the analysis again later.",
+
+  "pool_insights_observation_solar_ran_today": "Solar operation was active today.",
+  "pool_insights_observation_solar_not_ran_today": "Solar operation was not active today.",
+  "pool_insights_observation_solar_gain_today": "Solar yield is available today at about {kwh} kWh.",
+  "pool_insights_observation_solar_evaluation_available": "A solar evaluation is available.",
+  "pool_insights_observation_pv_used_today": "PV support was used today.",
+  "pool_insights_observation_pv_evaluation_available": "A PV evaluation is available.",
+  "pool_insights_observation_pv_runtime_today": "PV support ran for {minutes} minutes today.",
+  "pool_insights_observation_ph_evaluation_available": "A pH evaluation is available.",
+  "pool_insights_observation_tds_evaluation_available": "A TDS evaluation is available.",
+  "pool_insights_observation_orp_evaluation_available": "An ORP evaluation is available."
 }
