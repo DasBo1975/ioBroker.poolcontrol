@@ -65,7 +65,6 @@
   "Logical Control State (true / false)": "逻辑控制状态（真/假）",
   "Mail": "邮件",
   "Male": "男性",
-  "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or in the instance configuration.": "许多自动功能（例如太阳能控制、光伏模式、人工智能天气逻辑和诊断功能）仅在泳池季节活跃时运行。季节状态可以随时通过“status.season_active”数据点或在实例配置中更改。",
   "Many automatic features (e.g. solar control, photovoltaic mode, AI weather logic and diagnostic functions) only operate when the pool season is active. The season status can be changed at any time via the 'status.season_active' datapoint or your visualization. The instance configuration only provides the initial value when the datapoint is created for the first time.": "许多自动功能（例如太阳能控制、光伏模式、人工智能天气逻辑和诊断功能）仅在泳池季节活跃时运行。季节状态可以随时通过“status.season_active”数据点或可视化更改。实例配置仅在第一次创建数据点时提供初始值。",
   "Max Power (Watt)": "最大功率（瓦）",
   "Maximum Pool Temperature (°C – Safety Cutoff)": "最高水池温度（°C – 安全截止值）",

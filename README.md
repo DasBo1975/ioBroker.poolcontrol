@@ -271,6 +271,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Updated release tooling to the required minimum version.
+- Cleaned up outdated Admin i18n keys.
+- Replaced native timers in AI weather helpers with ioBroker adapter timers.
+
 ### 1.3.29 (2026-06-04)
 
 - Added Pool Insights V1 with observations, status evaluation and runtime i18n support.
