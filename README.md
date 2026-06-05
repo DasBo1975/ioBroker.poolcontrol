@@ -271,7 +271,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.30 (2026-06-05)
 
 - Updated release tooling to the required minimum version.
 - Cleaned up outdated Admin i18n keys.
@@ -306,12 +306,6 @@ New features are added regularly – please refer to the changelog.
 - Reworked multiple warnings and review notes from official ioBroker checks
 - Internal cleanup and small structural improvements
 - Further preparation for cleaner review and repository checks
-
-### 1.3.25 (2026-05-26)
-
-- Updated README structure and feature overview
-- Synchronized German and English function overviews
-- Updated repository maintenance dependencies
 
 ## Archived Release History
 
