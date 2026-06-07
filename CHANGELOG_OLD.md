@@ -4,6 +4,12 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.26 (2026-05-28)
+
+- Reworked multiple warnings and review notes from official ioBroker checks
+- Internal cleanup and small structural improvements
+- Further preparation for cleaner review and repository checks
+
 ## 1.3.25 (2026-05-26)
 
 - Updated README structure and feature overview

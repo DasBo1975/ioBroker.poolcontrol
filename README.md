@@ -271,10 +271,9 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.31 (2026-06-07)
 
 - Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.
-
 
 ### 1.3.30 (2026-06-05)
 
@@ -305,12 +304,6 @@ New features are added regularly – please refer to the changelog.
 - Added validation, result texts and error handling for all calculators
 - Added automatic pool volume prefill support
 - Expanded documentation and function overviews
-
-### 1.3.26 (2026-05-28)
-
-- Reworked multiple warnings and review notes from official ioBroker checks
-- Internal cleanup and small structural improvements
-- Further preparation for cleaner review and repository checks
 
 ## Archived Release History
 
