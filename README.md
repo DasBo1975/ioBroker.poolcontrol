@@ -271,6 +271,11 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.
+
+
 ### 1.3.30 (2026-06-05)
 
 - Updated release tooling to the required minimum version.

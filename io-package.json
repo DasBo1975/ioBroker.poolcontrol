@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.30",
     "news": {
+      "1.3.31": {
+        "en": "Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.",
+        "de": "Fehler in der automatischen Nachpump-Logik bei fehlenden Temperatursensoren behoben. Das automatische Nachpumpen wird jetzt nur noch durch den Kollektor-/Pooltemperaturvergleich blockiert, wenn die Solarsteuerung aktiv ist und beide Temperaturwerte gültig vorliegen.",
+        "ru": "Исправлена ​​логика автоматического пополнения циркуляции при отсутствии датчиков температуры. Автоматическое пополнение теперь блокируется только при сравнении температур коллектора и бассейна, когда активно управление солнечной батареей и обе температуры действительны.",
+        "pt": "Lógica de recarga automática de circulação corrigida quando faltam sensores de temperatura. O reabastecimento automático agora só é bloqueado pela comparação da temperatura do coletor/piscina quando o controle solar está ativo e ambas as temperaturas são válidas.",
+        "nl": "Probleem opgelost met het automatisch bijvullen van de circulatie wanneer temperatuursensoren ontbreken. Het automatisch bijvullen wordt nu alleen geblokkeerd door de vergelijking van de collector-/zwembadtemperatuur als de zonneregeling actief is en beide temperaturen geldig zijn.",
+        "fr": "Correction de la logique de recharge automatique de la circulation lorsque les capteurs de température sont manquants. L'appoint automatique n'est désormais bloqué par la comparaison des températures capteur/piscine que lorsque le contrôle solaire est actif et que les deux températures sont valables.",
+        "it": "Risolta la logica di rabbocco della circolazione automatica in caso di mancanza dei sensori di temperatura. Il rabbocco automatico ora è bloccato solo dal confronto della temperatura collettore/piscina quando il controllo solare è attivo ed entrambe le temperature sono valide.",
+        "es": "Se corrigió la lógica de recarga de circulación automática cuando faltaban sensores de temperatura. La recarga automática ahora solo se bloquea mediante la comparación de temperatura del colector/piscina cuando el control solar está activo y ambas temperaturas son válidas.",
+        "pl": "Naprawiono logikę automatycznego uzupełniania cyrkulacji w przypadku braku czujników temperatury. Automatyczne uzupełnianie jest teraz blokowane tylko przez porównanie temperatur kolektora/basenu, gdy aktywna jest kontrola solarna i obie temperatury są prawidłowe.",
+        "uk": "Виправлена ​​логіка автоматичного доповнення циркуляції, коли датчики температури відсутні. Автоматичне поповнення тепер блокується лише шляхом порівняння температури колектора/басейну, коли активовано сонячне керування та обидві температури дійсні.",
+        "zh-cn": "修复了缺少温度传感器时的自动循环充值逻辑。现在，仅当太阳能控制处于活动状态并且两个温度都有效时，自动充值才会被收集器/池温度比较阻止。"
+      },
       "1.3.30": {
         "en": "Updated release tooling to the required minimum version. Cleaned up outdated Admin i18n keys. Replaced native timers in AI weather helpers with ioBroker adapter timers.",
         "de": "Release-Werkzeuge auf die erforderliche Mindestversion aktualisiert. Veraltete Admin-i18n-Schlüssel bereinigt. Native Timer in den KI-Wetter-Helpern durch ioBroker-Adapter-Timer ersetzt.",
@@ -54,19 +67,6 @@
         "pl": "Dodano nowe narzędzia chemiczne z kalkulatorem pH Plus, kalkulatorem pH Minus i kalkulatorem soli. Dodano weryfikację, teksty wyników, obsługę błędów i automatyczne wstępne wypełnianie objętości puli. Rozszerzona dokumentacja i przeglądy funkcji.",
         "uk": "Додано нові хімічні інструменти з калькулятором pH Plus, калькулятором pH мінус і калькулятором солі. Додано перевірку, тексти результатів, обробку помилок і автоматичне попереднє заповнення обсягу пулу. Розширена документація та огляд функцій.",
         "zh-cn": "添加了新的化学工具，包括 pH 加计算器、pH 减计算器和盐计算器。添加了验证、结果文本、错误处理和自动池容量预填充。扩展的文档和功能概述。"
-      },
-      "1.3.26": {
-        "en": "Reworked several warnings and review notes from official ioBroker checks. Various small improvements and internal cleanups.",
-        "de": "Mehrere Warnungen und Review-Hinweise aus offiziellen ioBroker-Checks überarbeitet. Diverse kleine Verbesserungen und interne Bereinigungen.",
-        "ru": "Переработано несколько предупреждений и примечаний к обзору официальных проверок ioBroker. Различные мелкие улучшения и внутренние чистки.",
-        "pt": "Vários avisos e notas de revisão das verificações oficiais do ioBroker foram reformulados. Várias pequenas melhorias e limpezas internas.",
-        "nl": "Verschillende waarschuwingen en beoordelingsnotities van officiële ioBroker-controles herwerkt. Diverse kleine verbeteringen en interne opruimingen.",
-        "fr": "Retravaillé plusieurs avertissements et notes de révision des contrôles officiels d'ioBroker. Diverses petites améliorations et nettoyages internes.",
-        "it": "Rielaborati diversi avvisi e note di revisione dai controlli ufficiali di ioBroker. Varie piccole migliorie e pulizie interne.",
-        "es": "Se modificaron varias advertencias y notas de revisión de las comprobaciones oficiales de ioBroker. Varias pequeñas mejoras y limpiezas internas.",
-        "pl": "Przerobiono kilka ostrzeżeń i uwag z oficjalnych kontroli ioBroker. Różne drobne ulepszenia i wewnętrzne porządki.",
-        "uk": "Перероблено кілька попереджень і приміток до огляду з офіційних перевірок ioBroker. Різні невеликі покращення та внутрішні очищення.",
-        "zh-cn": "重新设计了官方 ioBroker 检查中的几条警告和审查说明。各种小的改进和内部清理。"
       }
     },
     "titleLang": {
