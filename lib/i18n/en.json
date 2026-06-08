@@ -399,5 +399,13 @@
   "pool_insights_observation_pv_runtime_today": "PV support ran for {minutes} minutes today.",
   "pool_insights_observation_ph_evaluation_available": "A pH evaluation is available.",
   "pool_insights_observation_tds_evaluation_available": "A TDS evaluation is available.",
-  "pool_insights_observation_orp_evaluation_available": "An ORP evaluation is available."
+  "pool_insights_observation_orp_evaluation_available": "An ORP evaluation is available.",
+
+  "circulation_plausibility_initializing": "Circulation plausibility check is initializing.",
+  "circulation_plausibility_ok": "Circulation plausibility check is OK.",
+  "circulation_plausibility_no_flow": "No valid live flow value is available for the circulation calculation.",
+  "circulation_plausibility_power_warning": "Pump power is implausibly high compared to the configured maximum power.",
+  "circulation_plausibility_flow_warning": "Calculated flow rate is implausibly high compared to the configured nominal flow.",
+  "circulation_plausibility_daily_total_jump_warning": "Daily circulation volume increased faster than physically plausible.",
+  "circulation_plausibility_multiple_warnings": "Multiple circulation plausibility warnings are active."
 }

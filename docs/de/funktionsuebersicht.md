@@ -20,6 +20,7 @@ PoolControl deckt folgende Hauptbereiche ab:
 - Heizungs- bzw. Wärmepumpensteuerung
 - Frostschutz
 - Laufzeit-, Umwälz-, Verbrauchs- und Kostenberechnung
+- Plausibilitätsdiagnose der Umwälzberechnung unter `circulation.plausibility`
 - Tages-, Wochen- und Monatsstatistiken für Temperaturen
 - Solar Insights und Photovoltaic Insights unter `analytics.insights.*`
 - zentrale Text- und Sprachausgabe über eine gemeinsame Queue-Struktur
@@ -53,6 +54,10 @@ Die Prioritätsverwaltung erfolgt über `pump.active_helper`. Dort steht, welche
 - `heatHelper` für Heizungsbetrieb
 
 Mehrere Helper prüfen diesen Wert, bevor sie die Pumpe schalten. Dadurch wird verhindert, dass beispielsweise Solar oder PV eine laufende Wartung oder Zeitsteuerung überschreibt.
+
+Das automatische Nachpumpen dient dazu, die tägliche Umwälzmenge zu erreichen. Es benötigt grundsätzlich keine Temperaturwerte. Wenn die Solarsteuerung aktiv ist und sowohl Kollektor- als auch Pooltemperatur gültig vorliegen, wird Nachpumpen blockiert, solange der Kollektor nicht wärmer als der Pool ist.
+
+Die Umwälzberechnung wird zusätzlich durch `circulation.plausibility` diagnostisch beobachtet. Die Diagnose prüft auf unplausible Pumpenleistung, unplausiblen berechneten Durchfluss und Sprünge der Tagesumwälzung, die schneller auftreten als physikalisch plausibel. Sie speichert nur Diagnoseinformationen in eigenen States und greift nicht in Pumpensteuerung, PV-Logik, Solarlogik oder die Berechnungsformel der Umwälzung ein.
 
 Zur Sicherheitslogik gehören:
 
@@ -451,6 +456,8 @@ Zusätzlich existieren viele bereichsspezifische Status- und Debugdatenpunkte, z
 - `analytics.insights.solar.debug.*`
 - `analytics.insights.photovoltaic.debug.*`
 
+Unter `circulation.plausibility` liegen zusätzliche Diagnosewerte für die Umwälzberechnung. Sie zeigen Status, Bewertungsstufe, Meldungsschlüssel, Power-/Flow-/Sprungwarnungen und die zugehörigen Vergleichswerte. Diese Werte helfen bei der Fehlersuche bei ungewöhnlichen Umwälzungswerten, erzeugen aber keine automatische Korrektur.
+
 Der Adapter besitzt außerdem einen `migrationHelper`, der beim Start zuletzt vor den Helpern ausgeführt wird und Struktur-/Update-Anpassungen vorbereitet. Details seiner konkreten Migrationen sind in dieser Übersicht nicht einzeln ausgewertet.
 
 ## 15. Export- und Analysefunktionen
@@ -483,7 +490,7 @@ Typische Einrichtung:
 
 - Poolgröße und Mindestumwälzung in den allgemeinen Einstellungen setzen
 - Pumpensteckdose und optional Leistungsdatenpunkt konfigurieren
-- Temperatursensoren aktivieren und Objekt-IDs zuordnen
+- Temperatursensoren bei Bedarf einrichten, insbesondere für Solar-, Heizungs-, Frostschutz- und Analysefunktionen
 - gewünschten Pumpenmodus wählen
 - Solar, PV, Zeitsteuerung, Heizung und Frostschutz nach Bedarf aktivieren
 - Speech-Ausgaben nur aktivieren, wenn Alexa/Telegram/E-Mail korrekt konfiguriert sind
@@ -507,7 +514,7 @@ Für den Einstieg reichen meist:
 
 - Pumpensteckdose konfigurieren
 - Poolgröße und Umwälzziel setzen
-- mindestens einen Pooltemperatursensor einrichten
+- Temperatursensoren bei Bedarf einrichten, insbesondere für Solar-, Heizungs-, Frostschutz- und Analysefunktionen
 - gewünschten Pumpenmodus wählen
 - danach Solar, PV, Heizung, Speech und Analysen schrittweise aktivieren
 

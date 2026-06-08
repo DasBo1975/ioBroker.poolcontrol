@@ -395,5 +395,13 @@
   "pool_insights_observation_pv_runtime_today": "今天 PV 支持运行了 {minutes} 分钟。",
   "pool_insights_observation_ph_evaluation_available": "已有 pH 评估。",
   "pool_insights_observation_tds_evaluation_available": "已有 TDS 评估。",
-  "pool_insights_observation_orp_evaluation_available": "已有 ORP 评估。"
+  "pool_insights_observation_orp_evaluation_available": "已有 ORP 评估。",
+
+  "circulation_plausibility_initializing": "循环合理性检查正在初始化。",
+  "circulation_plausibility_ok": "循环合理性检查正常。",
+  "circulation_plausibility_no_flow": "没有可用于循环计算的有效流量值。",
+  "circulation_plausibility_power_warning": "泵功率相对于配置的最大功率异常偏高。",
+  "circulation_plausibility_flow_warning": "计算出的流量相对于配置的额定流量异常偏高。",
+  "circulation_plausibility_daily_total_jump_warning": "每日循环量增长速度超过物理合理范围。",
+  "circulation_plausibility_multiple_warnings": "存在多个循环合理性警告。"
 }

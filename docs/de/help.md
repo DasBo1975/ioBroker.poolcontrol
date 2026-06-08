@@ -300,6 +300,11 @@ Dies dient zur Diagnose, sollte aber im Normalbetrieb deaktiviert bleiben.
 Die Struktur ist im Objektbaum selbsterklärend gestaltet.  
 Alle States besitzen sprechende Namen und Beschreibungen.
 
+### **Plausibilitätsprüfung der Umwälzberechnung**
+Der Channel `circulation.plausibility` enthält Diagnosewerte zur Umwälzberechnung. PoolControl prüft dort, ob die aktuell gemessene Pumpenleistung, der berechnete Durchfluss oder ein Sprung der Tagesumwälzung unplausibel wirken.
+
+Diese Diagnose dient ausschließlich der Analyse und Fehlersuche. Sie korrigiert keine Werte automatisch und verändert weder Pumpensteuerung noch PV-, Solar- oder Umwälzlogik. Die gespeicherten States helfen, ungewöhnliche Werte wie sprunghaft steigende Tagesumwälzungen nachzuvollziehen.
+
 ---
 
 # 5. Automatische Logiken & Helfer
@@ -328,6 +333,7 @@ Schaltet die Pumpe unter der eingestellten Temperatur automatisch ein.
 
 ### **RuntimeHelper**
 Berechnet Laufzeit und Umwälzung.
+Zusätzlich schreibt er reine Diagnosewerte unter `circulation.plausibility`, um unplausible Eingangs- oder Berechnungswerte sichtbar zu machen.
 
 ### **ConsumptionHelper**
 Tages-, Wochen-, Monats- und Jahresverbrauch.
@@ -338,6 +344,8 @@ Funktionen:
 - Wartungsmodus  
 - Nachpumpen (Umwälzprüfung)  
 - Benachrichtigungen  
+
+Das automatische Nachpumpen dient dazu, die tägliche Umwälzmenge zu erreichen. Es benötigt grundsätzlich keine Temperaturwerte. Wenn die Solarsteuerung aktiv ist und sowohl Kollektor- als auch Pooltemperatur gültig vorliegen, wird Nachpumpen blockiert, solange der Kollektor nicht wärmer als der Pool ist.
 
 ### **InfoHelper**
 - Adapterversion  

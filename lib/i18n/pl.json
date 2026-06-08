@@ -395,5 +395,13 @@
   "pool_insights_observation_pv_runtime_today": "Wsparcie PV działało dziś przez {minutes} minut.",
   "pool_insights_observation_ph_evaluation_available": "Dostępna jest ocena pH.",
   "pool_insights_observation_tds_evaluation_available": "Dostępna jest ocena TDS.",
-  "pool_insights_observation_orp_evaluation_available": "Dostępna jest ocena ORP."
+  "pool_insights_observation_orp_evaluation_available": "Dostępna jest ocena ORP.",
+
+  "circulation_plausibility_initializing": "Trwa inicjalizacja kontroli wiarygodności obiegu.",
+  "circulation_plausibility_ok": "Kontrola wiarygodności obiegu jest prawidłowa.",
+  "circulation_plausibility_no_flow": "Brak prawidłowej wartości przepływu dla obliczeń obiegu.",
+  "circulation_plausibility_power_warning": "Moc pompy jest nienaturalnie wysoka względem skonfigurowanej mocy maksymalnej.",
+  "circulation_plausibility_flow_warning": "Obliczony przepływ jest nienaturalnie wysoki względem skonfigurowanego przepływu nominalnego.",
+  "circulation_plausibility_daily_total_jump_warning": "Dzienna objętość obiegu wzrosła szybciej niż jest to fizycznie możliwe.",
+  "circulation_plausibility_multiple_warnings": "Aktywnych jest kilka ostrzeżeń dotyczących wiarygodności obiegu."
 }

@@ -286,6 +286,11 @@ This is used for diagnostics but should remain disabled during normal operation.
 The structure is designed to be self-explanatory in the object tree.  
 All states have descriptive names and descriptions.
 
+### **Plausibility Check for Circulation Calculation**
+The channel `circulation.plausibility` contains diagnostic values for the circulation calculation. PoolControl checks whether the measured pump power, the calculated flow rate, or jumps in the daily circulation volume appear implausible.
+
+This diagnostic module is analysis-only. It does not correct values automatically and does not change pump control, PV logic, solar logic, or the circulation calculation. The stored states help troubleshoot unusual circulation values, such as sudden jumps in the daily total.
+
 ---
 
 # 5. Automatic Logics & Helpers
@@ -314,6 +319,7 @@ Automatically switches on the pump below the configured temperature.
 
 ### **RuntimeHelper**
 Calculates runtime and circulation.
+It also writes analysis-only diagnostic values under `circulation.plausibility` to make implausible input or calculation values visible.
 
 ### **ConsumptionHelper**
 Daily, weekly, monthly, and yearly consumption.
@@ -324,6 +330,8 @@ Functions:
 - Maintenance mode  
 - Post-pumping (circulation check)  
 - Notifications  
+
+Automatic additional pumping is used to reach the daily circulation target. It generally does not require temperature values. If solar control is active and both collector and pool temperatures are valid, additional pumping is blocked as long as the collector is not warmer than the pool.
 
 ### **InfoHelper**
 - Adapter version  

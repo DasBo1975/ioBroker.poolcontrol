@@ -20,6 +20,7 @@ PoolControl covers the following main areas:
 - Heating or heat pump control
 - Frost protection
 - Runtime, circulation, consumption, and cost calculation
+- Plausibility diagnostics for the circulation calculation under `circulation.plausibility`
 - Daily, weekly, and monthly statistics for temperatures
 - Solar Insights and Photovoltaic Insights under `analytics.insights.*`
 - Central text and speech output via a shared queue structure
@@ -53,6 +54,10 @@ Priority management is handled via `pump.active_helper`. It shows which Helper c
 - `heatHelper` for heating operation
 
 Several Helpers check this value before switching the pump. This prevents, for example, solar or PV from overriding active maintenance or time control.
+
+Automatic additional pumping is used to reach the daily circulation target. It generally does not require temperature values. If solar control is active and both collector and pool temperatures are valid, additional pumping is blocked as long as the collector is not warmer than the pool.
+
+The circulation calculation is also monitored diagnostically under `circulation.plausibility`. The diagnostic checks for implausible pump power, implausible calculated flow, and jumps in the daily circulation volume that occur faster than physically plausible. It only stores diagnostic information in its own states and does not change pump control, PV logic, solar logic, or the circulation calculation formula.
 
 The safety logic includes:
 
@@ -451,6 +456,8 @@ In addition, many area-specific status and debug data points exist, for example:
 - `analytics.insights.solar.debug.*`
 - `analytics.insights.photovoltaic.debug.*`
 
+Additional diagnostic values for the circulation calculation are stored under `circulation.plausibility`. They expose status, severity level, message key, power/flow/jump warnings, and the related comparison values. These values help troubleshoot unusual circulation values but do not perform any automatic correction.
+
 The adapter also has a `migrationHelper`, which is executed last before the Helpers during startup and prepares structure/update adjustments. Details of its concrete migrations are not evaluated individually in this overview.
 
 ## 15. Export and Analysis Functions
@@ -483,7 +490,7 @@ Typical setup:
 
 - Set pool size and minimum circulation in the general settings
 - Configure pump socket and optionally power data point
-- Activate temperature sensors and assign object IDs
+- Set up temperature sensors as needed, especially for solar, heating, frost protection, and analysis functions
 - Select desired pump mode
 - Activate solar, PV, time control, heating, and frost protection as needed
 - Enable Speech outputs only when Alexa/Telegram/E-Mail are configured correctly
@@ -507,7 +514,7 @@ For getting started, the following is usually sufficient:
 
 - Configure pump socket
 - Set pool size and circulation target
-- Set up at least one pool temperature sensor
+- Set up temperature sensors as needed, especially for solar, heating, frost protection, and analysis functions
 - Select desired pump mode
 - Then gradually activate solar, PV, heating, Speech, and analyses
 

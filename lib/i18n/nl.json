@@ -395,5 +395,13 @@
   "pool_insights_observation_pv_runtime_today": "PV-ondersteuning liep vandaag {minutes} minuten.",
   "pool_insights_observation_ph_evaluation_available": "Er is een pH-beoordeling beschikbaar.",
   "pool_insights_observation_tds_evaluation_available": "Er is een TDS-beoordeling beschikbaar.",
-  "pool_insights_observation_orp_evaluation_available": "Er is een ORP-beoordeling beschikbaar."
+  "pool_insights_observation_orp_evaluation_available": "Er is een ORP-beoordeling beschikbaar.",
+
+  "circulation_plausibility_initializing": "De plausibiliteitscontrole van de circulatie wordt geïnitialiseerd.",
+  "circulation_plausibility_ok": "De plausibiliteitscontrole van de circulatie is in orde.",
+  "circulation_plausibility_no_flow": "Er is geen geldige debietwaarde beschikbaar voor de circulatieberekening.",
+  "circulation_plausibility_power_warning": "Het pompvermogen is onwaarschijnlijk hoog ten opzichte van het ingestelde maximale vermogen.",
+  "circulation_plausibility_flow_warning": "Het berekende debiet is onwaarschijnlijk hoog ten opzichte van het ingestelde nominale debiet.",
+  "circulation_plausibility_daily_total_jump_warning": "Het dagelijkse circulatievolume is sneller gestegen dan fysiek plausibel.",
+  "circulation_plausibility_multiple_warnings": "Er zijn meerdere waarschuwingen voor circulatie-plausibiliteit actief."
 }

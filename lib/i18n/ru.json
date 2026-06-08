@@ -395,5 +395,13 @@
   "pool_insights_observation_pv_runtime_today": "Поддержка PV сегодня работала {minutes} минут.",
   "pool_insights_observation_ph_evaluation_available": "Доступна оценка pH.",
   "pool_insights_observation_tds_evaluation_available": "Доступна оценка TDS.",
-  "pool_insights_observation_orp_evaluation_available": "Доступна оценка ORP."
+  "pool_insights_observation_orp_evaluation_available": "Доступна оценка ORP.",
+
+  "circulation_plausibility_initializing": "Инициализируется проверка достоверности циркуляции.",
+  "circulation_plausibility_ok": "Проверка достоверности циркуляции выполнена успешно.",
+  "circulation_plausibility_no_flow": "Нет допустимого значения потока для расчёта циркуляции.",
+  "circulation_plausibility_power_warning": "Мощность насоса слишком велика по сравнению с настроенной максимальной мощностью.",
+  "circulation_plausibility_flow_warning": "Расчётный поток слишком велик по сравнению с настроенным номинальным потоком.",
+  "circulation_plausibility_daily_total_jump_warning": "Суточный объём циркуляции увеличился быстрее, чем это физически возможно.",
+  "circulation_plausibility_multiple_warnings": "Активны несколько предупреждений проверки достоверности циркуляции."
 }

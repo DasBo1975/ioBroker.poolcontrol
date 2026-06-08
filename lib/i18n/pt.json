@@ -395,5 +395,13 @@
   "pool_insights_observation_pv_runtime_today": "O apoio PV funcionou hoje durante {minutes} minutos.",
   "pool_insights_observation_ph_evaluation_available": "Está disponível uma avaliação de pH.",
   "pool_insights_observation_tds_evaluation_available": "Está disponível uma avaliação TDS.",
-  "pool_insights_observation_orp_evaluation_available": "Está disponível uma avaliação ORP."
+  "pool_insights_observation_orp_evaluation_available": "Está disponível uma avaliação ORP.",
+
+  "circulation_plausibility_initializing": "A verificação de plausibilidade da circulação está a ser inicializada.",
+  "circulation_plausibility_ok": "A verificação de plausibilidade da circulação está correta.",
+  "circulation_plausibility_no_flow": "Não existe um valor de caudal válido para o cálculo da circulação.",
+  "circulation_plausibility_power_warning": "A potência da bomba é excessivamente elevada em relação à potência máxima configurada.",
+  "circulation_plausibility_flow_warning": "O caudal calculado é excessivamente elevado em relação ao caudal nominal configurado.",
+  "circulation_plausibility_daily_total_jump_warning": "O volume diário de circulação aumentou mais rapidamente do que seria fisicamente plausível.",
+  "circulation_plausibility_multiple_warnings": "Existem vários avisos de plausibilidade da circulação ativos."
 }

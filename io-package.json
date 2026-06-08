@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.31",
     "news": {
+      "1.3.32": {
+        "en": "Added circulation plausibility diagnostics. New checks detect implausible pump power, flow rates, and daily circulation jumps. Added detailed diagnostic states under circulation.plausibility to simplify troubleshooting and analysis of circulation calculations.",
+        "de": "Plausibilitätsdiagnose für die Umwälzberechnung hinzugefügt. Neue Prüfungen erkennen unplausible Pumpenleistungen, Durchflusswerte und Sprünge der Tagesumwälzung. Detaillierte Diagnose-States unter circulation.plausibility erleichtern die Fehlersuche und Analyse der Umwälzberechnung.",
+        "ru": "Добавлена ​​диагностика достоверности циркуляции. Новые проверки выявляют неправдоподобную мощность насоса, скорость потока и скачки суточной циркуляции. Добавлены подробные диагностические состояния в разделе «циркуляция.достоверность» для упрощения поиска и устранения неисправностей и анализа расчетов циркуляции.",
+        "pt": "Adicionados diagnósticos de plausibilidade de circulação. Novas verificações detectam potências de bomba, taxas de fluxo e saltos diários de circulação implausíveis. Adicionados estados de diagnóstico detalhados em circulação.plausibilidade para simplificar a solução de problemas e a análise de cálculos de circulação.",
+        "nl": "Diagnostiek van circulatieplausibiliteit toegevoegd. Nieuwe controles detecteren onwaarschijnlijk pompvermogen, debieten en dagelijkse circulatiesprongen. Gedetailleerde diagnostische statussen toegevoegd onder circulatie.plausibiliteit om probleemoplossing en analyse van circulatieberekeningen te vereenvoudigen.",
+        "fr": "Ajout de diagnostics de plausibilité de la circulation. De nouveaux contrôles détectent une puissance de pompe, des débits et des sauts de circulation quotidiens invraisemblables. Ajout d'états de diagnostic détaillés sous circulation.plausibilité pour simplifier le dépannage et l'analyse des calculs de circulation.",
+        "it": "Aggiunta diagnostica di plausibilità della circolazione. Nuovi controlli rilevano potenza della pompa, portate e salti di circolazione giornalieri non plausibili. Aggiunti stati diagnostici dettagliati in circolazione.plausibilità per semplificare la risoluzione dei problemi e l'analisi dei calcoli della circolazione.",
+        "es": "Se agregaron diagnósticos de plausibilidad de circulación. Las nuevas comprobaciones detectan potencias de bombeo, caudales y saltos diarios de circulación inverosímiles. Se agregaron estados de diagnóstico detallados bajo circulación. Plausibilidad para simplificar la resolución de problemas y el análisis de los cálculos de circulación.",
+        "pl": "Dodano diagnostykę wiarygodności obiegu. Nowe kontrole wykrywają nieprawdopodobną moc pompy, natężenie przepływu i codzienne skoki cyrkulacji. Dodano szczegółowe stany diagnostyczne w obszarze cyrkulacja.wiarygodność, aby uprościć rozwiązywanie problemów i analizę obliczeń cyrkulacji.",
+        "uk": "Додана діагностика вірогідності циркуляції. Нові перевірки виявляють неправдоподібну потужність насоса, швидкість потоку та щоденні стрибки циркуляції. Додано детальні діагностичні стани під циркуляцією. Правдоподібність для спрощення пошуку несправностей і аналізу розрахунків циркуляції.",
+        "zh-cn": "添加了循环合理性诊断。新的检查可以检测到难以置信的泵功率、流量和每日循环跳跃。在循环下添加了详细的诊断状态。合理性以简化循环计算的故障排除和分析。"
+      },
       "1.3.31": {
         "en": "Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.",
         "de": "Fehler in der automatischen Nachpump-Logik bei fehlenden Temperatursensoren behoben. Das automatische Nachpumpen wird jetzt nur noch durch den Kollektor-/Pooltemperaturvergleich blockiert, wenn die Solarsteuerung aktiv ist und beide Temperaturwerte gültig vorliegen.",
@@ -54,19 +67,6 @@
         "pl": "Dodano konfigurowalny limit czasu sprawdzania mocy rozruchowej dla monitorowania pompy (5-10 sekund). Poprawiona kompatybilność z opóźnionymi pomiarami mocy z inteligentnych wtyczek i mierników mocy.",
         "uk": "Додано настроюваний тайм-аут перевірки живлення при запуску для моніторингу насоса (5-10 секунд). Покращена сумісність із затримкою вимірювання потужності від розумних розеток і лічильників.",
         "zh-cn": "添加了用于泵监控的可配置启动电源检查超时（5-10 秒）。改进了与智能插头和功率计的延迟功率测量的兼容性。"
-      },
-      "1.3.27": {
-        "en": "Added new Chemistry Tools with pH Plus Calculator, pH Minus Calculator and Salt Calculator. Added validation, result texts, error handling and automatic pool volume prefill. Expanded documentation and function overviews.",
-        "de": "Neuen Bereich Chemistry Tools mit pH-Plus-Rechner, pH-Minus-Rechner und Salz-Rechner hinzugefügt. Validierungen, Ergebnistexte, Fehlerbehandlung und automatische Vorbelegung des Poolvolumens ergänzt. Dokumentation und Funktionsübersichten erweitert.",
-        "ru": "Добавлены новые химические инструменты с калькулятором pH плюс, калькулятором pH минус и калькулятором соли. Добавлена ​​проверка, тексты результатов, обработка ошибок и автоматическое предварительное заполнение объема пула. Расширенная документация и обзоры функций.",
-        "pt": "Adicionadas novas ferramentas de química com calculadora pH Plus, calculadora pH menos e calculadora de sal. Adicionados validação, textos de resultados, tratamento de erros e preenchimento automático do volume do pool. Documentação expandida e visões gerais de funções.",
-        "nl": "Nieuwe chemiehulpmiddelen toegevoegd met pH Plus-calculator, pH-minuscalculator en Zoutcalculator. Validatie, resultaatteksten, foutafhandeling en automatisch vooraf invullen van poolvolumes toegevoegd. Uitgebreide documentatie en functieoverzichten.",
-        "fr": "Ajout de nouveaux outils de chimie avec calculateur de pH Plus, calculateur de pH Moins et calculateur de sel. Ajout de la validation, des textes de résultats, de la gestion des erreurs et du pré-remplissage automatique du volume du pool. Documentation étendue et aperçus des fonctions.",
-        "it": "Aggiunti nuovi strumenti di chimica con calcolatore di pH più, calcolatore di pH meno e calcolatore di sale. Aggiunta convalida, testi dei risultati, gestione degli errori e precompilazione automatica del volume del pool. Documentazione estesa e panoramiche delle funzioni.",
-        "es": "Se agregaron nuevas herramientas de química con calculadora de pH Plus, calculadora de pH Minus y calculadora de sal. Se agregó validación, textos de resultados, manejo de errores y precarga automática del volumen del grupo. Documentación ampliada y descripciones generales de funciones.",
-        "pl": "Dodano nowe narzędzia chemiczne z kalkulatorem pH Plus, kalkulatorem pH Minus i kalkulatorem soli. Dodano weryfikację, teksty wyników, obsługę błędów i automatyczne wstępne wypełnianie objętości puli. Rozszerzona dokumentacja i przeglądy funkcji.",
-        "uk": "Додано нові хімічні інструменти з калькулятором pH Plus, калькулятором pH мінус і калькулятором солі. Додано перевірку, тексти результатів, обробку помилок і автоматичне попереднє заповнення обсягу пулу. Розширена документація та огляд функцій.",
-        "zh-cn": "添加了新的化学工具，包括 pH 加计算器、pH 减计算器和盐计算器。添加了验证、结果文本、错误处理和自动池容量预填充。扩展的文档和功能概述。"
       }
     },
     "titleLang": {
