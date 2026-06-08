@@ -271,7 +271,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.32 (2026-06-08)
 
 - Added circulation plausibility diagnostics for daily circulation calculations.
 - Added detection of implausible pump power values, flow rates and daily circulation volume jumps.
@@ -301,16 +301,6 @@ New features are added regularly – please refer to the changelog.
 - Added configurable startup power check timeout for pump monitoring (`pump.startup_power_check_timeout_sec`).
 - Default behavior remains unchanged (5 seconds).
 - Improved compatibility with delayed power measurements from smart plugs and power meters.
-
-### 1.3.27 (2026-05-30)
-
-- Added new Chemistry Tools section
-- Added pH Plus Calculator
-- Added pH Minus Calculator
-- Added Salt Calculator
-- Added validation, result texts and error handling for all calculators
-- Added automatic pool volume prefill support
-- Expanded documentation and function overviews
 
 ## Archived Release History
 

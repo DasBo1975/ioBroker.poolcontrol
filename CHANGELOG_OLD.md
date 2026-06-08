@@ -4,6 +4,16 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.27 (2026-05-30)
+
+- Added new Chemistry Tools section
+- Added pH Plus Calculator
+- Added pH Minus Calculator
+- Added Salt Calculator
+- Added validation, result texts and error handling for all calculators
+- Added automatic pool volume prefill support
+- Expanded documentation and function overviews
+
 ## 1.3.26 (2026-05-28)
 
 - Reworked multiple warnings and review notes from official ioBroker checks
