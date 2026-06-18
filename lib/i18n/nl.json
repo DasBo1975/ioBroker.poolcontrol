@@ -403,5 +403,6 @@
   "circulation_plausibility_power_warning": "Het pompvermogen is onwaarschijnlijk hoog ten opzichte van het ingestelde maximale vermogen.",
   "circulation_plausibility_flow_warning": "Het berekende debiet is onwaarschijnlijk hoog ten opzichte van het ingestelde nominale debiet.",
   "circulation_plausibility_daily_total_jump_warning": "Het dagelijkse circulatievolume is sneller gestegen dan fysiek plausibel.",
-  "circulation_plausibility_multiple_warnings": "Er zijn meerdere waarschuwingen voor circulatie-plausibiliteit actief."
+  "circulation_plausibility_multiple_warnings": "Er zijn meerdere waarschuwingen voor circulatie-plausibiliteit actief.",
+  "circulation_plausibility_disabled": "De plausibiliteitscontrole van de circulatie is uitgeschakeld."
 }

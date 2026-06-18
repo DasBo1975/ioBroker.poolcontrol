@@ -36,6 +36,7 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
 
 - **Solar Control**
   - Collector on/off thresholds with hysteresis
+  - Live collector-surface delta for dashboards and scripts
   - Collector warning threshold
   - Optional speech output for warnings
   - Automatic reset logic
@@ -43,10 +44,12 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
 - **Solar Extended**
   - Separate control for external solar actuators
   - Delta on/off thresholds
+  - Live collector-pool reference delta for dashboards and scripts
   - Maximum pool temperature limits
   - Diagnostic and reason states
   - Priority and block logic
   - Status section under `solar.extended.*`
+  - Runtime changes to `solar.extended.pool_temperature_source` are applied automatically; because Solar Extended uses a cyclic check interval, calculation, control logic, and `solar.extended.collector_pool_reference_delta` may take up to approximately 60 seconds to update.
 
 - **Photovoltaic Control**
   - Pump control based on PV surplus and household consumption
@@ -271,6 +274,13 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Added live delta states for standard solar and Solar Extended control:
+  - `solar.collector_surface_delta`
+  - `solar.extended.collector_pool_reference_delta`
+- Documented that runtime changes to `solar.extended.pool_temperature_source` are applied automatically, but may take up to approximately 60 seconds due to the Solar Extended cyclic check interval.
+
 ### 1.3.32 (2026-06-08)
 
 - Added circulation plausibility diagnostics for daily circulation calculations.

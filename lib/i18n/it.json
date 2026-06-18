@@ -403,5 +403,6 @@
   "circulation_plausibility_power_warning": "La potenza della pompa è eccessivamente alta rispetto alla potenza massima configurata.",
   "circulation_plausibility_flow_warning": "La portata calcolata è eccessivamente alta rispetto alla portata nominale configurata.",
   "circulation_plausibility_daily_total_jump_warning": "Il volume giornaliero di circolazione è aumentato più velocemente di quanto fisicamente plausibile.",
-  "circulation_plausibility_multiple_warnings": "Sono attivi più avvisi di plausibilità della circolazione."
+  "circulation_plausibility_multiple_warnings": "Sono attivi più avvisi di plausibilità della circolazione.",
+  "circulation_plausibility_disabled": "Il controllo di plausibilità della circolazione è disattivato."
 }

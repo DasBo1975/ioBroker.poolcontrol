@@ -403,6 +403,7 @@
   "circulation_plausibility_power_warning": "La potencia de la bomba es excesiva en relación con la potencia máxima configurada.",
   "circulation_plausibility_flow_warning": "El caudal calculado es excesivo en relación con el caudal nominal configurado.",
   "circulation_plausibility_daily_total_jump_warning": "El volumen diario de circulación ha aumentado más rápido de lo físicamente plausible.",
-  "circulation_plausibility_multiple_warnings": "Hay varias advertencias de plausibilidad de circulación activas."
+  "circulation_plausibility_multiple_warnings": "Hay varias advertencias de plausibilidad de circulación activas.",
+  "circulation_plausibility_disabled": "La comprobación de plausibilidad de la circulación está desactivada."
 }
 

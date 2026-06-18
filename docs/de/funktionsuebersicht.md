@@ -101,10 +101,15 @@ Wichtige Datenpunkte sind:
 - `solar.temp_off`: Ausschaltgrenze
 - `solar.hysteresis_active`: vorbereitete Hysterese-Option
 - `solar.request_active`: interne Solar-Anforderung
+- `solar.collector_surface_delta`: aktuelle Differenz Kollektor minus Pool-Oberfläche
 - `solar.collector_warning`: Kollektor-Warnstatus
 - `solar.warn_active`, `solar.warn_temp`, `solar.warn_speech`: Warnlogik
 
-Die Standardlogik vergleicht Kollektortemperatur und Pool-Oberflächentemperatur. Die Pumpe wird angefordert, wenn der Kollektor warm genug ist und die Differenz positiv ist. Sie wird nicht angefordert, wenn die Ausschalttemperatur unterschritten wird oder keine positive Differenz besteht.
+Die Standardlogik vergleicht Kollektortemperatur und Pool-Oberflächentemperatur. `solar.collector_surface_delta` stellt diese aktuelle Differenz als numerischen Live-Datenpunkt bereit. Die Pumpe wird angefordert, wenn der Kollektor warm genug ist und die Differenz positiv ist. Sie wird nicht angefordert, wenn die Ausschalttemperatur unterschritten wird oder keine positive Differenz besteht.
+
+Die erweiterte Solarsteuerung stellt mit `solar.extended.collector_pool_reference_delta` die aktuelle Differenz zwischen Kollektor und gewählter Poolreferenz bereit. Die Referenz wird weiterhin über `solar.extended.pool_temperature_source` ausgewählt.
+
+Hinweis: Änderungen an der Solar-Extended-Poolreferenz (`solar.extended.pool_temperature_source`) werden im laufenden Betrieb automatisch übernommen. Ein Adapter-Neustart ist nicht erforderlich. Da Solar Extended zyklisch arbeitet, kann die Aktualisierung der Berechnung, der Schaltlogik und des Datenpunkts `solar.extended.collector_pool_reference_delta` bis zu etwa 60 Sekunden dauern.
 
 Die Steuerung ist nur aktiv, wenn:
 

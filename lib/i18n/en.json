@@ -407,5 +407,6 @@
   "circulation_plausibility_power_warning": "Pump power is implausibly high compared to the configured maximum power.",
   "circulation_plausibility_flow_warning": "Calculated flow rate is implausibly high compared to the configured nominal flow.",
   "circulation_plausibility_daily_total_jump_warning": "Daily circulation volume increased faster than physically plausible.",
-  "circulation_plausibility_multiple_warnings": "Multiple circulation plausibility warnings are active."
+  "circulation_plausibility_multiple_warnings": "Multiple circulation plausibility warnings are active.",
+  "circulation_plausibility_disabled": "Circulation plausibility check is disabled."
 }

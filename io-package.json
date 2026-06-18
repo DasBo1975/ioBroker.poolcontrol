@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.32",
     "news": {
+      "1.3.33": {
+        "en": "Added live delta states for standard solar and Solar Extended control. Documented Solar Extended pool reference runtime update behavior.",
+        "de": "Live-Delta-Datenpunkte für Standard-Solar und Solar Extended ergänzt. Laufzeitverhalten der Solar-Extended-Poolreferenz dokumentiert.",
+        "ru": "Добавлены дельта-состояния в реальном времени для стандартного и расширенного управления солнечной энергией. Документированное поведение обновления во время выполнения ссылки на расширенный пул Solar.",
+        "pt": "Adicionados estados delta ao vivo para controle solar padrão e solar estendido. Comportamento de atualização de tempo de execução de referência do pool Solar Extended documentado.",
+        "nl": "Live deltatoestanden toegevoegd voor standaard zonne-energie en Solar Extended-regeling. Gedocumenteerd runtime-updategedrag van de Solar Extended-poolreferentie.",
+        "fr": "Ajout d'états delta en direct pour le contrôle solaire standard et solaire étendu. Comportement documenté de la mise à jour du runtime de référence du pool Solar Extended.",
+        "it": "Aggiunti stati delta live per il controllo solare standard e Solar Extended. Comportamento documentato dell'aggiornamento runtime di riferimento del pool Solar Extended.",
+        "es": "Se agregaron estados delta en vivo para control solar estándar y solar extendido. Comportamiento de actualización del tiempo de ejecución de referencia del grupo Solar Extended documentado.",
+        "pl": "Dodano stany delta na żywo dla standardowego sterowania solarnego i Solar Extended. Udokumentowane zachowanie aktualizacji środowiska uruchomieniowego referencyjnej puli Solar Extended.",
+        "uk": "Додано живі дельта-стани для стандартного сонячного та розширеного керування Solar. Задокументована поведінка оновлення середовища виконання довідкового пулу Solar Extended.",
+        "zh-cn": "为标准太阳能和太阳能扩展控制添加了实时增量状态。记录了 Solar Extended 池参考运行时更新行为。"
+      },
       "1.3.32": {
         "en": "Added circulation plausibility diagnostics. New checks detect implausible pump power, flow rates, and daily circulation jumps. Added detailed diagnostic states under circulation.plausibility to simplify troubleshooting and analysis of circulation calculations.",
         "de": "Plausibilitätsdiagnose für die Umwälzberechnung hinzugefügt. Neue Prüfungen erkennen unplausible Pumpenleistungen, Durchflusswerte und Sprünge der Tagesumwälzung. Detaillierte Diagnose-States unter circulation.plausibility erleichtern die Fehlersuche und Analyse der Umwälzberechnung.",
@@ -54,19 +67,6 @@
         "pl": "Dodano usługę Pool Insights V1 z obserwacjami, oceną stanu i obsługą środowiska wykonawczego i18n. Ulepszone generowanie tekstu Pool Insights i usunięta zależność od zewnętrznych bloków podsumowań. Naprawiono brakującą inicjalizację stanów wykonawczych sezonu i ostrzeżenia słonecznego z konfiguracji adaptera. Dodano uwagi do interfejsu administratora wyjaśniające wartości początkowe w porównaniu z kontrolą punktów danych w czasie wykonywania.",
         "uk": "Додано Pool Insights V1 із спостереженнями, оцінкою стану та підтримкою i18n під час виконання. Покращено створення тексту Pool Insights і видалено залежність від зовнішніх блоків підсумків. Виправлено відсутність ініціалізації сезону та станів попередження про сонячне світло з конфігурації адаптера. Додано примітки інтерфейсу користувача адміністратора, що пояснюють початкові значення та керування точкою даних під час виконання.",
         "zh-cn": "添加了 Pool Insights V1，具有观察、状态评估和运行时 i18n 支持。改进了 Pool Insights 文本生成并消除了对外部摘要块的依赖。修复了适配器配置中缺少季节和太阳警告运行时状态初始化的问题。添加了管理 UI 注释，解释初始值与运行时数据点控制。"
-      },
-      "1.3.28": {
-        "en": "Added configurable startup power check timeout for pump monitoring (5-10 seconds). Improved compatibility with delayed power measurements from smart plugs and power meters.",
-        "de": "Konfigurierbares Timeout für die Leistungsprüfung nach Pumpenstart (5-10 Sekunden) hinzugefügt. Kompatibilität mit verzögert aktualisierten Leistungswerten von Smart-Steckdosen und Leistungsmessern verbessert.",
-        "ru": "Добавлен настраиваемый тайм-аут проверки мощности при запуске для мониторинга насоса (5–10 секунд). Улучшена совместимость с измерениями мощности с задержкой от интеллектуальных розеток и измерителей мощности.",
-        "pt": "Adicionado tempo limite de verificação de energia de inicialização configurável para monitoramento da bomba (5 a 10 segundos). Compatibilidade aprimorada com medições de energia atrasadas de plugues inteligentes e medidores de energia.",
-        "nl": "Configureerbare time-out voor stroomcontrole bij opstarten toegevoegd voor pompbewaking (5-10 seconden). Verbeterde compatibiliteit met vertraagde stroommetingen van slimme stekkers en stroommeters.",
-        "fr": "Ajout d'un délai d'expiration configurable pour la vérification de l'alimentation au démarrage pour la surveillance de la pompe (5 à 10 secondes). Compatibilité améliorée avec les mesures de puissance retardées des prises intelligentes et des compteurs de puissance.",
-        "it": "Aggiunto timeout configurabile del controllo dell'alimentazione all'avvio per il monitoraggio della pompa (5-10 secondi). Compatibilità migliorata con misurazioni di potenza ritardate da prese intelligenti e misuratori di potenza.",
-        "es": "Se agregó un tiempo de espera de verificación de energía de inicio configurable para el monitoreo de la bomba (5-10 segundos). Compatibilidad mejorada con mediciones de potencia retrasadas de enchufes inteligentes y medidores de potencia.",
-        "pl": "Dodano konfigurowalny limit czasu sprawdzania mocy rozruchowej dla monitorowania pompy (5-10 sekund). Poprawiona kompatybilność z opóźnionymi pomiarami mocy z inteligentnych wtyczek i mierników mocy.",
-        "uk": "Додано настроюваний тайм-аут перевірки живлення при запуску для моніторингу насоса (5-10 секунд). Покращена сумісність із затримкою вимірювання потужності від розумних розеток і лічильників.",
-        "zh-cn": "添加了用于泵监控的可配置启动电源检查超时（5-10 秒）。改进了与智能插头和功率计的延迟功率测量的兼容性。"
       }
     },
     "titleLang": {

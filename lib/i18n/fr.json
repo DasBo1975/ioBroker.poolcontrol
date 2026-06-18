@@ -403,5 +403,6 @@
   "circulation_plausibility_power_warning": "La puissance de la pompe est anormalement élevée par rapport à la puissance maximale configurée.",
   "circulation_plausibility_flow_warning": "Le débit calculé est anormalement élevé par rapport au débit nominal configuré.",
   "circulation_plausibility_daily_total_jump_warning": "Le volume quotidien de circulation a augmenté plus rapidement que physiquement plausible.",
-  "circulation_plausibility_multiple_warnings": "Plusieurs avertissements de plausibilité de circulation sont actifs."
+  "circulation_plausibility_multiple_warnings": "Plusieurs avertissements de plausibilité de circulation sont actifs.",
+  "circulation_plausibility_disabled": "La vérification de plausibilité de la circulation est désactivée."
 }

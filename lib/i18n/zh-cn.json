@@ -403,5 +403,6 @@
   "circulation_plausibility_power_warning": "泵功率相对于配置的最大功率异常偏高。",
   "circulation_plausibility_flow_warning": "计算出的流量相对于配置的额定流量异常偏高。",
   "circulation_plausibility_daily_total_jump_warning": "每日循环量增长速度超过物理合理范围。",
-  "circulation_plausibility_multiple_warnings": "存在多个循环合理性警告。"
+  "circulation_plausibility_multiple_warnings": "存在多个循环合理性警告。",
+  "circulation_plausibility_disabled": "循环合理性检查已禁用。"
 }

@@ -101,10 +101,15 @@ Important data points are:
 - `solar.temp_off`: switch-off threshold
 - `solar.hysteresis_active`: prepared hysteresis option
 - `solar.request_active`: internal solar request
+- `solar.collector_surface_delta`: current collector minus pool surface difference
 - `solar.collector_warning`: collector warning status
 - `solar.warn_active`, `solar.warn_temp`, `solar.warn_speech`: warning logic
 
-The standard logic compares collector temperature and pool surface temperature. The pump is requested when the collector is warm enough and the difference is positive. It is not requested when the switch-off temperature falls below the configured threshold or no positive difference exists.
+The standard logic compares collector temperature and pool surface temperature. `solar.collector_surface_delta` exposes this current difference as a numeric live data point. The pump is requested when the collector is warm enough and the difference is positive. It is not requested when the switch-off temperature falls below the configured threshold or no positive difference exists.
+
+Extended solar control exposes the current difference between collector and selected pool reference via `solar.extended.collector_pool_reference_delta`. The reference is still selected via `solar.extended.pool_temperature_source`.
+
+Note: Changes to the Solar Extended pool reference (`solar.extended.pool_temperature_source`) are applied automatically during runtime. No adapter restart is required. Since Solar Extended operates on a cyclic check interval, updates to the calculation, control logic and the `solar.extended.collector_pool_reference_delta` state may take up to approximately 60 seconds.
 
 Control is only active when:
 

@@ -380,5 +380,6 @@
   "circulation_plausibility_power_warning": "Die Pumpenleistung ist im Verhältnis zur konfigurierten Maximalleistung unplausibel hoch.",
   "circulation_plausibility_flow_warning": "Der berechnete Durchfluss ist im Verhältnis zur konfigurierten Nennförderleistung unplausibel hoch.",
   "circulation_plausibility_daily_total_jump_warning": "Das Tagesumwälzvolumen ist schneller gestiegen als physikalisch plausibel.",
-  "circulation_plausibility_multiple_warnings": "Mehrere Plausibilitätswarnungen zur Umwälzberechnung sind aktiv."
+  "circulation_plausibility_multiple_warnings": "Mehrere Plausibilitätswarnungen zur Umwälzberechnung sind aktiv.",
+  "circulation_plausibility_disabled": "Die Plausibilitätsprüfung der Umwälzberechnung ist deaktiviert."
 }

@@ -176,6 +176,10 @@ Einstellungen:
 
 Die Solarsteuerung arbeitet nur im Modus **auto**.
 
+Zusätzliche Live-Datenpunkte stellen die aktuelle Differenz `solar.collector_surface_delta` für Standard-Solar und `solar.extended.collector_pool_reference_delta` für Solar Extended bereit. Diese Werte dienen VIS, Skripten, Dashboards und Auswertungen.
+
+Hinweis: Änderungen an der Solar-Extended-Poolreferenz (`solar.extended.pool_temperature_source`) werden im laufenden Betrieb automatisch übernommen. Ein Adapter-Neustart ist nicht erforderlich. Da Solar Extended zyklisch arbeitet, kann die Aktualisierung der Berechnung, der Schaltlogik und des Datenpunkts `solar.extended.collector_pool_reference_delta` bis zu etwa 60 Sekunden dauern.
+
 ---
 
 ## 3.5 Photovoltaik (PV)

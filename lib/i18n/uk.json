@@ -403,5 +403,6 @@
   "circulation_plausibility_power_warning": "Потужність насоса надто висока відносно налаштованої максимальної потужності.",
   "circulation_plausibility_flow_warning": "Розрахований потік надто високий відносно налаштованого номінального потоку.",
   "circulation_plausibility_daily_total_jump_warning": "Добовий обсяг циркуляції збільшився швидше, ніж це фізично можливо.",
-  "circulation_plausibility_multiple_warnings": "Активні кілька попереджень перевірки правдоподібності циркуляції."
+  "circulation_plausibility_multiple_warnings": "Активні кілька попереджень перевірки правдоподібності циркуляції.",
+  "circulation_plausibility_disabled": "Перевірку правдоподібності циркуляції вимкнено."
 }

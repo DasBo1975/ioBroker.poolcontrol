@@ -162,6 +162,10 @@ Settings:
 
 Solar control works only in **auto** mode.
 
+Additional live data points expose the current difference `solar.collector_surface_delta` for standard solar and `solar.extended.collector_pool_reference_delta` for Solar Extended. These values are intended for VIS, scripts, dashboards, and evaluations.
+
+Note: Changes to the Solar Extended pool reference (`solar.extended.pool_temperature_source`) are applied automatically during runtime. No adapter restart is required. Since Solar Extended operates on a cyclic check interval, updates to the calculation, control logic and the `solar.extended.collector_pool_reference_delta` state may take up to approximately 60 seconds.
+
 ---
 
 ## 3.5 Photovoltaics (PV)
