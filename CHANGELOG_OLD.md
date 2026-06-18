@@ -4,6 +4,12 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.28 (2026-06-03)
+
+- Added configurable startup power check timeout for pump monitoring (`pump.startup_power_check_timeout_sec`).
+- Default behavior remains unchanged (5 seconds).
+- Improved compatibility with delayed power measurements from smart plugs and power meters.
+
 ## 1.3.27 (2026-05-30)
 
 - Added new Chemistry Tools section

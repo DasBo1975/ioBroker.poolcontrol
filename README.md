@@ -274,7 +274,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.33 (2026-06-18)
 
 - Added live delta states for standard solar and Solar Extended control:
   - `solar.collector_surface_delta`
@@ -305,12 +305,6 @@ New features are added regularly – please refer to the changelog.
 - Added configurable startup power check timeout state for pump startup monitoring.
 - Fixed missing initialization of season and solar warning runtime states from adapter configuration.
 - Added admin UI information about initial configuration values and runtime datapoint control.
-
-### 1.3.28 (2026-06-03)
-
-- Added configurable startup power check timeout for pump monitoring (`pump.startup_power_check_timeout_sec`).
-- Default behavior remains unchanged (5 seconds).
-- Improved compatibility with delayed power measurements from smart plugs and power meters.
 
 ## Archived Release History
 
