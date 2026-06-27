@@ -388,6 +388,14 @@ Je nach Konfiguration können zusätzlich E-Mails gesendet werden.
 
 ---
 
+## Zweistufige begrenzte Chemie-Historie
+
+Die vorhandenen pH-, TDS- und ORP-States samples_json bleiben als Kurzzeithistorie im 15-Minuten-Raster bestehen: maximal 7 Tage, 672 Samples und 64 KB UTF-8 je State. Für die bestehenden 30-Tage-Auswertungen speichert der Adapter zusätzlich je Chemieart einen internen daily_json-Ringpuffer lokaler Kalendertage mit min, max, avg, last und count, maximal 32 Einträgen und 8 KB.
+
+24h und 7d werden aus samples_json, 30d bevorzugt aus last des passenden daily_json-Tagesaggregats berechnet. Alle bisherigen Referenz-, Delta-, Trend- und Summary-States bleiben erhalten. Der Tagespuffer übernimmt beim ersten Aufbau eine noch gültige vorhandene 30d-Referenz und sicher lesbare Altsamples und wird danach mit jedem neu gespeicherten gültigen Sample fortgeschrieben. Übergroße Altwerte werden vor dem JSON-Parsing verworfen. Die Tagesaggregate sind kompakt und ersetzen keine Rohhistorie. Langzeit-Rohdaten gehören in eine ioBroker-History- oder Zeitreihendatenbank.
+
+Wenn eine bereits übergroße states.jsonl den Start des js-controller verhindert, muss sie zuerst manuell oder mit externen Recovery-Werkzeugen bereinigt werden. Der Adapter kann diesen Zustand erst nach einem erfolgreichen Controller-Start behandeln.
+
 # 8. FAQ & Tipps
 
 **1. Warum passiert nichts, obwohl AI aktiv ist?**  

@@ -187,6 +187,15 @@ It provides automation for pumps, heating, solar and photovoltaic control as wel
   - No chlorine control
   - No automatic dosing
 
+  **Two-tier bounded chemistry history**
+  - Existing samples_json states remain the 7-day, 15-minute short-term history: at most 672 samples and 64 KB each
+  - New internal daily_json states keep compact local-calendar-day aggregates with min/max/avg/last/count: at most 32 entries and 8 KB each
+  - 24h and 7d trends use samples_json; 30d trends use the last value of the matching daily aggregate
+  - Existing 24h, 7d, and 30d trend states and text/HTML/JSON reports retain their API and meaning
+  - The daily aggregates complement but do not replace raw history; valid legacy data is normalized during migration and oversized JSON is rejected before parsing
+  - Raw long-term histories belong in a dedicated ioBroker history/time-series database
+  - If an oversized states.jsonl already prevents js-controller startup, it must be repaired externally before PoolControl can run
+
   **Chemistry Tools**
   - pH Plus calculator
   - pH Minus calculator
@@ -274,6 +283,16 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- **Major stability improvement:** Completely redesigned the internal chemistry history (pH, ORP and TDS) to prevent unbounded JSON state growth. This significantly reduces the risk of oversized `states.jsonl` files and potential js-controller startup failures.
+- **New two-stage history architecture:** Chemistry history now uses a compact short-term history for recent measurements together with a dedicated daily history for long-term trends. All existing 24-hour, 7-day and 30-day trend calculations and reports remain fully available.
+- **Protected history storage:** Added strict limits for chemistry history sample count and JSON size. Oversized or invalid history states are now safely detected, validated and handled before being processed.
+- **Daily aggregates introduced:** Added compact daily aggregates for pH, ORP and TDS containing minimum, maximum, average and last measurement together with the number of valid samples. This preserves long-term trend analysis without storing large raw histories.
+- **Additional safeguards:** Added size protection for the solar logbook and debug log to prevent uncontrolled state growth.
+- **Maintenance:** Updated the `@iobroker/adapter-core` dependency to the latest recommended version.
+
+
 ### 1.3.33 (2026-06-18)
 
 - Added live delta states for standard solar and Solar Extended control:

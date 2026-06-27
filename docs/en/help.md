@@ -374,6 +374,14 @@ Depending on configuration, emails can also be sent.
 
 ---
 
+## Two-tier bounded chemistry history
+
+The existing pH, TDS, and ORP samples_json states remain the 15-minute short-term history: at most 7 days, 672 samples, and 64 KB of UTF-8 data per state. For the existing 30-day evaluations, the adapter additionally stores one internal daily_json ring buffer of local calendar days per chemistry type, containing min, max, avg, last, and count, with at most 32 entries and 8 KB.
+
+The 24h and 7d comparisons use samples_json; the 30d comparison preferably uses last from the matching daily_json aggregate. All existing reference, delta, trend, and summary states remain available. During initial setup, a still-valid existing scalar 30d reference and safely readable legacy samples seed the daily buffer; afterwards it is updated for each newly stored valid sample. Oversized legacy values are discarded before JSON parsing. The compact daily aggregates do not replace raw history. Raw long-term data belongs in an ioBroker history or time-series database.
+
+If an already oversized states.jsonl prevents js-controller from starting, it must first be repaired manually or with external recovery tools. The adapter can only handle this condition after the controller has started successfully.
+
 # 8. FAQ & Tips
 
 **1. Why does nothing happen although AI is active?**  

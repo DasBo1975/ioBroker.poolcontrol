@@ -349,6 +349,14 @@ Der Bereich `chemistry.orp.*` ist als Analyse- und Hinweisbereich vorhanden. Er 
 
 Die ORP-Auswertung kann eine pH-Referenz berücksichtigen und synchronisiert diese unabhängig vom ORP-Wert. Sie dient der Einordnung und Empfehlung. Es gibt keine automatische Chlorsteuerung, keine automatische Dosierung und keine automatische Pumpen- oder Aktorsteuerung auf Basis des ORP-Werts.
 
+### Zweistufige begrenzte Chemie-Historie
+
+Die vorhandenen States chemistry.ph.history.samples_json, chemistry.tds.history.samples_json und chemistry.orp.history.samples_json bleiben als Kurzzeithistorie erhalten. Sie speichern im 15-Minuten-Raster maximal 7 Tage, 672 Samples und 64 KB UTF-8 je State. Die neuen internen States chemistry.ph.history.daily_json, chemistry.tds.history.daily_json und chemistry.orp.history.daily_json bilden einen persistenten Ringpuffer lokaler Kalendertage mit den Feldern min, max, avg, last und count, maximal 32 Einträgen und 8 KB je State.
+
+24h- und 7d-Vergleiche werden aus samples_json berechnet. Die 30d-Referenz wird bevorzugt aus dem Feld last des passenden Tagesaggregats ermittelt. Alle vorhandenen Referenz-, Delta-, Trend- und Summary-States bleiben unverändert. Beim ersten Aufbau werden eine noch gültige skalare 30d-Referenz und sicher lesbare Altsamples übernommen; anschließend werden die kompakten Tagesaggregate mit jedem neu gespeicherten gültigen Sample fortgeschrieben. Übergroße JSON-Altwerte werden vor dem Parsen verworfen. Die Tagesaggregate ergänzen die Rohhistorie, ersetzen sie aber nicht. Rohdaten für echte Langzeithistorien gehören weiterhin in eine ioBroker-History- oder Zeitreihendatenbank.
+
+Kann der js-controller wegen einer bereits riesigen states.jsonl nicht starten, ist vor dem Adapterstart eine manuelle oder externe Bereinigung erforderlich.
+
 ### ### Chemistry Tools
 
 PoolControl enthält einfache Chemie-Rechner als Hilfswerkzeuge für die manuelle Poolpflege. Die Rechner dienen ausschließlich zur Berechnung und Orientierung. Es erfolgt keine automatische Dosierung von Chemikalien.

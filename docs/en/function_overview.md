@@ -349,6 +349,14 @@ The area `chemistry.orp.*` is present as an analysis and recommendation area. It
 
 The ORP evaluation can use a pH reference and synchronizes it independently from the ORP value. It is intended for classification and recommendations. There is no automatic chlorine control, no automatic dosing, and no automatic pump or actuator control based on the ORP value.
 
+### Two-tier bounded chemistry history
+
+The existing chemistry.ph.history.samples_json, chemistry.tds.history.samples_json, and chemistry.orp.history.samples_json states remain the short-term history. At a 15-minute interval, each state retains at most 7 days, 672 samples, and 64 KB of UTF-8 data. The new internal chemistry.ph.history.daily_json, chemistry.tds.history.daily_json, and chemistry.orp.history.daily_json states form persistent local-calendar-day ring buffers containing min, max, avg, last, and count, with at most 32 entries and 8 KB per state.
+
+The 24h and 7d comparisons use samples_json; the 30d reference preferably uses last from the matching daily aggregate. All existing reference, delta, trend, and summary states remain unchanged. A still-valid scalar 30d reference and safely readable legacy samples seed the daily buffer during its first initialization; afterwards the compact daily aggregate is updated for each newly stored valid sample. Oversized legacy JSON is rejected before parsing. The daily aggregates complement but do not replace raw history. Raw long-term histories still belong in an ioBroker history or time-series database.
+
+If js-controller cannot start because states.jsonl is already oversized, manual or external cleanup is required before the adapter can run.
+
 ### ### Chemistry Tools
 
 PoolControl includes simple chemistry calculators as helper tools for manual pool maintenance. These calculators are intended solely for calculation and informational purposes. No chemicals are dosed automatically.
