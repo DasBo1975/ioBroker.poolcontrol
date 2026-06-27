@@ -283,7 +283,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.34 (2026-06-27)
 
 - **Major stability improvement:** Completely redesigned the internal chemistry history (pH, ORP and TDS) to prevent unbounded JSON state growth. This significantly reduces the risk of oversized `states.jsonl` files and potential js-controller startup failures.
 - **New two-stage history architecture:** Chemistry history now uses a compact short-term history for recent measurements together with a dedicated daily history for long-term trends. All existing 24-hour, 7-day and 30-day trend calculations and reports remain fully available.
@@ -291,7 +291,6 @@ New features are added regularly – please refer to the changelog.
 - **Daily aggregates introduced:** Added compact daily aggregates for pH, ORP and TDS containing minimum, maximum, average and last measurement together with the number of valid samples. This preserves long-term trend analysis without storing large raw histories.
 - **Additional safeguards:** Added size protection for the solar logbook and debug log to prevent uncontrolled state growth.
 - **Maintenance:** Updated the `@iobroker/adapter-core` dependency to the latest recommended version.
-
 
 ### 1.3.33 (2026-06-18)
 
@@ -316,14 +315,6 @@ New features are added regularly – please refer to the changelog.
 - Updated release tooling to the required minimum version.
 - Cleaned up outdated Admin i18n keys.
 - Replaced native timers in AI weather helpers with ioBroker adapter timers.
-
-### 1.3.29 (2026-06-04)
-
-- Added Pool Insights V1 with observations, status evaluation and runtime i18n support.
-- Improved Pool Insights text generation and removed dependency on external summary blocks.
-- Added configurable startup power check timeout state for pump startup monitoring.
-- Fixed missing initialization of season and solar warning runtime states from adapter configuration.
-- Added admin UI information about initial configuration values and runtime datapoint control.
 
 ## Archived Release History
 

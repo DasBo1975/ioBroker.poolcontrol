@@ -4,6 +4,14 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.29 (2026-06-04)
+
+- Added Pool Insights V1 with observations, status evaluation and runtime i18n support.
+- Improved Pool Insights text generation and removed dependency on external summary blocks.
+- Added configurable startup power check timeout state for pump startup monitoring.
+- Fixed missing initialization of season and solar warning runtime states from adapter configuration.
+- Added admin UI information about initial configuration values and runtime datapoint control.
+
 ## 1.3.28 (2026-06-03)
 
 - Added configurable startup power check timeout for pump monitoring (`pump.startup_power_check_timeout_sec`).

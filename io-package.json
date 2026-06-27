@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.3.33",
+    "version": "1.3.34",
     "news": {
       "1.3.34": {
         "en": "Improved chemistry history architecture with protected short-term and daily history, prevented oversized JSON states, added safeguards against state database growth, enhanced solar logbook/debug log protection, and updated adapter-core dependency.",
