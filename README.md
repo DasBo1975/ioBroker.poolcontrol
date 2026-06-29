@@ -283,14 +283,13 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.4.0 (2026-06-29)
 
 - Added a reset button for pump learning to quickly clear learned values after a pump replacement or incorrect learning while keeping user settings intact.
 - Made the daily circulation factor writable and persistent. The adapter configuration is now only used as the initial value, allowing adjustments directly via states (e.g. VIS or HomePanel).
 - Added an optional temperature-dependent circulation factor that automatically increases the required daily circulation based on a selectable temperature sensor and configurable threshold.
 - Extended the existing time control with an optional interval mode. Each time window can now operate either continuously or in configurable intervals without introducing a new pump mode.
 - Added new diagnostic states and multilingual status messages to improve transparency and troubleshooting for the new circulation and time control features.
-
 
 ### 1.3.35 (2026-06-29)
 
@@ -321,10 +320,6 @@ New features are added regularly – please refer to the changelog.
 - Added detection of implausible pump power values, flow rates and daily circulation volume jumps.
 - Added detailed diagnostic states under `circulation.plausibility` for troubleshooting and analysis.
 - Improved diagnostics for circulation calculations without changing existing pump, PV or solar control logic.
-
-### 1.3.31 (2026-06-07)
-
-- Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.
 
 ## Archived Release History
 
