@@ -283,13 +283,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.3.35 (2026-06-29)
 
 - Fixed an inconsistency in the daily circulation calculation.
 - `circulation.daily_remaining` is now recalculated together with `circulation.daily_required`.
 - Changing the pool size or minimum daily circulation now produces consistent values immediately after adapter restart.
 - The remaining daily circulation is no longer blocked by zero flow or a stopped pump.
-
 
 ### 1.3.34 (2026-06-27)
 
@@ -317,12 +316,6 @@ New features are added regularly – please refer to the changelog.
 ### 1.3.31 (2026-06-07)
 
 - Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.
-
-### 1.3.30 (2026-06-05)
-
-- Updated release tooling to the required minimum version.
-- Cleaned up outdated Admin i18n keys.
-- Replaced native timers in AI weather helpers with ioBroker adapter timers.
 
 ## Archived Release History
 
