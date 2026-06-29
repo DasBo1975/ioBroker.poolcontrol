@@ -74,8 +74,16 @@ Automatisches Einschalten/Ausschalten der Pumpe.
 ### ✔ Photovoltaik-Modus  
 Die Pumpe läuft bei PV-Überschuss.
 
+### ✔ Bedienbarer Umwälzfaktor
+`general.min_circulation_per_day` ist der beschreibbare und persistente Basis-Umwälzfaktor (0.5 bis 3.0). Der Admin-Wert dient nur als Initialwert; Änderungen wirken auf `circulation.daily_required` und `circulation.daily_remaining`.
+
+Optional erhöht `control.circulation.temperature_factor.*` den wirksamen Faktor ab einer Temperaturschwelle. Der Basiswert bleibt unverändert, der Effektivwert steht in `general.min_circulation_effective_per_day` und ist auf `3.0` begrenzt. Der gewählte Temperatursensor muss aktiviert sein und einen gültigen Wert liefern.
+
 ### ✔ Drucksensor-Integration  
 Trend, Lernwerte, Normalbereich, Diagnose.
+
+### ✔ Pumpen-Lernwerte zuruecksetzen
+`pump.learning.reset` setzt gelernte Pumpenwerte nach Pumpenwechseln oder falschem Lernen zurueck. `pump.learning.tolerance_percent` bleibt erhalten; das Learning bleibt passiv und schaltet die Pumpe nicht.
 
 ### ✔ KI-System (AI)  
 Tägliche Zusammenfassungen, Wetterhinweise, Pooltipps, Wochenendberichte.
@@ -266,8 +274,13 @@ Bis zu **drei Zeitfenster**:
 - Startzeit  
 - Endzeit  
 - Wochentage  
+- optionaler Intervallbetrieb mit Intervallabstand und Laufzeit
 
 Nur aktiv, wenn `pump.mode = time`.
+
+Der Intervallbetrieb wird je Zeitfenster über `timecontrol.timeX_interval_active` aktiviert. Standardmäßig startet die Pumpe alle 60 Minuten für 15 Minuten; der Zyklus beginnt immer relativ zur Startzeit des Fensters. Ohne Intervall bleibt der bisherige Dauerbetrieb unverändert.
+
+Überlappende Zeitfenster werden per OR-Logik ausgewertet: Fordert mindestens ein Fenster aktuell Lauf an, bleibt die Pumpe eingeschaltet. Ein Intervall endet rechnerisch spätestens an der exklusiven Endzeit; durch den unveränderten 60-Sekunden-Check kann die tatsächliche Schaltung um bis zu knapp 60 Sekunden verzögert erfolgen. Ungültige Intervallwerte werden nicht verändert und führen innerhalb des Fensters zum bisherigen Dauerlauf. `timecontrol.status_text` zeigt den aktuellen Diagnosezustand.
 
 ---
 

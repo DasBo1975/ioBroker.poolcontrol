@@ -28,6 +28,21 @@ Zeitstempel des letzten automatisch erzeugten Prüfberichts.
 
 ---
 
+### `control.circulation.temperature_factor.*`
+**Temperaturabhängiger Umwälzfaktor**
+Erhöht den wirksamen Tagesfaktor ab einer konfigurierbaren Temperaturschwelle, ohne den Basiswert `general.min_circulation_per_day` zu überschreiben.
+
+- `enabled`: Funktion ein- oder ausschalten
+- `sensor`: Sensorrolle `surface`, `ground`, `flow`, `return`, `collector` oder `outside`
+- `threshold_c`: Temperaturschwelle in °C
+- `add_factor`: Zusatzfaktor
+- `active`: zeigt die aktuelle Anwendung des Zusatzfaktors
+- `status`: technischer Status der Auswertung
+
+Der gewählte Sensor muss aktiviert sein und einen gültigen Messwert liefern. Der wirksame Faktor wird auf maximal `3.0` begrenzt und unter `general.min_circulation_effective_per_day` ausgegeben.
+
+---
+
 ## Energieverwaltung (`control.energy`)
 
 ### `control.energy.reset`

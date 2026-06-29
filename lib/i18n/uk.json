@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "Розрахований потік надто високий відносно налаштованого номінального потоку.",
   "circulation_plausibility_daily_total_jump_warning": "Добовий обсяг циркуляції збільшився швидше, ніж це фізично можливо.",
   "circulation_plausibility_multiple_warnings": "Активні кілька попереджень перевірки правдоподібності циркуляції.",
-  "circulation_plausibility_disabled": "Перевірку правдоподібності циркуляції вимкнено."
+  "circulation_plausibility_disabled": "Перевірку правдоподібності циркуляції вимкнено.",
+  "Pump is running within the normal range": "Насос працює в нормальному діапазоні",
+  "Pump is running below the normal range": "Насос працює нижче нормального діапазону",
+  "Pump is running above the normal range": "Насос працює вище нормального діапазону",
+  "Pump is outside the known range": "Насос поза відомим діапазоном",
+  "Pump learning values reset": "Навчені значення насоса скинуто",
+  "Time control active": "Керування за часом активне",
+  "Interval mode active": "Інтервальний режим активний",
+  "Another time window keeps the pump running": "Інше часове вікно підтримує роботу насоса",
+  "Invalid interval configuration": "Неприпустима конфігурація інтервалу"
 }

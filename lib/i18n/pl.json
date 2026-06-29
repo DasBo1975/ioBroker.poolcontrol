@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "Obliczony przepływ jest nienaturalnie wysoki względem skonfigurowanego przepływu nominalnego.",
   "circulation_plausibility_daily_total_jump_warning": "Dzienna objętość obiegu wzrosła szybciej niż jest to fizycznie możliwe.",
   "circulation_plausibility_multiple_warnings": "Aktywnych jest kilka ostrzeżeń dotyczących wiarygodności obiegu.",
-  "circulation_plausibility_disabled": "Kontrola wiarygodności obiegu jest wyłączona."
+  "circulation_plausibility_disabled": "Kontrola wiarygodności obiegu jest wyłączona.",
+  "Pump is running within the normal range": "Pompa pracuje w normalnym zakresie",
+  "Pump is running below the normal range": "Pompa pracuje poniżej normalnego zakresu",
+  "Pump is running above the normal range": "Pompa pracuje powyżej normalnego zakresu",
+  "Pump is outside the known range": "Pompa jest poza znanym zakresem",
+  "Pump learning values reset": "Wyuczone wartości pompy zresetowane",
+  "Time control active": "Sterowanie czasowe aktywne",
+  "Interval mode active": "Tryb interwałowy aktywny",
+  "Another time window keeps the pump running": "Inne okno czasowe podtrzymuje pracę pompy",
+  "Invalid interval configuration": "Nieprawidłowa konfiguracja interwału"
 }

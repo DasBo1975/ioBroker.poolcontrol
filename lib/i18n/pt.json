@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "O caudal calculado é excessivamente elevado em relação ao caudal nominal configurado.",
   "circulation_plausibility_daily_total_jump_warning": "O volume diário de circulação aumentou mais rapidamente do que seria fisicamente plausível.",
   "circulation_plausibility_multiple_warnings": "Existem vários avisos de plausibilidade da circulação ativos.",
-  "circulation_plausibility_disabled": "A verificação de plausibilidade da circulação está desativada."
+  "circulation_plausibility_disabled": "A verificação de plausibilidade da circulação está desativada.",
+  "Pump is running within the normal range": "A bomba está a funcionar dentro do intervalo normal",
+  "Pump is running below the normal range": "A bomba está a funcionar abaixo do intervalo normal",
+  "Pump is running above the normal range": "A bomba está a funcionar acima do intervalo normal",
+  "Pump is outside the known range": "A bomba está fora do intervalo conhecido",
+  "Pump learning values reset": "Valores aprendidos da bomba redefinidos",
+  "Time control active": "Controlo de tempo ativo",
+  "Interval mode active": "Modo de intervalo ativo",
+  "Another time window keeps the pump running": "Outra janela de tempo mantém a bomba em funcionamento",
+  "Invalid interval configuration": "Configuração de intervalo inválida"
 }

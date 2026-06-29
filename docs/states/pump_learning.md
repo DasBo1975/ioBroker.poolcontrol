@@ -150,6 +150,17 @@ Dieser Text ist ideal für:
 
 ---
 
+#### `pump.learning.reset`
+Manueller Button zum Zuruecksetzen der gelernten Pumpenwerte.
+
+Der Reset ist fuer Pumpenwechsel oder falsch gelernte Werte gedacht. Er setzt nur die gelernten Werte, Normalbereiche, Abweichungen und die Anzahl der Lernzyklen unter `pump.learning.*` zurueck.
+
+Nicht zurueckgesetzt werden `pump.learning.tolerance_percent`, aktuelle Livewerte, Pumpen-Konfigurationswerte, Pumpenmodus, Fehlerstatus oder `pump.pressure.learning.*`.
+
+Der Button setzt sich nach der Ausloesung automatisch wieder auf `false`. Das Learning bleibt weiterhin passiv und schaltet die Pumpe nicht.
+
+---
+
 ## Eigenschaften & Sicherheit
 
 Der Lernbereich:
@@ -160,7 +171,7 @@ Der Lernbereich:
 - lernt nur bei **gültigen Pumpenläufen**
 - ist **persistiert** und übersteht Updates
 
-Alle Datenpunkte sind **read-only**.
+Die Lern- und Diagnosewerte sind read-only. `pump.learning.tolerance_percent` ist als Nutzereinstellung beschreibbar; `pump.learning.reset` ist ein manueller Reset-Button.
 
 ---
 

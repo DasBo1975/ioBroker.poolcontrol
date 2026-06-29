@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "计算出的流量相对于配置的额定流量异常偏高。",
   "circulation_plausibility_daily_total_jump_warning": "每日循环量增长速度超过物理合理范围。",
   "circulation_plausibility_multiple_warnings": "存在多个循环合理性警告。",
-  "circulation_plausibility_disabled": "循环合理性检查已禁用。"
+  "circulation_plausibility_disabled": "循环合理性检查已禁用。",
+  "Pump is running within the normal range": "水泵在正常范围内运行",
+  "Pump is running below the normal range": "水泵低于正常范围运行",
+  "Pump is running above the normal range": "水泵高于正常范围运行",
+  "Pump is outside the known range": "水泵超出已知范围",
+  "Pump learning values reset": "水泵学习值已重置",
+  "Time control active": "时间控制已启用",
+  "Interval mode active": "间歇模式已启用",
+  "Another time window keeps the pump running": "另一个时间窗口使水泵保持运行",
+  "Invalid interval configuration": "间隔配置无效"
 }

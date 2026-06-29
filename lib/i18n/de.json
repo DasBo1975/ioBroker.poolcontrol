@@ -381,5 +381,14 @@
   "circulation_plausibility_flow_warning": "Der berechnete Durchfluss ist im Verhältnis zur konfigurierten Nennförderleistung unplausibel hoch.",
   "circulation_plausibility_daily_total_jump_warning": "Das Tagesumwälzvolumen ist schneller gestiegen als physikalisch plausibel.",
   "circulation_plausibility_multiple_warnings": "Mehrere Plausibilitätswarnungen zur Umwälzberechnung sind aktiv.",
-  "circulation_plausibility_disabled": "Die Plausibilitätsprüfung der Umwälzberechnung ist deaktiviert."
+  "circulation_plausibility_disabled": "Die Plausibilitätsprüfung der Umwälzberechnung ist deaktiviert.",
+  "Pump is running within the normal range": "Pumpe läuft im Normalbereich",
+  "Pump is running below the normal range": "Pumpe läuft unterhalb des Normalbereichs",
+  "Pump is running above the normal range": "Pumpe läuft oberhalb des Normalbereichs",
+  "Pump is outside the known range": "Pumpe außerhalb des bekannten Bereichs",
+  "Pump learning values reset": "Pumpen-Lernwerte zurückgesetzt",
+  "Time control active": "Zeitsteuerung aktiv",
+  "Interval mode active": "Intervallbetrieb aktiv",
+  "Another time window keeps the pump running": "Ein anderes Zeitfenster hält die Pumpe in Betrieb",
+  "Invalid interval configuration": "Ungültige Intervallkonfiguration"
 }

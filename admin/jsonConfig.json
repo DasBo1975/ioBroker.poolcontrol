@@ -67,6 +67,16 @@
           "lg": 3,
           "xl": 3
         },
+        "min_circulation_hint": {
+          "type": "staticText",
+          "text": "This value is only the initial value for general.min_circulation_per_day. It is copied during first setup or when the state is empty or invalid. The effective value is the writable state general.min_circulation_per_day and can later be changed via VIS or HomePanel.",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
         "general_season_header": {
           "type": "header",
           "text": "Season Settings",

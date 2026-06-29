@@ -408,5 +408,14 @@
   "circulation_plausibility_flow_warning": "Calculated flow rate is implausibly high compared to the configured nominal flow.",
   "circulation_plausibility_daily_total_jump_warning": "Daily circulation volume increased faster than physically plausible.",
   "circulation_plausibility_multiple_warnings": "Multiple circulation plausibility warnings are active.",
-  "circulation_plausibility_disabled": "Circulation plausibility check is disabled."
+  "circulation_plausibility_disabled": "Circulation plausibility check is disabled.",
+  "Pump is running within the normal range": "Pump is running within the normal range",
+  "Pump is running below the normal range": "Pump is running below the normal range",
+  "Pump is running above the normal range": "Pump is running above the normal range",
+  "Pump is outside the known range": "Pump is outside the known range",
+  "Pump learning values reset": "Pump learning values reset",
+  "Time control active": "Time control active",
+  "Interval mode active": "Interval mode active",
+  "Another time window keeps the pump running": "Another time window keeps the pump running",
+  "Invalid interval configuration": "Invalid interval configuration"
 }

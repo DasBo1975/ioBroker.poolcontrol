@@ -57,6 +57,10 @@ Several Helpers check this value before switching the pump. This prevents, for e
 
 Automatic additional pumping is used to reach the daily circulation target. It generally does not require temperature values. If solar control is active and both collector and pool temperatures are valid, additional pumping is blocked as long as the collector is not warmer than the pool.
 
+The base circulation factor is stored in `general.min_circulation_per_day`. The Admin value is only the initial value during first setup or when the state is empty/invalid. The state is writable, persistent, and limited to `0.5` to `3.0`. Changes update `circulation.daily_required` and `circulation.daily_remaining`.
+
+Optionally, `control.circulation.temperature_factor.*` increases this base value from a configured temperature threshold. The selected sensor must be enabled and provide a valid value. The base value is not overwritten; `general.min_circulation_effective_per_day` contains the effective value capped at `3.0`, while `general.min_circulation_effective_reason` contains the technical reason. The daily target and remaining amount use the effective value; `circulation.daily_total` remains unchanged.
+
 The circulation calculation is also monitored diagnostically under `circulation.plausibility`. The diagnostic checks for implausible pump power, implausible calculated flow, and jumps in the daily circulation volume that occur faster than physically plausible. It only stores diagnostic information in its own states and does not change pump control, PV logic, solar logic, or the circulation calculation formula.
 
 The safety logic includes:
@@ -73,8 +77,11 @@ In addition, there are live and learning areas:
 
 - `pump.live.*` for current power, current flow, flow percentage, and last flow value
 - `pump.learning.*` for learned power and flow ranges, deviations, and tolerance
+- `pump.learning.reset` to reset learned pump values after pump changes or incorrect learning; `pump.learning.tolerance_percent` is kept
 - `pump.pressure.*` for pressure sensor data, trend, learned values, and diagnostics
 - `pump.speed.*` for recommendations or states of a variable pump speed
+
+`pump.learning.*` remains purely passive and diagnostic. The reset button also does not affect pump control, PV mode, live values, or `pump.pressure.learning.*`.
 
 ## 4. Time Control
 
@@ -84,10 +91,15 @@ Time control is located under `timecontrol.*`. There are three time windows (`ti
 - Start time
 - End time
 - Weekday selection
+- optional interval operation (`interval_active`, `interval_every_min`, `interval_run_min`)
 
 The `timeHelper` checks every minute whether one of the active time windows is valid for the current weekday. Time control only switches when `pump.mode = time` is set.
 
 When a time window is active, the Helper sets `pump.active_helper` to `timeHelper`, updates `speech.time_active`, and switches `pump.pump_switch`. When the time window ends or the pump mode is left, the Helper releases priority again.
+
+When interval operation is enabled, the cycle is always anchored to the start time of the respective window. The defaults are a 60-minute interval period and a 15-minute run time. The run time must not exceed the interval period; with an invalid configuration, user values are retained and the affected window falls back to the existing continuous operation.
+
+Multiple windows use OR logic, so a paused interval cannot switch off another window that currently requests operation. The exclusive end time limits every interval run. Because the existing 60-second check remains unchanged, the physical switch may occur almost 60 seconds after the calculated point in time. `timecontrol.status_text` provides the translated diagnostic state.
 
 ## 5. Solar Control
 

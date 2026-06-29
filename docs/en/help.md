@@ -61,8 +61,16 @@ Automatic switching on/off of the pump.
 ### ✔ Photovoltaic mode  
 The pump runs when there is PV surplus.
 
+### ✔ Editable circulation factor
+`general.min_circulation_per_day` is the writable and persistent base circulation factor (0.5 to 3.0). The Admin value is only an initial value; changes affect `circulation.daily_required` and `circulation.daily_remaining`.
+
+Optionally, `control.circulation.temperature_factor.*` increases the effective factor from a configured temperature threshold. The base value remains unchanged, the effective value is exposed as `general.min_circulation_effective_per_day`, and is capped at `3.0`. The selected temperature sensor must be enabled and provide a valid value.
+
 ### ✔ Pressure sensor integration  
 Trend, learning values, normal range, diagnostics.
+
+### ✔ Reset pump learning values
+`pump.learning.reset` resets learned pump values after pump changes or incorrect learning. `pump.learning.tolerance_percent` is kept; learning remains passive and does not switch the pump.
 
 ### ✔ AI System  
 Daily summaries, weather hints, pool tips, weekend reports.
@@ -252,8 +260,13 @@ Up to **three time windows**:
 - Start time  
 - End time  
 - Weekdays  
+- optional interval operation with interval period and run time
 
 Only active if `pump.mode = time`.
+
+Interval operation is enabled separately for each window through `timecontrol.timeX_interval_active`. By default, the pump starts every 60 minutes and runs for 15 minutes; the cycle is always anchored to the window start time. With interval operation disabled, the existing continuous operation remains unchanged.
+
+Overlapping windows use OR logic: the pump remains on whenever at least one window currently requests operation. An interval logically ends no later than the exclusive end time; because the existing 60-second check remains unchanged, the physical switch may be delayed by almost 60 seconds. Invalid interval values are not modified and fall back to continuous operation within the window. `timecontrol.status_text` shows the current diagnostic state.
 
 ---
 

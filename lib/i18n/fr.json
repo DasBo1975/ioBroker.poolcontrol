@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "Le débit calculé est anormalement élevé par rapport au débit nominal configuré.",
   "circulation_plausibility_daily_total_jump_warning": "Le volume quotidien de circulation a augmenté plus rapidement que physiquement plausible.",
   "circulation_plausibility_multiple_warnings": "Plusieurs avertissements de plausibilité de circulation sont actifs.",
-  "circulation_plausibility_disabled": "La vérification de plausibilité de la circulation est désactivée."
+  "circulation_plausibility_disabled": "La vérification de plausibilité de la circulation est désactivée.",
+  "Pump is running within the normal range": "La pompe fonctionne dans la plage normale",
+  "Pump is running below the normal range": "La pompe fonctionne en dessous de la plage normale",
+  "Pump is running above the normal range": "La pompe fonctionne au-dessus de la plage normale",
+  "Pump is outside the known range": "La pompe est hors de la plage connue",
+  "Pump learning values reset": "Valeurs d’apprentissage de la pompe réinitialisées",
+  "Time control active": "Commande horaire active",
+  "Interval mode active": "Mode intervalle actif",
+  "Another time window keeps the pump running": "Une autre plage horaire maintient la pompe en marche",
+  "Invalid interval configuration": "Configuration d’intervalle non valide"
 }

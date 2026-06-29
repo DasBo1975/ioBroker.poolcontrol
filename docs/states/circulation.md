@@ -17,8 +17,9 @@ Er dient ausschließlich der **Anzeige und Auswertung** und trifft selbst **kein
 - Einheit: Liter (`value.volume`)
 - Der Wert ergibt sich aus:
   - Poolvolumen
-  - konfigurierter Mindest-Umwälzung
+  - dem wirksamen State `general.min_circulation_effective_per_day`
 - Dieser Wert ist die **Sollgröße** für den aktuellen Tag
+- Änderungen am Basiswert, an den Temperaturfaktor-Einstellungen oder am gewählten Temperaturwert aktualisieren `circulation.daily_required` und `circulation.daily_remaining`
 
 ---
 
@@ -53,6 +54,7 @@ daily_required – daily_total
 - Sie werden von anderen Modulen (z. B. Zeit-, PV- oder Automatiklogik) zur Bewertung herangezogen
 - Es erfolgt **keine direkte Pumpensteuerung** über diesen Bereich
 - Alle Werte werden täglich automatisch zurückgesetzt
+- Der temperaturabhängige Faktor verändert `circulation.daily_total` nicht
 
 ---
 

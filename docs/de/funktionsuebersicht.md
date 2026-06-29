@@ -57,6 +57,10 @@ Mehrere Helper prüfen diesen Wert, bevor sie die Pumpe schalten. Dadurch wird v
 
 Das automatische Nachpumpen dient dazu, die tägliche Umwälzmenge zu erreichen. Es benötigt grundsätzlich keine Temperaturwerte. Wenn die Solarsteuerung aktiv ist und sowohl Kollektor- als auch Pooltemperatur gültig vorliegen, wird Nachpumpen blockiert, solange der Kollektor nicht wärmer als der Pool ist.
 
+Der Basis-Umwälzfaktor liegt in `general.min_circulation_per_day`. Der Admin-Wert ist nur der Initialwert bei erster Einrichtung oder bei leerem/ungültigem State. Der State ist beschreibbar, persistent und auf `0.5` bis `3.0` begrenzt. Änderungen aktualisieren `circulation.daily_required` und `circulation.daily_remaining`.
+
+Optional erhöht `control.circulation.temperature_factor.*` diesen Basiswert ab einer Temperaturschwelle. Der gewählte Sensor muss aktiviert sein und einen gültigen Wert liefern. Der Basiswert wird nicht überschrieben; `general.min_circulation_effective_per_day` enthält den auf maximal `3.0` begrenzten Effektivwert und `general.min_circulation_effective_reason` den technischen Grund. Tages-Soll und Tages-Rest verwenden den Effektivwert, `circulation.daily_total` bleibt unverändert.
+
 Die Umwälzberechnung wird zusätzlich durch `circulation.plausibility` diagnostisch beobachtet. Die Diagnose prüft auf unplausible Pumpenleistung, unplausiblen berechneten Durchfluss und Sprünge der Tagesumwälzung, die schneller auftreten als physikalisch plausibel. Sie speichert nur Diagnoseinformationen in eigenen States und greift nicht in Pumpensteuerung, PV-Logik, Solarlogik oder die Berechnungsformel der Umwälzung ein.
 
 Zur Sicherheitslogik gehören:
@@ -73,8 +77,11 @@ Ergänzend gibt es Live- und Lernbereiche:
 
 - `pump.live.*` für aktuelle Leistung, aktuellen Durchfluss, Durchflussprozent und letzten Durchflusswert
 - `pump.learning.*` für gelernte Leistungs- und Durchflussbereiche, Abweichungen und Toleranz
+- `pump.learning.reset` zum Zuruecksetzen der gelernten Pumpenwerte nach Pumpenwechseln oder falschem Lernen; `pump.learning.tolerance_percent` bleibt erhalten
 - `pump.pressure.*` für Drucksensorik, Trend, Lernwerte und Diagnose
 - `pump.speed.*` für Empfehlungen bzw. Zustände einer variablen Pumpenleistung
+
+`pump.learning.*` bleibt rein passiv und diagnostisch. Auch der Reset-Button greift nicht in Pumpensteuerung, PV-Modus, Livewerte oder `pump.pressure.learning.*` ein.
 
 ## 4. Zeitsteuerung
 
@@ -84,10 +91,15 @@ Die Zeitsteuerung liegt unter `timecontrol.*`. Es gibt drei Zeitfenster (`time1`
 - Startzeit
 - Endzeit
 - Wochentagsauswahl
+- optionaler Intervallbetrieb (`interval_active`, `interval_every_min`, `interval_run_min`)
 
 Der `timeHelper` prüft jede Minute, ob eines der aktiven Zeitfenster für den aktuellen Wochentag gültig ist. Die Zeitsteuerung schaltet nur, wenn `pump.mode = time` gesetzt ist.
 
 Wenn ein Zeitfenster aktiv ist, setzt der Helper `pump.active_helper` auf `timeHelper`, aktualisiert `speech.time_active` und schaltet `pump.pump_switch`. Endet das Zeitfenster oder wird der Pumpenmodus verlassen, gibt der Helper die Priorität wieder frei.
+
+Bei aktiviertem Intervallbetrieb beginnt der Zyklus immer relativ zur Startzeit des jeweiligen Fensters. Standardwerte sind 60 Minuten Intervallabstand und 15 Minuten Laufzeit. Die Laufzeit darf den Intervallabstand nicht überschreiten; bei ungültiger Konfiguration bleiben die Benutzerwerte erhalten und das betroffene Fenster fällt auf den bisherigen Dauerlauf zurück.
+
+Mehrere Zeitfenster werden per OR-Logik ausgewertet. Ein pausierendes Intervall kann daher ein anderes Fenster mit aktueller Laufanforderung nicht abschalten. Die Endzeit ist exklusiv und begrenzt jeden Intervalllauf. Wegen des unveränderten 60-Sekunden-Prüftakts kann die tatsächliche Schaltung bis zu knapp 60 Sekunden nach dem rechnerischen Zeitpunkt erfolgen. `timecontrol.status_text` stellt den übersetzten Diagnosezustand bereit.
 
 ## 5. Solarsteuerung
 

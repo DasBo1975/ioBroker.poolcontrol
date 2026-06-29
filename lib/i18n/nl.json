@@ -404,5 +404,14 @@
   "circulation_plausibility_flow_warning": "Het berekende debiet is onwaarschijnlijk hoog ten opzichte van het ingestelde nominale debiet.",
   "circulation_plausibility_daily_total_jump_warning": "Het dagelijkse circulatievolume is sneller gestegen dan fysiek plausibel.",
   "circulation_plausibility_multiple_warnings": "Er zijn meerdere waarschuwingen voor circulatie-plausibiliteit actief.",
-  "circulation_plausibility_disabled": "De plausibiliteitscontrole van de circulatie is uitgeschakeld."
+  "circulation_plausibility_disabled": "De plausibiliteitscontrole van de circulatie is uitgeschakeld.",
+  "Pump is running within the normal range": "De pomp draait binnen het normale bereik",
+  "Pump is running below the normal range": "De pomp draait onder het normale bereik",
+  "Pump is running above the normal range": "De pomp draait boven het normale bereik",
+  "Pump is outside the known range": "De pomp valt buiten het bekende bereik",
+  "Pump learning values reset": "Geleerde pompwaarden gereset",
+  "Time control active": "Tijdregeling actief",
+  "Interval mode active": "Intervalmodus actief",
+  "Another time window keeps the pump running": "Een ander tijdvenster houdt de pomp in werking",
+  "Invalid interval configuration": "Ongeldige intervalconfiguratie"
 }
