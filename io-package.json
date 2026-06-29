@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.3.34",
     "news": {
+      "1.3.35": {
+        "en": "Fixed daily circulation remaining calculation after changing pool size or minimum daily circulation.",
+        "de": "Korrigiert die Berechnung der verbleibenden täglichen Umwälzung nach Änderung von Poolgröße oder Mindestumwälzung.",
+        "ru": "Исправлен расчет остатка дневного тиража после изменения размера пула или минимального дневного тиража.",
+        "pt": "Corrigido o cálculo restante da circulação diária após alterar o tamanho da piscina ou a circulação diária mínima.",
+        "nl": "Vaste berekening van de resterende dagelijkse circulatie na wijziging van de zwembadgrootte of minimale dagelijkse circulatie.",
+        "fr": "Calcul de la circulation quotidienne restante fixe après avoir modifié la taille de la piscine ou la circulation quotidienne minimale.",
+        "it": "Risolto il problema con il calcolo della circolazione giornaliera rimanente dopo aver modificato le dimensioni della piscina o la circolazione giornaliera minima.",
+        "es": "Se corrigió el cálculo de la circulación diaria restante después de cambiar el tamaño de la piscina o la circulación diaria mínima.",
+        "pl": "Naprawiono obliczanie pozostałego dziennego obiegu po zmianie wielkości basenu lub minimalnego dziennego obiegu.",
+        "uk": "Виправлено розрахунок залишку денного тиражу після зміни розміру пулу або мінімального добового тиражу.",
+        "zh-cn": "修复了更改矿池大小或最低每日流通量后每日流通量剩余计算的问题。"
+      },
       "1.3.34": {
         "en": "Improved chemistry history architecture with protected short-term and daily history, prevented oversized JSON states, added safeguards against state database growth, enhanced solar logbook/debug log protection, and updated adapter-core dependency.",
         "de": "Chemie-Historie grundlegend verbessert: geschützte Kurzzeit- und Tageshistorie eingeführt, übergroße JSON-States verhindert, Schutz vor unkontrolliertem Wachstum der State-Datenbank ergänzt, Solar-Logbuch und Debug-Log zusätzlich abgesichert sowie adapter-core-Abhängigkeit aktualisiert.",
@@ -54,19 +67,6 @@
         "pl": "Naprawiono logikę automatycznego uzupełniania cyrkulacji w przypadku braku czujników temperatury. Automatyczne uzupełnianie jest teraz blokowane tylko przez porównanie temperatur kolektora/basenu, gdy aktywna jest kontrola solarna i obie temperatury są prawidłowe.",
         "uk": "Виправлена ​​логіка автоматичного доповнення циркуляції, коли датчики температури відсутні. Автоматичне поповнення тепер блокується лише шляхом порівняння температури колектора/басейну, коли активовано сонячне керування та обидві температури дійсні.",
         "zh-cn": "修复了缺少温度传感器时的自动循环充值逻辑。现在，仅当太阳能控制处于活动状态并且两个温度都有效时，自动充值才会被收集器/池温度比较阻止。"
-      },
-      "1.3.30": {
-        "en": "Updated release tooling to the required minimum version. Cleaned up outdated Admin i18n keys. Replaced native timers in AI weather helpers with ioBroker adapter timers.",
-        "de": "Release-Werkzeuge auf die erforderliche Mindestversion aktualisiert. Veraltete Admin-i18n-Schlüssel bereinigt. Native Timer in den KI-Wetter-Helpern durch ioBroker-Adapter-Timer ersetzt.",
-        "ru": "Обновлены инструменты выпуска до необходимой минимальной версии. Очищены устаревшие ключи администратора i18n. Заменены встроенные таймеры в помощниках погоды AI на таймеры адаптера ioBroker.",
-        "pt": "Ferramentas de lançamento atualizadas para a versão mínima exigida. Limpeza de chaves Admin i18n desatualizadas. Temporizadores nativos substituídos em ajudantes meteorológicos de IA por temporizadores adaptadores ioBroker.",
-        "nl": "Releasetooling bijgewerkt naar de vereiste minimumversie. Verouderde Admin i18n-sleutels opgeschoond. Native timers in AI-weerhelpers vervangen door ioBroker-adaptertimers.",
-        "fr": "Outils de version mis à jour vers la version minimale requise. Nettoyage des clés Admin i18n obsolètes. Remplacement des minuteries natives dans les assistants météo AI par des minuteries d'adaptateur ioBroker.",
-        "it": "Strumenti di rilascio aggiornati alla versione minima richiesta. Ripulite le chiavi Admin i18n obsolete. Sostituiti i timer nativi negli assistenti meteorologici AI con i timer dell'adattatore ioBroker.",
-        "es": "Herramientas de lanzamiento actualizadas a la versión mínima requerida. Se limpiaron las claves de Admin i18n obsoletas. Se reemplazaron los temporizadores nativos en los asistentes meteorológicos de IA con temporizadores del adaptador ioBroker.",
-        "pl": "Zaktualizowano narzędzia wydania do wymaganej wersji minimalnej. Wyczyszczono nieaktualne klucze administratora i18n. Zastąpiono natywne liczniki czasu w pomocnikach pogodowych AI zegarami adaptera ioBroker.",
-        "uk": "Оновлено інструмент випуску до необхідної мінімальної версії. Очищено застарілі ключі адміністратора i18n. Вбудовані таймери в помічниках погоди штучного інтелекту замінено на таймери адаптера ioBroker.",
-        "zh-cn": "将发布工具更新为所需的最低版本。清理了过时的 Admin i18n 密钥。将 AI 天气助手中的本机计时器替换为 ioBroker 适配器计时器。"
       }
     },
     "titleLang": {

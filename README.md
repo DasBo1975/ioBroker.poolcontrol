@@ -283,6 +283,14 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed an inconsistency in the daily circulation calculation.
+- `circulation.daily_remaining` is now recalculated together with `circulation.daily_required`.
+- Changing the pool size or minimum daily circulation now produces consistent values immediately after adapter restart.
+- The remaining daily circulation is no longer blocked by zero flow or a stopped pump.
+
+
 ### 1.3.34 (2026-06-27)
 
 - **Major stability improvement:** Completely redesigned the internal chemistry history (pH, ORP and TDS) to prevent unbounded JSON state growth. This significantly reduces the risk of oversized `states.jsonl` files and potential js-controller startup failures.
