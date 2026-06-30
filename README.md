@@ -283,13 +283,12 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.4.1 (2026-06-30)
 
 - Fixed Auto-PV holding logic for already running pumps.
 - When Auto-PV already controls the pump, the current pump power is now considered for the holding decision.
 - This prevents a running pump from triggering its own Auto-PV afterrun/stop cycle after startup.
 - The displayed PV surplus (`photovoltaic.power_surplus_w`) remains the real remaining surplus and is not artificially adjusted.
-
 
 ### 1.4.0 (2026-06-29)
 
@@ -321,13 +320,6 @@ New features are added regularly – please refer to the changelog.
   - `solar.collector_surface_delta`
   - `solar.extended.collector_pool_reference_delta`
 - Documented that runtime changes to `solar.extended.pool_temperature_source` are applied automatically, but may take up to approximately 60 seconds due to the Solar Extended cyclic check interval.
-
-### 1.3.32 (2026-06-08)
-
-- Added circulation plausibility diagnostics for daily circulation calculations.
-- Added detection of implausible pump power values, flow rates and daily circulation volume jumps.
-- Added detailed diagnostic states under `circulation.plausibility` for troubleshooting and analysis.
-- Improved diagnostics for circulation calculations without changing existing pump, PV or solar control logic.
 
 ## Archived Release History
 

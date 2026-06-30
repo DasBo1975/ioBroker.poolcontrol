@@ -4,6 +4,13 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.32 (2026-06-08)
+
+- Added circulation plausibility diagnostics for daily circulation calculations.
+- Added detection of implausible pump power values, flow rates and daily circulation volume jumps.
+- Added detailed diagnostic states under `circulation.plausibility` for troubleshooting and analysis.
+- Improved diagnostics for circulation calculations without changing existing pump, PV or solar control logic.
+
 ## 1.3.31 (2026-06-07)
 
 - Fixed automatic circulation top-up logic when temperature sensors are missing. Automatic top-up is now only blocked by collector/pool temperature comparison when solar control is active and both temperatures are valid.

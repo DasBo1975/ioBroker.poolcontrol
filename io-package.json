@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "news": {
       "1.4.1": {
         "en": "Fixed Auto-PV holding logic so a running pump no longer reduces its own available PV power calculation. The displayed PV surplus remains unchanged.",
