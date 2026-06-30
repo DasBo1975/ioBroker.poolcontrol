@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.4.0",
     "news": {
+      "1.4.1": {
+        "en": "Fixed Auto-PV holding logic so a running pump no longer reduces its own available PV power calculation. The displayed PV surplus remains unchanged.",
+        "de": "Korrigiert die Auto-PV-Haltebedingung, damit eine laufende Pumpe ihre eigene verfügbare PV-Leistung nicht mehr rechnerisch reduziert. Der angezeigte PV-Überschuss bleibt unverändert.",
+        "ru": "Исправлена ​​логика удержания Auto-PV, поэтому работающий насос больше не уменьшает собственный расчет доступной фотоэлектрической мощности. Отображаемый излишек фотоэлектрической энергии остается неизменным.",
+        "pt": "Lógica de retenção Auto-PV corrigida para que uma bomba em funcionamento não reduza mais seu próprio cálculo de potência fotovoltaica disponível. O excedente fotovoltaico exibido permanece inalterado.",
+        "nl": "Vaste Auto-PV-houdlogica zodat een draaiende pomp niet langer zijn eigen beschikbare PV-vermogensberekening vermindert. Het weergegeven PV-overschot blijft ongewijzigd.",
+        "fr": "Correction de la logique de maintien Auto-PV afin qu'une pompe en marche ne réduise plus son propre calcul de puissance PV disponible. L'excédent PV affiché reste inchangé.",
+        "it": "Risolto il problema con la logica di mantenimento FV automatica in modo che una pompa in funzione non riducesse più il proprio calcolo della potenza FV disponibile. Il surplus FV visualizzato rimane invariato.",
+        "es": "Se corrigió la lógica de retención automática de PV para que una bomba en funcionamiento ya no reduzca su propio cálculo de potencia PV disponible. El excedente de PV mostrado permanece sin cambios.",
+        "pl": "Naprawiono logikę wstrzymywania Auto-PV, dzięki czemu działająca pompa nie zmniejsza już własnej dostępnej mocy obliczeniowej PV. Wyświetlana nadwyżka PV pozostaje niezmieniona.",
+        "uk": "Виправлена ​​логіка утримування автоматичної PV, тому працюючий насос більше не зменшує власний розрахунок доступної PV потужності. Відображений надлишок PV залишається незмінним.",
+        "zh-cn": "修复了自动光伏保持逻辑，因此运行中的泵不再减少其自身的可用光伏功率计算。显示的PV剩余量保持不变。"
+      },
       "1.4.0": {
         "en": "Added pump learning reset button with multilingual status messages, made the daily circulation factor writable and persistent with instant recalculation, introduced temperature-dependent automatic circulation factor adjustment, and extended time control with optional interval operation including diagnostic status messages.",
         "de": "Reset-Button für das Pumpen-Learning mit mehrsprachigen Statusmeldungen hinzugefügt, täglichen Umwälzfaktor beschreibbar und persistent gemacht inklusive sofortiger Neuberechnung, temperaturabhängige automatische Anpassung des Umwälzfaktors ergänzt sowie die Zeitsteuerung um einen optionalen Intervallbetrieb mit Diagnosestatus erweitert.",
@@ -54,19 +67,6 @@
         "pl": "Dodano stany delta na żywo dla standardowego sterowania solarnego i Solar Extended. Udokumentowane zachowanie aktualizacji środowiska uruchomieniowego referencyjnej puli Solar Extended.",
         "uk": "Додано живі дельта-стани для стандартного сонячного та розширеного керування Solar. Задокументована поведінка оновлення середовища виконання довідкового пулу Solar Extended.",
         "zh-cn": "为标准太阳能和太阳能扩展控制添加了实时增量状态。记录了 Solar Extended 池参考运行时更新行为。"
-      },
-      "1.3.32": {
-        "en": "Added circulation plausibility diagnostics. New checks detect implausible pump power, flow rates, and daily circulation jumps. Added detailed diagnostic states under circulation.plausibility to simplify troubleshooting and analysis of circulation calculations.",
-        "de": "Plausibilitätsdiagnose für die Umwälzberechnung hinzugefügt. Neue Prüfungen erkennen unplausible Pumpenleistungen, Durchflusswerte und Sprünge der Tagesumwälzung. Detaillierte Diagnose-States unter circulation.plausibility erleichtern die Fehlersuche und Analyse der Umwälzberechnung.",
-        "ru": "Добавлена ​​диагностика достоверности циркуляции. Новые проверки выявляют неправдоподобную мощность насоса, скорость потока и скачки суточной циркуляции. Добавлены подробные диагностические состояния в разделе «циркуляция.достоверность» для упрощения поиска и устранения неисправностей и анализа расчетов циркуляции.",
-        "pt": "Adicionados diagnósticos de plausibilidade de circulação. Novas verificações detectam potências de bomba, taxas de fluxo e saltos diários de circulação implausíveis. Adicionados estados de diagnóstico detalhados em circulação.plausibilidade para simplificar a solução de problemas e a análise de cálculos de circulação.",
-        "nl": "Diagnostiek van circulatieplausibiliteit toegevoegd. Nieuwe controles detecteren onwaarschijnlijk pompvermogen, debieten en dagelijkse circulatiesprongen. Gedetailleerde diagnostische statussen toegevoegd onder circulatie.plausibiliteit om probleemoplossing en analyse van circulatieberekeningen te vereenvoudigen.",
-        "fr": "Ajout de diagnostics de plausibilité de la circulation. De nouveaux contrôles détectent une puissance de pompe, des débits et des sauts de circulation quotidiens invraisemblables. Ajout d'états de diagnostic détaillés sous circulation.plausibilité pour simplifier le dépannage et l'analyse des calculs de circulation.",
-        "it": "Aggiunta diagnostica di plausibilità della circolazione. Nuovi controlli rilevano potenza della pompa, portate e salti di circolazione giornalieri non plausibili. Aggiunti stati diagnostici dettagliati in circolazione.plausibilità per semplificare la risoluzione dei problemi e l'analisi dei calcoli della circolazione.",
-        "es": "Se agregaron diagnósticos de plausibilidad de circulación. Las nuevas comprobaciones detectan potencias de bombeo, caudales y saltos diarios de circulación inverosímiles. Se agregaron estados de diagnóstico detallados bajo circulación. Plausibilidad para simplificar la resolución de problemas y el análisis de los cálculos de circulación.",
-        "pl": "Dodano diagnostykę wiarygodności obiegu. Nowe kontrole wykrywają nieprawdopodobną moc pompy, natężenie przepływu i codzienne skoki cyrkulacji. Dodano szczegółowe stany diagnostyczne w obszarze cyrkulacja.wiarygodność, aby uprościć rozwiązywanie problemów i analizę obliczeń cyrkulacji.",
-        "uk": "Додана діагностика вірогідності циркуляції. Нові перевірки виявляють неправдоподібну потужність насоса, швидкість потоку та щоденні стрибки циркуляції. Додано детальні діагностичні стани під циркуляцією. Правдоподібність для спрощення пошуку несправностей і аналізу розрахунків циркуляції.",
-        "zh-cn": "添加了循环合理性诊断。新的检查可以检测到难以置信的泵功率、流量和每日循环跳跃。在循环下添加了详细的诊断状态。合理性以简化循环计算的故障排除和分析。"
       }
     },
     "titleLang": {
