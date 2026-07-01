@@ -283,6 +283,19 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### Work in progress
+
+- Fixed monthly temperature statistics reset scheduling
+  - Monthly reset no longer uses long timeouts above the Node.js/ioBroker limit
+  - Added persistent monthly period tracking
+  - Missed month changes after adapter downtime are detected safely
+  - Monthly reset is now checked daily and executed only once per period
+
+- Improved solar logbook logging
+  - Oversized solar logbook entries are now logged as debug instead of warning
+  - This avoids unnecessary warning noise for non-critical diagnostic information
+
+ 
 ### 1.4.1 (2026-06-30)
 
 - Fixed Auto-PV holding logic for already running pumps.
