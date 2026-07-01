@@ -283,7 +283,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.4.2 (2026-07-01)
 
 - Fixed monthly temperature statistics reset scheduling
   - Monthly reset no longer uses long timeouts above the Node.js/ioBroker limit
@@ -295,7 +295,6 @@ New features are added regularly – please refer to the changelog.
   - Oversized solar logbook entries are now logged as debug instead of warning
   - This avoids unnecessary warning noise for non-critical diagnostic information
 
- 
 ### 1.4.1 (2026-06-30)
 
 - Fixed Auto-PV holding logic for already running pumps.
@@ -326,13 +325,6 @@ New features are added regularly – please refer to the changelog.
 - **Daily aggregates introduced:** Added compact daily aggregates for pH, ORP and TDS containing minimum, maximum, average and last measurement together with the number of valid samples. This preserves long-term trend analysis without storing large raw histories.
 - **Additional safeguards:** Added size protection for the solar logbook and debug log to prevent uncontrolled state growth.
 - **Maintenance:** Updated the `@iobroker/adapter-core` dependency to the latest recommended version.
-
-### 1.3.33 (2026-06-18)
-
-- Added live delta states for standard solar and Solar Extended control:
-  - `solar.collector_surface_delta`
-  - `solar.extended.collector_pool_reference_delta`
-- Documented that runtime changes to `solar.extended.pool_temperature_source` are applied automatically, but may take up to approximately 60 seconds due to the Solar Extended cyclic check interval.
 
 ## Archived Release History
 

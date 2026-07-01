@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "news": {
       "1.4.2": {
         "en": "Fixed monthly temperature statistics reset scheduling to avoid long timeout errors on Node.js/ioBroker. Reduced oversized solar logbook warning to debug level.",

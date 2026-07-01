@@ -4,6 +4,13 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.33 (2026-06-18)
+
+- Added live delta states for standard solar and Solar Extended control:
+  - `solar.collector_surface_delta`
+  - `solar.extended.collector_pool_reference_delta`
+- Documented that runtime changes to `solar.extended.pool_temperature_source` are applied automatically, but may take up to approximately 60 seconds due to the Solar Extended cyclic check interval.
+
 ## 1.3.32 (2026-06-08)
 
 - Added circulation plausibility diagnostics for daily circulation calculations.
