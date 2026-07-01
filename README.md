@@ -282,7 +282,7 @@ New features are added regularly – please refer to the changelog.
 
 ---
 
-## Changelog
+## Changelog ##
 ### Work in progress
 
 - Fixed monthly temperature statistics reset scheduling
