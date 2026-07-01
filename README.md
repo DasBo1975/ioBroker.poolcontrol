@@ -282,8 +282,8 @@ New features are added regularly – please refer to the changelog.
 
 ---
 
-## Changelog 
-### **Work in progress**
+## Changelog
+### **WORK IN PROGRESS**
 
 - Fixed monthly temperature statistics reset scheduling
   - Monthly reset no longer uses long timeouts above the Node.js/ioBroker limit
