@@ -283,6 +283,18 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed restoration of the previous pump mode after maintenance mode and automatic circulation catch-up runs.
+- Maintenance mode now restores the previous valid user mode even after an adapter restart.
+- Maintenance mode and automatic catch-up runs now use separate restore values and can no longer overwrite each other.
+- Invalid values such as `null`, empty values, or internal helper modes are no longer written back to `pump.mode`.
+- Automatic circulation catch-up runs no longer start while maintenance mode is active.
+- Starting maintenance mode during an active catch-up run now stops the catch-up process cleanly before maintenance takes control.
+- Added validation to the pump-mode restoration after backwashing.
+- The existing overload protection remains unchanged and continues to switch `pump.mode` to `off` when an overload is detected.
+
+
 ### 1.4.2 (2026-07-01)
 
 - Fixed monthly temperature statistics reset scheduling
