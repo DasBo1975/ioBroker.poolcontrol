@@ -4,6 +4,15 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.3.34 (2026-06-27)
+
+- **Major stability improvement:** Completely redesigned the internal chemistry history (pH, ORP and TDS) to prevent unbounded JSON state growth. This significantly reduces the risk of oversized `states.jsonl` files and potential js-controller startup failures.
+- **New two-stage history architecture:** Chemistry history now uses a compact short-term history for recent measurements together with a dedicated daily history for long-term trends. All existing 24-hour, 7-day and 30-day trend calculations and reports remain fully available.
+- **Protected history storage:** Added strict limits for chemistry history sample count and JSON size. Oversized or invalid history states are now safely detected, validated and handled before being processed.
+- **Daily aggregates introduced:** Added compact daily aggregates for pH, ORP and TDS containing minimum, maximum, average and last measurement together with the number of valid samples. This preserves long-term trend analysis without storing large raw histories.
+- **Additional safeguards:** Added size protection for the solar logbook and debug log to prevent uncontrolled state growth.
+- **Maintenance:** Updated the `@iobroker/adapter-core` dependency to the latest recommended version.
+
 ## 1.3.33 (2026-06-18)
 
 - Added live delta states for standard solar and Solar Extended control:

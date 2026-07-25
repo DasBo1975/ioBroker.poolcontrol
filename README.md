@@ -283,7 +283,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.4.3 (2026-07-25)
 
 - Fixed restoration of the previous pump mode after maintenance mode and automatic circulation catch-up runs.
 - Maintenance mode now restores the previous valid user mode even after an adapter restart.
@@ -293,7 +293,6 @@ New features are added regularly – please refer to the changelog.
 - Starting maintenance mode during an active catch-up run now stops the catch-up process cleanly before maintenance takes control.
 - Added validation to the pump-mode restoration after backwashing.
 - The existing overload protection remains unchanged and continues to switch `pump.mode` to `off` when an overload is detected.
-
 
 ### 1.4.2 (2026-07-01)
 
@@ -328,15 +327,6 @@ New features are added regularly – please refer to the changelog.
 - `circulation.daily_remaining` is now recalculated together with `circulation.daily_required`.
 - Changing the pool size or minimum daily circulation now produces consistent values immediately after adapter restart.
 - The remaining daily circulation is no longer blocked by zero flow or a stopped pump.
-
-### 1.3.34 (2026-06-27)
-
-- **Major stability improvement:** Completely redesigned the internal chemistry history (pH, ORP and TDS) to prevent unbounded JSON state growth. This significantly reduces the risk of oversized `states.jsonl` files and potential js-controller startup failures.
-- **New two-stage history architecture:** Chemistry history now uses a compact short-term history for recent measurements together with a dedicated daily history for long-term trends. All existing 24-hour, 7-day and 30-day trend calculations and reports remain fully available.
-- **Protected history storage:** Added strict limits for chemistry history sample count and JSON size. Oversized or invalid history states are now safely detected, validated and handled before being processed.
-- **Daily aggregates introduced:** Added compact daily aggregates for pH, ORP and TDS containing minimum, maximum, average and last measurement together with the number of valid samples. This preserves long-term trend analysis without storing large raw histories.
-- **Additional safeguards:** Added size protection for the solar logbook and debug log to prevent uncontrolled state growth.
-- **Maintenance:** Updated the `@iobroker/adapter-core` dependency to the latest recommended version.
 
 ## Archived Release History
 

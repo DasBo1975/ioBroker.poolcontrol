@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "news": {
       "1.4.3": {
         "en": "Fixed pump mode restoration after maintenance mode and automatic circulation catch-up runs. Previous user modes are now stored separately and validated, maintenance mode restoration survives adapter restarts, and automatic catch-up runs no longer start during maintenance. Invalid values such as null or internal helper modes are no longer restored to pump.mode. Overload protection remains unchanged.",
