@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "news": {
       "1.4.4": {
         "en": "Fixed a race condition in the Auto-PV helper that could cause incorrect surplus calculations and unintended pump shutdowns during rapid PV and household power updates.",

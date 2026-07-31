@@ -283,7 +283,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.4.4 (2026-07-31)
 
 - Fixed a race condition in the Auto-PV helper that could occur during rapid updates of PV generation and household power values.
 - Added a short debounce for PV and household power events to ensure calculations always use the latest matching values.
@@ -292,7 +292,6 @@ New features are added regularly – please refer to the changelog.
 - The existing Auto-PV holding logic introduced in v1.4.1 remains unchanged.
 - `photovoltaic.power_surplus_w` continues to represent the real remaining PV surplus (`PV generation - household consumption`).
 - Existing Auto-PV features such as afterrun, circulation handling, solar overheating protection and controlHelper priority remain fully compatible.
-
 
 ### 1.4.3 (2026-07-25)
 
@@ -331,13 +330,6 @@ New features are added regularly – please refer to the changelog.
 - Added an optional temperature-dependent circulation factor that automatically increases the required daily circulation based on a selectable temperature sensor and configurable threshold.
 - Extended the existing time control with an optional interval mode. Each time window can now operate either continuously or in configurable intervals without introducing a new pump mode.
 - Added new diagnostic states and multilingual status messages to improve transparency and troubleshooting for the new circulation and time control features.
-
-### 1.3.35 (2026-06-29)
-
-- Fixed an inconsistency in the daily circulation calculation.
-- `circulation.daily_remaining` is now recalculated together with `circulation.daily_required`.
-- Changing the pool size or minimum daily circulation now produces consistent values immediately after adapter restart.
-- The remaining daily circulation is no longer blocked by zero flow or a stopped pump.
 
 ## Archived Release History
 
