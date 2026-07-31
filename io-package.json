@@ -3,6 +3,19 @@
     "name": "poolcontrol",
     "version": "1.4.3",
     "news": {
+      "1.4.4": {
+        "en": "Fixed a race condition in the Auto-PV helper that could cause incorrect surplus calculations and unintended pump shutdowns during rapid PV and household power updates.",
+        "de": "Eine Race Condition im Auto-PV-Helper behoben, die bei schnellen Aktualisierungen von PV-Erzeugung und Hausverbrauch zu fehlerhaften Überschussberechnungen und unerwarteten Pumpenabschaltungen führen konnte.",
+        "ru": "Исправлено состояние гонки в помощнике Auto-PV, которое могло привести к неправильным расчетам излишков и непреднамеренным отключениям насосов во время быстрого обновления фотоэлектрических систем и мощности в доме.",
+        "pt": "Corrigida uma condição de corrida no auxiliar Auto-PV que poderia causar cálculos de excedente incorretos e desligamentos não intencionais da bomba durante atualizações rápidas de energia fotovoltaica e doméstica.",
+        "nl": "Een raceconditie in de Auto-PV-helper opgelost die onjuiste overschotberekeningen en onbedoelde pompuitschakelingen kon veroorzaken tijdens snelle PV- en huishoudelijke stroomupdates.",
+        "fr": "Correction d'une condition de concurrence critique dans l'assistant Auto-PV qui pouvait entraîner des calculs de surplus incorrects et des arrêts involontaires de pompes lors de mises à jour rapides de l'alimentation photovoltaïque et domestique.",
+        "it": "Risolta una condizione di competizione nell'helper Auto-PV che poteva causare calcoli errati del surplus e arresti involontari della pompa durante gli aggiornamenti rapidi del fotovoltaico e dell'energia domestica.",
+        "es": "Se corrigió una condición de carrera en el asistente Auto-PV que podía causar cálculos de excedente incorrectos y apagados involuntarios de la bomba durante actualizaciones rápidas de energía fotovoltaica y doméstica.",
+        "pl": "Naprawiono sytuację wyścigową w pomocniku Auto-PV, która mogła powodować nieprawidłowe obliczenia nadwyżki i niezamierzone wyłączanie pomp podczas szybkich aktualizacji PV i zasilania domowego.",
+        "uk": "У помічнику Auto-PV виправлено перегони, які могли спричиняти неправильні обчислення надлишків і ненавмисне відключення насоса під час швидких оновлень PV та домашнього живлення.",
+        "zh-cn": "修复了自动光伏助手中的竞争条件，该条件可能导致光伏和家庭电力快速更新期间剩余计算不正确以及泵意外关闭。"
+      },
       "1.4.3": {
         "en": "Fixed pump mode restoration after maintenance mode and automatic circulation catch-up runs. Previous user modes are now stored separately and validated, maintenance mode restoration survives adapter restarts, and automatic catch-up runs no longer start during maintenance. Invalid values such as null or internal helper modes are no longer restored to pump.mode. Overload protection remains unchanged.",
         "de": "Die Wiederherstellung des Pumpenmodus nach dem Wartungsmodus und dem automatischen Nachpumpen wurde korrigiert. Vorherige Benutzermodi werden nun getrennt gespeichert und geprüft, die Wiederherstellung nach einer Wartung übersteht Adapterneustarts und während einer aktiven Wartung startet kein automatisches Nachpumpen mehr. Ungültige Werte wie null oder interne Helper-Modi werden nicht mehr nach pump.mode zurückgeschrieben. Der Überlastschutz bleibt unverändert.",
@@ -54,19 +67,6 @@
         "pl": "Dodano przycisk resetowania uczenia pompy z wielojęzycznymi komunikatami o stanie, umożliwiono zapis i trwałość dziennego współczynnika cyrkulacji dzięki natychmiastowemu przeliczeniu, wprowadzono automatyczną regulację współczynnika cyrkulacji zależną od temperatury oraz rozszerzoną kontrolę czasu z opcjonalną pracą interwałową, w tym komunikatami diagnostycznymi o stanie.",
         "uk": "Додано кнопку скидання навчання насоса з багатомовними повідомленнями про стан, зробив щоденний коефіцієнт циркуляції записуваним і постійним із миттєвим перерахунком, запровадив автоматичне регулювання коефіцієнта циркуляції залежно від температури та розширений контроль часу з додатковим інтервалом роботи, включаючи діагностичні повідомлення про стан.",
         "zh-cn": "添加了具有多语言状态消息的泵学习重置按钮，使每日循环系数可写并通过即时重新计算保持不变，引入了与温度相关的自动循环系数调整，以及具有可选间隔操作（包括诊断状态消息）的延长时间控制。"
-      },
-      "1.3.35": {
-        "en": "Fixed daily circulation remaining calculation after changing pool size or minimum daily circulation.",
-        "de": "Korrigiert die Berechnung der verbleibenden täglichen Umwälzung nach Änderung von Poolgröße oder Mindestumwälzung.",
-        "ru": "Исправлен расчет остатка дневного тиража после изменения размера пула или минимального дневного тиража.",
-        "pt": "Corrigido o cálculo restante da circulação diária após alterar o tamanho da piscina ou a circulação diária mínima.",
-        "nl": "Vaste berekening van de resterende dagelijkse circulatie na wijziging van de zwembadgrootte of minimale dagelijkse circulatie.",
-        "fr": "Calcul de la circulation quotidienne restante fixe après avoir modifié la taille de la piscine ou la circulation quotidienne minimale.",
-        "it": "Risolto il problema con il calcolo della circolazione giornaliera rimanente dopo aver modificato le dimensioni della piscina o la circolazione giornaliera minima.",
-        "es": "Se corrigió el cálculo de la circulación diaria restante después de cambiar el tamaño de la piscina o la circulación diaria mínima.",
-        "pl": "Naprawiono obliczanie pozostałego dziennego obiegu po zmianie wielkości basenu lub minimalnego dziennego obiegu.",
-        "uk": "Виправлено розрахунок залишку денного тиражу після зміни розміру пулу або мінімального добового тиражу.",
-        "zh-cn": "修复了更改矿池大小或最低每日流通量后每日流通量剩余计算的问题。"
       }
     },
     "titleLang": {

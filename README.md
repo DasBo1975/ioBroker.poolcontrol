@@ -283,6 +283,17 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed a race condition in the Auto-PV helper that could occur during rapid updates of PV generation and household power values.
+- Added a short debounce for PV and household power events to ensure calculations always use the latest matching values.
+- Replaced the previous throttle mechanism with a serialized recalculation workflow to prevent overlapping asynchronous recalculations.
+- Added an internal "latest run wins" protection so outdated recalculations can no longer overwrite newer results or trigger outdated pump decisions.
+- The existing Auto-PV holding logic introduced in v1.4.1 remains unchanged.
+- `photovoltaic.power_surplus_w` continues to represent the real remaining PV surplus (`PV generation - household consumption`).
+- Existing Auto-PV features such as afterrun, circulation handling, solar overheating protection and controlHelper priority remain fully compatible.
+
+
 ### 1.4.3 (2026-07-25)
 
 - Fixed restoration of the previous pump mode after maintenance mode and automatic circulation catch-up runs.
