@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.4",
+    "version": "1.4.5",
     "news": {
       "1.4.5": {
         "en": "Fixed a conflict between Auto-PV and Extended Solar control. Extended Solar could switch off a pump controlled by Auto-PV even while sufficient PV surplus was available. Extended Solar now only writes to the main pump switch when the pump mode is 'auto'.",
