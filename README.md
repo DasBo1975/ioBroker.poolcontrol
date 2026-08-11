@@ -283,6 +283,15 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
+### **WORK IN PROGRESS**
+
+- Fixed a conflict between Auto-PV and Extended Solar control.
+- Extended Solar could incorrectly switch off the main pump while the pump was being controlled by Auto-PV and sufficient PV surplus was still available.
+- Extended Solar now only writes to the main pump switch when `pump.mode = auto`.
+- Auto-PV operation is no longer interrupted by the Extended Solar control cycle.
+- Existing Extended Solar pump control in normal `auto` mode remains unchanged.
+
+
 ### 1.4.4 (2026-07-31)
 
 - Fixed a race condition in the Auto-PV helper that could occur during rapid updates of PV generation and household power values.
