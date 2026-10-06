@@ -285,6 +285,7 @@
   "Mixing run was not started because no runtime is configured.": "未启动混合运行，因为未配置运行时间。",
   "Mixing run was not started because another helper currently controls the pump.": "未启动混合运行，因为另一个 helper 当前正在控制泵。",
   "pH mixing run started. No chemicals are dosed automatically.": "pH 混合运行已启动。不会自动投加化学品。",
+  "The pH mixing run was ended by a PoolControl restart.": "pH 混合运行因 PoolControl 重启而结束。",
   "pH mixing run finished. Pump was switched off by the pH helper.": "pH 混合运行已结束。泵已由 pH helper 关闭。",
   "pH mixing run finished. Pump was not switched off because another helper is active.": "pH 混合运行已结束。泵未关闭，因为另一个 helper 处于活动状态。",
   "pH mixing run finished. Pump was already running and was not switched off by the pH helper.": "pH 混合运行已结束。泵已在运行，未由 pH helper 关闭。",

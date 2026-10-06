@@ -116,7 +116,7 @@ Beispiel: 2 bedeutet, dass das gesamte Poolvolumen zweimal pro Tag umgewälzt we
 **Saison aktiv**  
 Wichtig für Automatikfunktionen:  
 - **true**: Alle Automatiken aktiv  
-- **false**: Automatik aus, nur Frostschutz bleibt an
+- **false**: Normale Pool-, Solar- und PV-Automatik aus; Solar-Überhitzung bleibt eine Warnung ohne Pumpenaktion. Ein separat aktivierter Frostschutz darf weiterlaufen, sofern keine Pumpensperre greift.
 
 Der tatsächliche Zustand liegt im Objektbaum unter `status.season_active`.
 
@@ -136,13 +136,16 @@ Mögliche Werte:
 - `time`  
 - `off`  
 - `controlHelper` (automatisch vom Adapter gesetzt)  
-- `pv` (Photovoltaik-Modus)
+- `auto_pv` (Photovoltaik-Modus)
 
 **Weitere Einstellungen:**  
 - Maximalleistung (Watt)  
 - Maximaldurchfluss (l/h)  
 - Objekt-ID der Steckdose  
 - Frostschutz aktiv + Temperaturwert  
+- Sicherheitsfunktionen im manuellen Modus (`pump.manual_safety_enabled`)
+
+`off` ist eine harte Pumpensperre, auch für Frost- und Solar-Safety. Der separate Wartungsmodus `control.pump.maintenance_active` blockiert automatische Safety-Pumpenstarts ebenfalls. Im Handbetrieb `manual` dürfen Frostschutz und Solar-Überhitzung nur eingreifen, wenn `pump.manual_safety_enabled` aktiviert ist. Frostschutz benötigt immer seinen eigenen Aktivierungsschalter, darf dann aber unabhängig von der Poolsaison laufen.
 
 ---
 
@@ -187,6 +190,8 @@ Die Solarsteuerung arbeitet nur im Modus **auto**.
 Zusätzliche Live-Datenpunkte stellen die aktuelle Differenz `solar.collector_surface_delta` für Standard-Solar und `solar.extended.collector_pool_reference_delta` für Solar Extended bereit. Diese Werte dienen VIS, Skripten, Dashboards und Auswertungen.
 
 Hinweis: Änderungen an der Solar-Extended-Poolreferenz (`solar.extended.pool_temperature_source`) werden im laufenden Betrieb automatisch übernommen. Ein Adapter-Neustart ist nicht erforderlich. Da Solar Extended zyklisch arbeitet, kann die Aktualisierung der Berechnung, der Schaltlogik und des Datenpunkts `solar.extended.collector_pool_reference_delta` bis zu etwa 60 Sekunden dauern.
+
+Die Kollektorwarnung bleibt auch bei inaktiver Saison aktiv. Eine dadurch ausgelöste Solar-Überhitzungs-Pumpenaktion ist bei Saison AUS, in `off`, während der Wartung sowie in `manual` ohne Manual-Safety-Freigabe gesperrt.
 
 ---
 

@@ -106,6 +106,47 @@ class Poolcontrol extends utils.Adapter {
         }
     }
 
+    /**
+     * Starts a helper handler immediately and observes synchronous and asynchronous failures.
+     *
+     * @param {string} helperName - Name used in error logs.
+     * @param {string} id - State ID being dispatched.
+     * @param {() => void | Promise<void>} callback - Helper handler invocation.
+     */
+    _dispatchStateChange(helperName, id, callback) {
+        try {
+            const result = callback();
+            if (result && typeof result.then === 'function') {
+                void Promise.resolve(result).catch(error => this._logStateChangeError(helperName, id, error));
+            }
+        } catch (error) {
+            this._logStateChangeError(helperName, id, error);
+        }
+    }
+
+    /**
+     * Logs a helper dispatch failure without allowing logging failures to escape.
+     *
+     * @param {string} helperName - Name of the failed helper.
+     * @param {string} id - State ID being dispatched.
+     * @param {unknown} error - Thrown or rejected value.
+     */
+    _logStateChangeError(helperName, id, error) {
+        let details = 'Unknown error';
+
+        try {
+            details = error instanceof Error ? error.stack || error.message : String(error);
+        } catch {
+            details = 'Unprintable error';
+        }
+
+        try {
+            this.log.warn(`[${helperName}] Error in handleStateChange for ${id}: ${details}`);
+        } catch {
+            // A logger failure must not create a second unhandled error.
+        }
+    }
+
     async onReady() {
         this.log.info('Adapter started');
 
@@ -215,7 +256,7 @@ class Poolcontrol extends utils.Adapter {
         aiHelper.init(this);
         aiForecastHelper.init(this);
         aiChemistryHelpHelper.init(this);
-        chemistryPhHelper.init(this);
+        await chemistryPhHelper.init(this);
         chemistryTdsHelper.init(this);
         chemistryOrpHelper.init(this);
         chemistryToolsHelper.init(this); // NEU
@@ -291,6 +332,9 @@ class Poolcontrol extends utils.Adapter {
             if (controlHelper2.cleanup) {
                 controlHelper2.cleanup();
             }
+            if (debugLogHelper.cleanup) {
+                debugLogHelper.cleanup();
+            }
             if (heatHelper.cleanup) {
                 heatHelper.cleanup();
             }
@@ -365,7 +409,8 @@ class Poolcontrol extends utils.Adapter {
         // - still allow ack=true for read-only OWN states (status/live values)
         if (isOwnState && state.ack === true) {
             const isWritable = await this._isWritableOwnState(id);
-            if (isWritable) {
+            const isSeasonState = id.endsWith('status.season_active');
+            if (isWritable && !isSeasonState) {
                 return;
             }
         }
@@ -377,90 +422,32 @@ class Poolcontrol extends utils.Adapter {
             return; // danach keine Helper mehr aufrufen
         }
 
+        this._dispatchStateChange('temperatureHelper', id, () => temperatureHelper.handleStateChange(id, state));
+        this._dispatchStateChange('runtimeHelper', id, () => runtimeHelper.handleStateChange(id, state));
+        this._dispatchStateChange('pumpHelper', id, () => pumpHelper.handleStateChange(id, state));
+        this._dispatchStateChange('pumpHelper2', id, () => pumpHelper2.handleStateChange(id, state));
+        this._dispatchStateChange('pumpHelper3', id, () => pumpHelper3.handleStateChange(id, state));
+        this._dispatchStateChange('pumpHelper4', id, () => pumpHelper4.handleStateChange(id, state));
+        this._dispatchStateChange('pumpSpeedHelper', id, () => pumpSpeedHelper.handleStateChange(id, state));
+        this._dispatchStateChange('speechHelper', id, () => speechHelper.handleStateChange(id, state));
+        this._dispatchStateChange('consumptionHelper', id, () => consumptionHelper.handleStateChange(id, state));
         try {
-            temperatureHelper.handleStateChange(id, state);
+            await frostHelper.handleStateChange(id, state);
         } catch (e) {
-            this.log.warn(`[temperatureHelper] Error in handleStateChange: ${e.message}`);
+            this.log.warn(`[frostHelper] Error in handleStateChange: ${e.message}`);
         }
-        try {
-            runtimeHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[runtimeHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            pumpHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[pumpHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            pumpHelper2.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[pumpHelper2] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            pumpHelper3.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[pumpHelper3] Error in handleStateChange: ${e.message}`);
-        }
-
-        try {
-            pumpHelper4.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[pumpHelper4] Error in handleStateChange: ${e.message}`);
-        }
-
-        try {
-            pumpSpeedHelper.handleStateChange(id, state); // NEU
-        } catch (e) {
-            this.log.warn(`[pumpSpeedHelper] Error in handleStateChange: ${e.message}`);
-        }
-
-        try {
-            speechHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[speechHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            consumptionHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[consumptionHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            photovoltaicHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[photovoltaicHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            photovoltaicInsightsHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[photovoltaicInsightsHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            heatHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[heatHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            actuatorsHelper.handleStateChange(id, state); // NEU
-        } catch (e) {
-            this.log.warn(`[actuatorsHelper] Error in handleStateChange: ${e.message}`);
-        }
+        this._dispatchStateChange('photovoltaicHelper', id, () => photovoltaicHelper.handleStateChange(id, state));
+        this._dispatchStateChange('photovoltaicInsightsHelper', id, () =>
+            photovoltaicInsightsHelper.handleStateChange(id, state),
+        );
+        this._dispatchStateChange('heatHelper', id, () => heatHelper.handleStateChange(id, state));
+        this._dispatchStateChange('actuatorsHelper', id, () => actuatorsHelper.handleStateChange(id, state));
         // --- AI-Helper ---
-        try {
-            aiHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[main] Error in aiHelper.handleStateChange: ${e.message}`);
-        }
-        try {
-            aiForecastHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[main] Error in aiForecastHelper.handleStateChange: ${e.message}`);
-        }
-        try {
-            aiChemistryHelpHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[main] Error in aiChemistryHelpHelper.handleStateChange: ${e.message}`);
-        }
+        this._dispatchStateChange('aiHelper', id, () => aiHelper.handleStateChange(id, state));
+        this._dispatchStateChange('aiForecastHelper', id, () => aiForecastHelper.handleStateChange(id, state));
+        this._dispatchStateChange('aiChemistryHelpHelper', id, () =>
+            aiChemistryHelpHelper.handleStateChange(id, state),
+        );
         try {
             await chemistryPhHelper.handleStateChange(id, state);
         } catch (e) {
@@ -481,50 +468,32 @@ class Poolcontrol extends utils.Adapter {
         } catch (e) {
             this.log.warn(`[chemistryToolsHelper] Error in handleStateChange: ${e.message}`);
         }
-        try {
-            statusHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[statusHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            speechTextHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[speechTextHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            solarLogbookHelper.handleStateChange(id, state); // NEU
-        } catch (e) {
-            this.log.warn(`[solarLogbookHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            solarInsightsHelper.onStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[solarInsightsHelper] Error in handleStateChange: ${e.message}`);
-        }
-        try {
-            poolInsightsHelper.handleStateChange(id, state);
-        } catch (e) {
-            this.log.warn(`[poolInsightsHelper] Error in handleStateChange: ${e.message}`);
+        this._dispatchStateChange('statusHelper', id, () => statusHelper.handleStateChange(id, state));
+        this._dispatchStateChange('speechTextHelper', id, () => speechTextHelper.handleStateChange(id, state));
+        this._dispatchStateChange('solarLogbookHelper', id, () => solarLogbookHelper.handleStateChange(id, state));
+        this._dispatchStateChange('solarInsightsHelper', id, () => solarInsightsHelper.onStateChange(id, state));
+        this._dispatchStateChange('poolInsightsHelper', id, () => poolInsightsHelper.handleStateChange(id, state));
+        if (id.includes('control.')) {
+            this._dispatchStateChange('controlHelper', id, () => controlHelper.handleStateChange(id, state));
         }
         if (id.includes('control.')) {
-            controlHelper.handleStateChange(id, state);
-        }
-        if (id.includes('control.')) {
-            controlHelper2.handleStateChange(id, state);
+            this._dispatchStateChange('controlHelper2', id, () => controlHelper2.handleStateChange(id, state));
         }
 
         // --- Photovoltaik-Parameter ---
         if (id.endsWith('photovoltaic.afterrun_min')) {
             this.log.debug(`[onStateChange] PV after-run time changed to ${state.val} Minuten`);
-            this.config.pv_afterrun_min = Number(state.val);
         }
 
         if (id.endsWith('photovoltaic.ignore_on_circulation')) {
             this.log.debug(`[onStateChange] Ignore PV logic on circulation = ${state.val}`);
-            this.config.pv_ignore_on_circulation = !!state.val;
         }
 
-        await debugLogHelper.handleStateChange(id, state);
+        try {
+            await debugLogHelper.handleStateChange(id, state);
+        } catch (error) {
+            this._logStateChangeError('debugLogHelper', id, error);
+        }
     }
 }
 

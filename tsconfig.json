@@ -1,0 +1,32 @@
+{
+    "extends": "@tsconfig/node22/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "noImplicitAny": false,
+        "useUnknownInCatchVariables": false,
+        "types": [
+            "node",
+            "mocha"
+        ]
+    },
+    "include": [
+        "main.js",
+        "debug-names.js",
+        "lib/**/*.js",
+        "lib/**/*.d.ts",
+        "test/**/*.js",
+        "test/**/*.cjs",
+        "*.test.cjs"
+    ],
+    "exclude": [
+        "node_modules",
+        "local-tools",
+        "coverage",
+        "build",
+        "admin/build",
+        "admin/src"
+    ]
+}

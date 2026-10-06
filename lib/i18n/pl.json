@@ -285,6 +285,7 @@
   "Mixing run was not started because no runtime is configured.": "Cykl mieszania nie został uruchomiony, ponieważ nie skonfigurowano czasu pracy.",
   "Mixing run was not started because another helper currently controls the pump.": "Cykl mieszania nie został uruchomiony, ponieważ inny helper obecnie steruje pompą.",
   "pH mixing run started. No chemicals are dosed automatically.": "Uruchomiono cykl mieszania pH. Chemikalia nie są dozowane automatycznie.",
+  "The pH mixing run was ended by a PoolControl restart.": "Cykl mieszania pH został zakończony przez ponowne uruchomienie PoolControl.",
   "pH mixing run finished. Pump was switched off by the pH helper.": "Cykl mieszania pH zakończony. Pompa została wyłączona przez helper pH.",
   "pH mixing run finished. Pump was not switched off because another helper is active.": "Cykl mieszania pH zakończony. Pompa nie została wyłączona, ponieważ aktywny jest inny helper.",
   "pH mixing run finished. Pump was already running and was not switched off by the pH helper.": "Cykl mieszania pH zakończony. Pompa już pracowała i nie została wyłączona przez helper pH.",

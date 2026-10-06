@@ -73,6 +73,10 @@ Zur Sicherheitslogik gehören:
 - kurze Kulanzzeiten nach Start und Stopp, damit Einschalt- und Ausschaltflanken nicht sofort als Fehler gewertet werden
 - optionaler Sicherheitsbetrieb im manuellen Modus über `pump.manual_safety_enabled`
 
+Für automatische Frost- und Solar-Safety-Pumpenstarts gelten feste Sperren: `pump.mode = off` bedeutet immer AUS, und der Wartungsmodus `control.pump.maintenance_active = true` blockiert automatische Safety-Starts ebenfalls. `manual` ist Handbetrieb und nicht Wartung; Frost- und Solar-Safety dürfen ihn nur übersteuern, wenn `pump.manual_safety_enabled = true` ist.
+
+Eine inaktive Poolsaison beendet die normale Pool-, Solar- und PV-Automatik sowie Pumpenaktionen des Solar-Überhitzungsschutzes. Ein separat aktivierter Frostschutz darf dagegen auch außerhalb der Saison laufen, sofern die Pumpe nicht auf `off` steht und keine Wartungs- oder Manual-Safety-Sperre greift. Ist `pump.frost_protection_active = false`, erfolgt kein Froststart.
+
 Ergänzend gibt es Live- und Lernbereiche:
 
 - `pump.live.*` für aktuelle Leistung, aktuellen Durchfluss, Durchflussprozent und letzten Durchflusswert
@@ -131,7 +135,7 @@ Die Steuerung ist nur aktiv, wenn:
 - der Solarmodus `standard` ist
 - kein höherer Vorrang durch `controlHelper` oder `timeHelper` besteht
 
-Die Kollektorwarnung setzt `solar.collector_warning`, wenn die Warntemperatur erreicht wird. Sie wird automatisch zurückgesetzt, wenn der Kollektor auf 90 Prozent des Warnwerts oder darunter fällt.
+Die Kollektorwarnung setzt `solar.collector_warning`, wenn die Warntemperatur erreicht wird. Sie wird automatisch zurückgesetzt, wenn der Kollektor auf 90 Prozent des Warnwerts oder darunter fällt. Die Warnung bleibt auch bei inaktiver Saison verfügbar; daraus entsteht dann jedoch keine Pumpenaktion.
 
 ## 6. Photovoltaik- und PV-Überschussfunktionen
 
@@ -162,7 +166,7 @@ Die Pumpe wird nur geschaltet, wenn:
 
 Mit `photovoltaic.afterrun_min` kann ein Nachlauf nach Ende des Überschusses eingestellt werden. `photovoltaic.ignore_on_circulation` kann PV-Steuerung beenden bzw. verhindern, wenn das tägliche Umwälzziel bereits erreicht ist.
 
-Eine Besonderheit ist die Sicherheitsübersteuerung bei Solar-Überhitzung: Wenn `solar.collector_warning` aktiv ist, kann der PV-Helper die Pumpe unabhängig vom PV-Überschuss einschalten, um den Kollektor zu schützen.
+Eine Besonderheit ist die Sicherheitsübersteuerung bei Solar-Überhitzung: Wenn `solar.collector_warning` aktiv ist, kann der PV-Helper die Pumpe unabhängig vom PV-Überschuss einschalten, um den Kollektor zu schützen. Diese Pumpenaktion benötigt eine aktive Saison, ist in `off` und während der Wartung gesperrt und darf `manual` nur bei aktiviertem `pump.manual_safety_enabled` übersteuern. Die Kollektorwarnung selbst bleibt von diesen Pumpensperren unberührt.
 
 ## 7. Temperatur- und Sensorfunktionen
 

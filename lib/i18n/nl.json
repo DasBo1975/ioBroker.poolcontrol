@@ -285,6 +285,7 @@
   "Mixing run was not started because no runtime is configured.": "Mengloop is niet gestart omdat er geen looptijd is geconfigureerd.",
   "Mixing run was not started because another helper currently controls the pump.": "Mengloop is niet gestart omdat een andere helper momenteel de pomp bestuurt.",
   "pH mixing run started. No chemicals are dosed automatically.": "pH-mengloop gestart. Er worden geen chemicaliën automatisch gedoseerd.",
+  "The pH mixing run was ended by a PoolControl restart.": "De pH-mengcyclus is beëindigd door een herstart van PoolControl.",
   "pH mixing run finished. Pump was switched off by the pH helper.": "pH-mengloop beëindigd. De pomp is door de pH-helper uitgeschakeld.",
   "pH mixing run finished. Pump was not switched off because another helper is active.": "pH-mengloop beëindigd. De pomp is niet uitgeschakeld omdat een andere helper actief is.",
   "pH mixing run finished. Pump was already running and was not switched off by the pH helper.": "pH-mengloop beëindigd. De pomp draaide al en is niet door de pH-helper uitgeschakeld.",

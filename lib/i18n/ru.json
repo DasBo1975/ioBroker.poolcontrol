@@ -285,6 +285,7 @@
   "Mixing run was not started because no runtime is configured.": "Цикл перемешивания не был запущен, потому что время работы не настроено.",
   "Mixing run was not started because another helper currently controls the pump.": "Цикл перемешивания не был запущен, потому что другой helper сейчас управляет насосом.",
   "pH mixing run started. No chemicals are dosed automatically.": "Цикл перемешивания pH запущен. Химикаты автоматически не дозируются.",
+  "The pH mixing run was ended by a PoolControl restart.": "Цикл смешивания pH был завершён из-за перезапуска PoolControl.",
   "pH mixing run finished. Pump was switched off by the pH helper.": "Цикл перемешивания pH завершен. Насос был выключен helper pH.",
   "pH mixing run finished. Pump was not switched off because another helper is active.": "Цикл перемешивания pH завершен. Насос не был выключен, потому что активен другой helper.",
   "pH mixing run finished. Pump was already running and was not switched off by the pH helper.": "Цикл перемешивания pH завершен. Насос уже работал и не был выключен helper pH.",
