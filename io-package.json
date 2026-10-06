@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "poolcontrol",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "news": {
       "1.4.6": {
         "en": "Improved overall stability around helper lifecycle, cleanup and asynchronous processing. Temperature statistics now handle day, week and month transitions as well as restart and downtime scenarios more reliably. Daily circulation volume is now calculated interval-based for variable flow rates, preventing previously accumulated values from being recalculated with the current flow. Pump safety and ownership handling has also been made more robust.",

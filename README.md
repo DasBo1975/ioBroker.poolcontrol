@@ -286,8 +286,7 @@ New features are added regularly – please refer to the changelog.
 ---
 
 ## Changelog
-
-### **WORK IN PROGRESS**
+### 1.4.6 (2026-10-06)
 
 This release focuses primarily on stability, lifecycle safety and the reliability of runtime and temperature statistics.
 
@@ -337,7 +336,6 @@ This release focuses primarily on stability, lifecycle safety and the reliabilit
 - Improved JSDoc typing and type-safe contracts across many helpers without changing their existing runtime behavior.
 - Strengthened static validation to detect invalid state handling, lifecycle issues and unsafe asynchronous code paths earlier during development.
 
-
 ### 1.4.5 (2026-08-11)
 
 - Fixed a conflict between Auto-PV and Extended Solar control.
@@ -378,13 +376,6 @@ This release focuses primarily on stability, lifecycle safety and the reliabilit
 - Improved solar logbook logging
   - Oversized solar logbook entries are now logged as debug instead of warning
   - This avoids unnecessary warning noise for non-critical diagnostic information
-
-### 1.4.1 (2026-06-30)
-
-- Fixed Auto-PV holding logic for already running pumps.
-- When Auto-PV already controls the pump, the current pump power is now considered for the holding decision.
-- This prevents a running pump from triggering its own Auto-PV afterrun/stop cycle after startup.
-- The displayed PV surplus (`photovoltaic.power_surplus_w`) remains the real remaining surplus and is not artificially adjusted.
 
 ## Archived Release History
 

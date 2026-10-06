@@ -4,6 +4,13 @@ This file contains older changes of ioBroker.poolcontrol.
 Recent changes can be found in the README.md.
 
 ---
+## 1.4.1 (2026-06-30)
+
+- Fixed Auto-PV holding logic for already running pumps.
+- When Auto-PV already controls the pump, the current pump power is now considered for the holding decision.
+- This prevents a running pump from triggering its own Auto-PV afterrun/stop cycle after startup.
+- The displayed PV surplus (`photovoltaic.power_surplus_w`) remains the real remaining surplus and is not artificially adjusted.
+
 ## 1.4.0 (2026-06-29)
 
 - Added a reset button for pump learning to quickly clear learned values after a pump replacement or incorrect learning while keeping user settings intact.
